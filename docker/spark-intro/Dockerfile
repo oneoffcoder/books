@@ -1,4 +1,4 @@
-FROM oneoffcoder/spark-jupyter
+FROM oneoffcoder/spark-jupyter:latest
 LABEL One-Off Coder "info@oneoffcoder.com"
 
 # setup ubuntu

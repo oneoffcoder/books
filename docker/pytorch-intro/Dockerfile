@@ -1,4 +1,4 @@
-FROM oneoffcoder:book-base
+FROM oneoffcoder/book-base:latest
 LABEL One-Off Coder "info@oneoffcoder.com"
 
 # setup ubuntu
