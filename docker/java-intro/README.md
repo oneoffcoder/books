@@ -11,7 +11,7 @@ To run the container.
 ```bash
 docker run -it \
     -p 8888:8888 \
-    -v $HOME/git/books/java-intro/container/ubuntu/root/ipynb:/root/ipynb \
+    -v $HOME/git/books/docker/java-intro/ipynb:/root/ipynb \
     book-java-intro:local
 ```
 
