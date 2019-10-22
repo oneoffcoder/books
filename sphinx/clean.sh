@@ -4,5 +4,5 @@ projects=( "java-intro" "python-intro" "pytorch-intro" "scikit-intro" "spark-int
 
 for project in "${projects[@]}"
 do
-    cd $project/book && make clean && make html && cd ../..
+    cd $project && make clean && cd ..
 done
