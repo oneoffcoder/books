@@ -11,12 +11,12 @@ To run the container.
 ```bash
 docker run -it \
     -p 8888:8888 \
-    -v $HOME/git/books/java-intro/ubuntu/root/ipynb:/root/ipynb \
-    java-jupyter:local
+    -v $HOME/git/books/java-intro/container/ubuntu/root/ipynb:/root/ipynb \
+    book-java-intro:local
 ```
 
-Then point your browser to [http://localhost:8888](http://localhost:8888). Jupyter Lab should show up and you can start a Java kernel.
+Then point your browser to [http://localhost:8888](http://localhost:8888).
 
 # Docker Hub
 
-[Image](https://hub.docker.com/r/oneoffcoder/java-jupyter)
+[Image](https://hub.docker.com/r/oneoffcoder/book-java-intro)
