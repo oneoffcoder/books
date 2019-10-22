@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+  <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://localhost</value>
+  </property>
+  <property>
+    <name>hadoop.http.filter.initializers</name>
+    <value>org.apache.hadoop.http.lib.StaticUserWebFilter,org.apache.hadoop.security.HttpCrossOriginFilterInitializer</value>
+  </property>
+  <property>
+    <name>hadoop.http.cross-origin.enabled</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hadoop.http.cross-origin.allowed-origins</name>
+    <value>*</value>
+  </property>
+  <property>
+    <name>hadoop.http.cross-origin.allowed-methods</name>
+    <value>GET,POST,HEAD,PUT,OPTIONS,DELETE,TRACE</value>
+  </property>
+  <property>
+    <name>hadoop.http.cross-origin.allowed-headers</name>
+    <value>X-Requested-With,Content-Type,Accept,Origin,WWW-Authenticate,Accept-Encoding,Transfer-Encoding,X-XSRF-HEADER</value>
+  </property>
+  <property>
+    <name>hadoop.http.cross-origin.max-age</name>
+    <value>1800</value>
+  </property>  
+</configuration>

@@ -1,0 +1,8 @@
+name: base
+channels:
+  - default
+  - anaconda
+  - crogoz
+dependencies:
+  - graphframes
+  - networkx
