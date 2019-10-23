@@ -1,7 +1,7 @@
 FROM oneoffcoder/book-base:latest
 LABEL One-Off Coder "info@oneoffcoder.com"
 
-ENV IJAVA_COMPILER_OPTS="--enable-preview"
+ENV IJAVA_COMPILER_OPTS="--release 12 --enable-preview"
 ENV IJAVA_CLASSPATH="/root/libs/"
 
 # setup ubuntu
