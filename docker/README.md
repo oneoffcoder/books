@@ -33,3 +33,13 @@ docker-compose up -d
 docker-compose ps 
 docker-compose down
 ```
+
+Some useful commands.
+
+```bash
+# get realtime events from docker containers
+docker-compose events
+
+# observe status e.g. health
+docker ps
+```

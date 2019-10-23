@@ -9,6 +9,12 @@ services:
         source: ./java-intro/ipynb
         target: /root/ipynb
         consistency: consistent
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
   python:
     image: oneoffcoder/book-python-intro
     ports:
@@ -18,6 +24,12 @@ services:
         source: ./python-intro/ipynb
         target: /root/ipynb
         consistency: consistent
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
   pytorch:
     image: oneoffcoder/book-pytorch-intro
     ports:
@@ -27,6 +39,12 @@ services:
         source: ./pytorch-intro/ipynb
         target: /root/ipynb
         consistency: consistent
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
   scikit:
     image: oneoffcoder/book-scikit-intro
     ports:
@@ -36,6 +54,12 @@ services:
         source: ./scikit-intro/ipynb
         target: /root/ipynb
         consistency: consistent
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
   spark:
     image: oneoffcoder/book-spark-intro
     ports:
@@ -50,3 +74,9 @@ services:
         source: ./spark-intro/ipynb
         target: /root/ipynb
         consistency: consistent
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
