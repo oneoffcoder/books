@@ -5,25 +5,37 @@ services:
     ports:
       - "7770:8888"
     volumes:
-      - ./java-intro/ipynb:/root/ipynb
+      - type: bind
+        source: ./java-intro/ipynb
+        target: /root/ipynb
+        consistency: consistent
   python:
     image: oneoffcoder/book-python-intro
     ports:
       - "7771:8888"
     volumes:
-      - ./python-intro/ipynb:/root/ipynb
+      - type: bind
+        source: ./python-intro/ipynb
+        target: /root/ipynb
+        consistency: consistent
   pytorch:
     image: oneoffcoder/book-pytorch-intro
     ports:
       - "7772:8888"
     volumes:
-      - ./pytorch-intro/ipynb:/root/ipynb
+      - type: bind
+        source: ./pytorch-intro/ipynb
+        target: /root/ipynb
+        consistency: consistent
   scikit:
     image: oneoffcoder/book-scikit-intro
     ports:
       - "7773:8888"
     volumes:
-      - ./scikit-intro/ipynb:/root/ipynb
+      - type: bind
+        source: ./scikit-intro/ipynb
+        target: /root/ipynb
+        consistency: consistent
   spark:
     image: oneoffcoder/book-spark-intro
     ports:
@@ -34,4 +46,7 @@ services:
       - "9000:9000"
       - "9864:9864"
     volumes:
-      - ./spark-intro/ipynb:/root/ipynb
+      - type: bind
+        source: ./spark-intro/ipynb
+        target: /root/ipynb
+        consistency: consistent
