@@ -1,29 +1,29 @@
-version: '3'
+version: "3.7"
 services:
   java:
     image: oneoffcoder/book-java-intro
     ports:
       - "7770:8888"
     volumes:
-      - "$HOME/git/books/docker/java-intro/ipynb:/root/ipynb"
+      - ./java-intro/ipynb:/root/ipynb
   python:
     image: oneoffcoder/book-python-intro
     ports:
       - "7771:8888"
     volumes:
-      - "$HOME/git/books/docker/python-intro/ipynb:/root/ipynb"
+      - ./python-intro/ipynb:/root/ipynb
   pytorch:
     image: oneoffcoder/book-pytorch-intro
     ports:
       - "7772:8888"
     volumes:
-      - "$HOME/git/books/docker/pytorch-intro/ipynb:/root/ipynb"
+      - ./pytorch-intro/ipynb:/root/ipynb
   scikit:
     image: oneoffcoder/book-scikit-intro
     ports:
       - "7773:8888"
     volumes:
-      - "$HOME/git/books/docker/scikit-intro/ipynb:/root/ipynb"
+      - ./scikit-intro/ipynb:/root/ipynb
   spark:
     image: oneoffcoder/book-spark-intro
     ports:
@@ -34,4 +34,4 @@ services:
       - "9000:9000"
       - "9864:9864"
     volumes:
-      - "$HOME/git/books/docker/spark-intro/ipynb:/root/ipynb"
+      - ./spark-intro/ipynb:/root/ipynb
