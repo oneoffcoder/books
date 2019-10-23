@@ -26,6 +26,14 @@ To run the containers in the foreground. Hit `CTRL-C` to quit.
 docker-compose up
 ```
 
+To access the Jupyter Lab environments.
+
+* [Java](http://localhost:7770)
+* [Python](http://localhost:7771)
+* [PyTorch](http://localhost:7772)
+* [Scikit](http://localhost:7773)
+* [Spark](http://localhost:7774)
+
 To run the containers in the background.
 
 ```bash
