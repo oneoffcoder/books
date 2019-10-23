@@ -9,6 +9,8 @@ services:
         source: ./java-intro/ipynb
         target: /root/ipynb
         consistency: consistent
+    environment:
+      IJAVA_COMPILER_OPTS: "--source 12 --enable-preview"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8888"]
       interval: 60s
