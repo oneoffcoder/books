@@ -14,7 +14,7 @@ RUN apt-get update -y \
 RUN wget -q https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh -O /tmp/Anaconda3-2019.07-Linux-x86_64.sh \
     && /bin/bash /tmp/Anaconda3-2019.07-Linux-x86_64.sh -b -p $CONDA_HOME \
     && $CONDA_HOME/bin/conda update -n root conda -y
-COPY ubuntu/root/.jupyter /root/
+COPY ubuntu/root/.jupyter /root/.jupyter/
 
 # setup volumes
 RUN mkdir /root/ipynb
