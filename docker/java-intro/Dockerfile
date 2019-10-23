@@ -11,6 +11,7 @@ RUN apt-get update -y \
 RUN wget -q https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-1.3.0.zip -O /tmp/ijava-1.3.0.zip \
     && unzip /tmp/ijava-1.3.0.zip -d /tmp/ijava \
     && python /tmp/ijava/install.py --sys-prefix
+COPY ubuntu/usr/local/conda/share/jupyter/kernels/java/kernel.json /usr/local/conda/share/jupyter/kernels/java/kernel.json
 
 # clean up
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
