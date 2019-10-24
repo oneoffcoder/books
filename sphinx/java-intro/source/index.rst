@@ -26,7 +26,9 @@ Java, No Tears
    :maxdepth: 2
    :numbered:
    :caption: Contents:
-
+   
+   intro
+   types
 
 
 Indices and tables
