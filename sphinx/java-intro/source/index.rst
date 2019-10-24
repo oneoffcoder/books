@@ -29,6 +29,7 @@ Java, No Tears
    
    intro
    types
+   operators
 
 
 Indices and tables
