@@ -31,6 +31,7 @@ Java, No Tears
    types
    operators
    control
+   loops
 
 
 Indices and tables
