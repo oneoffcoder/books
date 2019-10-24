@@ -1,6 +1,6 @@
 package com.oneoffcoder.java.types;
 
-public class TypesString {
+public class StringConcatenation {
 
   public static void main(String[] args) throws Exception {
     var s1 = "Hi"; // basic string

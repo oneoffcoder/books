@@ -1,6 +1,6 @@
 package com.oneoffcoder.java.types;
 
-public class TypesMultiDimensionalArray {
+public class MultiDimensionalArray {
 
   public static void main(String[] args) throws Exception {
     int matrix[][] = new int[2][2];

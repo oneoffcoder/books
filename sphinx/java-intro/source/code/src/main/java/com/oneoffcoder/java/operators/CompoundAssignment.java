@@ -1,6 +1,6 @@
 package com.oneoffcoder.java.operators;
 
-public class OperatorCompoundAssignment {
+public class CompoundAssignment {
 
   public static void main(String[] args) throws Exception {
     int a = 10;

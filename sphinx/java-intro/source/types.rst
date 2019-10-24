@@ -4,26 +4,26 @@ Types
 Basic Types
 -----------
 
-.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/TypesBasic.java
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/Basic.java
    :language: java
    :linenos:
 
 Arrays
 ------
 
-.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/TypesArray.java
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/ArrayBasic.java
    :language: java
    :linenos:
 
-.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/TypesArrayInline.java
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/ArrayInline.java
    :language: java
    :linenos:
 
-.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/TypesMultiDimensionalArray.java
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/MultiDimensionalArray.java
    :language: java
    :linenos:
 
-.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/TypesMultiDimensionalArrayInline.java
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/MultiDimensionalArrayInline.java
    :language: java
    :linenos:
 
@@ -37,6 +37,6 @@ Type inference with var
 String
 ------
 
-.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/TypesString.java
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/StringConcatenation.java
    :language: java
    :linenos:

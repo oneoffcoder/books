@@ -1,6 +1,6 @@
 package com.oneoffcoder.java.operators;
 
-public class OperatorBooleanLogical {
+public class BooleanLogical {
 
   public static void main(String[] args) throws Exception {
     var a = false;

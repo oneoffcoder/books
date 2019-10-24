@@ -1,6 +1,6 @@
 package com.oneoffcoder.java.operators;
 
-public class OperatorBasic {
+public class Basic {
 
   public static void main(String[] args) throws Exception {
     int a = 1 + 1;

@@ -1,6 +1,6 @@
 package com.oneoffcoder.java.operators;
 
-public class OperatorRelational {
+public class Relational {
 
   public static void main(String[] args) throws Exception {
     var num1 = 4;

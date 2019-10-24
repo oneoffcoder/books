@@ -1,6 +1,6 @@
 package com.oneoffcoder.java.operators;
 
-public class OperatorBitwiseUnsignedRightShift {
+public class BitwiseUnsignedRightShift {
 
   public static void main(String[] args) throws Exception {
     var a = -1;

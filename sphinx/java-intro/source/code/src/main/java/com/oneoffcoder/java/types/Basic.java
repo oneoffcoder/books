@@ -1,6 +1,6 @@
 package com.oneoffcoder.java.types;
 
-public class TypesBasic {
+public class Basic {
 
   public static void main(String[] args) throws Exception {
     byte b = 127;

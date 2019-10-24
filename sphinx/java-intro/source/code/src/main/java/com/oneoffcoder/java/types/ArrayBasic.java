@@ -1,6 +1,6 @@
 package com.oneoffcoder.java.types;
 
-public class TypesArray {
+public class ArrayBasic {
 
   public static void main(String[] args) throws Exception {
     int months[] = new int[12];

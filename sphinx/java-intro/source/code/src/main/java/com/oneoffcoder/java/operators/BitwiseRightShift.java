@@ -1,10 +1,13 @@
 package com.oneoffcoder.java.operators;
 
-public class OperatorParentheses {
+public class BitwiseRightShift {
 
   public static void main(String[] args) throws Exception {
-    var result1 = 4 + 2 * 2;
-    var result2 = (4 + 2) * 2;
+    var a = 8;
+
+    var x = a >> 1;
+    var y = a >> 2;
+    var z = a >> 3;
   }
 
 }
