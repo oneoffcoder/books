@@ -30,6 +30,7 @@ Java, No Tears
    intro
    types
    operators
+   control
 
 
 Indices and tables
