@@ -12,7 +12,7 @@ public class OpenCsvRead {
 
   public static void main(String[] args) throws Exception {
     final var parser = new CSVParserBuilder()
-        .withSeparator(ICSVParser.DEFAULT_SEPARATOR)git 
+        .withSeparator(ICSVParser.DEFAULT_SEPARATOR)
         .withQuoteChar(ICSVParser.DEFAULT_QUOTE_CHARACTER)
         .withEscapeChar(ICSVParser.DEFAULT_ESCAPE_CHARACTER)
         .build();
