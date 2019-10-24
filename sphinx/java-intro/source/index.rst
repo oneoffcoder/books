@@ -32,6 +32,7 @@ Java, No Tears
    operators
    control
    loops
+   clazz
 
 
 Indices and tables
