@@ -32,3 +32,10 @@ CSV
 .. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/OpenCsvRead.java
    :language: java
    :linenos:
+
+Static imports
+--------------
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/StaticImport.java
+   :language: java
+   :linenos:
