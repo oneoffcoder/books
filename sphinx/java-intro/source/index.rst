@@ -36,8 +36,9 @@ Java, No Tears
    generic
    libraries
    collection
-   exceptions
    lambda
+   streams
+   exceptions
    threads
    enum
    annot

@@ -14,6 +14,13 @@ List creation
    :language: java
    :linenos:
 
+List iteration with forEach
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/collection/ListForEach.java
+   :language: java
+   :linenos:
+
 List manipulation
 ^^^^^^^^^^^^^^^^^
 
