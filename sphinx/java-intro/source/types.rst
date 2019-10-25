@@ -41,6 +41,51 @@ Type inference with var
 String
 ------
 
-.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/StringConcatenation.java
+String instantiation
+^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/string/StringInstantiation.java
+   :language: java
+   :linenos:
+
+String concatenation 
+^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/string/StringConcatenation.java
+   :language: java
+   :linenos:
+
+String comparison
+^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/string/StringComparison.java
+   :language: java
+   :linenos:
+
+String extraction
+^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/string/StringExtraction.java
+   :language: java
+   :linenos:
+
+String modification
+^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/string/StringModification.java
+   :language: java
+   :linenos:
+
+String search
+^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/string/StringSearch.java
+   :language: java
+   :linenos:
+
+Getting an object's string value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/string/StringValueOf.java
    :language: java
    :linenos:
