@@ -34,6 +34,7 @@ Java, No Tears
    loops
    clazz
    libraries
+   exceptions
 
 
 Indices and tables
