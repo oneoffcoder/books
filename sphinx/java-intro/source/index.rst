@@ -38,6 +38,7 @@ Java, No Tears
    threads
    enum
    annot
+   generic
 
 
 Indices and tables
