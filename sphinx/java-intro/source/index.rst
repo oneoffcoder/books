@@ -38,7 +38,8 @@ Java, No Tears
    exceptions
    threads
    enum
-   annot   
+   annot
+   lambda
 
 
 Indices and tables
