@@ -35,6 +35,7 @@ Java, No Tears
    clazz
    generic
    libraries
+   collection
    exceptions
    threads
    enum
