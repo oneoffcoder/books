@@ -7,6 +7,7 @@ public class BasicValueOf {
   }
 
   public static class Person {
+
     private String firstName;
     private String lastName;
     private Gender gender;
@@ -17,7 +18,9 @@ public class BasicValueOf {
       this.gender = gender;
     }
 
-    public Gender getGender() { return gender; }
+    public Gender getGender() {
+      return gender;
+    }
 
     @Override
     public String toString() {

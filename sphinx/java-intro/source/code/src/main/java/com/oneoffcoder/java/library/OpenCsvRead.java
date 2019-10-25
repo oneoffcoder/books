@@ -2,11 +2,8 @@ package com.oneoffcoder.java.library;
 
 import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReaderBuilder;
-import com.opencsv.CSVWriterBuilder;
 import com.opencsv.ICSVParser;
-import com.opencsv.ICSVWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
 
 public class OpenCsvRead {
 
