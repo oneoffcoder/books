@@ -1,6 +1,9 @@
 Collections
 ===========
 
+- mutable vs immutable
+- thread-unsafe vs thread-safe
+
 List
 ----
 
