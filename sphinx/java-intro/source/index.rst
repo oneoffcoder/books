@@ -33,12 +33,12 @@ Java, No Tears
    control
    loops
    clazz
+   generic
    libraries
    exceptions
    threads
    enum
-   annot
-   generic
+   annot   
 
 
 Indices and tables
