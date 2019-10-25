@@ -1,5 +1,5 @@
-Class and object-oriented programming (OOP)
-===========================================
+Classes
+=======
 
 Basic
 -----
