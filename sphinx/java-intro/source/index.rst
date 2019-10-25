@@ -36,6 +36,8 @@ Java, No Tears
    libraries
    exceptions
    threads
+   enum
+   annot
 
 
 Indices and tables

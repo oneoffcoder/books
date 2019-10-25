@@ -8,6 +8,10 @@ Basic Types
    :language: java
    :linenos:
 
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/TypeWrapper.java
+   :language: java
+   :linenos:
+
 Arrays
 ------
 
