@@ -39,3 +39,65 @@ Static imports
 .. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/StaticImport.java
    :language: java
    :linenos:
+
+String tokenization
+-------------------
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/StringTokenization.java
+   :language: java
+   :linenos:
+
+Optional
+--------
+
+Basic use of optional
+^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/OptionalBasic.java
+   :language: java
+   :linenos:
+
+Nullable optional
+^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/OptionalNullable.java
+   :language: java
+   :linenos:
+
+Date
+----
+
+Basic date
+^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/DateBasic.java
+   :language: java
+   :linenos:
+
+Basic calendar
+^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/CalendarBasic.java
+   :language: java
+   :linenos:
+
+Calendar creation
+^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/CalendarCreation.java
+   :language: java
+   :linenos:
+
+Calendar manipulation
+^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/CalendarManipulation.java
+   :language: java
+   :linenos:
+
+Random number generation
+------------------------
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/RandomNumberGeneration.java
+   :language: java
+   :linenos:

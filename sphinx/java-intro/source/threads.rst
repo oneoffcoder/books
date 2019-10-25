@@ -38,3 +38,10 @@ Multiple threads
 .. literalinclude:: code/src/main/java/com/oneoffcoder/java/threading/MultipleThreads.java
    :language: java
    :linenos:
+
+Timer and TimerTask
+-------------------
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/threading/WithTimer.java
+   :language: java
+   :linenos:

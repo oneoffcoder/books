@@ -37,10 +37,10 @@ Java, No Tears
    libraries
    collection
    exceptions
+   lambda
    threads
    enum
    annot
-   lambda
 
 
 Indices and tables
