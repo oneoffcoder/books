@@ -44,3 +44,31 @@ Parentheses
 .. literalinclude:: code/oneoffcoder/operator/parentheses.py
    :language: python
    :linenos:
+
+List unpacking
+--------------
+
+.. literalinclude:: code/oneoffcoder/operator/listunpacking.py
+   :language: python
+   :linenos:
+
+List unpacking ignoring some values
+-----------------------------------
+
+.. literalinclude:: code/oneoffcoder/operator/listunpackingignoring.py
+   :language: python
+   :linenos:
+
+Merging lists via unpacking
+---------------------------
+
+.. literalinclude:: code/oneoffcoder/operator/mergelistviaunpacking.py
+   :language: python
+   :linenos:
+
+Merging dictionaries via unpacking
+----------------------------------
+
+.. literalinclude:: code/oneoffcoder/operator/mergedictionaryviaunpacking.py
+   :language: python
+   :linenos:
