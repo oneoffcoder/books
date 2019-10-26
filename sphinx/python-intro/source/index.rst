@@ -26,8 +26,19 @@ Python, No Tears
    :maxdepth: 2
    :numbered:
    :caption: Contents:
-
-
+   
+   intro
+   types
+   string
+   operators
+   control
+   loops
+   collection
+   clazz
+   libraries
+   exceptions
+   threads
+   io
 
 Indices and tables
 ==================
