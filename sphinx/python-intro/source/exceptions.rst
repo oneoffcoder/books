@@ -1,2 +1,4 @@
 Exceptions
 ==========
+
+.. highlight:: java

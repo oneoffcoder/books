@@ -1,2 +1,4 @@
 Loops
 =====
+
+.. highlight:: java

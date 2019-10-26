@@ -1,2 +1,4 @@
 Control Statements
 ==================
+
+.. highlight:: java

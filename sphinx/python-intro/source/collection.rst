@@ -1,2 +1,4 @@
 Collections
 ===========
+
+.. highlight:: java

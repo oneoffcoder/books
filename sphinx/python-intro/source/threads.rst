@@ -1,2 +1,4 @@
 Threading
 =========
+
+.. highlight:: java
