@@ -3,3 +3,8 @@ class Car(object):
         self.make = make
         self.model = model
         self.year = year
+
+
+car = Car('Honda', 'Accord', 2019)
+
+print(f'{car.make} {car.model} {car.year}')

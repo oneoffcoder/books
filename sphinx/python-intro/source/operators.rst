@@ -51,6 +51,7 @@ List unpacking
 .. literalinclude:: code/oneoffcoder/operator/listunpacking.py
    :language: python
    :linenos:
+   :emphasize-lines: 6
 
 List unpacking ignoring some values
 -----------------------------------
@@ -58,6 +59,7 @@ List unpacking ignoring some values
 .. literalinclude:: code/oneoffcoder/operator/listunpackingignoring.py
    :language: python
    :linenos:
+   :emphasize-lines: 5
 
 Merging lists via unpacking
 ---------------------------
@@ -65,6 +67,7 @@ Merging lists via unpacking
 .. literalinclude:: code/oneoffcoder/operator/mergelistviaunpacking.py
    :language: python
    :linenos:
+   :emphasize-lines: 4
 
 Merging dictionaries via unpacking
 ----------------------------------
@@ -72,3 +75,4 @@ Merging dictionaries via unpacking
 .. literalinclude:: code/oneoffcoder/operator/mergedictionaryviaunpacking.py
    :language: python
    :linenos:
+   :emphasize-lines: 9

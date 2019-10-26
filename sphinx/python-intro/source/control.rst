@@ -23,6 +23,7 @@ Nested if-else
 .. literalinclude:: code/oneoffcoder/control/nestedifelse.py
    :language: python
    :linenos:
+   :emphasize-lines: 8-11
 
 Multiple comparison in if-else
 ------------------------------
@@ -30,3 +31,4 @@ Multiple comparison in if-else
 .. literalinclude:: code/oneoffcoder/control/multicompare.py
    :language: python
    :linenos:
+   :emphasize-lines: 3,5
