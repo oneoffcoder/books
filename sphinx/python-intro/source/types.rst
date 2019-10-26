@@ -56,3 +56,10 @@ Map
 .. literalinclude:: code/oneoffcoder/type/maptype.py
    :language: python
    :linenos:
+
+Tuple
+-----
+
+.. literalinclude:: code/oneoffcoder/type/tupletype.py
+   :language: python
+   :linenos:

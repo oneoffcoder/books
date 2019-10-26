@@ -19,7 +19,7 @@ months.remove(-1)
 # extend a list
 months.extend([11, 12])
 
-# add two lists
+# concatenate two lists
 months = [0, 1, 2, 3, 4] + [5, 6, 7, 8, 9, 10]
 
 # get length of list
