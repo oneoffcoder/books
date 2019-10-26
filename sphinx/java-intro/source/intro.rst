@@ -14,6 +14,9 @@ Learning any programming language starts with the customary ``Hello, world!`` ex
 .. literalinclude:: code/src/main/java/com/oneoffcoder/java/intro/HelloWorld.java
    :language: java
    :linenos:
+   :lines: 6
+   :dedent: 4
+   :emphasize-lines: 1
 
 Let's break down this program.
 
