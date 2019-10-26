@@ -9,47 +9,115 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.stream.Collectors;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class TestAll {
 
-  /**
-   * Look at https://stackoverflow.com/questions/15582476/how-to-call-main-method-of-a-class-using-reflection-in-java.
-   * @throws IOException
-   * @throws ClassNotFoundException
-   * @throws NoSuchMethodException
-   * @throws InvocationTargetException
-   * @throws IllegalAccessException
-   */
-  @Test
-  public void testAll()
-      throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-    Set<String> ignore = new HashSet<>() {{
-      add("com.oneoffcoder.java.TestAll");
-      add("com.oneoffcoder.java.exception.ThrowException");
-      add("com.oneoffcoder.java.exception.DivideByZero");
-    }};
+  public static class Tuple {
+    private final Class clazz;
+    private final Exception exception;
+    private final boolean success;
 
-    Class[] classes = getClasses("com.oneoffcoder.java");
-    for (var c : classes) {
-      if (ignore.contains(c.getName())) {
-        continue;
+    public Tuple(Class clazz, Exception exception, boolean success) {
+      this.clazz = clazz;
+      this.exception = exception;
+      this.success = success;
+    }
+
+    @Override
+    public String toString() {
+      if (!success) {
+        return clazz.getName() + ": " + exception.toString();
+      } else {
+        return clazz.getName();
       }
+    }
+  }
 
-      System.out.println(c.getName());
+  public static class TestWorker implements Callable<Tuple> {
+    private final Class clazz;
+
+    public TestWorker(Class clazz) {
+      this.clazz = clazz;
+    }
+
+    @Override
+    public Tuple call() throws Exception {
+      Exception exception = null;
+      boolean success = true;
 
       try {
-        final Method method = c.getMethod("main", String[].class);
+        final Method method = clazz.getMethod("main", String[].class);
         final Object[] args = {new String[]{}};
         method.invoke(null, args);
       } catch (NoSuchMethodException e) {
         // swallow
       } catch (Exception e) {
-        Assert.assertTrue("Uknown exception: " + c, false);
+        exception = e;
+        success = false;
       }
+
+      return new Tuple(clazz, exception, success);
     }
+  }
+
+  /**
+   * Look at https://stackoverflow.com/questions/15582476/how-to-call-main-method-of-a-class-using-reflection-in-java.
+   * @throws IOException
+   * @throws ClassNotFoundException
+   */
+  @Test
+  public void testAll()
+      throws IOException, ClassNotFoundException, ExecutionException, InterruptedException {
+    final Set<String> ignore = new HashSet<>() {{
+      add("com.oneoffcoder.java.TestAll");
+      add("com.oneoffcoder.java.exception.ThrowException");
+      add("com.oneoffcoder.java.exception.DivideByZero");
+    }};
+
+    List<Callable<Tuple>> callables = getClasses("com.oneoffcoder.java")
+        .stream()
+        .filter(c -> !ignore.contains(c.getName()))
+        .map(c -> new TestWorker(c))
+        .collect(Collectors.toList());
+
+    ExecutorService service = Executors.newFixedThreadPool(10);
+    List<Future<Tuple>> futures = new ArrayList<>();
+    for (var callable : callables) {
+      futures.add(service.submit(callable));
+    }
+
+    List<Tuple> results = futures.stream()
+        .map(f -> {
+          try {
+            return Optional.of(f.get());
+          } catch (Exception e) {
+            // swallow
+          }
+          return Optional.ofNullable(null);
+        })
+        .filter(o -> o.isPresent())
+        .map(o -> (Tuple)o.get())
+        .collect(Collectors.toList());
+
+    results.forEach(tuple -> {
+      if (!tuple.success) {
+        Assert.assertTrue(tuple.toString(), false);
+      }
+    });
+
+    service.shutdown();
+
+    System.out.println("done testing!");
   }
 
   /**
@@ -59,7 +127,7 @@ public class TestAll {
    * @throws ClassNotFoundException
    * @throws IOException
    */
-  private static Class[] getClasses(String packageName)
+  private static List<Class> getClasses(String packageName)
       throws ClassNotFoundException, IOException {
     ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
     assert classLoader != null;
@@ -70,11 +138,12 @@ public class TestAll {
       URL resource = resources.nextElement();
       dirs.add(new File(resource.getFile()));
     }
-    ArrayList<Class> classes = new ArrayList<Class>();
+
+    List<Class> classes = new ArrayList<Class>();
     for (File directory : dirs) {
       classes.addAll(findClasses(directory, packageName));
     }
-    return classes.toArray(new Class[classes.size()]);
+    return classes;
   }
 
   /**
