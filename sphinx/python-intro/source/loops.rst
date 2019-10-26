@@ -59,14 +59,37 @@ Looping over two lists with enumeration
 Comprehension
 -------------
 
-list comprehension
+List comprehension
 ^^^^^^^^^^^^^^^^^^
 
-set comprehension
+.. literalinclude:: code/oneoffcoder/loop/listcomprehension.py
+   :language: python
+   :linenos:
+
+Nested list comprehension
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/oneoffcoder/loop/nestedlistcomprehension.py
+   :language: python
+   :linenos:
+
+Set comprehension
 ^^^^^^^^^^^^^^^^^
 
-dictionary comprehension
+.. literalinclude:: code/oneoffcoder/loop/setcomprehension.py
+   :language: python
+   :linenos:
+
+Dictionary comprehension
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-generator comprehension
+.. literalinclude:: code/oneoffcoder/loop/dictionarycomprehension.py
+   :language: python
+   :linenos:
+
+Generator comprehension
 ^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: code/oneoffcoder/loop/generatorcomprehension.py
+   :language: python
+   :linenos:

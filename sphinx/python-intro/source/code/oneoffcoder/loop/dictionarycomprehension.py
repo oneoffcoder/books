@@ -6,7 +6,7 @@ for name in names:
     m[name] = len(name)
 
 
-# create a map in this way
+# create a map in this way, using a map comprehension
 names = ['Jack', 'John', 'Joe', 'Mary']
 
 m = {name: len(name) for name in names}

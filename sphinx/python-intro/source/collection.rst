@@ -1,4 +1,0 @@
-Collections
-===========
-
-.. highlight:: python

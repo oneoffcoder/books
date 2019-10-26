@@ -32,7 +32,6 @@ Python, No Tears
    operators
    control
    loops
-   collection
    clazz
    libraries
    exceptions
