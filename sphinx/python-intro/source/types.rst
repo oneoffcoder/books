@@ -39,6 +39,20 @@ String manipulation
 List
 ----
 
-.. literalinclude:: code/oneoffcoder/type/list.py
+.. literalinclude:: code/oneoffcoder/type/listtype.py
+   :language: python
+   :linenos:
+
+Set
+---
+
+.. literalinclude:: code/oneoffcoder/type/settype.py
+   :language: python
+   :linenos:
+
+Map
+---
+
+.. literalinclude:: code/oneoffcoder/type/maptype.py
    :language: python
    :linenos:
