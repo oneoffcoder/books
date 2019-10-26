@@ -1,4 +1,4 @@
 Threading
 =========
 
-.. highlight:: java
+.. highlight:: python

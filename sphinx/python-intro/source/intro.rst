@@ -1,7 +1,7 @@
 Hello, World!
 ==============
 
-.. highlight:: java
+.. highlight:: python
 
 .. literalinclude:: code/oneoffcoder/intro/helloworld.py
    :language: python

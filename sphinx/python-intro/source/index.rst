@@ -29,7 +29,6 @@ Python, No Tears
    
    intro
    types
-   string
    operators
    control
    loops

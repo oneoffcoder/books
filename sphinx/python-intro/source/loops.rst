@@ -1,4 +1,4 @@
 Loops
 =====
 
-.. highlight:: java
+.. highlight:: python

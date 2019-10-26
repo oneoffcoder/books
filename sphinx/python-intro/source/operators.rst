@@ -1,7 +1,7 @@
 Operators
 =========
 
-.. highlight:: java
+.. highlight:: python
 
 Basic arithmetic operators 
 --------------------------

@@ -1,4 +1,4 @@
 Classes
 =======
 
-.. highlight:: java
+.. highlight:: python

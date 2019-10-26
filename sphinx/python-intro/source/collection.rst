@@ -1,4 +1,4 @@
 Collections
 ===========
 
-.. highlight:: java
+.. highlight:: python

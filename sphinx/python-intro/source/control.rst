@@ -1,7 +1,7 @@
 Control Statements
 ==================
 
-.. highlight:: java
+.. highlight:: python
 
 if-else
 -------

@@ -1,4 +1,4 @@
 Exceptions
 ==========
 
-.. highlight:: java
+.. highlight:: python

@@ -1,4 +1,4 @@
 Input/Output (IO)
 =================
 
-.. highlight:: java
+.. highlight:: python
