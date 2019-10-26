@@ -1,6 +1,8 @@
 String
 ======
 
+.. highlight:: java
+
 String creation
 ---------------
 
