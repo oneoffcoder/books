@@ -116,11 +116,6 @@ Inheritance
    :lines: 57-64
    :dedent: 4
 
-Packaging
----------
-
-`TODO`
-
 Interface
 ---------
 
