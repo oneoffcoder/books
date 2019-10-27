@@ -19,8 +19,8 @@ Read data from a file
    :linenos:
    :emphasize-lines: 1
 
-Writing and reading to a JSON file
-----------------------------------
+Writing/reading to/from a JSON file
+-----------------------------------
 
 .. literalinclude:: code/oneoffcoder/io/wrjson.py
    :language: python
@@ -42,3 +42,11 @@ Shelving/unshelfing data to/from a file
    :language: python
    :linenos:
    :emphasize-lines: 6-7,10-11
+
+Creating temporary file and directory
+-------------------------------------
+
+.. literalinclude:: code/oneoffcoder/io/tempio.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 4,9,13
