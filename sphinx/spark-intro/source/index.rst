@@ -27,15 +27,6 @@ Spark, No Tears
    :numbered:
    :caption: Contents:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
 About
 =====
 

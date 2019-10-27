@@ -44,14 +44,6 @@ Java, No Tears
    annot
    io
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
 About
 =====
 
