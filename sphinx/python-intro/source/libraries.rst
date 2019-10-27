@@ -79,3 +79,11 @@ Listing files
    :language: python
    :linenos:
    :emphasize-lines: 3
+
+HTTP
+----
+
+.. literalinclude:: code/oneoffcoder/library/httpop.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 5,17,30-31
