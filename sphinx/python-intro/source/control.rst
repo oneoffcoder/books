@@ -9,6 +9,7 @@ if-else
 .. literalinclude:: code/oneoffcoder/control/ifelse.py
    :language: python
    :linenos:
+   :emphasize-lines: 4,6
 
 if-elseif-else
 --------------
@@ -16,6 +17,7 @@ if-elseif-else
 .. literalinclude:: code/oneoffcoder/control/ifelifelse.py
    :language: python
    :linenos:
+   :emphasize-lines: 3,5,7
 
 Nested if-else
 --------------
