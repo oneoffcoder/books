@@ -26,6 +26,9 @@ Scikit, No Tears
    :maxdepth: 2
    :numbered:
    :caption: Contents:
+   
+   linear-regression
+   logistic-regression
 
 About
 =====
