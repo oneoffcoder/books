@@ -30,6 +30,7 @@ Scikit, No Tears
    linear-regression
    logistic-regression
    classification
+   clustering
 
 About
 =====
