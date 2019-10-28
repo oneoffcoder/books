@@ -31,6 +31,7 @@ Scikit, No Tears
    logistic-regression
    classification
    clustering
+   dimension-reduction
 
 About
 =====
