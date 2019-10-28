@@ -9,7 +9,14 @@ A collection of online books for data science, computer science and coding!
 Install dependencies.
 
 ```bash
-pip install sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinx-autobuild
+pip install \
+    sphinx \
+    sphinx_rtd_theme \
+    sphinxcontrib-bibtex \
+    sphinx-autobuild \
+    nbsphinx
+
+conda install -c conda-forge pandoc
 ```
 
 Then run.
