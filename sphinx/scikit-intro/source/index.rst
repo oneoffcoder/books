@@ -32,6 +32,7 @@ Scikit, No Tears
    classification
    clustering
    dimension-reduction
+   generate-samples
 
 About
 =====
