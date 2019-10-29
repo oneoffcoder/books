@@ -31,8 +31,14 @@ Scikit, No Tears
    logistic-regression
    classification
    clustering
+   nearest-neighbors
    dimension-reduction
    generate-samples
+   pairwise-metrics
+   preprocessing
+   imputation
+   pipelines
+   validation
 
 About
 =====
