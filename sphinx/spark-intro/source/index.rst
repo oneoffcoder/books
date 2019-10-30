@@ -26,6 +26,12 @@ Spark, No Tears
    :maxdepth: 2
    :numbered:
    :caption: Contents:
+   
+   rdd
+   dataframes
+   io
+   sparksql
+   graphs
 
 About
 =====
