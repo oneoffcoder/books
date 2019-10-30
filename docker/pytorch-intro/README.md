@@ -11,7 +11,7 @@ To run the container.
 ```bash
 docker run -it \
     -p 8888:8888 \
-    -v $HOME/git/books/docker/pytorch-intro/ipynb:/root/ipynb \
+    -v $HOME/git/books/sphinx/pytorch-intro/source:/root/ipynb \
     book-pytorch-intro:local
 ```
 
