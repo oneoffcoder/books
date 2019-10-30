@@ -20,7 +20,8 @@
 project = 'Java, No Tears'
 copyright = '2019, One-Off Coder'
 author = 'One-Off Coder'
-
+version = '0.0.1'
+release = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
 
@@ -52,7 +53,9 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_show_sourcelink = False
-html_logo='_static/images/logo-small.png'
+html_show_sphinx = False
+html_logo = '_static/images/logo-small.png'
+html_favicon = '_static/images/favicon.ico'
 
 html_theme_options = {
     'canonical_url': '',
