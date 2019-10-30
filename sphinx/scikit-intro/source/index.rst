@@ -27,7 +27,7 @@ Scikit, No Tears
    :numbered:
    :caption: Contents:
    
-   linear-regression
+   regression
    logistic-regression
    classification
    clustering
