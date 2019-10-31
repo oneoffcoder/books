@@ -29,8 +29,8 @@ Spark, No Tears
    
    rdd
    dataframes
-   io
    sparksql
+   io
    graphs
 
 About
