@@ -9,7 +9,7 @@ class AlphaTCPHandler(socketserver.BaseRequestHandler):
 
         try:
             while True:
-                s = f'{choice(alphabets)}'
+                s = f'{choice(alphabets)}\n'
                 b = bytes(s, 'utf-8')
                 self.request.sendall(b)
                 time.sleep(1)

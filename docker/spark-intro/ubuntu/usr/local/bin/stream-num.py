@@ -8,7 +8,7 @@ class NumberTCPHandler(socketserver.BaseRequestHandler):
 
         try:
             while True:
-                s = f'{randint(1, 100)}'
+                s = f'{randint(1, 100)}\n'
                 b = bytes(s, 'utf-8')
                 self.request.sendall(b)
                 time.sleep(1)
