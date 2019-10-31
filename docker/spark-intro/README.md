@@ -31,6 +31,8 @@ docker run -it \
     -p 9000:9000 \
     -p 8888:8888 \
     -p 9864:9864 \
+    -p 300:300 \
+    -p 301:301 \
     -v $HOME/git/books/sphinx/spark-intro/source:/root/ipynb \
     -e PYSPARK_MASTER=spark://localhost:7077 \
     book-spark-intro:local
