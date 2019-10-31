@@ -31,6 +31,7 @@ Spark, No Tears
    dataframes
    sparksql
    io
+   dstreams
    graphs
 
 About
