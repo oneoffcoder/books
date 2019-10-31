@@ -93,3 +93,8 @@ Cite this book as follows.::
     author={One-Off Coder}, 
     year={2019}, 
     month={Oct}}
+
+Author
+======
+
+Jee Vang, Ph.D.
