@@ -93,9 +93,3 @@ Cite this book as follows.::
     author={One-Off Coder}, 
     year={2019}, 
     month={Oct}}
-
-Bibliography
-============
-
-.. bibliography:: references.bib
-   :style: alpha
