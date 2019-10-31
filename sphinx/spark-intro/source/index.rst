@@ -33,6 +33,7 @@ Spark, No Tears
    io
    dstreams
    graphs
+   machine-learning
 
 About
 =====
