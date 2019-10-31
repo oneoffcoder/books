@@ -1,0 +1,4 @@
+{"id": 1, "first_name": "John", "last_name": "Doe", "age": 27, "weight": 155.5, "height": 6.5, "male": true, "address": {"street": "123 Main Street", "city": "Washington", "state": "DC", "zip": 20050}, "sports": ["hockey", "tennis"]}
+{"id": 2, "first_name": "Jane", "last_name": "Smith", "age": 22, "weight": 135.5, "height": 5.7, "male": false, "address": {"street": "456 South Ave", "city": "Washington", "state": "DC", "zip": 20051}, "sports": ["basketball", "tennis"]}
+{"id": 3, "first_name": "Jack", "last_name": "Smith", "age": 25, "weight": 175.5, "height": 6.6, "male": true, "address": {"street": "44 Linton Road", "city": "Los Angeles", "state": "CA", "zip": 90210}, "sports": ["baseball", "soccer"]}
+{"id": 4, "first_name": "Janet", "last_name": "Doe", "age": 18, "weight": 125.5, "height": 5.5, "male": false, "address": {"street": "3545 S. King Street", "city": "Los Angeles", "state": "CA", "zip": 90211}, "sports": ["judo", "baseball"]}

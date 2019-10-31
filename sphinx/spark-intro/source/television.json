@@ -1,0 +1,12 @@
+{"id": 1, "person_id": 1, "name": "House, MD"}
+{"id": 2, "person_id": 1, "name": "Who's the Boss?"}
+{"id": 3, "person_id": 2, "name": "Charles in Charge"}
+{"id": 4, "person_id": 2, "name": "Facts of Life"}
+{"id": 5, "person_id": 2, "name": "Full House"}
+{"id": 6, "person_id": 3, "name": "Happy Days"}
+{"id": 7, "person_id": 3, "name": "Cheers"}
+{"id": 8, "person_id": 3, "name": "Night Court"}
+{"id": 9, "person_id": 3, "name": "Family Ties"}
+{"id": 10, "person_id": 5, "name": "ALF"}
+{"id": 11, "person_id": 5, "name": "Growing Pains"}
+{"id": 12, "person_id": 5, "name": "Three's Company"}
