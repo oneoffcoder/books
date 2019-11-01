@@ -29,6 +29,14 @@ PyTorch, No Tears
    
    environment
    tensor
+   transformation
+   data-loader
+   loss
+   optimizer
+   scheduler
+   model
+   model-persistence
+   learning
 
 About
 =====
