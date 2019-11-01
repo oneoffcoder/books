@@ -26,6 +26,9 @@ PyTorch, No Tears
    :maxdepth: 2
    :numbered:
    :caption: Contents:
+   
+   environment
+   tensor
 
 About
 =====
