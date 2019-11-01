@@ -29,8 +29,8 @@ PyTorch, No Tears
    
    environment
    tensor
+   data
    transformation
-   data-loader
    loss
    optimizer
    scheduler

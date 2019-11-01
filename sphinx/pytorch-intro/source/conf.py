@@ -44,7 +44,8 @@ exclude_patterns = [
     '_build', 
     '**.ipynb_checkpoints', 
     '**/.ipynb_checkpoints',
-    '**/output'
+    '**/output',
+    '_*.ipynb'
 ]
 source_suffix = '.rst'
 
