@@ -10,6 +10,10 @@ Basic types
    :language: python
    :linenos:
 
+.. literalinclude:: code/oneoffcoder/type/typedeclaration.py
+   :language: python
+   :linenos:
+
 String
 ------
 
