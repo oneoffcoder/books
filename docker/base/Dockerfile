@@ -3,6 +3,7 @@ LABEL One-Off Coder "info@oneoffcoder.com"
 
 ENV CONDA_HOME=/usr/local/conda
 ENV PATH=${CONDA_HOME}/bin:${PATH}
+ENV NOTEBOOK_PASSWORD=""
 
 # setup ubuntu
 RUN apt-get update -y \
