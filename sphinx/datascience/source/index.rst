@@ -23,11 +23,16 @@ Data Science Topics
 ===================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :numbered:
    :caption: Contents:
 
+   generate-gaussian-distributed-values
    missing-data
+   autograd-regression-gradient-descent
+   autograd-logistic-regression-gradient-descent
+   autograd-poisson-regression-gradient-descent
+   dirichlet-multinomial-distribution
    gmm
    gmm-dirichlet
    gmm-data-discretization
