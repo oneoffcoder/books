@@ -1,0 +1,42 @@
+version: 0.2
+
+env:
+  variables:
+    CONDA_HOME: "/usr/local/conda"
+    PATH: "${CONDA_HOME}/bin:${PATH}"
+    JAVA_INTRO: "./sphinx/java-intro"
+    PYTHON_INTRO: "./sphinx/python-intro"
+    PYTORCH_INTRO: "./sphinx/pytorch-intro"
+    SCIKIT_INTRO: "./sphinx/scikit-intro"
+    SPARK_INTRO: "./sphinx/spark-intro"
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+      - apt-get -y install wget
+      - wget -q https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O /tmp/anaconda.sh
+      - /bin/bash /tmp/anaconda.sh -b -p $CONDA_HOME
+      - $CONDA_HOME/bin/pip install sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinx-autobuild nbsphinx
+    finally:
+      - echo Install finished
+  pre_build:
+    commands:
+      - echo Entered the pre-build phase...
+    finally:
+      - echo Prebuild finished 
+  build:
+    commands:
+      - echo Entered the build phase...
+      - cd $JAVA_INTRO && make clean && make html && cd ..
+      - cd $PYTHON_INTRO && make clean && make html && cd ..
+      - cd $PYTORCH_INTRO && make clean && make html && cd ..
+      - cd $SCIKIT_INTRO && make clean && make html && cd ..
+      - cd $SPARK_INTRO && make clean && make html && cd ..
+    finally:
+      - echo Build finished
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - echo Build completed on `date`
