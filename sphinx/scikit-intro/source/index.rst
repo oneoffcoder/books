@@ -27,13 +27,14 @@ Scikit, No Tears
    :numbered:
    :caption: Contents:
    
+   generate-samples
+   visualizing
    regression
    logistic-regression
    classification
    clustering
    nearest-neighbors
    dimension-reduction
-   generate-samples
    pairwise-metrics
    preprocessing
    imputation
