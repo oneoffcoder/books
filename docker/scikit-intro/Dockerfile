@@ -7,4 +7,4 @@ RUN apt-get update -y \
     && apt-get clean
 
 # setup conda
-RUN $CONDA_HOME/bin/conda install -c anaconda scikit-learn -y
+RUN $CONDA_HOME/bin/conda install scikit-learn missingno -c anaconda -c conda-forge -y
