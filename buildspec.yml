@@ -1,15 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    CONDA_HOME: "/usr/local/conda"
-    PATH: "${CONDA_HOME}/bin:${PATH}"
-    JAVA_INTRO: "./sphinx/java-intro"
-    PYTHON_INTRO: "./sphinx/python-intro"
-    PYTORCH_INTRO: "./sphinx/pytorch-intro"
-    SCIKIT_INTRO: "./sphinx/scikit-intro"
-    SPARK_INTRO: "./sphinx/spark-intro"
-
 phases:
   install:
     runtime-versions:
@@ -29,11 +19,7 @@ phases:
   build:
     commands:
       - echo Entered the build phase...
-      - cd $JAVA_INTRO && make clean && make html && cd ..
-      - cd $PYTHON_INTRO && make clean && make html && cd ..
-      - cd $PYTORCH_INTRO && make clean && make html && cd ..
-      - cd $SCIKIT_INTRO && make clean && make html && cd ..
-      - cd $SPARK_INTRO && make clean && make html && cd ..
+      - cd sphinx/java-intro && make clean && make html && cd ../..
     finally:
       - echo Build finished
   post_build:
