@@ -27,6 +27,7 @@ Data Science Topics
    :numbered:
    :caption: Contents:
 
+   missing-data
    gmm
    gmm-dirichlet
    gmm-data-discretization
