@@ -6,8 +6,19 @@
 
 A collection of online books for data science, computer science and coding!
 
-* [Java, No Tears](https://learn-java.oneoffcoder.com)
-* [Python, No Tears](https://learn-python.oneoffcoder.com)
-* [PyTorch, No Tears](https://learn-pytorch.oneoffcoder.com)
-* [Scikit, No Tears](https://learn-scikit.oneoffcoder.com)
-* [Spark, No Tears](https://learn-spark.oneoffcoder.com)
+* Java, No Tears 
+  * [Book](https://learn-java.oneoffcoder.com)
+  * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-java-intro)
+* Python, No Tears 
+  * [Book](https://learn-python.oneoffcoder.com)
+  * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-python-intro)
+* PyTorch, No Tears 
+  * [Book](https://learn-pytorch.oneoffcoder.com)
+  * [Docker Image, CPU](https://hub.docker.com/r/oneoffcoder/book-pytorch-intro)
+  * [Docker Image, GPU](https://hub.docker.com/r/oneoffcoder/book-pytorch-intro-gpu)
+* Scikit, No Tears 
+  * [Book](https://learn-scikit.oneoffcoder.com)
+  * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-scikit-intro)
+* Spark, No Tears 
+  * [Book](https://learn-spark.oneoffcoder.com)
+  * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-spark-intro)
