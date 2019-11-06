@@ -20,4 +20,5 @@ phases:
       - cd sphinx/spark-intro && make clean && make html && cd ../..
   post_build:
     commands:
+      - cd sphinx/java-intro/build/html && zip -r /tmp/java-intro.zip . && cd ../../../..
       - echo Build completed on `date`
