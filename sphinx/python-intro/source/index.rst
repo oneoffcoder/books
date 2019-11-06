@@ -101,7 +101,7 @@ Cite this book as follows.::
 
     @misc{oneoffcoder_python_intro_2019, 
     title={Python, No Tears}, 
-    url={https://python-intro.oneoffcoder.com}, 
+    url={https://learn-python.oneoffcoder.com}, 
     author={One-Off Coder}, 
     year={2019}, 
     month={Oct}}

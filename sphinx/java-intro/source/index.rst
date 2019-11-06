@@ -106,7 +106,7 @@ Cite this book as follows.::
 
     @misc{oneoffcoder_java_intro_2019, 
     title={Java, No Tears}, 
-    url={https://java-intro.oneoffcoder.com}, 
+    url={https://learn-java.oneoffcoder.com}, 
     author={One-Off Coder}, 
     year={2019}, 
     month={Oct}}
