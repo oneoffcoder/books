@@ -2,7 +2,7 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-scikit-intro
-VERSION=0.0.3
+VERSION=0.0.4
 IMAGEID=$(docker images | awk -v repo="$REPOSITORY" -v tag="local" 'index($1, repo) && index($2, tag) {print $3}')
 
 echo ${IMAGEID}

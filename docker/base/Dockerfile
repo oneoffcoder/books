@@ -12,8 +12,8 @@ RUN apt-get update -y \
     && apt-get clean
 
 # setup conda
-RUN wget -q https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh -O /tmp/Anaconda3-2019.07-Linux-x86_64.sh \
-    && /bin/bash /tmp/Anaconda3-2019.07-Linux-x86_64.sh -b -p $CONDA_HOME \
+RUN wget -q https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O /tmp/anaconda.sh \
+    && /bin/bash /tmp/anaconda.sh -b -p $CONDA_HOME \
     && $CONDA_HOME/bin/conda update -n root conda -y
 COPY ubuntu/root/.jupyter /root/.jupyter/
 
