@@ -7,7 +7,7 @@ phases:
     commands:
       - echo Entered the install phase...
       - apt-get -q install pandoc -y
-      - pip install sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinx-autobuild nbsphinx -q
+      - pip install ipython sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinx-autobuild nbsphinx -q
     finally:
       - echo Install finished
   pre_build:
