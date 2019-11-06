@@ -41,6 +41,7 @@ Data Science Topics
    mvn-conditional
    partial-correlation
    precision-recall-roc
+   generate-random-bbn
    chernoff-faces
    chernoff-deeplearning
    chernoff-classification
