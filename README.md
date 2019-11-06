@@ -6,8 +6,8 @@
 
 A collection of online books for data science, computer science and coding!
 
-* [Java, No Tears](https://intro-java.oneoffcoder.com)
-* [Python, No Tears](https://python-java.oneoffcoder.com)
-* [PyTorch, No Tears](https://pytorch-java.oneoffcoder.com)
-* [Scikit, No Tears](https://scikit-java.oneoffcoder.com)
-* [Spark, No Tears](https://spark-java.oneoffcoder.com)
+* [Java, No Tears](https://learn-java.oneoffcoder.com)
+* [Python, No Tears](https://learn-python.oneoffcoder.com)
+* [PyTorch, No Tears](https://learn-pytorch.oneoffcoder.com)
+* [Scikit, No Tears](https://learn-scikit.oneoffcoder.com)
+* [Spark, No Tears](https://learn-spark.oneoffcoder.com)
