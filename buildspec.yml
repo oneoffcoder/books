@@ -6,7 +6,7 @@ phases:
       python: "3.7"
     commands:
       - echo Entered the install phase...
-      - pip install sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinx-autobuild nbsphinx
+      - pip install sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinx-autobuild nbsphinx -q
     finally:
       - echo Install finished
   pre_build:
@@ -20,6 +20,10 @@ phases:
     commands:
       - echo Entered the build phase...
       - cd sphinx/java-intro && make clean && make html && cd ../..
+      - cd sphinx/python-intro && make clean && make html && cd ../..
+      - cd sphinx/pytorch-intro && make clean && make html && cd ../..
+      - cd sphinx/scikit-intro && make clean && make html && cd ../..
+      - cd sphinx/spark-intro && make clean && make html && cd ../..
     finally:
       - echo Build finished
   post_build:
