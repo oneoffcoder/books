@@ -5,30 +5,20 @@ phases:
     runtime-versions:
       python: "3.7"
     commands:
-      - echo Entered the install phase...
       - apt-get -qq install pandoc -y
       - pip install ipython sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinx-autobuild nbsphinx -q
-    finally:
-      - echo Install finished
   pre_build:
     commands:
-      - echo Entered the pre-build phase...
       - python --version
       - pip --version
-    finally:
-      - echo Prebuild finished 
   build:
     commands:
-      - echo Entered the build phase...
       - cd sphinx/java-intro && make clean && make html && cd ../..
       - cd sphinx/python-intro && make clean && make html && cd ../..
       - cd sphinx/pytorch-intro && make clean && make html && cd ../..
       - cd sphinx/scikit-intro && make clean && make html && cd ../..
       - cd sphinx/spark-intro && make clean && make html && cd ../..
-    finally:
-      - echo Build finished
   post_build:
     commands:
-      - echo Entered the post_build phase...
       - aws s3 sync sphinx/java-intro/build/html s3://learn-java.oneoffcoder.com
       - echo Build completed on `date`
