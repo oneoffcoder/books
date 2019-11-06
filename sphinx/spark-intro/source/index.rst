@@ -97,7 +97,7 @@ Cite this book as follows.::
 
     @misc{oneoffcoder_spark_intro_2019, 
     title={Spark, No Tears}, 
-    url={https://spark-intro.oneoffcoder.com}, 
+    url={https://learn-spark.oneoffcoder.com}, 
     author={One-Off Coder}, 
     year={2019}, 
     month={Oct}}

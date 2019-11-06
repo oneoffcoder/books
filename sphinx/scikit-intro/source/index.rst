@@ -103,7 +103,7 @@ Cite this book as follows.::
 
     @misc{oneoffcoder_scikit_intro_2019, 
     title={Scikit, No Tears}, 
-    url={https://scikit-intro.oneoffcoder.com}, 
+    url={https://learn-scikit.oneoffcoder.com}, 
     author={One-Off Coder}, 
     year={2019}, 
     month={Oct}}

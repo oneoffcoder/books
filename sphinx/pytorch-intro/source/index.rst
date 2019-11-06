@@ -100,7 +100,7 @@ Cite this book as follows.::
 
     @misc{oneoffcoder_pytorch_intro_2019, 
     title={PyTorch, No Tears}, 
-    url={https://pytorch-intro.oneoffcoder.com}, 
+    url={https://learn-pytorch.oneoffcoder.com}, 
     author={One-Off Coder}, 
     year={2019}, 
     month={Oct}}
