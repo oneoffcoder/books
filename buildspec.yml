@@ -20,5 +20,5 @@ phases:
       - cd sphinx/spark-intro && make clean && make html && cd ../..
   post_build:
     commands:
-      - cd sphinx/java-intro/build/html && zip -r /tmp/java-intro.zip . && cd ../../../..
+      - aws s3 sync sphinx/java-intro/build/html s3://learn-java.oneoffcoder.com
       - echo Build completed on `date`
