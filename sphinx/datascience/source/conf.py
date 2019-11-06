@@ -48,6 +48,8 @@ exclude_patterns = [
     '_*.ipynb',
     'shapes/',
     '**/shapes'
+    'faces/', '**/faces',
+    'faces-small/', '**/faces-small'
 ]
 
 
