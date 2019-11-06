@@ -30,4 +30,5 @@ phases:
   post_build:
     commands:
       - echo Entered the post_build phase...
+      - aws s3 sync sphinx/java-intro/build/html s3://learn-java.oneoffcoder.com
       - echo Build completed on `date`
