@@ -1,0 +1,16 @@
+{% extends "!layout.html" %}
+
+{% block footer %}
+{{ super() }}
+<script async type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "www.googletagmanager.com/gtag/js?id=UA-150285674-1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-150285674-1');
+  } catch(err) {}</script>
+{% endblock %}

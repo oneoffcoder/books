@@ -1,6 +1,6 @@
 #!/bin/bash
 
-projects=( "java-intro" "python-intro" "pytorch-intro" "scikit-intro" "spark-intro" "datascience" )
+projects=( "java-intro" "python-intro" "pytorch-intro" "scikit-intro" "spark-intro" "datascience" "python-dothis" )
 
 for project in "${projects[@]}"
 do
