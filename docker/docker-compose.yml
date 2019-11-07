@@ -6,7 +6,7 @@ services:
       - "7770:8888"
     volumes:
       - type: bind
-        source: ./java-intro/ipynb
+        source: ../sphinx/java-intro/source
         target: /root/ipynb
         consistency: consistent
     environment:
@@ -23,7 +23,7 @@ services:
       - "7771:8888"
     volumes:
       - type: bind
-        source: ./python-intro/ipynb
+        source: ../sphinx/python-intro/source
         target: /root/ipynb
         consistency: consistent
     healthcheck:
@@ -33,12 +33,12 @@ services:
       retries: 3
       start_period: 40s
   pytorch:
-    image: oneoffcoder/book-pytorch-intro
+    image: oneoffcoder/book-pytorch-intro-gpu
     ports:
       - "7772:8888"
     volumes:
       - type: bind
-        source: ./pytorch-intro/ipynb
+        source: ../sphinx/pytorch-intro/source
         target: /root/ipynb
         consistency: consistent
     healthcheck:
@@ -53,7 +53,7 @@ services:
       - "7773:8888"
     volumes:
       - type: bind
-        source: ./scikit-intro/ipynb
+        source: ../sphinx/scikit-intro/source
         target: /root/ipynb
         consistency: consistent
     healthcheck:
@@ -73,7 +73,7 @@ services:
       - "9864:9864"
     volumes:
       - type: bind
-        source: ./spark-intro/ipynb
+        source: ../sphinx/spark-intro/source
         target: /root/ipynb
         consistency: consistent
     healthcheck:
@@ -88,7 +88,7 @@ services:
       - "7775:8888"
     volumes:
       - type: bind
-        source: ./datascience/ipynb
+        source: ../sphinx/datascience/source
         target: /root/ipynb
         consistency: consistent
     healthcheck:
