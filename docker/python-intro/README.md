@@ -1,4 +1,4 @@
-![One-Off Coder Logo](../logo.png "One-Off Coder")
+![One-Off Coder Logo](../../logo.png "One-Off Coder")
 
 # Purpose
 
