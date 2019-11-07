@@ -38,6 +38,7 @@ Data Science Topics
    autograd-regression-gradient-descent
    autograd-logistic-regression-gradient-descent
    autograd-poisson-regression-gradient-descent
+   neural-network-gradient-descent
    psuedo-r-squared-logistic-regression
    pca
    lda
@@ -51,6 +52,7 @@ Data Science Topics
    chernoff-deeplearning
    chernoff-classification
    chernoff-inception_v3
+   restricted-boltzmann-machine
 
 About
 =====
