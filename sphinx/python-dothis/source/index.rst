@@ -137,7 +137,7 @@ Copyright
     </a>
     <br />
     <br />
-    The full source code is available on <a href="https://github.com/oneoffcoder/python-dothis" target="_blank">GitHub</a>.
+    The full source code is available on <a href="https://github.com/oneoffcoder/books" target="_blank">GitHub</a>.
     <br />
     <br />
     </embed>
