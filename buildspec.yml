@@ -19,6 +19,7 @@ phases:
       - cd sphinx/scikit-intro && make clean && make html && cd ../..
       - cd sphinx/spark-intro && make clean && make html && cd ../..
       - cd sphinx/datascience && make clean && make html && cd ../..
+      - cd sphinx/python-dothis && make clean && make html && cd ../..
   post_build:
     commands:
       - aws s3 sync sphinx/java-intro/build/html s3://learn-java.oneoffcoder.com --quiet
@@ -27,4 +28,5 @@ phases:
       - aws s3 sync sphinx/scikit-intro/build/html s3://learn-scikit.oneoffcoder.com --quiet
       - aws s3 sync sphinx/spark-intro/build/html s3://learn-spark.oneoffcoder.com --quiet
       - aws s3 sync sphinx/datascience/build/html s3://datascience.oneoffcoder.com --quiet
+      - aws s3 sync sphinx/python-dothis/build/html s3://python.oneoffcoder.com --quiet
       - echo Build completed on `date`
