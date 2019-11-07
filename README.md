@@ -22,6 +22,9 @@ A collection of online books for data science, computer science and coding!
 * Spark, No Tears 
   * [Book](https://learn-spark.oneoffcoder.com)
   * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-spark-intro)
+* Data Science Topics 
+  * [Book](https://datascience.oneoffcoder.com)
+  * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-datascience)
 
 # Copyright Stuff
 

@@ -23,22 +23,36 @@ Data Science Topics
 ===================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :numbered:
    :caption: Contents:
 
+   generate-gaussian-distributed-values
+   kullback-leibler-divergence
+   dirichlet-multinomial-distribution
    gmm
    gmm-dirichlet
    gmm-data-discretization
+   missing-data
+   gradient-descent
+   autograd-regression-gradient-descent
+   autograd-logistic-regression-gradient-descent
+   autograd-poisson-regression-gradient-descent
+   neural-network-gradient-descent
+   psuedo-r-squared-logistic-regression
    pca
    lda
+   latent-semantic-analysis
    mvn-conditional
    partial-correlation
    precision-recall-roc
+   generate-random-bbn
+   neural-network-handcraft
    chernoff-faces
    chernoff-deeplearning
    chernoff-classification
    chernoff-inception_v3
+   restricted-boltzmann-machine
 
 About
 =====
