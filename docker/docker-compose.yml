@@ -82,3 +82,18 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+  datascience:
+    image: oneoffcoder/book-datascience
+    ports:
+      - "7775:8888"
+    volumes:
+      - type: bind
+        source: ./datascience/ipynb
+        target: /root/ipynb
+        consistency: consistent
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
