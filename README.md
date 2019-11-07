@@ -12,6 +12,9 @@ A collection of online books for data science, computer science and coding!
 * Python, No Tears 
   * [Book](https://learn-python.oneoffcoder.com)
   * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-python-intro)
+* Python, Do This, Not That!
+  * [Book](https://python.oneoffcoder.com)
+  * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-python-dothis)
 * PyTorch, No Tears 
   * [Book](https://learn-pytorch.oneoffcoder.com)
   * [Docker Image, CPU](https://hub.docker.com/r/oneoffcoder/book-pytorch-intro)
