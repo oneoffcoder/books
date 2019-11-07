@@ -19,20 +19,35 @@ pip install \
 conda install -c conda-forge pandoc
 ```
 
-Then run.
+To build.
 
 ```bash
 ./build.sh
 ```
 
+To clean.
+
+```bash
+./clean.sh
+```
+
 ## Autobuild
 
 ```bash
-python -m sphinx_autobuild java-intro/source java-intro/build -b html -p 8000 -B
-python -m sphinx_autobuild python-intro/source python-intro/build -b html -p 8001 -B
-python -m sphinx_autobuild pytorch-intro/source pytorch-intro/build -b html -p 8002 -B
-python -m sphinx_autobuild scikit-intro/source scikit-intro/build -b html -p 8003 -B
-python -m sphinx_autobuild spark-intro/source spark-intro/build -b html -p 8004 -B
+./autobuild.sh
 ```
 
-Then go to [http://localhost:8000](http://localhost:8000).
+Then go to 
+* [java](http://localhost:8000)
+* [python](http://localhost:8001)
+* [pytorch](http://localhost:8002)
+* [scikit](http://localhost:8003)
+* [spark](http://localhost:8004)
+* [datascience](http://localhost:8005)
+* [python-dothis](http://localhost:8006)
+
+To kill the `autobuild`.
+
+```bash
+./kill-autobuild.sh
+```

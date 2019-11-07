@@ -33,6 +33,8 @@ To access the Jupyter Lab environments.
 * [PyTorch](http://localhost:7772)
 * [Scikit](http://localhost:7773)
 * [Spark](http://localhost:7774)
+* [Data Science](http://localhost:7775)
+* [Python, Do This, Not That!](http://localhost:7776)
 
 To run the containers in the background.
 
