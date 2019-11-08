@@ -33,6 +33,7 @@ Data Science Topics
    gmm
    gmm-dirichlet
    gmm-data-discretization
+   kmc-bic-aic
    missing-data
    gradient-descent
    autograd-regression-gradient-descent
