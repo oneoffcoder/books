@@ -54,6 +54,7 @@ Data Science Topics
    chernoff-classification
    chernoff-inception_v3
    restricted-boltzmann-machine
+   rnn-classify-signals
 
 About
 =====
