@@ -16,7 +16,7 @@ Saying something
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/iugsjaJ1OgU" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ECSisVSBXew" frameborder="0" allowfullscreen></iframe>
 
 Thinking something
 ------------------
@@ -31,7 +31,7 @@ Thinking something
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/KPI6RGQsL7k" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_AllmFmZpvI" frameborder="0" allowfullscreen></iframe>
 
 Changing costume
 ----------------
@@ -44,6 +44,10 @@ Changing costume
 
     This code block changes the costume of a sprite to the ``next`` one.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OlUNZsXPDt0" frameborder="0" allowfullscreen></iframe>
+
 Changing backdrop
 -----------------
 
@@ -55,6 +59,10 @@ Changing backdrop
 
     This code block changes the backdrop to the ``next`` one.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Gmhvgz_0Tlc" frameborder="0" allowfullscreen></iframe>
+
 Changing size
 -------------
 
@@ -65,6 +73,10 @@ Changing size
 .. figure:: _static/images/looks/10-set-size-100-percent.png
 
     This code block changes the size of a sprite by ``percentage``.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jowxh8nz4Uo" frameborder="0" allowfullscreen></iframe>
 
 Changing color
 --------------
@@ -81,6 +93,10 @@ Changing color
 
     This code block clears the graphic effects.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6b8sjeaT6EE" frameborder="0" allowfullscreen></iframe>
+
 Showing and hiding
 ------------------
 
@@ -91,6 +107,10 @@ Showing and hiding
 .. figure:: _static/images/looks/15-hide.png
 
     This code block hides a sprite.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dk3mNeOE05U" frameborder="0" allowfullscreen></iframe>
 
 Layers
 ------
@@ -104,3 +124,7 @@ The stage has ``layers``. Layers that are in the front blocks those that are in 
 .. figure:: _static/images/looks/17-go-foward-1-layers.png
 
     This code block sends a sprite ``forward`` or ``backward`` into the layers.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MdfiZrHJZSw" frameborder="0" allowfullscreen></iframe>
