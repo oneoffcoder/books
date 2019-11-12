@@ -18,6 +18,8 @@ Playing sound
 
     This code block stops all sounds.
 
+:download:`Code <_static/code/scratch-4.1-sound-playing-sound.sb3>`
+
 Changing pitch and pan effects
 ------------------------------
 
@@ -41,6 +43,8 @@ Changing pitch and pan effects
 
     This code block clears the sound effects.
 
+:download:`Code <_static/code/scratch-4.2-sound-changing-pitch-and-pan-effects.sb3>`
+
 Changing volume
 ---------------
 
@@ -51,3 +55,5 @@ Changing volume
 .. figure:: _static/images/sound/09-set-volume-to-100-percent.png
 
     This code block changes the volume by a percentage.
+
+:download:`Code <_static/code/scratch-4.3-sound-changing-volume.sb3>`

@@ -14,6 +14,8 @@ When start is clicked (green flag)
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mIuDvibULro" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-5.1-events-when-start-is-clicked-green-flag.sb3>`
+
 When a key is clicked
 ---------------------
 
@@ -44,6 +46,8 @@ You may listen for almost any key being clicked.
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/OlRgkSmFXqY" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-5.2-events-when-a-key-is-clicked.sb3>`
+
 When sprite is clicked
 ----------------------
 
@@ -54,6 +58,8 @@ When sprite is clicked
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Sjp-q052KY0" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-5.3-events-when-sprite-is-clicked.sb3>`
 
 When backdrop switches
 ----------------------

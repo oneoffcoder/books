@@ -14,6 +14,8 @@ Basic moving
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/0pp2XXY04ac" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-2.1-motion-basic-moving.sb3>`
+
 Basic Rotation
 --------------
 
@@ -29,6 +31,8 @@ Basic Rotation
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/GXl-VHRT1lw" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-2.2-motion-basic-rotation.sb3>`
+
 Moving to a random position
 ---------------------------
 
@@ -39,6 +43,8 @@ Moving to a random position
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/sW44aUZ0xgQ" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-2.3-motion-moving-to-a-random-position.sb3>`
 
 Moving to the mouse pointer
 ---------------------------
@@ -51,6 +57,8 @@ Moving to the mouse pointer
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/zcAc4mLXYhI" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-2.4-motion-moving-to-the-mouse-pointer.sb3>`
+
 Moving to a specific x and y coordinate
 ---------------------------------------
 
@@ -61,6 +69,8 @@ Moving to a specific x and y coordinate
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/-A25PhyKS3A" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-2.5-motion-moving-to-a-specific-x-and-y-coordinate.sb3>`
 
 Gliding
 -------
@@ -83,6 +93,8 @@ Gliding
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/bqSfUX7ycAM" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-2.6-motion-gliding.sb3>`
+
 Pointing
 --------
 
@@ -97,6 +109,8 @@ Pointing
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/HOLD4ub8IFU" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-2.7-motion-pointing.sb3>`
 
 Changing x
 ----------
@@ -113,6 +127,8 @@ Changing x
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ntLQb7kqOuw" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-2.8-motion-changing-x.sb3>`
+
 Changing y
 ----------
 
@@ -128,6 +144,8 @@ Changing y
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/stceNz6M7js" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-2.9-motion-changing-y.sb3>`
+
 Bouncing
 --------
 
@@ -138,6 +156,8 @@ Bouncing
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/DlH5Fu65L54" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-2.10-motion-bouncing.sb3>`
 
 Rotation styles
 ---------------
@@ -157,3 +177,5 @@ Rotation styles
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ntfWocPjkz0" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-2.11-motion-rotation-styles.sb3>`

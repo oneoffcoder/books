@@ -18,6 +18,8 @@ Saying something
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ECSisVSBXew" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-3.1-looks-saying-something.sb3>`
+
 Thinking something
 ------------------
 
@@ -32,6 +34,8 @@ Thinking something
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/_AllmFmZpvI" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-3.2-looks-thinking-something.sb3>`
 
 Changing costume
 ----------------
@@ -48,6 +52,8 @@ Changing costume
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/OlUNZsXPDt0" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-3.3-looks-changing-costume.sb3>`
+
 Changing backdrop
 -----------------
 
@@ -63,6 +69,8 @@ Changing backdrop
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Gmhvgz_0Tlc" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-3.4-looks-changing-backdrop.sb3>`
+
 Changing size
 -------------
 
@@ -77,6 +85,8 @@ Changing size
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/jowxh8nz4Uo" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-3.5-looks-changing-size.sb3>`
 
 Changing color
 --------------
@@ -97,6 +107,8 @@ Changing color
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/6b8sjeaT6EE" frameborder="0" allowfullscreen></iframe>
 
+:download:`Code <_static/code/scratch-3.6-looks-changing-color.sb3>`
+
 Showing and hiding
 ------------------
 
@@ -111,6 +123,8 @@ Showing and hiding
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/dk3mNeOE05U" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-3.7-looks-showing-and-hiding.sb3>`
 
 Layers
 ------
@@ -128,3 +142,5 @@ The stage has ``layers``. Layers that are in the front blocks those that are in 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/MdfiZrHJZSw" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-3.8-looks-layers.sb3>`
