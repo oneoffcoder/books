@@ -1,6 +1,10 @@
 Integrated Development Environment
 ==================================
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Y-2sjHnRg3s" frameborder="0" allowfullscreen></iframe>
+
 The ``Scratch`` Integrated Development Environment (IDE) is a complete, self-contained program used to code games, control drones and program behavior into robots. Out of the box, Scratch is typically used to teach students how to code games. However, do not underestimate Scratch, as it is a versatile IDE that many others build upon to code and program other things. When you start Scratch, the IDE should look like the following. Note that there are 7 major components to the IDE.
 
 - ``Menu``
