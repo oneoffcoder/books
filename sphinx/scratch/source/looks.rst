@@ -29,6 +29,10 @@ Thinking something
 
     This code block makes a sprite think something.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KPI6RGQsL7k" frameborder="0" allowfullscreen></iframe>
+
 Changing costume
 ----------------
 
