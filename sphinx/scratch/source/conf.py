@@ -94,12 +94,12 @@ html_last_updated_fmt = '%b %d, %Y, %X'
 
 html_theme_options = {
     'canonical_url': '',
-    'analytics_id': '',  #  Provided by Google in your dashboard
+    'analytics_id': 'UA-152077463-1',  #  Provided by Google in your dashboard
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,
-    'style_nav_header_background': '#D50A0A',
+    'style_nav_header_background': '#006D75',
     # Toc options
     'collapse_navigation': True,
     'sticky_navigation': True,
