@@ -90,9 +90,6 @@ When message received
 
     This code block listens for when a message is received.
 
-Broadcasting messages
----------------------
-
 .. figure:: _static/images/events/11-when-broadcast-message.png
 
     This code block broadcasts a message.
