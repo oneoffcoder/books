@@ -23,7 +23,7 @@ Basic Rotation
 
 .. figure:: _static/images/motion/02-turn-left-15-degrees.png
 
-    This code block rotate a sprite to the left by 15 degrees.
+    This code block rotates a sprite to the left by 15 degrees.
 
 .. raw:: html
 
