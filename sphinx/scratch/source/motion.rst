@@ -12,7 +12,7 @@ Basic moving
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/gEwEVw49uBM" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0pp2XXY04ac" frameborder="0" allowfullscreen></iframe>
 
 Basic Rotation
 --------------
@@ -27,7 +27,7 @@ Basic Rotation
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/v9lddVBCC3s" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GXl-VHRT1lw" frameborder="0" allowfullscreen></iframe>
 
 Moving to a random position
 ---------------------------
@@ -38,7 +38,7 @@ Moving to a random position
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/eGVKFCaMN4g" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sW44aUZ0xgQ" frameborder="0" allowfullscreen></iframe>
 
 Moving to the mouse pointer
 ---------------------------
@@ -49,7 +49,7 @@ Moving to the mouse pointer
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/FU6Kh83GwZs" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zcAc4mLXYhI" frameborder="0" allowfullscreen></iframe>
 
 Moving to a specific x and y coordinate
 ---------------------------------------
@@ -60,7 +60,7 @@ Moving to a specific x and y coordinate
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/SWy3GOzM6RE" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-A25PhyKS3A" frameborder="0" allowfullscreen></iframe>
 
 Gliding
 -------
@@ -81,7 +81,7 @@ Gliding
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/MWKrZKRx1tc" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bqSfUX7ycAM" frameborder="0" allowfullscreen></iframe>
 
 Pointing
 --------
@@ -96,7 +96,7 @@ Pointing
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Skjjguw4ChQ" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HOLD4ub8IFU" frameborder="0" allowfullscreen></iframe>
 
 Changing x
 ----------
@@ -111,7 +111,7 @@ Changing x
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/94lOfqh9hDQ" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ntLQb7kqOuw" frameborder="0" allowfullscreen></iframe>
 
 Changing y
 ----------
@@ -126,7 +126,7 @@ Changing y
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/bsKYCRyUEHI" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/stceNz6M7js" frameborder="0" allowfullscreen></iframe>
 
 Bouncing
 --------
@@ -137,7 +137,7 @@ Bouncing
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/QzxlpHvVEr8" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DlH5Fu65L54" frameborder="0" allowfullscreen></iframe>
 
 Rotation styles
 ---------------
@@ -156,4 +156,4 @@ Rotation styles
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/cXoIkXlPj8A" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ntfWocPjkz0" frameborder="0" allowfullscreen></iframe>

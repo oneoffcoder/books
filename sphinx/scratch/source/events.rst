@@ -10,6 +10,10 @@ When start is clicked (green flag)
 
     This code block listens for when ``start`` is clicked.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mIuDvibULro" frameborder="0" allowfullscreen></iframe>
+
 When a key is clicked
 ---------------------
 
@@ -36,12 +40,20 @@ You may listen for almost any key being clicked.
 
     This code block listens for when the ``left arrow`` is clicked.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OlRgkSmFXqY" frameborder="0" allowfullscreen></iframe>
+
 When sprite is clicked
 ----------------------
 
 .. figure:: _static/images/events/06-when-sprite-clicked.png
 
     This code block listens for when a sprite is clicked.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Sjp-q052KY0" frameborder="0" allowfullscreen></iframe>
 
 When backdrop switches
 ----------------------
