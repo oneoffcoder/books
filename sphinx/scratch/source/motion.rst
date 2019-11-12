@@ -153,3 +153,7 @@ Rotation styles
 .. figure:: _static/images/motion/18-set-rotation-style-dont-rotate.png
 
     This code block sets the rotation style to ``don't rotate``.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cXoIkXlPj8A" frameborder="0" allowfullscreen></iframe>
