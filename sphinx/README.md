@@ -45,6 +45,7 @@ Then go to
 * [spark](http://localhost:8004)
 * [datascience](http://localhost:8005)
 * [python-dothis](http://localhost:8006)
+* [scratch](http://localhost:8007)
 
 To kill the `autobuild`.
 

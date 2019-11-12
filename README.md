@@ -28,6 +28,8 @@ A collection of online books for data science, computer science and coding!
 * Data Science Topics 
   * [Book](https://datascience.oneoffcoder.com)
   * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-datascience)
+* Scratch
+  * [Book](https://scratch.oneoffcoder.com)
 
 # Copyright Stuff
 
