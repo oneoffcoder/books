@@ -22,10 +22,24 @@
 Spark, No Tears
 ===============
 
+Preface
+=======
+
+This book is to teach students how program in `Apache Spark <https://spark.apache.org>`_. To follow along and execute the code samples, you will need `Docker <https://www.docker.com/>`_ installed. The Docker container is located on `Docker Hub <https://hub.docker.com/r/oneoffcoder/book-spark-intro>`_. After you have installed Docker, you may run the container as follows.
+
+.. code-block:: bash
+
+   docker run -it \
+    -p 8888:8888 \
+    -e PYSPARK_MASTER=spark://localhost:7077 \
+    oneoffcoder/book-spark-intro
+
+Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
+
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Contents:
+   :caption: Contents
    
    rdd
    dataframes
