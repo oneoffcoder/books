@@ -5,21 +5,26 @@ Integrated Development Environment
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Y-2sjHnRg3s" frameborder="0" allowfullscreen></iframe>
 
-The ``Scratch`` Integrated Development Environment (IDE) is a complete, self-contained program used to code games, control drones and program behavior into robots. Out of the box, Scratch is typically used to teach students how to code games. However, do not underestimate Scratch, as it is a versatile IDE that many others build upon to code and program other things. When you start Scratch, the IDE should look like the following. Note that there are 7 major components to the IDE.
-
-- ``Menu``
-- ``Code blocks``
-- ``Script editor``
-- ``Stage``
-- ``Program control``
-- ``Sprite control``
-- ``Backdrop control``
-
-We breakdown these major components of the Scratch IDE and discuss each below.
+The ``Scratch`` Integrated Development Environment (IDE) is a complete, self-contained program used to code games, control drones and program behavior into robots. Out of the box, Scratch is typically used to teach students how to code games. However, do not underestimate Scratch, as it is a versatile IDE that many others build upon to code and program other things. When you start Scratch, the IDE should look like the following. 
 
 .. figure:: _static/images/ide/00-ide.png
     
     The Scratch Integrated Development Environment (IDE).
+
+Note that there are 7 major components to the IDE.
+
+.. csv-table:: Scratch IDE Components
+   :header: " ", Component, Purpose
+
+   1, Menu, Load and save files.
+   2, Code Blocks, Reusable code blocks to control and add behavior to your program.
+   3, Script Editor, Area to build your code logic.
+   4, Stage, Area that shows your program in execution.
+   5, Program Control, Controls to start and stop your program.
+   6, Sprite Control, "Area to add, update, remove and define your sprites."
+   7, Backdrop Control, "Area to add, update, remove and dfine backgrounds."
+
+We breakdown these major components of the Scratch IDE and discuss each below.
 
 Menu 
 ----
@@ -39,27 +44,18 @@ Code blocks
 
 In Scratch, code is organized visually into types known as ``code blocks``. There are 9 types of code blocks. Here, we only show where the code block is located in the IDE; later, we will go into depth about each of the different types of code blocks.
 
-+-----------+-------------+---------------------------------+
-| Type      | Color       | Purpose                         |
-+===========+=============+=================================+
-| Motion    | Blue        | Move things.                    |
-+-----------+-------------+---------------------------------+
-| Looks     | Purple      | Change the look of things.      |
-+-----------+-------------+---------------------------------+
-| Sound     | Magenta     | Manipulate sounds.              |
-+-----------+-------------+---------------------------------+
-| Events    | Yellow      | Listen for events.              |
-+-----------+-------------+---------------------------------+
-| Control   | Orange      | Control your program.           |
-+-----------+-------------+---------------------------------+
-| Sensing   | Light Blue  | Sense the surrounding.          |
-+-----------+-------------+---------------------------------+
-| Operators | Green       | Math and comparison operations. |
-+-----------+-------------+---------------------------------+
-| Variables | Dark Orange | Create and retrieve variables.  |
-+-----------+-------------+---------------------------------+
-| My Blocks | Red         | Create custom blocks.           |
-+-----------+-------------+---------------------------------+
+.. csv-table:: Code Block Types
+   :header: Type, Color, Purpose
+
+   Motion, Blue, Move things.
+   Looks, Purple, Change the look of things.
+   Sound, Magenta, Manipulate sounds.
+   Events, Yellow, Listen for events.
+   Control, Orange, Control your program.
+   Sensing, Light Blue, Sense the surrounding.
+   Operators, Green, Math and comparison operations.
+   Variables, Dark Orange, Create and retrieve variables.
+   My Blocks, Red, Create custom blocks.
 
 .. figure:: _static/images/ide/02-code-blocks.png
 

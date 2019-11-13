@@ -1,3 +1,19 @@
+.. meta::
+   :description: Scratch Programming
+   :keywords: scratch programming children visual
+   :robots: index, follow
+   :abstract: A Scratch tutorial book.
+   :author: One-Off Coder
+   :contact: info@oneoffcoder.com
+   :copyright: One-Off Coder
+   :content: global
+   :generator: Sphinx
+   :language: English
+   :rating: general
+   :reply-to: info@oneoffcoder.com
+   :web_author: One-Off Coder
+   :revisit-after: 1 days
+   
 .. Scratch documentation master file, created by
    sphinx-quickstart on Mon Nov 11 14:42:08 2019.
    You can adapt this file completely to your liking, but it should at least
@@ -5,6 +21,11 @@
 
 Scratch
 =======
+
+This book is to help students learn ``how to`` program in Scratch. To work through the examples you will need to have access to the Scratch software, which is available 
+
+- online at `https://scratch.mit.edu <https://scratch.mit.edu>`_, or
+- offline as an install at `https://scratch.mit.edu/download <https://scratch.mit.edu/download>`_.
 
 .. toctree::
    :maxdepth: 2
@@ -98,6 +119,5 @@ Cite this book as follows.::
 Authors
 =======
 
-Jee Vang, Ph.D.
-
-Joyce Vang
+- Jee Vang, Ph.D.
+- Joyce Vang
