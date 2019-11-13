@@ -31,6 +31,7 @@ This book is to teach students specialized areas and topics of ``Data Science``.
 
    docker run -it \
     -p 8888:8888 \
+    -p 6006:6006 \
     --gpus all \
     oneoffcoder/book-datascience
 

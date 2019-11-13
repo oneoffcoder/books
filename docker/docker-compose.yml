@@ -36,6 +36,7 @@ services:
     image: oneoffcoder/book-pytorch-intro-gpu
     ports:
       - "7772:8888"
+      - "6006:6006"
     volumes:
       - type: bind
         source: ../sphinx/pytorch-intro/source
@@ -86,6 +87,7 @@ services:
     image: oneoffcoder/book-datascience
     ports:
       - "7775:8888"
+      - "6007:6006"
     volumes:
       - type: bind
         source: ../sphinx/datascience/source

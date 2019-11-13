@@ -47,7 +47,9 @@ exclude_patterns = [
     '**/output',
     '_*.ipynb',
     'shapes/',
-    '**/shapes'
+    '**/shapes',
+    'tensorboard/',
+    '**tensorboard'
 ]
 source_suffix = '.rst'
 
