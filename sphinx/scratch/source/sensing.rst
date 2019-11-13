@@ -18,6 +18,12 @@ Touching
 
     This code block detects when two specified colors are touching.
 
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/coCe0gcQN3A" frameborder="0" allowfullscreen></iframe>
+
+
 :download:`Code <_static/code/scratch-7.1-sensing-touching.sb3>`
 
 Distance
@@ -26,6 +32,10 @@ Distance
 .. figure:: _static/images/sensing/03-distance-to-mouse-pointer.png
 
     This code block detects the distance to the specified object (for example, ``mouse pointer``).
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4iq3vovHZbI" frameborder="0" allowfullscreen></iframe>
 
 :download:`Code <_static/code/scratch-7.2-sensing-distance.sb3>`
 
@@ -37,6 +47,10 @@ You may get input from users.
 .. figure:: _static/images/sensing/04-ask-name-wait.png
 
     This code block asks the user for input.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fh8juknlVYc" frameborder="0" allowfullscreen></iframe>
 
 :download:`Code <_static/code/scratch-7.3-sensing-asking.sb3>`
 
@@ -63,6 +77,10 @@ Keys
 
     This code block senses when the ``left arrow`` is pressed.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SzP-mvYonNs" frameborder="0" allowfullscreen></iframe>
+
 :download:`Code <_static/code/scratch-7.4-sensing-keys.sb3>`
 
 Mouse
@@ -80,6 +98,10 @@ Mouse
 
     This code block senses the ``y`` coordinate of the mouse.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0tEkSH8gTmc" frameborder="0" allowfullscreen></iframe>
+
 :download:`Code <_static/code/scratch-7.5-sensing-mouse.sb3>`
 
 Drag
@@ -95,6 +117,10 @@ Timer
 .. figure:: _static/images/sensing/13-reset-timer.png
 
     This code block resets the timer.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sCgwSd0t-qY" frameborder="0" allowfullscreen></iframe>
 
 :download:`Code <_static/code/scratch-7.7-sensing-timer.sb3>`
 
@@ -118,6 +144,10 @@ Stage
     This code block senses the specified variable of the stage.
 
 :download:`Code <_static/code/scratch-7.8-sensing-stage.sb3>`
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/13jZJVyciPQ" frameborder="0" allowfullscreen></iframe>
 
 Days
 ----

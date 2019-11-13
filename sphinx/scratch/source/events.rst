@@ -68,6 +68,10 @@ When backdrop switches
 
     This code block listens for when a backdrop switches.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mzSGzlUhuiQ" frameborder="0" allowfullscreen></iframe>
+
 :download:`Code <_static/code/scratch-5.4-events-when-backdrop-switches.sb3>`
 
 When loudness exceeds
@@ -77,6 +81,10 @@ When loudness exceeds
 
     This code block listens for when the volume exceeds a threshold.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HJX4HdSjnRI" frameborder="0" allowfullscreen></iframe>
+
 :download:`Code <_static/code/scratch-5.5-events-when-loudness-exceeds.sb3>`
 
 When timer exceeds
@@ -85,6 +93,10 @@ When timer exceeds
 .. figure:: _static/images/events/09-when-timer-exceeds.png
 
     This code block listens for when the timer exceeds a threshold.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vMslmmWE4kE" frameborder="0" allowfullscreen></iframe>
 
 :download:`Code <_static/code/scratch-5.6-events-when-timer-exceeds.sb3>`
 
@@ -102,5 +114,9 @@ When message received
 .. figure:: _static/images/events/12-when-broadcast-message-and-wait.png
 
     This code block broadcasts a message and waits.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/AykTBlRLLsY" frameborder="0" allowfullscreen></iframe>
 
 :download:`Code <_static/code/scratch-5.7-events-when-message-received.sb3>`
