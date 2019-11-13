@@ -1,3 +1,19 @@
+.. meta::
+   :description: Scratch Programming
+   :keywords: scratch programming children visual
+   :robots: index, follow
+   :abstract: A Scratch tutorial book.
+   :author: One-Off Coder
+   :contact: info@oneoffcoder.com
+   :copyright: One-Off Coder
+   :content: global
+   :generator: Sphinx
+   :language: English
+   :rating: general
+   :reply-to: info@oneoffcoder.com
+   :web_author: One-Off Coder
+   :revisit-after: 1 days
+   
 .. Scratch documentation master file, created by
    sphinx-quickstart on Mon Nov 11 14:42:08 2019.
    You can adapt this file completely to your liking, but it should at least
