@@ -18,6 +18,12 @@ Playing sound
 
     This code block stops all sounds.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zNKi3FbKf7U" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-4.1-sound-playing-sound.sb3>`
+
 Changing pitch and pan effects
 ------------------------------
 
@@ -41,6 +47,12 @@ Changing pitch and pan effects
 
     This code block clears the sound effects.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FTHb5hMXDj8" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-4.2-sound-changing-pitch-and-pan-effects.sb3>`
+
 Changing volume
 ---------------
 
@@ -51,3 +63,9 @@ Changing volume
 .. figure:: _static/images/sound/09-set-volume-to-100-percent.png
 
     This code block changes the volume by a percentage.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/uvO-Z7HjEGc" frameborder="0" allowfullscreen></iframe>
+
+:download:`Code <_static/code/scratch-4.3-sound-changing-volume.sb3>`
