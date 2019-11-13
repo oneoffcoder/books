@@ -30,7 +30,7 @@ This book is to help students learn ``how to`` program in Scratch. To work throu
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Contents:
+   :caption: Contents
 
    ide
    motion
