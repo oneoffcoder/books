@@ -22,6 +22,11 @@
 Scratch
 =======
 
+This book is to help students learn ``how to`` program in Scratch. To work through the examples you will need to have access to the Scratch software, which is available 
+
+- online at `https://scratch.mit.edu <https://scratch.mit.edu>`_, or
+- offline as an install at `https://scratch.mit.edu/download <https://scratch.mit.edu/download>`_.
+
 .. toctree::
    :maxdepth: 2
    :numbered:
@@ -114,6 +119,5 @@ Cite this book as follows.::
 Authors
 =======
 
-Jee Vang, Ph.D.
-
-Joyce Vang
+- Jee Vang, Ph.D.
+- Joyce Vang
