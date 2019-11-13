@@ -5,24 +5,26 @@ Integrated Development Environment
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Y-2sjHnRg3s" frameborder="0" allowfullscreen></iframe>
 
-The ``Scratch`` Integrated Development Environment (IDE) is a complete, self-contained program used to code games, control drones and program behavior into robots. Out of the box, Scratch is typically used to teach students how to code games. However, do not underestimate Scratch, as it is a versatile IDE that many others build upon to code and program other things. When you start Scratch, the IDE should look like the following. Note that there are 7 major components to the IDE.
-
-.. csv-table:: Scratch IDE Components
-   :header: Component, Purpose
-
-   Menu, Load and save files.
-   Code Blocks, Reusable code blocks to control and add behavior to your program.
-   Script Editor, Area to build your code logic.
-   Stage, Area that shows your program in execution.
-   Program Control, Controls to start and stop your program.
-   Sprite Control, "Area to add, update, remove and define your sprites."
-   Backdrop Control, "Area to add, update, remove and dfine backgrounds."
-
-We breakdown these major components of the Scratch IDE and discuss each below.
+The ``Scratch`` Integrated Development Environment (IDE) is a complete, self-contained program used to code games, control drones and program behavior into robots. Out of the box, Scratch is typically used to teach students how to code games. However, do not underestimate Scratch, as it is a versatile IDE that many others build upon to code and program other things. When you start Scratch, the IDE should look like the following. 
 
 .. figure:: _static/images/ide/00-ide.png
     
     The Scratch Integrated Development Environment (IDE).
+
+Note that there are 7 major components to the IDE.
+
+.. csv-table:: Scratch IDE Components
+   :header: " ", Component, Purpose
+
+   1, Menu, Load and save files.
+   2, Code Blocks, Reusable code blocks to control and add behavior to your program.
+   3, Script Editor, Area to build your code logic.
+   4, Stage, Area that shows your program in execution.
+   5, Program Control, Controls to start and stop your program.
+   6, Sprite Control, "Area to add, update, remove and define your sprites."
+   7, Backdrop Control, "Area to add, update, remove and dfine backgrounds."
+
+We breakdown these major components of the Scratch IDE and discuss each below.
 
 Menu 
 ----
