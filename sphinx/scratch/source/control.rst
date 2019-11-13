@@ -16,6 +16,10 @@ You may force your program to wait.
 
     This code block forces your program to wait until a ``termination`` condition is satisified.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NQSy3OCATug" frameborder="0" allowfullscreen></iframe>
+
 :download:`Code <_static/code/scratch-6.1-control-waiting.sb3>`
 
 Loops
@@ -35,6 +39,10 @@ To make your program repeat something over and over, use the following loops.
 
     This code block repeats code until a ``termination`` condition is satisified.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yf87rzE922Y" frameborder="0" allowfullscreen></iframe>
+
 :download:`Code <_static/code/scratch-6.2-control-loops.sb3>`
 
 Conditionals
@@ -49,6 +57,10 @@ Conditionals are responsible for decisions.
 .. figure:: _static/images/control/04-if-else.png
 
     This code block executes one of two code blocks.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OXng0uzeKtc" frameborder="0" allowfullscreen></iframe>
 
 :download:`Code <_static/code/scratch-6.3-control-conditionals.sb3>`
 
