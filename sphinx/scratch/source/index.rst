@@ -31,7 +31,7 @@ Almost all sections have short videos demonstrating the usage of Scratch to code
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/T3kdDdP17Yg" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GMQh6ARyaRs" frameborder="0" allowfullscreen></iframe>
 
 
 .. toctree::

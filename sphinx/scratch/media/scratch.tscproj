@@ -820,7 +820,7 @@
       "id" : 26,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-5.4-events-when-backdrop-switches.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T020841",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 218],
@@ -852,7 +852,7 @@
       "id" : 27,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-5.5-events-when-loudness-exceeds.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T021412",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 285],
@@ -884,7 +884,7 @@
       "id" : 28,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-5.6-events-when-timer-exceeds.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T021951",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 472],
@@ -916,7 +916,7 @@
       "id" : 29,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-5.7-events-when-message-received.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T022855",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 247],
@@ -948,7 +948,7 @@
       "id" : 30,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-6.1-control-waiting.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T024022",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 326],
@@ -980,7 +980,7 @@
       "id" : 31,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-6.2-control-loops.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T024550",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 725],
@@ -1012,7 +1012,7 @@
       "id" : 32,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-6.3-control-conditionals.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T023228",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 776],
@@ -1044,7 +1044,7 @@
       "id" : 33,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-7.1-sensing-touching.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T025328",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 409],
@@ -1076,7 +1076,7 @@
       "id" : 34,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-7.2-sensing-distance.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T025801",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 631],
@@ -1108,7 +1108,7 @@
       "id" : 35,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-7.3-sensing-asking.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T030228",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 82],
@@ -1140,7 +1140,7 @@
       "id" : 36,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-7.4-sensing-keys.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T030453",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 397],
@@ -1172,7 +1172,7 @@
       "id" : 37,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-7.5-sensing-mouse.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T030725",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 540],
@@ -1204,7 +1204,7 @@
       "id" : 38,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-7.7-sensing-timer.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T030934",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 434],
@@ -1236,7 +1236,7 @@
       "id" : 39,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-7.8-sensing-stage.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T031420",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 328],
@@ -1268,7 +1268,7 @@
       "id" : 40,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-8.1-operators-math.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T031748",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 283],
@@ -1300,7 +1300,7 @@
       "id" : 41,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-8.2-operators-random.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T031924",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 276],
@@ -1332,7 +1332,7 @@
       "id" : 42,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-8.3-operators-comparison.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T032132",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 455],
@@ -1364,7 +1364,7 @@
       "id" : 43,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-8.4-operators-boolean.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T032353",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 802],
@@ -1396,7 +1396,7 @@
       "id" : 44,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-8.5-operators-string.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T032928",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 299],
@@ -1428,7 +1428,7 @@
       "id" : 45,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-10-custom-blocks.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T033209",
+      "lastMod" : "20191114T030851",
       "sourceTracks" : [
         {
           "range" : [0, 596],
@@ -1460,7 +1460,7 @@
       "id" : 46,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-11-costumes.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T041924",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 2310],
@@ -1492,7 +1492,7 @@
       "id" : 47,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-12-sounds.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T042305",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 1577],
@@ -1524,7 +1524,7 @@
       "id" : 48,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-13-sprites.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T042638",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 1405],
@@ -1556,7 +1556,7 @@
       "id" : 49,
       "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\scratch\\media\\scratch-14-backdrops.trec",
       "rect" : [0, 0, 1920, 1080],
-      "lastMod" : "20191113T042845",
+      "lastMod" : "20191114T030852",
       "sourceTracks" : [
         {
           "range" : [0, 1108],
@@ -3815,7 +3815,7 @@
                                     "start" : 0,
                                     "duration" : 229,
                                     "mediaStart" : 0,
-                                    "mediaDuration" : 229,
+                                    "mediaDuration" : 1,
                                     "scalar" : 1,
                                     "metadata" : {
                                       "WinSubProjectDisplayName" : "",
@@ -3891,7 +3891,7 @@
                               "kind" : "remix",
                               "shape" : "text",
                               "style" : "basic",
-                              "height" : 72.0000000001311,
+                              "height" : 87.000000000044,
                               "line-spacing" : 0.0,
                               "width" : 1153.09090909266,
                               "word-wrap" : 1.0,
@@ -3914,7 +3914,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"underline","rangeEnd":23,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":23,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontItalic","rangeEnd":23,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":23,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":23,"rangeStart":0,"value":51,"valueType":"double"},{"name":"kerning","rangeEnd":23,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":23,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"},{"name":"fontWeight","rangeEnd":23,"rangeStart":0,"value":400,"valueType":"int"}],
+                                    "value" : [{"name":"fontWeight","rangeEnd":23,"rangeStart":0,"value":400,"valueType":"int"},{"name":"underline","rangeEnd":23,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":23,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"},{"name":"kerning","rangeEnd":23,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontName","rangeEnd":23,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"strikethrough","rangeEnd":23,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontItalic","rangeEnd":23,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":23,"rangeStart":0,"value":55,"valueType":"double"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -3925,7 +3925,7 @@
                             },
                             "parameters" : {
                               "translation0" : 0.454545453540789,
-                              "translation1" : -123.000000000281
+                              "translation1" : -130.500000000194
                             },
                             "effects" : [
                                 {
@@ -4189,16 +4189,16 @@
                               "fill-color-green" : 0.298039215686275,
                               "fill-color-opacity" : 1.0,
                               "fill-color-red" : 0.901960784313726,
-                              "height" : 83.9999999998924,
+                              "height" : 127.333333333302,
                               "line-spacing" : 0.0,
                               "stroke-color-blue" : 0.777079198166942,
                               "stroke-color-green" : 0.93090625,
                               "stroke-color-opacity" : 1.0,
                               "stroke-color-red" : 0.113700037136884,
                               "stroke-width" : 0.0,
-                              "width" : 732.000000000374,
+                              "width" : 753.666666667098,
                               "word-wrap" : 1.0,
-                              "horizontal-alignment" : "left",
+                              "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
                               "stroke-style" : "solid",
                               "text" : "ONE-OFF CODER",
@@ -4219,7 +4219,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"strikethrough","rangeEnd":13,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":13,"rangeStart":0,"value":700,"valueType":"int"},{"name":"fontSize","rangeEnd":13,"rangeStart":0,"value":64,"valueType":"double"},{"name":"fontItalic","rangeEnd":13,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":13,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontName","rangeEnd":13,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"underline","rangeEnd":13,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":13,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"}],
+                                    "value" : [{"name":"fontName","rangeEnd":13,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"strikethrough","rangeEnd":13,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":13,"rangeStart":0,"value":76,"valueType":"double"},{"name":"underline","rangeEnd":13,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontItalic","rangeEnd":13,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":13,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":13,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"},{"name":"fontWeight","rangeEnd":13,"rangeStart":0,"value":700,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -4229,8 +4229,8 @@
                               "autoRotateText" : true
                             },
                             "parameters" : {
-                              "translation0" : -80.999999999634,
-                              "translation1" : 145.999999999818
+                              "translation0" : -91.833333332996,
+                              "translation1" : 167.666666666523
                             },
                             "effects" : [
 
@@ -4246,7 +4246,10 @@
                               "default-HAlign" : "left",
                               "default-LineSpace" : 0.0,
                               "default-VAlign" : "center",
+                              "default-opacity" : 1.0,
                               "default-text-attributes" : "[{\"name\":\"fontName\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":\"Montserrat\",\"valueType\":\"string\"},{\"name\":\"underline\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontItalic\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fgColor\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":\"(255,255,255,255)\",\"valueType\":\"color\"},{\"name\":\"fontSize\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":64,\"valueType\":\"double\"},{\"name\":\"fontWeight\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":700,\"valueType\":\"int\"},{\"name\":\"strikethrough\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"}]",
+                              "default-translation0" : -91.833333332996,
+                              "default-translation1" : 167.666666666523,
                               "effectApplied" : "none"
                             },
                             "animationTracks" : {
@@ -18657,7 +18660,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "sound",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -18674,7 +18677,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -19260,7 +19263,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "sound",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -19277,7 +19280,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":55,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -19863,7 +19866,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "sound",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -19880,7 +19883,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":55,"valueType":"double"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -21050,7 +21053,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "events",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -21067,7 +21070,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -21999,7 +22002,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "events",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -22016,7 +22019,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -22948,7 +22951,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "events",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -22965,7 +22968,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -23896,7 +23899,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "events",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -23913,7 +23916,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -24844,7 +24847,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "events",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -24861,7 +24864,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -25792,7 +25795,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "events",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -25809,7 +25812,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -26740,7 +26743,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "events",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -26757,7 +26760,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -27122,7 +27125,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "control",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -27139,7 +27142,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"fontName","rangeEnd":7,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"kerning","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontItalic","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":7,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontSize","rangeEnd":7,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":7,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"underline","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -27725,7 +27728,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "control",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -27742,7 +27745,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"underline","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":7,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"fontWeight","rangeEnd":7,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":7,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":7,"rangeStart":0,"value":55,"valueType":"double"},{"name":"strikethrough","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"double"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -28328,7 +28331,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "control",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -28345,7 +28348,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"kerning","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontSize","rangeEnd":7,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":7,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontItalic","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":7,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontWeight","rangeEnd":7,"rangeStart":0,"value":400,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -29497,7 +29500,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "sensing",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -29514,7 +29517,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontSize","rangeEnd":7,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fgColor","rangeEnd":7,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"kerning","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontName","rangeEnd":7,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"strikethrough","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":7,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -30445,7 +30448,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "sensing",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -30462,7 +30465,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"strikethrough","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":7,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"kerning","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontSize","rangeEnd":7,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fontName","rangeEnd":7,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontWeight","rangeEnd":7,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -31393,7 +31396,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "sensing",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -31410,7 +31413,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"strikethrough","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontItalic","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":7,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fgColor","rangeEnd":7,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"kerning","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"double"},{"name":"underline","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":7,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontWeight","rangeEnd":7,"rangeStart":0,"value":400,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -32341,7 +32344,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "sensing",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -32358,7 +32361,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontSize","rangeEnd":7,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fontItalic","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":7,"rangeStart":0,"value":400,"valueType":"int"},{"name":"kerning","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"double"},{"name":"underline","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":7,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"strikethrough","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":7,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -33307,7 +33310,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "sensing",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -33324,7 +33327,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontName","rangeEnd":7,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontWeight","rangeEnd":7,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontSize","rangeEnd":7,"rangeStart":0,"value":60,"valueType":"double"},{"name":"underline","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":7,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"fontItalic","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"double"},{"name":"strikethrough","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -34255,7 +34258,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "sensing",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -34272,7 +34275,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"kerning","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontWeight","rangeEnd":7,"rangeStart":0,"value":400,"valueType":"int"},{"name":"strikethrough","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":7,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"fontName","rangeEnd":7,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":7,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fontItalic","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -35204,7 +35207,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "sensing",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -35221,7 +35224,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontWeight","rangeEnd":7,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fgColor","rangeEnd":7,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontName","rangeEnd":7,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":7,"rangeStart":0,"value":60,"valueType":"double"},{"name":"fontItalic","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":7,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -35587,7 +35590,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "operators",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -35604,7 +35607,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"fgColor","rangeEnd":9,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"fontItalic","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":9,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"strikethrough","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":9,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontSize","rangeEnd":9,"rangeStart":0,"value":55,"valueType":"double"},{"name":"kerning","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"double"},{"name":"underline","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -36190,7 +36193,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "operators",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -36207,7 +36210,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"fgColor","rangeEnd":9,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"underline","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":9,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":9,"rangeStart":0,"value":55,"valueType":"double"},{"name":"strikethrough","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":9,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"double"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -36793,7 +36796,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "operators",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -36810,7 +36813,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"fgColor","rangeEnd":9,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"fontItalic","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":9,"rangeStart":0,"value":55,"valueType":"double"},{"name":"underline","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":9,"rangeStart":0,"value":400,"valueType":"int"},{"name":"kerning","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontName","rangeEnd":9,"rangeStart":0,"value":"Montserrat","valueType":"string"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -37396,7 +37399,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "operators",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -37413,7 +37416,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"fontSize","rangeEnd":9,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fontName","rangeEnd":9,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontItalic","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":9,"rangeStart":0,"value":400,"valueType":"int"},{"name":"strikethrough","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":9,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -37999,7 +38002,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "operators",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -38016,7 +38019,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"fgColor","rangeEnd":9,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"underline","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":9,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":9,"rangeStart":0,"value":55,"valueType":"double"},{"name":"kerning","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontName","rangeEnd":9,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"strikethrough","rangeEnd":9,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -39168,7 +39171,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -39185,7 +39188,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontItalic","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontWeight","rangeEnd":1,"rangeStart":0,"value":400,"valueType":"int"},{"name":"strikethrough","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":1,"rangeStart":0,"value":96,"valueType":"double"},{"name":"fgColor","rangeEnd":1,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"},{"name":"fontName","rangeEnd":1,"rangeStart":0,"value":"Lato","valueType":"string"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -39550,7 +39553,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -39567,7 +39570,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"fontName","rangeEnd":1,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontWeight","rangeEnd":1,"rangeStart":0,"value":400,"valueType":"int"},{"name":"strikethrough","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":1,"rangeStart":0,"value":96,"valueType":"double"},{"name":"fgColor","rangeEnd":1,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"},{"name":"underline","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontItalic","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -39665,6 +39668,8 @@
                               "default-LineSpace" : 0.0,
                               "default-VAlign" : "center",
                               "default-text-attributes" : "[{\"name\":\"strikethrough\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontWeight\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":100,\"valueType\":\"int\"},{\"name\":\"fontSize\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":55,\"valueType\":\"double\"},{\"name\":\"underline\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fgColor\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":\"(239,231,195,255)\",\"valueType\":\"color\"},{\"name\":\"fontItalic\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontName\",\"rangeEnd\":13,\"rangeStart\":0,\"value\":\"Montserrat\",\"valueType\":\"string\"}]",
+                              "default-translation0" : -1.77887982122371e-11,
+                              "default-translation1" : -100.336673040374,
                               "effectApplied" : "none"
                             },
                             "animationTracks" : {
@@ -40719,7 +40724,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -40736,7 +40741,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontWeight","rangeEnd":1,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontName","rangeEnd":1,"rangeStart":0,"value":"Lato","valueType":"string"},{"name":"strikethrough","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":1,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"},{"name":"fontItalic","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":1,"rangeStart":0,"value":96,"valueType":"double"},{"name":"underline","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"double"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -41101,7 +41106,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "motion",
+                              "text" : "",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -41118,7 +41123,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":6,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":6,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":6,"rangeStart":0,"value":55,"valueType":"double"},{"name":"fgColor","rangeEnd":6,"rangeStart":0,"value":"(239,231,195,255)","valueType":"color"},{"name":"strikethrough","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":6,"rangeStart":0,"value":0,"valueType":"double"}],
+                                    "value" : [{"name":"fontWeight","rangeEnd":1,"rangeStart":0,"value":400,"valueType":"int"},{"name":"kerning","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontName","rangeEnd":1,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":1,"rangeStart":0,"value":96,"valueType":"double"},{"name":"fontItalic","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":1,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"},{"name":"underline","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -42270,7 +42275,7 @@
                               "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "looks",
+                              "text" : "",
                               "vertical-alignment" : "center",
                               "font" : {
                                 "color-blue" : 1.0,
@@ -42287,7 +42292,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fontWeight","rangeEnd":5,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":5,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontSize","rangeEnd":5,"rangeStart":0,"value":60,"valueType":"double"},{"name":"kerning","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":5,"rangeStart":0,"value":"(0,0,0,255)","valueType":"color"},{"name":"underline","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":5,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "value" : [{"name":"fontWeight","rangeEnd":1,"rangeStart":0,"value":400,"valueType":"int"},{"name":"kerning","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontItalic","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":1,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"},{"name":"fontSize","rangeEnd":1,"rangeStart":0,"value":96,"valueType":"double"},{"name":"fontName","rangeEnd":1,"rangeStart":0,"value":"Lato","valueType":"string"},{"name":"underline","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -44449,7 +44454,7 @@
                                     "start" : 0,
                                     "duration" : 229,
                                     "mediaStart" : 0,
-                                    "mediaDuration" : 229,
+                                    "mediaDuration" : 1,
                                     "scalar" : 1,
                                     "metadata" : {
                                       "WinSubProjectDisplayName" : "",
@@ -46697,7 +46702,7 @@
     "backgroundColor" : [ 0, 0, 0, 255]
   },
   "metadata" : {
-    "AutoSaveFile" : "C:\\Users\\oneoffcoder\\AppData\\Local\\TechSmith\\Camtasia Studio\\19.0\\Auto-Saves\\scratch27c4b9.autosave.tscproj",
+    "AutoSaveFile" : "C:\\Users\\oneoffcoder\\AppData\\Local\\TechSmith\\Camtasia Studio\\19.0\\Auto-Saves\\scratch80158d.autosave.tscproj",
     "CanvasZoom" : 60,
     "Date" : "2019-11-12 09:27:50 AM",
     "Fit" : 0,
