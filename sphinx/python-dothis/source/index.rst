@@ -61,6 +61,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    looping-two-collections
    list-generator
    list-filtering
+   list-counting
    dictionary-defaultdict
    dictionary-get
    dictionary-updating
@@ -74,6 +75,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    string-concatenation
    string-interpolation
    string-dry
+   string-reversal
    function-clarification
    function-lambda
    function-generator

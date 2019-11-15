@@ -27,6 +27,13 @@ This book is to help students learn ``how to`` program in Scratch. To work throu
 - online at `https://scratch.mit.edu <https://scratch.mit.edu>`_, or
 - offline as an install at `https://scratch.mit.edu/download <https://scratch.mit.edu/download>`_.
 
+Almost all sections have short videos demonstrating the usage of Scratch to code. For the impatient, the merged, full video is available below.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GMQh6ARyaRs" frameborder="0" allowfullscreen></iframe>
+
+
 .. toctree::
    :maxdepth: 2
    :numbered:
