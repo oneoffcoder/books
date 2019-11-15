@@ -11,6 +11,14 @@ Don't do this
 
 .. code:: python
 
+    x, y = 1, 2
+    temp = x
+    x = y
+    y = temp
+
+
+.. code:: python
+
     def update_x(x):
         return x + 1
 
@@ -36,6 +44,11 @@ Don't do this
 
 Do this
 ^^^^^^^
+
+.. code:: python
+
+    x, y = 1, 2
+    x, y = y, x
 
 .. code:: python
 
