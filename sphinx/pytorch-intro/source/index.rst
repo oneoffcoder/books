@@ -55,7 +55,8 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    model-persistence
    learning
    rnn
-   tensorboard
+   gan
+   tensorboard   
    
 About
 =====
