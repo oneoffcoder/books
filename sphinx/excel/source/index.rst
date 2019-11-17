@@ -8,7 +8,10 @@ Excel, No Tears
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: Contents:
+
+   shortcuts
 
 
 
