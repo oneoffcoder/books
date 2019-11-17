@@ -45,6 +45,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    
    environment
    tensor
+   autograd
    data
    transformation
    loss
@@ -54,7 +55,10 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    model-persistence
    learning
    rnn
-   tensorboard
+   gan
+   neural-transfer
+   object-detection
+   tensorboard   
    
 About
 =====

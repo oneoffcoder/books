@@ -2,7 +2,7 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-pytorch-intro-gpu
-VERSION=0.0.4
+VERSION=0.0.5
 IMAGEID=$(docker images | awk -v repo="$REPOSITORY" -v tag="local" 'index($1, repo) && index($2, tag) {print $3}')
 
 echo ${IMAGEID}
