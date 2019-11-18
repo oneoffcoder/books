@@ -17,7 +17,7 @@ Personal protective equipment
 Environment
 -----------
 
-* Make sure people around you are aware of your drone's flight and stay away as far as possible.
-* Make sure you fly within the constraints of your drone (some drones are meant for flying indoors only).
+* Make sure people around you are aware of your drone's flight and stay away as far as possible. The Tello's fligt range is 100 m or 328 feet, and this is the range of situational control you must have.
+* Make sure you fly within the constraints of your drone (some drones are meant for flying indoors only). The Tello is meant for indoor flying, but outdoor flying is only recommended if there is little to no wind.
 * Contact your local airport for rules and regulations on flying drones. Do not fly into or over areas that are dangerous or protected.
 * Do not manipulate a drone under the influence.
