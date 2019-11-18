@@ -34,6 +34,7 @@ This book is a tutorial on programming ``Makeblock`` robots.
 
    prerequisites
    safety
+   parts
    blocks
    programs
 
