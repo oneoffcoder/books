@@ -156,7 +156,6 @@ class TelloUI(object):
 
         :return: None
         """
-        
         panel = Toplevel(self.root)
         panel.wm_title("Gesture Recognition")
 
