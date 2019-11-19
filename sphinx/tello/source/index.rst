@@ -39,6 +39,7 @@ This book is a tutorial on programming ``Tello`` drones.
    scratch
    python
    python-auto-flight
+   python-manual-control
    resources
 
 
