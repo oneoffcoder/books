@@ -56,7 +56,7 @@ class Tello(object):
         """
         while True:
             try:
-                self.response, ip = self.socket.recvfrom(3000)
+                self.response, _ = self.socket.recvfrom(3000)
             except socket.error as exc:
                 print(f'Caught exception socket.error : {exc}')
 
@@ -127,7 +127,7 @@ class Tello(object):
         else:
             speed = int(round(speed * 27.7778))
 
-        return self.send_command('speed %s' % speed)
+        return self.send_command(f'speed {speed}')
 
     def rotate_cw(self, degrees):
         """
@@ -136,7 +136,7 @@ class Tello(object):
         :param degrees: Degrees to rotate, 1 to 360.
         :return:Response from Tello, 'OK' or 'FALSE'.
         """
-        return self.send_command('cw %s' % degrees)
+        return self.send_command(f'cw {degrees}')
 
     def rotate_ccw(self, degrees):
         """
@@ -145,7 +145,7 @@ class Tello(object):
         :param degrees: Degrees to rotate, 1 to 360.
         :return: Response from Tello, 'OK' or 'FALSE'.
         """
-        return self.send_command('ccw %s' % degrees)
+        return self.send_command(f'ccw {degrees}')
 
     def flip(self, direction):
         """
@@ -154,7 +154,7 @@ class Tello(object):
         :param direction: Direction to flip, 'l', 'r', 'f', 'b'.
         :return: Response from Tello, 'OK' or 'FALSE'.
         """
-        return self.send_command('flip %s' % direction)
+        return self.send_command(f'flip {direction}')
 
     def get_response(self):
         """
@@ -261,7 +261,7 @@ class Tello(object):
         else:
             distance = int(round(distance * 100))
 
-        return self.send_command('%s %s' % (direction, distance))
+        return self.send_command(f'{direction} {distance}')
 
     def move_backward(self, distance):
         """

@@ -33,17 +33,17 @@ class TelloUI(object):
 
         # create buttons
         self.btn_landing = tki.Button(
-            self.root, text="Open Command Panel", relief="raised", command=self.openCmdWindow)
-        self.btn_landing.pack(side="bottom", fill="both",
-                              expand="yes", padx=10, pady=5)
+            self.root, text='Open Command Panel', relief='raised', command=self.openCmdWindow)
+        self.btn_landing.pack(side='bottom', fill='both',
+                              expand='yes', padx=10, pady=5)
         
         # start a thread that constantly pools the video sensor for
         # the most recently read frame
         self.stopEvent = threading.Event()
         
         # set a callback to handle when the window is closed
-        self.root.wm_title("TELLO Controller")
-        self.root.wm_protocol("WM_DELETE_WINDOW", self.on_close)
+        self.root.wm_title('TELLO Controller')
+        self.root.wm_protocol('WM_DELETE_WINDOW', self.on_close)
 
         # the sending_command will send command to tello every 5 seconds
         self.sending_command_thread = threading.Thread(target = self._sendingCommand)
@@ -74,7 +74,7 @@ class TelloUI(object):
         :return: None
         """        
         panel = Toplevel(self.root)
-        panel.wm_title("Command Panel")
+        panel.wm_title('Command Panel')
 
         # create text input entry
         text0 = tki.Label(panel,
@@ -89,18 +89,18 @@ class TelloUI(object):
                           'S - Move Tello Down\t\t\tArrow Down - Move Tello Backward\n'
                           'A - Rotate Tello Counter-Clockwise\tArrow Left - Move Tello Left\n'
                           'D - Rotate Tello Clockwise\t\tArrow Right - Move Tello Right',
-                          justify="left")
-        text1.pack(side="top")
+                          justify='left')
+        text1.pack(side='top')
 
         self.btn_landing = tki.Button(
-            panel, text="Land", relief="raised", command=self.telloLanding)
-        self.btn_landing.pack(side="bottom", fill="both",
-                              expand="yes", padx=10, pady=5)
+            panel, text='Land', relief='raised', command=self.telloLanding)
+        self.btn_landing.pack(side='bottom', fill='both',
+                              expand='yes', padx=10, pady=5)
 
         self.btn_takeoff = tki.Button(
-            panel, text="Takeoff", relief="raised", command=self.telloTakeOff)
-        self.btn_takeoff.pack(side="bottom", fill="both",
-                              expand="yes", padx=10, pady=5)
+            panel, text='Takeoff', relief='raised', command=self.telloTakeOff)
+        self.btn_takeoff.pack(side='bottom', fill='both',
+                              expand='yes', padx=10, pady=5)
 
         # binding arrow keys to drone control
         self.tmp_f = tki.Frame(panel, width=100, height=2)
@@ -112,32 +112,32 @@ class TelloUI(object):
         self.tmp_f.bind('<KeyPress-Down>', self.on_keypress_down)
         self.tmp_f.bind('<KeyPress-Left>', self.on_keypress_left)
         self.tmp_f.bind('<KeyPress-Right>', self.on_keypress_right)
-        self.tmp_f.pack(side="bottom")
+        self.tmp_f.pack(side='bottom')
         self.tmp_f.focus_set()
 
         self.btn_landing = tki.Button(
-            panel, text="Flip", relief="raised", command=self.openFlipWindow)
-        self.btn_landing.pack(side="bottom", fill="both",
-                              expand="yes", padx=10, pady=5)
+            panel, text='Flip', relief='raised', command=self.openFlipWindow)
+        self.btn_landing.pack(side='bottom', fill='both',
+                              expand='yes', padx=10, pady=5)
 
         self.distance_bar = Scale(panel, from_=0.02, to=5, tickinterval=0.01, digits=3, label='Distance(m)',
                                   resolution=0.01)
         self.distance_bar.set(0.2)
-        self.distance_bar.pack(side="left")
+        self.distance_bar.pack(side='left')
 
-        self.btn_distance = tki.Button(panel, text="Reset Distance", relief="raised",
+        self.btn_distance = tki.Button(panel, text='Reset Distance', relief='raised',
                                        command=self.updateDistancebar,
                                        )
-        self.btn_distance.pack(side="left", fill="both",
-                               expand="yes", padx=10, pady=5)
+        self.btn_distance.pack(side='left', fill='both',
+                               expand='yes', padx=10, pady=5)
 
         self.degree_bar = Scale(panel, from_=1, to=360, tickinterval=10, label='Degree')
         self.degree_bar.set(30)
-        self.degree_bar.pack(side="right")
+        self.degree_bar.pack(side='right')
 
-        self.btn_distance = tki.Button(panel, text="Reset Degree", relief="raised", command=self.updateDegreebar)
-        self.btn_distance.pack(side="right", fill="both",
-                               expand="yes", padx=10, pady=5)
+        self.btn_distance = tki.Button(panel, text='Reset Degree', relief='raised', command=self.updateDegreebar)
+        self.btn_distance.pack(side='right', fill='both',
+                               expand='yes', padx=10, pady=5)
 
     def openFlipWindow(self):
         """
@@ -146,27 +146,27 @@ class TelloUI(object):
         :return: None
         """
         panel = Toplevel(self.root)
-        panel.wm_title("Gesture Recognition")
+        panel.wm_title('Gesture Recognition')
 
         self.btn_flipl = tki.Button(
-            panel, text="Flip Left", relief="raised", command=self.telloFlip_l)
-        self.btn_flipl.pack(side="bottom", fill="both",
-                            expand="yes", padx=10, pady=5)
+            panel, text='Flip Left', relief='raised', command=self.telloFlip_l)
+        self.btn_flipl.pack(side='bottom', fill='both',
+                            expand='yes', padx=10, pady=5)
 
         self.btn_flipr = tki.Button(
-            panel, text="Flip Right", relief="raised", command=self.telloFlip_r)
-        self.btn_flipr.pack(side="bottom", fill="both",
-                            expand="yes", padx=10, pady=5)
+            panel, text='Flip Right', relief='raised', command=self.telloFlip_r)
+        self.btn_flipr.pack(side='bottom', fill='both',
+                            expand='yes', padx=10, pady=5)
 
         self.btn_flipf = tki.Button(
-            panel, text="Flip Forward", relief="raised", command=self.telloFlip_f)
-        self.btn_flipf.pack(side="bottom", fill="both",
-                            expand="yes", padx=10, pady=5)
+            panel, text='Flip Forward', relief='raised', command=self.telloFlip_f)
+        self.btn_flipf.pack(side='bottom', fill='both',
+                            expand='yes', padx=10, pady=5)
 
         self.btn_flipb = tki.Button(
-            panel, text="Flip Backward", relief="raised", command=self.telloFlip_b)
-        self.btn_flipb.pack(side="bottom", fill="both",
-                            expand="yes", padx=10, pady=5)
+            panel, text='Flip Backward', relief='raised', command=self.telloFlip_b)
+        self.btn_flipb.pack(side='bottom', fill='both',
+                            expand='yes', padx=10, pady=5)
 
     def telloTakeOff(self):
         return self.tello.takeoff()                
@@ -256,7 +256,7 @@ class TelloUI(object):
         the quit process to continue.
         :return: None
         """
-        print("[INFO] closing...")
+        print('[INFO] closing...')
         self.stopEvent.set()
         del self.tello
         self.root.quit()
