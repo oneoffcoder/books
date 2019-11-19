@@ -26,8 +26,6 @@ def start(file_name):
     """
     start_time = str(datetime.now())
 
-    file_name = sys.argv[1]
-
     with open(file_name, 'r') as f:
         commands = f.readlines()
 
