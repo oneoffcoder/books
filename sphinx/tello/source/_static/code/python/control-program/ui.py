@@ -1,7 +1,5 @@
-from PIL import Image
-from PIL import ImageTk
-import Tkinter as tki
-from Tkinter import Toplevel, Scale
+import tkinter as tki
+from tkinter import Toplevel, Scale
 import threading
 import datetime
 import os
@@ -34,15 +32,6 @@ class TelloUI(object):
         self.panel = None
 
         # create buttons
-        self.btn_snapshot = tki.Button(self.root, text="Snapshot!",
-                                       command=self.takeSnapshot)
-        self.btn_snapshot.pack(side="bottom", fill="both",
-                               expand="yes", padx=10, pady=5)
-
-        self.btn_pause = tki.Button(self.root, text="Pause", relief="raised", command=self.pauseVideo)
-        self.btn_pause.pack(side="bottom", fill="both",
-                            expand="yes", padx=10, pady=5)
-
         self.btn_landing = tki.Button(
             self.root, text="Open Command Panel", relief="raised", command=self.openCmdWindow)
         self.btn_landing.pack(side="bottom", fill="both",
