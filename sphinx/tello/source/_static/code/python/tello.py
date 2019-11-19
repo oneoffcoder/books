@@ -3,8 +3,11 @@ import threading
 import time
 from stats import Stats
 
-class Tello:
+class Tello(object):
     def __init__(self):
+        """
+        Constructor.
+        """
         self.local_ip = ''
         self.local_port = 8889
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # socket for sending cmd
@@ -61,7 +64,15 @@ class Tello:
                 print(f'Caught exception socket.error : {exc}')
 
     def on_close(self):
+        """
+        On close.
+        :returns: None.
+        """
         pass
 
     def get_log(self):
+        """
+        Gets the logs.
+        :returns: Logs.
+        """
         return self.log
