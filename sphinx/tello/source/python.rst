@@ -4,7 +4,7 @@ Python Programming
 Python Setup
 ------------
 
-You may actually use any programming language that can establish a UDP connection to send commands to the Tello drone, however, in this book, we will use ``Python`` to send commands to the drone. Python programming is an intermediate to advanced subject. Make sure you are comfortable and familiar with Python programming. The Python code is adapted from the ``DJI`` `GitHub <https://github.com/dji-sdk/Tello-Python>`_ repository. 
+You may actually use any programming language that can establish a UDP connection to send commands to the Tello drone, however, in this book, we will use ``Python`` to send commands to the drone. Python programming is an intermediate to advanced subject. Make sure you are comfortable and familiar with Python programming. Start learning Python today by going to our `online book <https://learn-python.oneoffcoder.com>`_. The Python code is adapted from the ``DJI`` `GitHub <https://github.com/dji-sdk/Tello-Python>`_ repository. 
 
 
 To be able to run the Python programs, you will need to have Python 3.x or higher. The use of `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`_ or `Anaconda <https://anaconda-installer.readthedocs.io/en/latest/>`_ is highly recommended. Setting up the environment you will need to get the Python drone programming examples working is rather involved. We recommend you select your favorite Python environment and follow the installation instruction. Additionally, please stop by `One-Off Coder <https://www.oneoffcoder.com>`_ for hands-on help.
