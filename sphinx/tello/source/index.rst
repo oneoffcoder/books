@@ -25,7 +25,7 @@ Drone Programming with Tello
 Preface
 =======
 
-This book is a tutorial on programming ``Makeblock`` robots.
+This book is a tutorial on programming ``Tello`` drones.
 
 .. toctree::
    :maxdepth: 2
