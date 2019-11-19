@@ -7,12 +7,12 @@ Excel, No Tears
 ===============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :numbered:
    :caption: Contents:
 
    shortcuts
-
+   formulas-functions
 
 
 About

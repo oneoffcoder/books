@@ -15,18 +15,39 @@ File
    ``Ctrl+F2``, Open print preview window
    ``Ctrl+F4``, Close current workbook
    ``Alt+F4``, Close excel
+
+Ribbon
+------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Ctrl+F1``, Expand or collapse ribbon
    ``Alt``, Activate access keys
    ``Tab``, Move to next ribbon control
    ``Space``, Activate or open selected control
    ``Enter``, Confirm control change
    ``F1``, Get help on selected control
+
+Drag and Drop
+-------------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Drag``, Drag and cut
    ``Ctrl+Drag``, Drag and copy
    ``Shift+Drag``, Drag and insert
    ``Ctrl+Shift+Drag``, Drag and insert copy
    ``Alt+Drag``, Drag to worksheet
    ``Ctrl+Drag``, Drag to duplicate worksheet
+
+Active Cell
+-----------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Shift+Backspace``, Select active cell only
    ``Ctrl+Backspace``, Show active cell
    ``Ctrl+.``, Move active cell cockwise in selection
@@ -34,6 +55,13 @@ File
    ``Shift+Enter``, Move active cell up
    ``Tab``, Move active cell right
    ``Shift+Tab``, Move active cell left
+
+General
+-------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``F1``, Open Help
    ``Ctrl+Z``, Undo last action
    ``Ctrl+Y``, Redo last action
@@ -54,6 +82,13 @@ File
    ``Shift+Space``, Select table row
    ``Ctrl+Space``, Select table column
    ``Ctrl+A``, Select table
+
+Selection
+---------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Shift+Space``, Select entire row
    ``Ctrl+Space``, Select entire column
    ``Ctrl+A``, Select entire worksheet
@@ -63,6 +98,13 @@ File
    ``Ctrl+Alt+Left``, Move left non-adjacent
    ``Shift+F8``, Toggle add to selection mode
    ``Esc``, Cancel selection
+
+Navigation
+----------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Alt+PageDown``, Move one screen right
    ``Alt+PageUp``, Move one screen left
    ``Ctrl+Right``, Move to right edge of data region
@@ -73,6 +115,13 @@ File
    ``Ctrl+End``, Move to last cell in worksheet
    ``Ctrl+Home``, Move to first cell in worksheet
    ``End``, Turn end mode on
+
+Extend Selection
+----------------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Ctrl+Shift+Right``, Extend last cell right
    ``Ctrl+Shift+Left``, Extend last cell left
    ``Ctrl+Shift+Up``, Extend last cell up
@@ -85,9 +134,23 @@ File
    ``Ctrl+Shift+Home``, Extend first cell
    ``Ctrl+Shift+End``, Extend last worksheet cell
    ``F8``, Toggle extend selection mode
+
+Select Special
+--------------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Ctrl+G``, Display Go To dialog box
    ``Ctrl+Shift+O``, Select cells with comments
    ``Ctrl+Shift+*``, Select current region
+
+Cell edit
+---------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``F2``, Edit active cell
    ``Shift+F2``, Insert or edit comment
    ``Esc``, Cancel entry
@@ -101,6 +164,13 @@ File
    ``Shift+End``, Select to end of cell
    ``Ctrl+Delete``, Delete to end of line
    ``Alt+Enter``, New line in cell
+
+Data entry
+----------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Enter``, Enter and move down
    ``Shift+Enter``, Enter and move up
    ``Tab``, Enter and move right
@@ -116,6 +186,13 @@ File
    ``Ctrl+K``, Add hyperlink
    ``Alt+Down``, Display AutoComplete list
    ``Ctrl+E``, Flash fill
+
+Cell format
+-----------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Ctrl+1``, Format almost anything
    ``Ctrl+Shift+F``, Display format cells font tab
    ``Ctrl+B``, Apply or remove bold formatting
@@ -129,6 +206,13 @@ File
    ``Alt+H+5``, Remove Indent
    ``Alt+H+F+G``, Increase font size one step
    ``Alt+H+F+K``, Decrease font size one step
+
+Number format
+-------------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Ctrl+Shift+~``, Apply general format
    ``Ctrl+Shift+$``, Apply currency format
    ``Ctrl+Shift+%``, Apply percentage format
@@ -137,6 +221,13 @@ File
    ``Ctrl+Shift+@``, Apply time format
    ``Ctrl+Shift+!``, Apply number format
    ``Ctrl+Shift+&``, Add border outline
+
+Border format
+-------------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Alt+R``, Add or remove border right
    ``Alt+L``, Add or remove border left
    ``Alt+T``, Add or remove border top
@@ -145,10 +236,17 @@ File
    ``Alt+H``, Add or remove border horizontal interior
    ``Alt+V``, Add or remove border vertical interior
    ``Ctrl+Shift+_``, Remove borders
+
+Formulas
+--------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``F4``, Toggle absolute and relative references
    ``Shift+F3``, Open insert function dialog
    ``Alt+=``, Autosum selected cells
-   ``Ctrl+   ```, Toggle formulas on and off
+   ``Ctrl+```, Toggle formulas on and off
    ``Ctrl+Shift+A``, Insert function arguments
    ``Ctrl+Shift+Enter``, Enter array formula
    ``F9``, Calculate worksheet
@@ -160,6 +258,13 @@ File
    ``Ctrl+Shift+F3``, Define names from labels
    ``F3``, Paste name into formula
    ``Tab``, Accept function with autocomplete
+
+Grid operations
+---------------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Ctrl+Shift++``, Display insert dialog box
    ``Ctrl+Shift++``, Insert rows
    ``Ctrl+Shift++``, Insert columns
@@ -176,6 +281,13 @@ File
    ``Alt+Shift+Left``, Ungroup rows or columns
    ``Alt+Shift+Right``, Open group dialog box
    ``Alt+Shift+Left``, Open ungroup dialog box
+
+Pivot tables
+------------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Ctrl+8``, Hide or show outline symbols
    ``Space``, Toggle pivot table field checkbox
    ``Alt+Shift+Right``, Group pivot table items
@@ -184,6 +296,13 @@ File
    ``Alt+F1``, Create pivot chart on same worksheet
    ``F11``, Create pivot chart on new worksheet
    ``Alt+D+P``, Open pivot table wizard
+
+Workbook
+--------
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``Shift+F11``, Insert new worksheet
    ``Ctrl+PageDown``, Go to next worksheet
    ``Ctrl+PageUp``, Go to previous worksheet
@@ -196,6 +315,13 @@ File
    ``Shift+Click``, Select adjacent worksheets
    ``Ctrl+Click``, Select non-adjacent worksheets
    ``Scroll Lock``, Toggle scroll lock
+
+Other
+-----
+
+.. csv-table:: File Shortcuts
+   :header: Combination, Effect
+
    ``F7``, Open spelling dialog box
    ``Shift+F7``, Open thesaurus dialog box
    ``Alt+F8``, Open macro dialog box
@@ -203,8 +329,6 @@ File
    ``Ctrl+D``, Duplicate object
    ``Alt``, Snap to grid
    ``Ctrl+6``, Hide or show objects
-   ``Alt+   ```, Display modify cell style
+   ``Alt+```, Display modify cell style
    ``Shift+F10``, Display shortcut menu
    ``Alt+Space``, Display control menu
-
-
