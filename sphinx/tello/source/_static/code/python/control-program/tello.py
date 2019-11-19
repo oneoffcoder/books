@@ -16,7 +16,8 @@ class Tello(object):
 
         :param local_ip: Local IP address to bind.
         :param local_port: Local port to bind.
-        :param imperial: If True, speed is MPH and distance is feet. If False, speed is KPH and distance is meters.
+        :param imperial: If True, speed is MPH and distance is feet. 
+                         If False, speed is KPH and distance is meters.
         :param command_timeout: Number of seconds to wait for a response to a command.
         :param tello_ip: Tello IP.
         :param tello_port: Tello port.
@@ -25,7 +26,7 @@ class Tello(object):
         self.command_timeout = command_timeout
         self.imperial = imperial
         self.response = None  
-        self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # socket for sending cmd
+        self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.tello_address = (tello_ip, tello_port)
         self.last_height = 0
         self.socket.bind((local_ip, local_port))

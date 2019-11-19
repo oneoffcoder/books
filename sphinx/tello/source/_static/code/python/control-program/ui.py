@@ -24,7 +24,8 @@ class TelloUI(object):
         self.distance = 0.1  # default distance for 'move' cmd
         self.degree = 30  # default degree for 'cw' or 'ccw' cmd
 
-        # if the flag is TRUE,the auto-takeoff thread will stop waiting for the response from tello
+        # if the flag is TRUE,the auto-takeoff thread will stop waiting
+        # for the response from tello
         self.quit_waiting_flag = False
         
         # initialize the root window and image panel
@@ -120,7 +121,8 @@ class TelloUI(object):
         self.btn_landing.pack(side='bottom', fill='both',
                               expand='yes', padx=10, pady=5)
 
-        self.distance_bar = Scale(panel, from_=0.02, to=5, tickinterval=0.01, digits=3, label='Distance(m)',
+        self.distance_bar = Scale(panel, from_=0.02, to=5, tickinterval=0.01, 
+                                  digits=3, label='Distance(m)',
                                   resolution=0.01)
         self.distance_bar.set(0.2)
         self.distance_bar.pack(side='left')
@@ -135,7 +137,8 @@ class TelloUI(object):
         self.degree_bar.set(30)
         self.degree_bar.pack(side='right')
 
-        self.btn_distance = tki.Button(panel, text='Reset Degree', relief='raised', command=self.updateDegreebar)
+        self.btn_distance = tki.Button(panel, text='Reset Degree', relief='raised', 
+                                       command=self.updateDegreebar)
         self.btn_distance.pack(side='right', fill='both',
                                expand='yes', padx=10, pady=5)
 
