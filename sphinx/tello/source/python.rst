@@ -1,10 +1,18 @@
 Python Programming
 ==================
 
+Python Setup
+------------
+
+You may actually use any programming language that can establish a UDP connection to send commands to the Tello drone, however, in this book, we will use ``Python`` to send commands to the drone. Python programming is an intermediate to advanced subject. Make sure you are comfortable and familiar with Python programming. The Python code is adapted from the ``DJI`` `GitHub <https://github.com/dji-sdk/Tello-Python>`_ repository. 
+
+
+To be able to run the Python programs, you will need to have Python 3.x or higher. The use of `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`_ or `Anaconda <https://anaconda-installer.readthedocs.io/en/latest/>`_ is highly recommended. Setting up the environment you will need to get the Python drone programming examples working is rather involved. We recommend you select your favorite Python environment and follow the installation instruction. Additionally, please stop by `One-Off Coder <https://www.oneoffcoder.com>`_ for hands-on help.
+
 Tello Software Development Kit
 ------------------------------
 
-You may establish a ``UDP`` connection to the Tello on port ``8889`` and send commands. There are versions ``1.0`` and ``2.0`` to communicate with the Tello. We will be using version 1.0. The following are manuals listing the commands that may be sent.
+You may establish a ``UDP`` connection to the Tello on port ``8889`` and send commands. There are versions ``1.0`` and ``2.0`` to communicate with the ``Tello`` and ``Tello EDU``, respectively. We will be using version 1.0. The following are manuals listing the commands that may be sent.
 
 * `Tello 1.0 SDK <https://dl-cdn.ryzerobotics.com/downloads/tello/0228/Tello+SDK+Readme.pdf>`_
 * `Tello 2.0 SDK <https://dl-cdn.ryzerobotics.com/downloads/Tello/Tello%20SDK%202.0%20User%20Guide.pdf>`_
@@ -30,48 +38,3 @@ We list the Tello 1.0 commands in the following table.
    Battery?, Get current battery percentage, ``xx``
    Time?, Get current flight time, ``xx``
 
-Python
-------
-
-You may actually use any programming language that can establish a UDP connection to send commands to the Tello drone, however, in this section, we will use ``Python`` to send commands to the drone. The Python code is adapted from the ``DJI`` `GitHub <https://github.com/dji-sdk/Tello-Python>`_ repository. To be able to run the Python programs, you will need to have Python 3.x or higher. The use of `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`_ or `Anaconda <https://anaconda-installer.readthedocs.io/en/latest/>`_ is highly recommended.
-
-Sending commands
-----------------
-
-The ``Stats`` class is used to log command requests and responses.
-
-.. literalinclude:: _static/code/python/stats.py
-   :language: python
-   :linenos:
-
-:download:`Code <_static/code/python/stats.py>`
-
-The ``Tello`` class is used to abstract the drone.
-
-.. literalinclude:: _static/code/python/tello.py
-   :language: python
-   :linenos:
-
-:download:`Code <_static/code/python/tello.py>`
-
-The ``command.txt` file stores the sequence of string commands that we will send to the drone.
-
-.. literalinclude:: _static/code/python/command.txt
-   :language: text
-   :linenos:
-
-:download:`Code <_static/code/python/command.txt>`
-
-The ``app.py`` file is the application program entry point.
-
-.. literalinclude:: _static/code/python/app.py
-   :language: python
-   :linenos:
-
-:download:`Code <_static/code/python/app.py>`
-
-To run the program, type in the following from a terminal. The program will output the logs to the directory ``log/``.
-
-.. code:: bash
-
-    python app.py command.txt
