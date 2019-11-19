@@ -1,5 +1,5 @@
-Programs
-========
+Scratch
+=======
 
 Here are some very basic programs you may try for yourself to start drone programming with Scratch and the Tello!
 

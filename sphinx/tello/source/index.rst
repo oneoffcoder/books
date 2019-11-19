@@ -36,7 +36,8 @@ This book is a tutorial on programming ``Makeblock`` robots.
    safety
    parts
    blocks
-   programs
+   scratch
+   python
 
 
 About
