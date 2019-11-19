@@ -59,4 +59,4 @@ To run the program, type in the following from a terminal. The program will outp
 
 .. code:: bash
 
-    python app.py command.txt
+    python app.py -f command.txt
