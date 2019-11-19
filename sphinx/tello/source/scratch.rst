@@ -48,6 +48,24 @@ How about rotating the drone clocwise ``cw`` then counter-clockwise ``ccw``?
 
 :download:`Code <_static/code/scratch/cw-ccw.sb2>`
 
+Simple flight
+-------------
+
+Simple flying.
+
+.. image:: _static/images/programs/simple-flight.png
+
+:download:`Code <_static/code/scratch/simple-flight.sb2>`
+
+Flip meow
+---------
+
+Flip and meow!
+
+.. image:: _static/images/programs/flip-meow.png
+
+:download:`Code <_static/code/scratch/flip-meow.sb2>`
+
 Flipping out
 ------------
 
@@ -83,3 +101,30 @@ Let's spice it up with manual controls! Sounds + motion with the cat!
 .. image:: _static/images/programs/manual-control-spicy.png
 
 :download:`Code <_static/code/scratch/manual-control-spicy.sb2>`
+
+Square
+------
+
+Too square!
+
+.. image:: _static/images/programs/square-flight.png
+
+:download:`Code <_static/code/scratch/square-flight.sb2>`
+
+Square flips
+------------
+
+A square with flips!
+
+.. image:: _static/images/programs/square-and-flips.png
+
+:download:`Code <_static/code/scratch/square-and-flips.sb2>`
+
+Spaceship
+---------
+
+A UFO spaceship?
+
+.. image:: _static/images/programs/spaceship.png
+
+:download:`Code <_static/code/scratch/spaceship.sb2>`
