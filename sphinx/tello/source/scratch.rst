@@ -107,7 +107,7 @@ Can we make the drone flip out?
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/L9cCSMpGv5M" frameborder="0" allowfullscreen></iframe>
 
-Manual Control
+Manual control
 --------------
 
 Can we manually control the drone? ``YES, WE CAN!``. Note the following.
@@ -129,7 +129,7 @@ Can we manually control the drone? ``YES, WE CAN!``. Note the following.
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/nuHRQwba9Dc" frameborder="0" allowfullscreen></iframe>
 
-Spicy Manual Control
+Spicy manual control
 --------------------
 
 Let's spice it up with manual controls! Sounds + motion with the cat!
