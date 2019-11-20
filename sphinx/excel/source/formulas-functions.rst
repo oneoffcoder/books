@@ -75,5 +75,5 @@ Here are some things to note in these ``if`` examples.
 
 Excel at its core is a collection of data and the formulas that manipulate them to create more data.
 This was a brief overview of formulas and functions. The rest of this book will cover functions
-that are widely used in Excel.
+that are widely used in Excel and advanced function nesting.
 
