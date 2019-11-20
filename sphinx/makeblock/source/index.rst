@@ -32,6 +32,22 @@ This book is a tutorial on programming ``Makeblock`` robots.
    :numbered:
    :caption: Contents:
 
+   ide
+   lighting
+   speaker
+   action
+   sensing
+   infrared
+   events
+   control
+   operators
+   variables
+   my-blocks
+   devices
+   sprites
+   background
+   resources
+
 About
 =====
 
