@@ -34,7 +34,7 @@ This book is a tutorial on programming ``Tello`` drones. Please watch the video 
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Contents:
+   :caption: Contents
 
    prerequisites
    safety
