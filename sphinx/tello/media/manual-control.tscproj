@@ -18,7 +18,7 @@
   "sourceBin" : [
     {
       "id" : 1,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\cw-ccw.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\cw-ccw.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T010229",
       "sourceTracks" : [
@@ -50,7 +50,7 @@
     },
     {
       "id" : 2,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\flip-meow.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\flip-meow.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T010255",
       "sourceTracks" : [
@@ -82,7 +82,7 @@
     },
     {
       "id" : 3,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\flip-with-duration.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\flip-with-duration.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T010321",
       "sourceTracks" : [
@@ -114,7 +114,7 @@
     },
     {
       "id" : 4,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\forward-backward.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\forward-backward.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T010350",
       "sourceTracks" : [
@@ -146,7 +146,7 @@
     },
     {
       "id" : 5,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\hello-world.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\hello-world.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T010409",
       "sourceTracks" : [
@@ -178,7 +178,7 @@
     },
     {
       "id" : 6,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\left-right.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\left-right.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T010433",
       "sourceTracks" : [
@@ -210,7 +210,7 @@
     },
     {
       "id" : 7,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\manual-control.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\manual-control.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T010517",
       "sourceTracks" : [
@@ -242,7 +242,7 @@
     },
     {
       "id" : 8,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\manual-control-spicy.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\manual-control-spicy.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T010558",
       "sourceTracks" : [
@@ -274,7 +274,7 @@
     },
     {
       "id" : 9,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\simple-flight.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\simple-flight.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T013017",
       "sourceTracks" : [
@@ -306,7 +306,7 @@
     },
     {
       "id" : 10,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\spaceship.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\spaceship.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T013058",
       "sourceTracks" : [
@@ -338,7 +338,7 @@
     },
     {
       "id" : 11,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\square-and-flips.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\square-and-flips.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T013147",
       "sourceTracks" : [
@@ -370,7 +370,7 @@
     },
     {
       "id" : 12,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\square-flight.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\square-flight.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T013242",
       "sourceTracks" : [
@@ -402,7 +402,7 @@
     },
     {
       "id" : 13,
-      "src" : "C:\\Users\\ioc\\Downloads\\tello-scratch\\up-down.MP4",
+      "src" : "C:\\Users\\oneoffcoder\\Downloads\\tello-scratch\\up-down.MP4",
       "rect" : [0, 0, 3840, 2160],
       "lastMod" : "20191120T013307",
       "sourceTracks" : [
@@ -480,9 +480,9 @@
     },
     {
       "id" : 16,
-      "src" : "C:\\Users\\ioc\\git\\books\\sphinx\\tello\\source\\_static\\images\\logo.png",
+      "src" : "C:\\Users\\oneoffcoder\\git\\books\\sphinx\\tello\\source\\_static\\images\\logo.png",
       "rect" : [0, 0, 150, 150],
-      "lastMod" : "20191118T185019",
+      "lastMod" : "20191120T014807",
       "sourceTracks" : [
         {
           "range" : [0, 1],
@@ -550,7 +550,7 @@
     "sceneTrack" : {
       "scenes" : [
         {
-          "duration" : 40.1,
+          "duration" : 54.5,
           "title" : "",
           "type" : "",
           "csml" : {
@@ -562,16 +562,8 @@
                     "id" : 20,
                     "_type" : "Group",
                     "parameters" : {
-                      "translation0" : {
-                        "type" : "double",
-                        "defaultValue" : 82.9825351017817,
-                        "interp" : "eioe"
-                      },
-                      "translation1" : {
-                        "type" : "double",
-                        "defaultValue" : 2.22598828258924e-10,
-                        "interp" : "eioe"
-                      },
+                      "translation0" : 82.9825351017817,
+                      "translation1" : 2.22598828258924e-10,
                       "volume" : 1.0
                     },
                     "tracks" : [
@@ -582,16 +574,8 @@
                             "id" : 21,
                             "_type" : "Group",
                             "parameters" : {
-                              "translation0" : {
-                                "type" : "double",
-                                "defaultValue" : -277.982535101782,
-                                "interp" : "eioe"
-                              },
-                              "translation1" : {
-                                "type" : "double",
-                                "defaultValue" : -174.500000000223,
-                                "interp" : "eioe"
-                              },
+                              "translation0" : -277.982535101782,
+                              "translation1" : -174.500000000223,
                               "volume" : 1.0
                             },
                             "tracks" : [
@@ -605,61 +589,17 @@
                                       "kind" : "remix",
                                       "shape" : "shape-rectangle",
                                       "style" : "urban",
-                                      "fill-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.650980392156863,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.647058823529412,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.584313725490196,
-                                        "interp" : "linr"
-                                      },
-                                      "height" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1079.99999999986,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
-                                      "width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1919.99999999991,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-blue" : 0.650980392156863,
+                                      "fill-color-green" : 0.647058823529412,
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : 0.584313725490196,
+                                      "height" : 1079.99999999986,
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
+                                      "width" : 1919.99999999991,
                                       "horizontal-alignment" : "center",
                                       "stroke-style" : "solid",
                                       "vertical-alignment" : "center",
@@ -679,16 +619,8 @@
                                       "autoRotateText" : true
                                     },
                                     "parameters" : {
-                                      "translation0" : {
-                                        "type" : "double",
-                                        "defaultValue" : 194.999999999771,
-                                        "interp" : "eioe"
-                                      },
-                                      "translation1" : {
-                                        "type" : "double",
-                                        "defaultValue" : 174.500000000129,
-                                        "interp" : "eioe"
-                                      }
+                                      "translation0" : 194.999999999771,
+                                      "translation1" : 174.500000000129
                                     },
                                     "effects" : [
 
@@ -728,30 +660,13 @@
                                       "kind" : "remix",
                                       "shape" : "shape-ellipse",
                                       "style" : "bold",
-                                      "fill-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0588235294117647,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.768627450980392,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.945098039215686,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-blue" : 0.0588235294117647,
+                                      "fill-color-green" : 0.768627450980392,
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : 0.945098039215686,
                                       "height" : {
                                         "type" : "double",
                                         "defaultValue" : 350.000000000129,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -761,35 +676,14 @@
                                           }
                                         ]
                                       },
-                                      "stroke-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
                                       "width" : {
                                         "type" : "double",
                                         "defaultValue" : 390.000000000389,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -821,7 +715,6 @@
                                       "translation0" : {
                                         "type" : "double",
                                         "defaultValue" : -960.00000000013,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -834,7 +727,6 @@
                                       "translation1" : {
                                         "type" : "double",
                                         "defaultValue" : -540.499999999867,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -893,7 +785,6 @@
                                       "fill-color-blue" : {
                                         "type" : "double",
                                         "defaultValue" : 0.443137254901961,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -906,7 +797,6 @@
                                       "fill-color-green" : {
                                         "type" : "double",
                                         "defaultValue" : 0.8,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -916,15 +806,10 @@
                                           }
                                         ]
                                       },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-opacity" : 1.0,
                                       "fill-color-red" : {
                                         "type" : "double",
                                         "defaultValue" : 0.180392156862745,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -937,7 +822,6 @@
                                       "height" : {
                                         "type" : "double",
                                         "defaultValue" : 350.000000000129,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -947,35 +831,14 @@
                                           }
                                         ]
                                       },
-                                      "stroke-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
                                       "width" : {
                                         "type" : "double",
                                         "defaultValue" : 390.000000000389,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1007,7 +870,6 @@
                                       "translation0" : {
                                         "type" : "double",
                                         "defaultValue" : -960.00000000013,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1020,7 +882,6 @@
                                       "translation1" : {
                                         "type" : "double",
                                         "defaultValue" : -540.499999999867,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1078,7 +939,6 @@
                                       "fill-color-blue" : {
                                         "type" : "double",
                                         "defaultValue" : 0.235294117647059,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1091,7 +951,6 @@
                                       "fill-color-green" : {
                                         "type" : "double",
                                         "defaultValue" : 0.298039215686275,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1101,15 +960,10 @@
                                           }
                                         ]
                                       },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-opacity" : 1.0,
                                       "fill-color-red" : {
                                         "type" : "double",
                                         "defaultValue" : 0.905882352941176,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1122,7 +976,6 @@
                                       "height" : {
                                         "type" : "double",
                                         "defaultValue" : 350.000000000129,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1132,35 +985,14 @@
                                           }
                                         ]
                                       },
-                                      "stroke-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
                                       "width" : {
                                         "type" : "double",
                                         "defaultValue" : 390.000000000389,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1192,7 +1024,6 @@
                                       "translation0" : {
                                         "type" : "double",
                                         "defaultValue" : -960.00000000013,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1205,7 +1036,6 @@
                                       "translation1" : {
                                         "type" : "double",
                                         "defaultValue" : -540.499999999867,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1263,7 +1093,6 @@
                                       "fill-color-blue" : {
                                         "type" : "double",
                                         "defaultValue" : 0.713725490196078,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1276,7 +1105,6 @@
                                       "fill-color-green" : {
                                         "type" : "double",
                                         "defaultValue" : 0.349019607843137,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1286,15 +1114,10 @@
                                           }
                                         ]
                                       },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-opacity" : 1.0,
                                       "fill-color-red" : {
                                         "type" : "double",
                                         "defaultValue" : 0.607843137254902,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1307,7 +1130,6 @@
                                       "height" : {
                                         "type" : "double",
                                         "defaultValue" : 350.000000000129,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1317,35 +1139,14 @@
                                           }
                                         ]
                                       },
-                                      "stroke-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
                                       "width" : {
                                         "type" : "double",
                                         "defaultValue" : 390.000000000389,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1377,7 +1178,6 @@
                                       "translation0" : {
                                         "type" : "double",
                                         "defaultValue" : -960.00000000013,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1390,7 +1190,6 @@
                                       "translation1" : {
                                         "type" : "double",
                                         "defaultValue" : -540.499999999867,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 10,
@@ -1448,7 +1247,6 @@
                                       "fill-color-blue" : {
                                         "type" : "double",
                                         "defaultValue" : 0.368627450980392,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 103,
@@ -1461,7 +1259,6 @@
                                       "fill-color-green" : {
                                         "type" : "double",
                                         "defaultValue" : 0.286274509803922,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 103,
@@ -1471,15 +1268,10 @@
                                           }
                                         ]
                                       },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-opacity" : 1.0,
                                       "fill-color-red" : {
                                         "type" : "double",
                                         "defaultValue" : 0.203921568627451,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 103,
@@ -1492,7 +1284,6 @@
                                       "height" : {
                                         "type" : "double",
                                         "defaultValue" : 14.2401956586024,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 103,
@@ -1505,7 +1296,6 @@
                                       "stroke-color-blue" : {
                                         "type" : "double",
                                         "defaultValue" : 0.368627450980392,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 103,
@@ -1518,7 +1308,6 @@
                                       "stroke-color-green" : {
                                         "type" : "double",
                                         "defaultValue" : 0.286274509803922,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 103,
@@ -1528,15 +1317,10 @@
                                           }
                                         ]
                                       },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
+                                      "stroke-color-opacity" : 1.0,
                                       "stroke-color-red" : {
                                         "type" : "double",
                                         "defaultValue" : 0.203921568627451,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 103,
@@ -1546,15 +1330,10 @@
                                           }
                                         ]
                                       },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 6.0,
-                                        "interp" : "linr"
-                                      },
+                                      "stroke-width" : 6.0,
                                       "width" : {
                                         "type" : "double",
                                         "defaultValue" : 14.9818725158125,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 103,
@@ -1586,7 +1365,6 @@
                                       "translation0" : {
                                         "type" : "double",
                                         "defaultValue" : 194.999999999601,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 103,
@@ -1599,7 +1377,6 @@
                                       "translation1" : {
                                         "type" : "double",
                                         "defaultValue" : 174.500000000223,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 103,
@@ -1612,7 +1389,6 @@
                                       "rotation2" : {
                                         "type" : "double",
                                         "defaultValue" : 0.785398163397448,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 103,
@@ -1681,21 +1457,9 @@
                                       "ident" : "Lens-Shadow-001"
                                     },
                                     "parameters" : {
-                                      "translation0" : {
-                                        "type" : "double",
-                                        "defaultValue" : 195.0,
-                                        "interp" : "eioe"
-                                      },
-                                      "translation1" : {
-                                        "type" : "double",
-                                        "defaultValue" : 174.5,
-                                        "interp" : "eioe"
-                                      },
-                                      "opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.5,
-                                        "interp" : "linr"
-                                      }
+                                      "translation0" : 195.0,
+                                      "translation1" : 174.5,
+                                      "opacity" : 0.5
                                     },
                                     "effects" : [
 
@@ -1746,61 +1510,17 @@
                                       "kind" : "remix",
                                       "shape" : "shape-rectangle",
                                       "style" : "bold",
-                                      "fill-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0969326214087388,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
-                                      "height" : {
-                                        "type" : "double",
-                                        "defaultValue" : 131.249999999999,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 10.8466310704369,
-                                        "interp" : "linr"
-                                      },
-                                      "width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 926.249999999746,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-blue" : 0.0,
+                                      "fill-color-green" : 0.0,
+                                      "fill-color-opacity" : 0.0969326214087388,
+                                      "fill-color-red" : 0.0,
+                                      "height" : 131.249999999999,
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 10.8466310704369,
+                                      "width" : 926.249999999746,
                                       "horizontal-alignment" : "center",
                                       "stroke-style" : "solid",
                                       "vertical-alignment" : "center",
@@ -1820,16 +1540,8 @@
                                       "autoRotateText" : true
                                     },
                                     "parameters" : {
-                                      "translation0" : {
-                                        "type" : "double",
-                                        "defaultValue" : 43.124999999994,
-                                        "interp" : "eioe"
-                                      },
-                                      "translation1" : {
-                                        "type" : "double",
-                                        "defaultValue" : 337.625000000083,
-                                        "interp" : "eioe"
-                                      }
+                                      "translation0" : 43.124999999994,
+                                      "translation1" : 337.625000000083
                                     },
                                     "effects" : [
                                         {
@@ -1986,56 +1698,20 @@
                               "kind" : "remix",
                               "shape" : "text",
                               "style" : "basic",
-                              "height" : {
-                                "type" : "double",
-                                "defaultValue" : 85.1607142855484,
-                                "interp" : "linr"
-                              },
-                              "line-spacing" : {
-                                "type" : "double",
-                                "defaultValue" : 0.0,
-                                "interp" : "linr"
-                              },
-                              "width" : {
-                                "type" : "double",
-                                "defaultValue" : 893.55978260832,
-                                "interp" : "linr"
-                              },
-                              "word-wrap" : {
-                                "type" : "double",
-                                "defaultValue" : 1.0,
-                                "interp" : "linr"
-                              },
+                              "height" : 85.1607142855484,
+                              "line-spacing" : 0.0,
+                              "width" : 893.55978260832,
+                              "word-wrap" : 1.0,
                               "horizontal-alignment" : "right",
                               "resize-behavior" : "resizeText",
                               "text" : "www.oneoffcoder.com",
                               "vertical-alignment" : "center",
                               "font" : {
-                                "color-blue" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-green" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-red" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "size" : {
-                                  "type" : "double",
-                                  "defaultValue" : 96.0,
-                                  "interp" : "linr"
-                                },
-                                "tracking" : {
-                                  "type" : "double",
-                                  "defaultValue" : 0.0,
-                                  "interp" : "linr"
-                                },
+                                "color-blue" : 1.0,
+                                "color-green" : 1.0,
+                                "color-red" : 1.0,
+                                "size" : 96.0,
+                                "tracking" : 0.0,
                                 "name" : "Montserrat",
                                 "weight" : "Regular"
                               },
@@ -2055,16 +1731,8 @@
                               "autoRotateText" : true
                             },
                             "parameters" : {
-                              "translation0" : {
-                                "type" : "double",
-                                "defaultValue" : -39.8742956618135,
-                                "interp" : "eioe"
-                              },
-                              "translation1" : {
-                                "type" : "double",
-                                "defaultValue" : -111.267857142685,
-                                "interp" : "eioe"
-                              }
+                              "translation0" : -39.8742956618135,
+                              "translation1" : -111.267857142685
                             },
                             "effects" : [
                                 {
@@ -2167,56 +1835,20 @@
                               "kind" : "remix",
                               "shape" : "text",
                               "style" : "basic",
-                              "height" : {
-                                "type" : "double",
-                                "defaultValue" : 147.285714285697,
-                                "interp" : "linr"
-                              },
-                              "line-spacing" : {
-                                "type" : "double",
-                                "defaultValue" : 0.0,
-                                "interp" : "linr"
-                              },
-                              "width" : {
-                                "type" : "double",
-                                "defaultValue" : 1299.19999999944,
-                                "interp" : "linr"
-                              },
-                              "word-wrap" : {
-                                "type" : "double",
-                                "defaultValue" : 1.0,
-                                "interp" : "linr"
-                              },
+                              "height" : 147.285714285697,
+                              "line-spacing" : 0.0,
+                              "width" : 1299.19999999944,
+                              "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
-                              "text" : "Turning around and around",
+                              "text" : "Manual control",
                               "vertical-alignment" : "center",
                               "font" : {
-                                "color-blue" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-green" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-red" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "size" : {
-                                  "type" : "double",
-                                  "defaultValue" : 96.0,
-                                  "interp" : "linr"
-                                },
-                                "tracking" : {
-                                  "type" : "double",
-                                  "defaultValue" : 0.0,
-                                  "interp" : "linr"
-                                },
+                                "color-blue" : 1.0,
+                                "color-green" : 1.0,
+                                "color-red" : 1.0,
+                                "size" : 96.0,
+                                "tracking" : 0.0,
                                 "name" : "Montserrat",
                                 "weight" : "Regular"
                               },
@@ -2226,7 +1858,7 @@
                                   {
                                     "endTime" : 0,
                                     "time" : 0,
-                                    "value" : [{"name":"fgColor","rangeEnd":25,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"},{"name":"fontName","rangeEnd":25,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"strikethrough","rangeEnd":25,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontItalic","rangeEnd":25,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontWeight","rangeEnd":25,"rangeStart":0,"value":400,"valueType":"int"},{"name":"kerning","rangeEnd":25,"rangeStart":0,"value":0,"valueType":"double"},{"name":"underline","rangeEnd":25,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":25,"rangeStart":0,"value":117,"valueType":"double"}],
+                                    "value" : [{"name":"fontWeight","rangeEnd":14,"rangeStart":0,"value":400,"valueType":"int"},{"name":"kerning","rangeEnd":14,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":14,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"},{"name":"fontSize","rangeEnd":14,"rangeStart":0,"value":117,"valueType":"double"},{"name":"fontItalic","rangeEnd":14,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":14,"rangeStart":0,"value":0,"valueType":"int"},{"name":"underline","rangeEnd":14,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":14,"rangeStart":0,"value":"Montserrat","valueType":"string"}],
                                     "duration" : 0
                                   }
                                 ]
@@ -2236,16 +1868,8 @@
                               "autoRotateText" : true
                             },
                             "parameters" : {
-                              "translation0" : {
-                                "type" : "double",
-                                "defaultValue" : -125.470650246468,
-                                "interp" : "eioe"
-                              },
-                              "translation1" : {
-                                "type" : "double",
-                                "defaultValue" : 0.35714285720249,
-                                "interp" : "eioe"
-                              }
+                              "translation0" : -125.470650246468,
+                              "translation1" : 0.35714285720249
                             },
                             "effects" : [
                                 {
@@ -2349,56 +1973,20 @@
                               "kind" : "remix",
                               "shape" : "text",
                               "style" : "basic",
-                              "height" : {
-                                "type" : "double",
-                                "defaultValue" : 117.0,
-                                "interp" : "linr"
-                              },
-                              "line-spacing" : {
-                                "type" : "double",
-                                "defaultValue" : 0.0,
-                                "interp" : "linr"
-                              },
-                              "width" : {
-                                "type" : "double",
-                                "defaultValue" : 893.55978260832,
-                                "interp" : "linr"
-                              },
-                              "word-wrap" : {
-                                "type" : "double",
-                                "defaultValue" : 1.0,
-                                "interp" : "linr"
-                              },
+                              "height" : 117.0,
+                              "line-spacing" : 0.0,
+                              "width" : 893.55978260832,
+                              "word-wrap" : 1.0,
                               "horizontal-alignment" : "left",
                               "resize-behavior" : "resizeText",
                               "text" : "Tello Programming with Scratch",
                               "vertical-alignment" : "center",
                               "font" : {
-                                "color-blue" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-green" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-red" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "size" : {
-                                  "type" : "double",
-                                  "defaultValue" : 96.0,
-                                  "interp" : "linr"
-                                },
-                                "tracking" : {
-                                  "type" : "double",
-                                  "defaultValue" : 0.0,
-                                  "interp" : "linr"
-                                },
+                                "color-blue" : 1.0,
+                                "color-green" : 1.0,
+                                "color-red" : 1.0,
+                                "size" : 96.0,
+                                "tracking" : 0.0,
                                 "name" : "Montserrat",
                                 "weight" : "Regular"
                               },
@@ -2418,16 +2006,8 @@
                               "autoRotateText" : true
                             },
                             "parameters" : {
-                              "translation0" : {
-                                "type" : "double",
-                                "defaultValue" : -229.732535101794,
-                                "interp" : "eioe"
-                              },
-                              "translation1" : {
-                                "type" : "double",
-                                "defaultValue" : 163.124999999891,
-                                "interp" : "eioe"
-                              }
+                              "translation0" : -229.732535101794,
+                              "translation1" : 163.124999999891
                             },
                             "effects" : [
                                 {
@@ -2588,10 +2168,10 @@
                   {
                     "id" : 33,
                     "_type" : "VMFile",
-                    "src" : 1,
+                    "src" : 7,
                     "trackNumber" : 0,
                     "attributes" : {
-                      "ident" : "cw-ccw"
+                      "ident" : "manual-control"
                     },
                     "parameters" : {
                       "scale0" : {
@@ -2609,9 +2189,9 @@
 
                     ],
                     "start" : 240,
-                    "duration" : 555,
-                    "mediaStart" : 0,
-                    "mediaDuration" : 555,
+                    "duration" : 950,
+                    "mediaStart" : 265,
+                    "mediaDuration" : 950,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -2624,26 +2204,10 @@
                     "id" : 34,
                     "_type" : "Group",
                     "parameters" : {
-                      "translation0" : {
-                        "type" : "double",
-                        "defaultValue" : -2.35843344853492e-10,
-                        "interp" : "eioe"
-                      },
-                      "translation1" : {
-                        "type" : "double",
-                        "defaultValue" : 7.05142610968323e-11,
-                        "interp" : "eioe"
-                      },
-                      "scale0" : {
-                        "type" : "double",
-                        "defaultValue" : 0.998151571164516,
-                        "interp" : "eioe"
-                      },
-                      "scale1" : {
-                        "type" : "double",
-                        "defaultValue" : 0.998151571164515,
-                        "interp" : "eioe"
-                      },
+                      "translation0" : -2.35843344853492e-10,
+                      "translation1" : 7.05142610968323e-11,
+                      "scale0" : 0.998151571164516,
+                      "scale1" : 0.998151571164515,
                       "volume" : 1.0
                     },
                     "tracks" : [
@@ -2654,16 +2218,8 @@
                             "id" : 35,
                             "_type" : "Group",
                             "parameters" : {
-                              "translation0" : {
-                                "type" : "double",
-                                "defaultValue" : -0.499999999627335,
-                                "interp" : "eioe"
-                              },
-                              "translation1" : {
-                                "type" : "double",
-                                "defaultValue" : 0.499999999862666,
-                                "interp" : "eioe"
-                              },
+                              "translation0" : -0.499999999627335,
+                              "translation1" : 0.499999999862666,
                               "volume" : 1.0
                             },
                             "tracks" : [
@@ -2680,7 +2236,6 @@
                                       "fill-color-blue" : {
                                         "type" : "double",
                                         "defaultValue" : 0.611764705882353,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -2693,7 +2248,6 @@
                                       "fill-color-green" : {
                                         "type" : "double",
                                         "defaultValue" : 0.737254901960784,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -2703,15 +2257,10 @@
                                           }
                                         ]
                                       },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-opacity" : 1.0,
                                       "fill-color-red" : {
                                         "type" : "double",
                                         "defaultValue" : 0.101960784313725,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -2724,7 +2273,6 @@
                                       "height" : {
                                         "type" : "double",
                                         "defaultValue" : 24.4999999997613,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -2734,35 +2282,14 @@
                                           }
                                         ]
                                       },
-                                      "stroke-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
                                       "width" : {
                                         "type" : "double",
                                         "defaultValue" : 24.4999999997613,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -2794,7 +2321,6 @@
                                       "translation0" : {
                                         "type" : "double",
                                         "defaultValue" : 0.499999999881766,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -2807,7 +2333,6 @@
                                       "translation1" : {
                                         "type" : "double",
                                         "defaultValue" : -0.499999999896517,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -2847,61 +2372,17 @@
                                       "kind" : "remix",
                                       "shape" : "shape-rectangle",
                                       "style" : "urban",
-                                      "fill-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.443137254901961,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.8,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "fill-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.180392156862745,
-                                        "interp" : "linr"
-                                      },
-                                      "height" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1079.99999999982,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
-                                      "width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1919.99999999982,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-blue" : 0.443137254901961,
+                                      "fill-color-green" : 0.8,
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : 0.180392156862745,
+                                      "height" : 1079.99999999982,
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
+                                      "width" : 1919.99999999982,
                                       "horizontal-alignment" : "center",
                                       "stroke-style" : "solid",
                                       "vertical-alignment" : "center",
@@ -2921,16 +2402,8 @@
                                       "autoRotateText" : true
                                     },
                                     "parameters" : {
-                                      "translation0" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.499999999832085,
-                                        "interp" : "eioe"
-                                      },
-                                      "translation1" : {
-                                        "type" : "double",
-                                        "defaultValue" : -0.499999999940542,
-                                        "interp" : "eioe"
-                                      }
+                                      "translation0" : 0.499999999832085,
+                                      "translation1" : -0.499999999940542
                                     },
                                     "effects" : [
 
@@ -2971,7 +2444,6 @@
                                       "fill-color-blue" : {
                                         "type" : "double",
                                         "defaultValue" : 0.235294117647059,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -2984,7 +2456,6 @@
                                       "fill-color-green" : {
                                         "type" : "double",
                                         "defaultValue" : 0.298039215686275,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -2994,15 +2465,10 @@
                                           }
                                         ]
                                       },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-opacity" : 1.0,
                                       "fill-color-red" : {
                                         "type" : "double",
                                         "defaultValue" : 0.905882352941176,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3015,7 +2481,6 @@
                                       "height" : {
                                         "type" : "double",
                                         "defaultValue" : 24.4999999997613,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3025,35 +2490,14 @@
                                           }
                                         ]
                                       },
-                                      "stroke-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
                                       "width" : {
                                         "type" : "double",
                                         "defaultValue" : 24.4999999997613,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3085,7 +2529,6 @@
                                       "translation0" : {
                                         "type" : "double",
                                         "defaultValue" : 0.499999999881766,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3098,7 +2541,6 @@
                                       "translation1" : {
                                         "type" : "double",
                                         "defaultValue" : -0.499999999896517,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3141,7 +2583,6 @@
                                       "fill-color-blue" : {
                                         "type" : "double",
                                         "defaultValue" : 0.713725490196078,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3172,7 +2613,6 @@
                                       "fill-color-green" : {
                                         "type" : "double",
                                         "defaultValue" : 0.349019607843137,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3200,15 +2640,10 @@
                                           }
                                         ]
                                       },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-opacity" : 1.0,
                                       "fill-color-red" : {
                                         "type" : "double",
                                         "defaultValue" : 0.607843137254902,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3239,7 +2674,6 @@
                                       "height" : {
                                         "type" : "double",
                                         "defaultValue" : 9.88636363576558,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3255,35 +2689,14 @@
                                           }
                                         ]
                                       },
-                                      "stroke-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
                                       "width" : {
                                         "type" : "double",
                                         "defaultValue" : 10.1953124993756,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3321,7 +2734,6 @@
                                       "translation0" : {
                                         "type" : "double",
                                         "defaultValue" : 0.499999999627445,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3352,7 +2764,6 @@
                                       "translation1" : {
                                         "type" : "double",
                                         "defaultValue" : -0.499999999862744,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3383,7 +2794,6 @@
                                       "rotation2" : {
                                         "type" : "double",
                                         "defaultValue" : 0.0,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 29,
@@ -3472,7 +2882,6 @@
                                       "fill-color-blue" : {
                                         "type" : "double",
                                         "defaultValue" : 0.443137254901961,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3485,7 +2894,6 @@
                                       "fill-color-green" : {
                                         "type" : "double",
                                         "defaultValue" : 0.8,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3495,15 +2903,10 @@
                                           }
                                         ]
                                       },
-                                      "fill-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
+                                      "fill-color-opacity" : 1.0,
                                       "fill-color-red" : {
                                         "type" : "double",
                                         "defaultValue" : 0.180392156862745,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3516,7 +2919,6 @@
                                       "height" : {
                                         "type" : "double",
                                         "defaultValue" : 24.4999999997613,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3526,35 +2928,14 @@
                                           }
                                         ]
                                       },
-                                      "stroke-color-blue" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-green" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-color-red" : {
-                                        "type" : "double",
-                                        "defaultValue" : 1.0,
-                                        "interp" : "linr"
-                                      },
-                                      "stroke-width" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.0,
-                                        "interp" : "linr"
-                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
                                       "width" : {
                                         "type" : "double",
                                         "defaultValue" : 24.4999999997613,
-                                        "interp" : "linr",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3586,7 +2967,6 @@
                                       "translation0" : {
                                         "type" : "double",
                                         "defaultValue" : 0.499999999881766,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3599,7 +2979,6 @@
                                       "translation1" : {
                                         "type" : "double",
                                         "defaultValue" : -0.499999999896517,
-                                        "interp" : "eioe",
                                         "keyframes" : [
                                           {
                                             "endTime" : 9,
@@ -3655,21 +3034,9 @@
                                       "ident" : "Lens-Shadow-001"
                                     },
                                     "parameters" : {
-                                      "translation0" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.499999999503091,
-                                        "interp" : "eioe"
-                                      },
-                                      "translation1" : {
-                                        "type" : "double",
-                                        "defaultValue" : -0.499999999955975,
-                                        "interp" : "eioe"
-                                      },
-                                      "opacity" : {
-                                        "type" : "double",
-                                        "defaultValue" : 0.5,
-                                        "interp" : "linr"
-                                      }
+                                      "translation0" : 0.499999999503091,
+                                      "translation1" : -0.499999999955975,
+                                      "opacity" : 0.5
                                     },
                                     "effects" : [
 
@@ -3753,56 +3120,20 @@
                               "kind" : "remix",
                               "shape" : "text",
                               "style" : "bold",
-                              "height" : {
-                                "type" : "double",
-                                "defaultValue" : 98.5714285715236,
-                                "interp" : "linr"
-                              },
-                              "line-spacing" : {
-                                "type" : "double",
-                                "defaultValue" : 0.0,
-                                "interp" : "linr"
-                              },
-                              "width" : {
-                                "type" : "double",
-                                "defaultValue" : 1382.7238043204,
-                                "interp" : "linr"
-                              },
-                              "word-wrap" : {
-                                "type" : "double",
-                                "defaultValue" : 1.0,
-                                "interp" : "linr"
-                              },
+                              "height" : 98.5714285715236,
+                              "line-spacing" : 0.0,
+                              "width" : 1382.7238043204,
+                              "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
                               "text" : "www.oneoffcoder.com",
                               "vertical-alignment" : "center",
                               "font" : {
-                                "color-blue" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-green" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-red" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "size" : {
-                                  "type" : "double",
-                                  "defaultValue" : 96.0,
-                                  "interp" : "linr"
-                                },
-                                "tracking" : {
-                                  "type" : "double",
-                                  "defaultValue" : 0.0,
-                                  "interp" : "linr"
-                                },
+                                "color-blue" : 1.0,
+                                "color-green" : 1.0,
+                                "color-red" : 1.0,
+                                "size" : 96.0,
+                                "tracking" : 0.0,
                                 "name" : "Source Sans Pro",
                                 "weight" : "Semi Bold"
                               },
@@ -3822,26 +3153,10 @@
                               "autoRotateText" : true
                             },
                             "parameters" : {
-                              "translation0" : {
-                                "type" : "double",
-                                "defaultValue" : -0.000901192933332133,
-                                "interp" : "eioe"
-                              },
-                              "translation1" : {
-                                "type" : "double",
-                                "defaultValue" : -75.9260582013136,
-                                "interp" : "eioe"
-                              },
-                              "scale0" : {
-                                "type" : "double",
-                                "defaultValue" : 1.00185185185185,
-                                "interp" : "eioe"
-                              },
-                              "scale1" : {
-                                "type" : "double",
-                                "defaultValue" : 1.00185185185185,
-                                "interp" : "eioe"
-                              }
+                              "translation0" : -0.000901192933332133,
+                              "translation1" : -75.9260582013136,
+                              "scale0" : 1.00185185185185,
+                              "scale1" : 1.00185185185185
                             },
                             "effects" : [
                                 {
@@ -3976,56 +3291,20 @@
                               "kind" : "remix",
                               "shape" : "text",
                               "style" : "bold",
-                              "height" : {
-                                "type" : "double",
-                                "defaultValue" : 98.5714285715236,
-                                "interp" : "linr"
-                              },
-                              "line-spacing" : {
-                                "type" : "double",
-                                "defaultValue" : 0.0,
-                                "interp" : "linr"
-                              },
-                              "width" : {
-                                "type" : "double",
-                                "defaultValue" : 1382.7238043204,
-                                "interp" : "linr"
-                              },
-                              "word-wrap" : {
-                                "type" : "double",
-                                "defaultValue" : 1.0,
-                                "interp" : "linr"
-                              },
+                              "height" : 98.5714285715236,
+                              "line-spacing" : 0.0,
+                              "width" : 1382.7238043204,
+                              "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
                               "text" : "Like, Subscribe and Share",
                               "vertical-alignment" : "center",
                               "font" : {
-                                "color-blue" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-green" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-red" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "size" : {
-                                  "type" : "double",
-                                  "defaultValue" : 96.0,
-                                  "interp" : "linr"
-                                },
-                                "tracking" : {
-                                  "type" : "double",
-                                  "defaultValue" : 0.0,
-                                  "interp" : "linr"
-                                },
+                                "color-blue" : 1.0,
+                                "color-green" : 1.0,
+                                "color-red" : 1.0,
+                                "size" : 96.0,
+                                "tracking" : 0.0,
                                 "name" : "Source Sans Pro",
                                 "weight" : "Semi Bold"
                               },
@@ -4045,16 +3324,8 @@
                               "autoRotateText" : true
                             },
                             "parameters" : {
-                              "translation0" : {
-                                "type" : "double",
-                                "defaultValue" : -5.56780840277918,
-                                "interp" : "eioe"
-                              },
-                              "translation1" : {
-                                "type" : "double",
-                                "defaultValue" : -174.589152349476,
-                                "interp" : "eioe"
-                              }
+                              "translation0" : -5.56780840277918,
+                              "translation1" : -174.589152349476
                             },
                             "effects" : [
                                 {
@@ -4191,56 +3462,20 @@
                               "kind" : "remix",
                               "shape" : "text",
                               "style" : "bold",
-                              "height" : {
-                                "type" : "double",
-                                "defaultValue" : 172.857142857204,
-                                "interp" : "linr"
-                              },
-                              "line-spacing" : {
-                                "type" : "double",
-                                "defaultValue" : 0.0,
-                                "interp" : "linr"
-                              },
-                              "width" : {
-                                "type" : "double",
-                                "defaultValue" : 1382.44576014776,
-                                "interp" : "linr"
-                              },
-                              "word-wrap" : {
-                                "type" : "double",
-                                "defaultValue" : 1.0,
-                                "interp" : "linr"
-                              },
+                              "height" : 172.857142857204,
+                              "line-spacing" : 0.0,
+                              "width" : 1382.44576014776,
+                              "word-wrap" : 1.0,
                               "horizontal-alignment" : "center",
                               "resize-behavior" : "resizeText",
                               "text" : "ONE-OFF CODER",
                               "vertical-alignment" : "center",
                               "font" : {
-                                "color-blue" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-green" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "color-red" : {
-                                  "type" : "double",
-                                  "defaultValue" : 1.0,
-                                  "interp" : "linr"
-                                },
-                                "size" : {
-                                  "type" : "double",
-                                  "defaultValue" : 96.0,
-                                  "interp" : "linr"
-                                },
-                                "tracking" : {
-                                  "type" : "double",
-                                  "defaultValue" : 0.0,
-                                  "interp" : "linr"
-                                },
+                                "color-blue" : 1.0,
+                                "color-green" : 1.0,
+                                "color-red" : 1.0,
+                                "size" : 96.0,
+                                "tracking" : 0.0,
                                 "name" : "Source Sans Pro",
                                 "weight" : "Semi Bold"
                               },
@@ -4260,16 +3495,8 @@
                               "autoRotateText" : true
                             },
                             "parameters" : {
-                              "translation0" : {
-                                "type" : "double",
-                                "defaultValue" : 0.277119926386471,
-                                "interp" : "eioe"
-                              },
-                              "translation1" : {
-                                "type" : "double",
-                                "defaultValue" : 42.4999999998856,
-                                "interp" : "eioe"
-                              }
+                              "translation0" : 0.277119926386471,
+                              "translation1" : 42.4999999998856
                             },
                             "effects" : [
                                 {
@@ -4432,7 +3659,7 @@
                     "effects" : [
 
                     ],
-                    "start" : 795,
+                    "start" : 1190,
                     "duration" : 298,
                     "mediaStart" : 0.0,
                     "mediaDuration" : 298.0,
@@ -4479,10 +3706,10 @@
                   {
                     "id" : 45,
                     "_type" : "AMFile",
-                    "src" : 1,
+                    "src" : 7,
                     "trackNumber" : 1,
                     "attributes" : {
-                      "ident" : "cw-ccw",
+                      "ident" : "manual-control",
                       "gain" : 1.0,
                       "mixToMono" : false
                     },
@@ -4494,9 +3721,9 @@
 
                     ],
                     "start" : 240,
-                    "duration" : 555,
-                    "mediaStart" : 0,
-                    "mediaDuration" : 555,
+                    "duration" : 950,
+                    "mediaStart" : 265,
+                    "mediaDuration" : 950,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -4520,22 +3747,14 @@
                       "ident" : "logo"
                     },
                     "parameters" : {
-                      "translation0" : {
-                        "type" : "double",
-                        "defaultValue" : 884.999999999756,
-                        "interp" : "eioe"
-                      },
-                      "translation1" : {
-                        "type" : "double",
-                        "defaultValue" : -464.999999999932,
-                        "interp" : "eioe"
-                      }
+                      "translation0" : 884.999999999756,
+                      "translation1" : -464.999999999932
                     },
                     "effects" : [
 
                     ],
                     "start" : 90,
-                    "duration" : 1003,
+                    "duration" : 1398,
                     "mediaStart" : 0,
                     "mediaDuration" : 1,
                     "scalar" : 1,
@@ -4595,21 +3814,15 @@
                             "duration" : 0
                           },
                           {
-                            "endTime" : 1073,
-                            "time" : 1073,
-                            "value" : 1.0,
+                            "endTime" : 1418,
+                            "time" : 1418,
+                            "value" : 1.00000000000002,
                             "duration" : 0
                           },
                           {
-                            "endTime" : 1203,
-                            "time" : 1203,
+                            "endTime" : 1626,
+                            "time" : 1626,
                             "value" : 0.0,
-                            "duration" : 0
-                          },
-                          {
-                            "endTime" : 1204,
-                            "time" : 1204,
-                            "value" : 1.0,
                             "duration" : 0
                           }
                         ]
@@ -4619,9 +3832,9 @@
 
                     ],
                     "start" : 0,
-                    "duration" : 1203,
+                    "duration" : 1635,
                     "mediaStart" : 0,
-                    "mediaDuration" : 1203,
+                    "mediaDuration" : 1635,
                     "scalar" : 1,
                     "metadata" : {
                       "clipSpeedAttribute" : false
@@ -4710,13 +3923,14 @@
     "backgroundColor" : [ 0, 0, 0, 255]
   },
   "metadata" : {
-    "AutoSaveFile" : "C:\\Users\\ioc\\AppData\\Local\\TechSmith\\Camtasia Studio\\19.0\\Auto-Saves\\cw-ccw10f7502f.autosave.tscproj",
-    "CanvasZoom" : 16,
+    "AutoSaveFile" : "",
+    "CanvasZoom" : 48,
     "Date" : "2019-11-19 07:54:07 PM",
     "IsAutoSave" : "0",
     "Language" : "ENU",
     "ProfileName" : "",
-    "Title" : "cw-ccw",
+    "ProjectDimensionsChanged" : "0",
+    "Title" : "manual-control",
     "audioNarrationNotes" : "",
     "calloutStyle" : "Basic",
     "canvasDetached" : "False",

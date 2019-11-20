@@ -12,6 +12,10 @@ Every programming attempt needs a ``Hello, world!`` example. This program simply
 
 :download:`Code <_static/code/scratch/hello-world.sb2>`
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PlOzEv-rfCY" frameborder="0" allowfullscreen></iframe>
+
 Going up and down
 -----------------
 
@@ -20,6 +24,10 @@ This program sends the drone up and then down.
 .. image:: _static/images/programs/up-down.png
 
 :download:`Code <_static/code/scratch/up-down.sb2>`
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l2jqhyWIozM" frameborder="0" allowfullscreen></iframe>
 
 Left or right?
 --------------
@@ -30,6 +38,10 @@ This program makes the drone fly left then right.
 
 :download:`Code <_static/code/scratch/left-right.sb2>`
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MOZ-X9hpHBI" frameborder="0" allowfullscreen></iframe>
+
 Forward, then backward
 ----------------------
 
@@ -38,6 +50,10 @@ This program flies the drone forward then backward.
 .. image:: _static/images/programs/forward-back.png
 
 :download:`Code <_static/code/scratch/forward-back.sb2>`
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pmmpLN3VvO0" frameborder="0" allowfullscreen></iframe>
 
 Turning around and around
 -------------------------
@@ -48,6 +64,10 @@ How about rotating the drone clocwise ``cw`` then counter-clockwise ``ccw``?
 
 :download:`Code <_static/code/scratch/cw-ccw.sb2>`
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/V7vU6RjtP_g" frameborder="0" allowfullscreen></iframe>
+
 Simple flight
 -------------
 
@@ -56,6 +76,10 @@ Simple flying.
 .. image:: _static/images/programs/simple-flight.png
 
 :download:`Code <_static/code/scratch/simple-flight.sb2>`
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/N6LbN22ZCUc" frameborder="0" allowfullscreen></iframe>
 
 Flip meow
 ---------
@@ -66,6 +90,10 @@ Flip and meow!
 
 :download:`Code <_static/code/scratch/flip-meow.sb2>`
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Uq6RaLw92ws" frameborder="0" allowfullscreen></iframe>
+
 Flipping out
 ------------
 
@@ -75,7 +103,11 @@ Can we make the drone flip out?
 
 :download:`Code <_static/code/scratch/flip-with-duration.sb2>`
 
-Manual Control
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/L9cCSMpGv5M" frameborder="0" allowfullscreen></iframe>
+
+Manual control
 --------------
 
 Can we manually control the drone? ``YES, WE CAN!``. Note the following.
@@ -93,7 +125,11 @@ Can we manually control the drone? ``YES, WE CAN!``. Note the following.
 
 :download:`Code <_static/code/scratch/manual-control.sb2>`
 
-Spicy Manual Control
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nuHRQwba9Dc" frameborder="0" allowfullscreen></iframe>
+
+Spicy manual control
 --------------------
 
 Let's spice it up with manual controls! Sounds + motion with the cat!
@@ -101,6 +137,10 @@ Let's spice it up with manual controls! Sounds + motion with the cat!
 .. image:: _static/images/programs/manual-control-spicy.png
 
 :download:`Code <_static/code/scratch/manual-control-spicy.sb2>`
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5oI9iLC0yz8" frameborder="0" allowfullscreen></iframe>
 
 Square
 ------
@@ -111,6 +151,10 @@ Too square!
 
 :download:`Code <_static/code/scratch/square-flight.sb2>`
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9lQxCn5fjW0" frameborder="0" allowfullscreen></iframe>
+
 Square flips
 ------------
 
@@ -120,6 +164,10 @@ A square with flips!
 
 :download:`Code <_static/code/scratch/square-and-flips.sb2>`
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QE05fXLR1eE" frameborder="0" allowfullscreen></iframe>
+
 Spaceship
 ---------
 
@@ -128,3 +176,7 @@ A UFO spaceship?
 .. image:: _static/images/programs/spaceship.png
 
 :download:`Code <_static/code/scratch/spaceship.sb2>`
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RBflUsMkqGg" frameborder="0" allowfullscreen></iframe>
