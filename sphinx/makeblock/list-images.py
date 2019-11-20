@@ -3,7 +3,7 @@ from collections import defaultdict, namedtuple
 
 Image = namedtuple('Image', 'alias path')
 
-image_dir = './source/_static/images/codey'
+image_dir = './source/_static/images/common'
 files = pathlib.Path(image_dir).glob('**/*.png')
 d = defaultdict(list)
 

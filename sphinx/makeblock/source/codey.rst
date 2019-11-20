@@ -270,3 +270,93 @@ Speaker
    |set-volume-to-x|, 
    |stop-all-sounds|, 
    |volume|,
+
+My-Blocks
+---------
+
+.. |make-a-block| image:: _static/images/common/my-blocks/make-a-block.png
+
+.. csv-table:: My-Blocks
+   :header: Block, Effect
+
+   |make-a-block|, 
+
+Control
+-------
+
+.. |forever| image:: _static/images/common/control/forever.png
+.. |if-then-else| image:: _static/images/common/control/if-then-else.png
+.. |if-then| image:: _static/images/common/control/if-then.png
+.. |repeat-until| image:: _static/images/common/control/repeat-until.png
+.. |repeat-x| image:: _static/images/common/control/repeat-x.png
+.. |stop| image:: _static/images/common/control/stop.png
+.. |wait-until| image:: _static/images/common/control/wait-until.png
+.. |wait-x-seconds| image:: _static/images/common/control/wait-x-seconds.png
+
+.. csv-table:: Control
+   :header: Block, Effect
+
+   |forever|, 
+   |if-then-else|, 
+   |if-then|, 
+   |repeat-until|, 
+   |repeat-x|, 
+   |stop|, 
+   |wait-until|, 
+   |wait-x-seconds|, 
+
+Variables
+---------
+
+.. |make-a-list| image:: _static/images/common/variables/make-a-list.png
+.. |make-a-variable| image:: _static/images/common/variables/make-a-variable.png
+
+.. csv-table:: Variables
+   :header: Block, Effect
+
+   |make-a-list|, 
+   |make-a-variable|, 
+
+Operators
+---------
+
+.. |join-text-text| image:: _static/images/common/operators/join-text-text.png
+.. |length-of-text| image:: _static/images/common/operators/length-of-text.png
+.. |letter-x-to-text| image:: _static/images/common/operators/letter-x-to-text.png
+.. |math-of-x| image:: _static/images/common/operators/math-of-x.png
+.. |not-x| image:: _static/images/common/operators/not-x.png
+.. |pick-random-x-to-y| image:: _static/images/common/operators/pick-random-x-to-y.png
+.. |round-x| image:: _static/images/common/operators/round-x.png
+.. |text-contains-x| image:: _static/images/common/operators/text-contains-x.png
+.. |x-and-y| image:: _static/images/common/operators/x-and-y.png
+.. |x-divide-y| image:: _static/images/common/operators/x-divide-y.png
+.. |x-equals-y| image:: _static/images/common/operators/x-equals-y.png
+.. |x-gt-y| image:: _static/images/common/operators/x-gt-y.png
+.. |x-lt-y| image:: _static/images/common/operators/x-lt-y.png
+.. |x-minus-y| image:: _static/images/common/operators/x-minus-y.png
+.. |x-mod-y| image:: _static/images/common/operators/x-mod-y.png
+.. |x-or-y| image:: _static/images/common/operators/x-or-y.png
+.. |x-plus-y| image:: _static/images/common/operators/x-plus-y.png
+.. |x-times-y| image:: _static/images/common/operators/x-times-y.png
+
+.. csv-table:: Operators
+   :header: Block, Effect
+
+   |join-text-text|, 
+   |length-of-text|, 
+   |letter-x-to-text|, 
+   |math-of-x|, 
+   |not-x|, 
+   |pick-random-x-to-y|, 
+   |round-x|, 
+   |text-contains-x|, 
+   |x-and-y|, 
+   |x-divide-y|, 
+   |x-equals-y|, 
+   |x-gt-y|, 
+   |x-lt-y|, 
+   |x-minus-y|, 
+   |x-mod-y|, 
+   |x-or-y|, 
+   |x-plus-y|, 
+   |x-times-y|,
