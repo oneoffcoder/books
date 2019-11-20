@@ -3,7 +3,7 @@ from collections import defaultdict, namedtuple
 
 Image = namedtuple('Image', 'alias path')
 
-image_dir = './source/_static/images/mbot'
+image_dir = './source/_static/images/common'
 files = pathlib.Path(image_dir).glob('**/*.png')
 d = defaultdict(list)
 
@@ -19,17 +19,21 @@ for f in files:
     t = Image(a, s)
     d[section].append(t)
 
-for section, figures in d.items():
+d = [(section, figures) for section, figures in d.items()]
+d = sorted(d, key=lambda tup: tup[0])
+
+for section, figures in d:
     figs = sorted(figures, key=lambda image: image.path)
-    print(section.title())
-    print('-'*len(section))
+    s = section[3:len(section)]
+    print(s.title())
+    print('-'*len(s))
     print()
     
     for _, path in figs:
         print(path)
 
     print()
-    print(f'.. csv-table:: {section.title()}')
+    print(f'.. csv-table:: {s.title()}')
     print('   :header: Block, Effect')
     print()
     
