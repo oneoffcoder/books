@@ -21,6 +21,8 @@ phases:
       - cd sphinx/datascience && make clean && make html && cd ../..
       - cd sphinx/python-dothis && make clean && make html && cd ../..
       - cd sphinx/scratch && make clean && make html && cd ../..
+      - cd sphinx/tello && make clean && make html && cd ../..
+      - cd sphinx/makeblock && make clean && make html && cd ../..
   post_build:
     commands:
       - aws s3 sync sphinx/java-intro/build/html s3://learn-java.oneoffcoder.com --quiet
@@ -31,4 +33,6 @@ phases:
       - aws s3 sync sphinx/datascience/build/html s3://datascience.oneoffcoder.com --quiet
       - aws s3 sync sphinx/python-dothis/build/html s3://python.oneoffcoder.com --quiet
       - aws s3 sync sphinx/scratch/build/html s3://scratch.oneoffcoder.com --quiet
+      - aws s3 sync sphinx/tello/build/html s3://tello.oneoffcoder.com --quiet
+      - aws s3 sync sphinx/makeblock/build/html s3://makeblock.oneoffcoder.com --quiet
       - echo Build completed on `date`
