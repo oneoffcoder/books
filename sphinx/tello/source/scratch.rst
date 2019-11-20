@@ -103,6 +103,10 @@ Can we make the drone flip out?
 
 :download:`Code <_static/code/scratch/flip-with-duration.sb2>`
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/L9cCSMpGv5M" frameborder="0" allowfullscreen></iframe>
+
 Manual Control
 --------------
 
@@ -172,3 +176,7 @@ A UFO spaceship?
 .. image:: _static/images/programs/spaceship.png
 
 :download:`Code <_static/code/scratch/spaceship.sb2>`
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RBflUsMkqGg" frameborder="0" allowfullscreen></iframe>
