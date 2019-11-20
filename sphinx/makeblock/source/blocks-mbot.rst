@@ -4,6 +4,8 @@ mBot Code Blocks
 Show
 ----
 
+The ``Show`` code blocks control the ``LED panel`` if you have it installed. Typically, the LED panel is installed on ``port 1``.
+
 .. |00-led-panel-shows-image-for-secs| image:: _static/images/mbot/00-show/00-led-panel-shows-image-for-secs.png
 .. |01-led-panel-shows-image| image:: _static/images/mbot/00-show/01-led-panel-shows-image.png
 .. |02-led-panel-shows-image-at-x-y| image:: _static/images/mbot/00-show/02-led-panel-shows-image-at-x-y.png
@@ -16,14 +18,14 @@ Show
 .. csv-table:: Show
    :header: Block, Effect
 
-   |00-led-panel-shows-image-for-secs|,
-   |01-led-panel-shows-image|,
-   |02-led-panel-shows-image-at-x-y|,
-   |03-led-panel-shows-text|,
-   |04-led-panel-shows-text-at-x-y|,
-   |05-led-panel-shows-number-text|,
-   |06-led-panel-shows-time|,
-   |07-led-panel-x-clears-screen|,
+   |00-led-panel-shows-image-for-secs|, displays the specified image for the specifed amount of seconds
+   |01-led-panel-shows-image|, displays the specified image
+   |02-led-panel-shows-image-at-x-y|, displays the specified image the specified ``x`` and ``y`` coordinate
+   |03-led-panel-shows-text|, displays the specified string
+   |04-led-panel-shows-text-at-x-y|, displays the specified string at the specified ``x`` and ``y`` coordinate
+   |05-led-panel-shows-number-text|, displays the specified number
+   |06-led-panel-shows-time|, displays the time
+   |07-led-panel-x-clears-screen|, clears the screen
 
 Light and Sound
 ---------------
@@ -37,11 +39,11 @@ Light and Sound
 .. csv-table:: Light and Sound
    :header: Block, Effect
 
-   |00-led-shows-color-for-secs|,
-   |01-led-shows-color|,
-   |02-turn-on-light-with-color-red-green-blue|,
-   |03-play-note-for-x-beats|,
-   |04-play-sound-at-frequency-of-hz-for-secs|,
+   |00-led-shows-color-for-secs|, shows the specified ``color`` for the specified amount of ``seconds``
+   |01-led-shows-color|, shows the specified ``color``
+   |02-turn-on-light-with-color-red-green-blue|, "shows the color controlled by the specified amount of ``red``, ``green`` and ``blue``"
+   |03-play-note-for-x-beats|, plays the specified ``note`` at the specified ``beat``
+   |04-play-sound-at-frequency-of-hz-for-secs|, plays a sound at the specified ``frequency`` for the specified amount of ``seconds``
 
 Action
 ------
@@ -57,13 +59,13 @@ Action
 .. csv-table:: Action
    :header: Block, Effect
 
-   |00-move-forward-at-power-x-for-secs|,
-   |01-move-backward-at-power-x-for-secs|,
-   |02-turn-left-at-power-x-for-secs|,
-   |03-turn-right-at-power-x-for-secs|,
-   |04-x-at-power-y|,
-   |05-left-wheel-turns-at-power-x-right-wheel-at-power-y|,
-   |06-stop-moving|,
+   |00-move-forward-at-power-x-for-secs|, move ``forward`` for the specified amount of ``seconds``
+   |01-move-backward-at-power-x-for-secs|, move ``backward`` for the specified amount of ``seconds``
+   |02-turn-left-at-power-x-for-secs|, turn ``left`` for the specified amount of ``seconds``
+   |03-turn-right-at-power-x-for-secs|, turn ``right`` for the specified amount of ``seconds``
+   |04-x-at-power-y|, "move ``forward``, ``backward``, ``left`` or ``right``"
+   |05-left-wheel-turns-at-power-x-right-wheel-at-power-y|, turn the ``left`` and ``right`` wheels
+   |06-stop-moving|, stop moving
 
 Sensing
 -------
@@ -82,16 +84,16 @@ Sensing
 .. csv-table:: Sensing
    :header: Block, Effect
 
-   |00-light-sensor-light-intensity|,
-   |01-ultrasonic-sensor-distance|,
-   |02-line-follwer-sensor-value|,
-   |03-line-follower-sensor-detects-being|,
-   |04-when-on-board-button|,
-   |05-ir-remote-pressed|,
-   |06-send-ir-message-text|,
-   |07-ir-message-received|,
-   |08-timer|,
-   |09-reset-timer|,
+   |00-light-sensor-light-intensity|, toggles on/off the ``light intensity`` reading
+   |01-ultrasonic-sensor-distance|, toggles on/off the ``ultrasonic sensor`` reading
+   |02-line-follwer-sensor-value|, toggles on/off the ``line sensor`` reading
+   |03-line-follower-sensor-detects-being|, senses if the line sensor detects a particular color
+   |04-when-on-board-button|, senses if the onboard button is being pressed
+   |05-ir-remote-pressed|, senses the button being pressed on the ``IR`` remote
+   |06-send-ir-message-text|, sends and ``IR`` message
+   |07-ir-message-received|, the ``IR`` message received
+   |08-timer|, toggles on/off the ``timer``
+   |09-reset-timer|, resets the timer
 
 Events
 ------
@@ -107,10 +109,10 @@ Events
 .. csv-table:: Events
    :header: Block, Effect
 
-   |00-when-flag-clicked|,
-   |01-when-key-pressed|,
-   |02-when-mbot-starts-up|,
-   |03-when-onboard-button-x|,
-   |04-when-receive-message|,
-   |05-broadcast-message|,
-   |06-broadcast-message-and-wait|,
+   |00-when-flag-clicked|, when the ``flag`` is clicked 
+   |01-when-key-pressed|, when a ``key`` is pressed 
+   |02-when-mbot-starts-up|, when the robot starts up 
+   |03-when-onboard-button-x|, when the ``on-board`` button is pressed or released
+   |04-when-receive-message|, when a message is received
+   |05-broadcast-message|, broadcast a message 
+   |06-broadcast-message-and-wait|, broadcast a message and wait 
