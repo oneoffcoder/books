@@ -30,7 +30,7 @@ This book is a tutorial on programming ``Makeblock`` robots. In particular, we w
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Contents:
+   :caption: Contents
 
    ide
    codey
