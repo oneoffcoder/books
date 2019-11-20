@@ -25,7 +25,7 @@ Robotics Programming with Makeblock
 Preface
 =======
 
-This book is a tutorial on programming ``Makeblock`` robots. In particular, we will demonstrate how to program with the ``Codey Rocky`` (or just ``Codey`` for short) and ``mBot`` robots. To follow along, you will need to `install mBlock <https://www.mblock.cc/en-us/download>`_ version ``5.1.0`` or higher.
+This book is a tutorial on programming ``Makeblock`` robots. In particular, we will demonstrate how to program with the ``Codey Rocky`` (or just ``Codey`` for short) and ``mBot`` robots. To follow along, you will need to `install mBlock and mLink <https://www.mblock.cc/en-us/download>`_. It is advised to use mBlock version ``5.1.0`` or higher and mLink version ``1.3.0`` or higher.
 
 .. toctree::
    :maxdepth: 2
