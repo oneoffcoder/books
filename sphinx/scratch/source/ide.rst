@@ -22,7 +22,7 @@ Note that there are 7 major components to the IDE.
    4, Stage, Area that shows your program in execution.
    5, Program Control, Controls to start and stop your program.
    6, Sprite Control, "Area to add, update, remove and define your sprites."
-   7, Backdrop Control, "Area to add, update, remove and dfine backgrounds."
+   7, Backdrop Control, "Area to add, update, remove and define backgrounds."
 
 We breakdown these major components of the Scratch IDE and discuss each below.
 
