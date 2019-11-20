@@ -56,14 +56,18 @@ Light and Sound
 
 .. |led-shows-color-for-secs| image:: _static/images/mbot/lightsound/led-shows-color-for-secs.png
 .. |led-shows-color| image:: _static/images/mbot/lightsound/led-shows-color.png
-.. |play-note-fthe Scratch IDELight and Sound
+.. |play-note-for-x-beats| image:: _static/images/mbot/lightsound/play-note-for-x-beats.png
+.. |play-sound-at-frequency-of-hz-for-secs| image:: _static/images/mbot/lightsound/play-sound-at-frequency-of-hz-for-secs.png
+.. |turn-on-light-with-color-red-green-blue| image:: _static/images/mbot/lightsound/turn-on-light-with-color-red-green-blue.png
+
+.. csv-table:: Light and Sound
    :header: Block, Effect
 
-   |led-shows-color-for-secs|, 
-   |led-shows-color|, 
-   |play-note-for-x-beats|, 
-   |play-sound-at-frequency-of-hz-for-secs|, 
-   |turn-on-light-with-color-red-green-blue|, 
+   |led-shows-color-for-secs|,
+   |led-shows-color|,
+   |play-note-for-x-beats|,
+   |play-sound-at-frequency-of-hz-for-secs|,
+   |turn-on-light-with-color-red-green-blue|,
 
 Show
 ----
