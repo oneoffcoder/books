@@ -30,6 +30,10 @@ A collection of online books for data science, computer science and coding!
   * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-datascience)
 * Scratch
   * [Book](https://scratch.oneoffcoder.com)
+* Drone Programming with the Tello
+  * [Book](https://tello.oneoffcoder.com)
+* Robotics Programming with Makeblock
+  * [Book](https://makeblock.oneoffcoder.com)
 
 # Copyright Stuff
 
