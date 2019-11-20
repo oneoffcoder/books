@@ -1,15 +1,15 @@
-Integrated Development Environment
-==================================
+mBlock
+======
 
-The ``Makeblock`` Integrated Development Environment (IDE) is based on ``Scratch`` and is a complete, self-contained program used to program and code behavior into Makeblock robots. When you start the IDE, it should look like the following. 
+The ``Makeblock`` Integrated Development Environment (IDE) is based on ``Scratch`` and is a complete, self-contained program used to program and code behavior into Makeblock robots. The Makeblock IDE is called ``mBlock``. When you start mBlock, it should look like the following. 
 
 .. figure:: _static/images/ide/ide.png
     
     The Integrated Development Environment (IDE).
 
-Note that there are 7 major components to the IDE.
+Note that there are 7 major components to mBlock.
 
-.. csv-table:: IDE Components
+.. csv-table:: mBlock Components
    :header: " ", Component, Purpose
 
    1, Menu, Load and save files.
@@ -20,7 +20,7 @@ Note that there are 7 major components to the IDE.
    6, Sprite Control, "Area to add, update, remove and define your sprites."
    7, Background Control, "Area to add, update, remove and define backgrounds."
 
-We breakdown these major components of the Scratch IDE and discuss each below.
+We breakdown these major components of mBlock and discuss each below.
 
 
 
