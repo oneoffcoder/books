@@ -30,12 +30,26 @@ This book is a tutorial on programming ``Makeblock`` robots. In particular, we w
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Contents
+   :caption: mBlock
 
    ide
    blocks-codey
    blocks-mbot
    blocks-common
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Coding
+
+   code-codey
+   code-mbot
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Miscellaneous
+
    resources
 
 About
