@@ -25,7 +25,7 @@ Robotics Programming with Makeblock
 Preface
 =======
 
-This book is a tutorial on programming ``Makeblock`` robots.
+This book is a tutorial on programming ``Makeblock`` robots. In particular, we will demonstrate how to program with the ``Codey Rocky`` (or just ``Codey`` for short) and ``mBot`` robots.
 
 .. toctree::
    :maxdepth: 2

@@ -1,5 +1,5 @@
-Codey
-=====
+Codey Rocky Code Blocks
+=======================
 
 Lighting
 --------
@@ -271,16 +271,6 @@ Speaker
    |stop-all-sounds|, 
    |volume|,
 
-My-Blocks
----------
-
-.. |make-a-block| image:: _static/images/common/my-blocks/make-a-block.png
-
-.. csv-table:: My-Blocks
-   :header: Block, Effect
-
-   |make-a-block|, 
-
 Control
 -------
 
@@ -304,18 +294,6 @@ Control
    |stop|, 
    |wait-until|, 
    |wait-x-seconds|, 
-
-Variables
----------
-
-.. |make-a-list| image:: _static/images/common/variables/make-a-list.png
-.. |make-a-variable| image:: _static/images/common/variables/make-a-variable.png
-
-.. csv-table:: Variables
-   :header: Block, Effect
-
-   |make-a-list|, 
-   |make-a-variable|, 
 
 Operators
 ---------
@@ -360,3 +338,25 @@ Operators
    |x-or-y|, 
    |x-plus-y|, 
    |x-times-y|,
+
+Variables
+---------
+
+.. |make-a-list| image:: _static/images/common/variables/make-a-list.png
+.. |make-a-variable| image:: _static/images/common/variables/make-a-variable.png
+
+.. csv-table:: Variables
+   :header: Block, Effect
+
+   |make-a-list|, 
+   |make-a-variable|, 
+
+My-Blocks
+---------
+
+.. |make-a-block| image:: _static/images/common/my-blocks/make-a-block.png
+
+.. csv-table:: My-Blocks
+   :header: Block, Effect
+
+   |make-a-block|, 

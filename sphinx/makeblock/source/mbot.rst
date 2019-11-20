@@ -1,5 +1,5 @@
-mBot
-====
+mBot Code Blocks
+================
 
 Action
 ------
@@ -56,11 +56,7 @@ Light and Sound
 
 .. |led-shows-color-for-secs| image:: _static/images/mbot/lightsound/led-shows-color-for-secs.png
 .. |led-shows-color| image:: _static/images/mbot/lightsound/led-shows-color.png
-.. |play-note-for-x-beats| image:: _static/images/mbot/lightsound/play-note-for-x-beats.png
-.. |play-sound-at-frequency-of-hz-for-secs| image:: _static/images/mbot/lightsound/play-sound-at-frequency-of-hz-for-secs.png
-.. |turn-on-light-with-color-red-green-blue| image:: _static/images/mbot/lightsound/turn-on-light-with-color-red-green-blue.png
-
-.. csv-table:: Light and Sound
+.. |play-note-fthe Scratch IDELight and Sound
    :header: Block, Effect
 
    |led-shows-color-for-secs|, 
@@ -93,16 +89,6 @@ Show
    |led-panel-shows-time|, 
    |led-panel-x-clears-screen|,
 
-My-Blocks
----------
-
-.. |make-a-block| image:: _static/images/common/my-blocks/make-a-block.png
-
-.. csv-table:: My-Blocks
-   :header: Block, Effect
-
-   |make-a-block|, 
-
 Control
 -------
 
@@ -126,18 +112,6 @@ Control
    |stop|, 
    |wait-until|, 
    |wait-x-seconds|, 
-
-Variables
----------
-
-.. |make-a-list| image:: _static/images/common/variables/make-a-list.png
-.. |make-a-variable| image:: _static/images/common/variables/make-a-variable.png
-
-.. csv-table:: Variables
-   :header: Block, Effect
-
-   |make-a-list|, 
-   |make-a-variable|, 
 
 Operators
 ---------
@@ -182,3 +156,25 @@ Operators
    |x-or-y|, 
    |x-plus-y|, 
    |x-times-y|,
+
+Variables
+---------
+
+.. |make-a-list| image:: _static/images/common/variables/make-a-list.png
+.. |make-a-variable| image:: _static/images/common/variables/make-a-variable.png
+
+.. csv-table:: Variables
+   :header: Block, Effect
+
+   |make-a-list|, 
+   |make-a-variable|, 
+
+My-Blocks
+---------
+
+.. |make-a-block| image:: _static/images/common/my-blocks/make-a-block.png
+
+.. csv-table:: My-Blocks
+   :header: Block, Effect
+
+   |make-a-block|, 
