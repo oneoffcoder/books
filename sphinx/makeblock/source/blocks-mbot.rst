@@ -18,11 +18,11 @@ The ``Show`` code blocks control the ``LED panel`` if you have it installed. Typ
 .. csv-table:: Show
    :header: Block, Effect
 
-   |00-led-panel-shows-image-for-secs|, displays the specified image for the specifed amount of seconds
+   |00-led-panel-shows-image-for-secs|, displays image with duration
    |01-led-panel-shows-image|, displays the specified image
-   |02-led-panel-shows-image-at-x-y|, displays the specified image the specified ``x`` and ``y`` coordinate
+   |02-led-panel-shows-image-at-x-y|, displays image at coordinate
    |03-led-panel-shows-text|, displays the specified string
-   |04-led-panel-shows-text-at-x-y|, displays the specified string at the specified ``x`` and ``y`` coordinate
+   |04-led-panel-shows-text-at-x-y|, displays string at coordinate
    |05-led-panel-shows-number-text|, displays the specified number
    |06-led-panel-shows-time|, displays the time
    |07-led-panel-x-clears-screen|, clears the screen
@@ -39,11 +39,11 @@ Light and Sound
 .. csv-table:: Light and Sound
    :header: Block, Effect
 
-   |00-led-shows-color-for-secs|, shows the specified ``color`` for the specified amount of ``seconds``
-   |01-led-shows-color|, shows the specified ``color``
-   |02-turn-on-light-with-color-red-green-blue|, "shows the color controlled by the specified amount of ``red``, ``green`` and ``blue``"
-   |03-play-note-for-x-beats|, plays the specified ``note`` at the specified ``beat``
-   |04-play-sound-at-frequency-of-hz-for-secs|, plays a sound at the specified ``frequency`` for the specified amount of ``seconds``
+   |00-led-shows-color-for-secs|, shows ``color`` with duration
+   |01-led-shows-color|, shows ``color``
+   |02-turn-on-light-with-color-red-green-blue|, "shows color with ``red``, ``green`` and ``blue`` amounts"
+   |03-play-note-for-x-beats|, plays ``note`` at ``beat``
+   |04-play-sound-at-frequency-of-hz-for-secs|, plays a sound at ``frequency`` with duration
 
 Action
 ------
@@ -59,11 +59,11 @@ Action
 .. csv-table:: Action
    :header: Block, Effect
 
-   |00-move-forward-at-power-x-for-secs|, move ``forward`` for the specified amount of ``seconds``
-   |01-move-backward-at-power-x-for-secs|, move ``backward`` for the specified amount of ``seconds``
-   |02-turn-left-at-power-x-for-secs|, turn ``left`` for the specified amount of ``seconds``
-   |03-turn-right-at-power-x-for-secs|, turn ``right`` for the specified amount of ``seconds``
-   |04-x-at-power-y|, "move ``forward``, ``backward``, ``left`` or ``right``"
+   |00-move-forward-at-power-x-for-secs|, move ``forward`` with duration
+   |01-move-backward-at-power-x-for-secs|, move ``backward`` with duration
+   |02-turn-left-at-power-x-for-secs|, turn ``left`` with duration
+   |03-turn-right-at-power-x-for-secs|, turn ``right`` with duration
+   |04-x-at-power-y|, move
    |05-left-wheel-turns-at-power-x-right-wheel-at-power-y|, turn the ``left`` and ``right`` wheels
    |06-stop-moving|, stop moving
 
@@ -84,15 +84,15 @@ Sensing
 .. csv-table:: Sensing
    :header: Block, Effect
 
-   |00-light-sensor-light-intensity|, toggles on/off the ``light intensity`` reading
-   |01-ultrasonic-sensor-distance|, toggles on/off the ``ultrasonic sensor`` reading
-   |02-line-follwer-sensor-value|, toggles on/off the ``line sensor`` reading
-   |03-line-follower-sensor-detects-being|, senses if the line sensor detects a particular color
-   |04-when-on-board-button|, senses if the onboard button is being pressed
-   |05-ir-remote-pressed|, senses the button being pressed on the ``IR`` remote
+   |00-light-sensor-light-intensity|, toggles ``light intensity`` reading
+   |01-ultrasonic-sensor-distance|, toggles ``ultrasonic sensor`` reading
+   |02-line-follwer-sensor-value|, toggles ``line sensor`` reading
+   |03-line-follower-sensor-detects-being|, line sensor detects color
+   |04-when-on-board-button|, onboard button is pressed
+   |05-ir-remote-pressed|, button pressed on ``IR`` remote
    |06-send-ir-message-text|, sends and ``IR`` message
    |07-ir-message-received|, the ``IR`` message received
-   |08-timer|, toggles on/off the ``timer``
+   |08-timer|, toggles ``timer``
    |09-reset-timer|, resets the timer
 
 Events

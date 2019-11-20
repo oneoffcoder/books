@@ -15,7 +15,7 @@ Emotion
 .. |08-naughty| image:: _static/images/codey/00-emotion/08-naughty.png
 .. |09-proud| image:: _static/images/codey/00-emotion/09-proud.png
 .. |10-yummy| image:: _static/images/codey/00-emotion/10-yummy.png
-.. |11-un-oh| image:: _static/images/codey/00-emotion/11-un-oh.png
+.. |11-uh-oh| image:: _static/images/codey/00-emotion/11-uh-oh.png
 .. |12-wow| image:: _static/images/codey/00-emotion/12-wow.png
 .. |13-hurt| image:: _static/images/codey/00-emotion/13-hurt.png
 .. |14-sad| image:: _static/images/codey/00-emotion/14-sad.png
@@ -34,32 +34,32 @@ Emotion
 .. csv-table:: Emotion
    :header: Block, Effect
 
-   |00-look-up|,
-   |01-look-down|,
-   |02-look-left|,
-   |03-look-right|,
-   |04-look-around|,
-   |05-blink|,
-   |06-smile|,
-   |07-yeah|,
-   |08-naughty|,
-   |09-proud|,
-   |10-yummy|,
-   |11-un-oh|,
-   |12-wow|,
-   |13-hurt|,
-   |14-sad|,
-   |15-angry|,
-   |16-hello|,
-   |17-sprint|,
-   |18-scared|,
-   |19-shiver|,
-   |20-dizzy|,
-   |21-yawn|,
-   |22-sleep|,
-   |23-wake|,
-   |24-yes|,
-   |25-no|,
+   |00-look-up|, look up
+   |01-look-down|, look down
+   |02-look-left|, look left
+   |03-look-right|, look right
+   |04-look-around|, look around
+   |05-blink|, blink
+   |06-smile|, smile
+   |07-yeah|, yeah
+   |08-naughty|, naughty
+   |09-proud|, proud
+   |10-yummy|, yummy
+   |11-uh-oh|, uh-oh
+   |12-wow|, wow
+   |13-hurt|, hurt
+   |14-sad|, sad
+   |15-angry|, angry
+   |16-hello|, hello
+   |17-sprint|, sprint
+   |18-scared|, scared
+   |19-shiver|, shiver
+   |20-dizzy|, dizzy
+   |21-yawn|, yawn
+   |22-sleep|, sleep
+   |23-wake|, wake
+   |24-yes|, yes
+   |25-no|, no
 
 Looks
 -----
@@ -79,17 +79,17 @@ Looks
 .. csv-table:: Looks
    :header: Block, Effect
 
-   |00-show-image-for-x-secs|,
-   |01-show-image|,
-   |02-show-image-at-x-y|,
-   |03-turn-off-screen|,
-   |04-show-text|,
-   |05-show-text-until-scroll-done|,
-   |06-show-text-at-x-y|,
-   |07-light-up-x-y|,
-   |08-light-off-x-y|,
-   |09-switch-light-up-off-x-y|,
-   |10-x-y-is-lighted-up|,
+   |00-show-image-for-x-secs|, shows ``image`` with duration
+   |01-show-image|, shows the specified ``image``
+   |02-show-image-at-x-y|, shows ``image`` at coordinate
+   |03-turn-off-screen|, turns off the screen 
+   |04-show-text|, shows the specified string
+   |05-show-text-until-scroll-done|, shows string until scrolling is done 
+   |06-show-text-at-x-y|, shows string at coordinate 
+   |07-light-up-x-y|, turn on the lights at coordinate
+   |08-light-off-x-y|, turn off the lights at coordinate
+   |09-switch-light-up-off-x-y|, light ``up`` and ``off`` at coordinate
+   |10-x-y-is-lighted-up|, checks if lighted up at coordinate
 
 Lighting
 --------
@@ -104,12 +104,12 @@ Lighting
 .. csv-table:: Lighting
    :header: Block, Effect
 
-   |00-rgb-led-lights-up-x-for-y-secs|,
-   |01-rgb-led-lights-up-x|,
-   |02-set-indicator-red-green-blue-with-color-value-y|,
-   |03-rgb-led-lights-off|,
-   |04-set-rocky-light-with-color-rgbycpw|,
-   |05-rocky-lights-off|,
+   |00-rgb-led-lights-up-x-for-y-secs|, light up with duration
+   |01-rgb-led-lights-up-x|, light up
+   |02-set-indicator-red-green-blue-with-color-value-y|, set indicator color
+   |03-rgb-led-lights-off|, turn ``LED`` off
+   |04-set-rocky-light-with-color-rgbycpw|, set ``Rocky`` light
+   |05-rocky-lights-off|, turn off ``Rocky`` light
 
 Speaker
 -------
@@ -127,15 +127,15 @@ Speaker
 .. csv-table:: Speaker
    :header: Block, Effect
 
-   |00-play-sound-x|,
-   |01-play-sound-x-until-done|,
-   |02-stop-all-sounds|,
-   |03-play-note-x-for-y-beats|,
-   |04-rest-for-x-beats|,
-   |05-play-sound-at-frequency-of-x-hz-secs|,
-   |06-change-volume-by-x|,
-   |07-set-volume-to-x|,
-   |08-volume|,
+   |00-play-sound-x|, plays sound
+   |01-play-sound-x-until-done|, plays sound until done
+   |02-stop-all-sounds|, stop sounds
+   |03-play-note-x-for-y-beats|, plays note
+   |04-rest-for-x-beats|, rest
+   |05-play-sound-at-frequency-of-x-hz-secs|, play sound at frequency
+   |06-change-volume-by-x|, change volume
+   |07-set-volume-to-x|, set volume
+   |08-volume|, volume value
 
 Action
 ------
@@ -155,17 +155,17 @@ Action
 .. csv-table:: Action
    :header: Block, Effect
 
-   |00-move-forward-at-power-x-percent-for-y-secs|,
-   |01-move-backward-at-power-x-percent-for-y-secs|,
-   |02-turn-left-at-power-x-percent-for-y-secs|,
-   |03-turn-right-at-power-x-percent-for-y-secs|,
-   |04-keep-straight-forward-at-power-x-percent-for-y-secs|,
-   |05-keep-straight-backward-at-power-x-percent-for-y-secs|,
-   |06-turn-left-x-degrees-until-done|,
-   |07-turn-right-x-degrees-until-done|,
-   |08-move-forward-backward-left-right-at-power-x-percent|,
-   |09-left-wheel-turns-at-power-x-percent-right-wheel-at-power-y-percent|,
-   |10-stop-moving|,
+   |00-move-forward-at-power-x-percent-for-y-secs|, move forward with duration
+   |01-move-backward-at-power-x-percent-for-y-secs|, move backward with duration
+   |02-turn-left-at-power-x-percent-for-y-secs|, turn left with duration
+   |03-turn-right-at-power-x-percent-for-y-secs|, turn right with duration
+   |04-keep-straight-forward-at-power-x-percent-for-y-secs|, keep forward with duration
+   |05-keep-straight-backward-at-power-x-percent-for-y-secs|, keep backward with duration
+   |06-turn-left-x-degrees-until-done|, turn left until done
+   |07-turn-right-x-degrees-until-done|, turn right until done
+   |08-move-forward-backward-left-right-at-power-x-percent|, move
+   |09-left-wheel-turns-at-power-x-percent-right-wheel-at-power-y-percent|, turn left and right wheels
+   |10-stop-moving|, stop moving
 
 Sensing
 -------
@@ -199,31 +199,31 @@ Sensing
 .. csv-table:: Sensing
    :header: Block, Effect
 
-   |00-button-is-pressed|,
-   |01-when-codey-connected-to-rockey|,
-   |02-gear-potentiometer-value|,
-   |03-loudness|,
-   |04-ambient-light-intensity|,
-   |05-battery-level|,
-   |06-shaken|,
-   |07-shaking-strength|,
-   |08-codey-tilted|,
-   |09-codey-positioned-as|,
-   |10-roll-angle|,
-   |11-pitch-angle|,
-   |12-rotation-angle-around-x|,
-   |13-rotation-angle-around-y|,
-   |14-rotation-angle-around-z|,
-   |15-reset-the-x-rotation-angle|,
-   |16-timer|,
-   |17-reset-timer|,
-   |18-obstacles-ahead|,
-   |19-the-color-detected-is|,
-   |20-color-value-detected|,
-   |21-color-sensor-ambient-light-intensity|,
-   |22-color-sensor-relected-light-intensity|,
-   |23-color-sensor-refected-infrared-light-intensity|,
-   |24-color-sensor-grey-scale-value|,
+   |00-button-is-pressed|, checks if button pressed
+   |01-when-codey-connected-to-rockey|, ``Codey`` is connected to ``Rockey``
+   |02-gear-potentiometer-value|, potentiometer value
+   |03-loudness|, loudness
+   |04-ambient-light-intensity|, ambient light intensity
+   |05-battery-level|, battery level
+   |06-shaken|, check if shaken
+   |07-shaking-strength|, shaken strength
+   |08-codey-tilted|, check if tilted
+   |09-codey-positioned-as|, check position
+   |10-roll-angle|, roll angle
+   |11-pitch-angle|, pitch angle
+   |12-rotation-angle-around-x|, ``x`` rotation angle
+   |13-rotation-angle-around-y|, ``y`` rotation angle
+   |14-rotation-angle-around-z|, ``z`` rotation angle
+   |15-reset-the-x-rotation-angle|, reset rotation
+   |16-timer|, timer
+   |17-reset-timer|, reset timer
+   |18-obstacles-ahead|, are there obstacles?
+   |19-the-color-detected-is|, color detection
+   |20-color-value-detected|, color detection
+   |21-color-sensor-ambient-light-intensity|, light detection
+   |22-color-sensor-relected-light-intensity|, light detection
+   |23-color-sensor-refected-infrared-light-intensity|, infrared detection
+   |24-color-sensor-grey-scale-value|, grey-scale value
 
 Infrared
 --------
@@ -236,10 +236,10 @@ Infrared
 .. csv-table:: Infrared
    :header: Block, Effect
 
-   |00-send-ir-message-x|,
-   |01-ir-message-received|,
-   |02-record-home-appliances-remote-signal-3-secs|,
-   |03-send-home-appliances-remote-signal|,
+   |00-send-ir-message-x|, sends ``IR`` message
+   |01-ir-message-received|, ``IR`` message
+   |02-record-home-appliances-remote-signal-3-secs|, record signal
+   |03-send-home-appliances-remote-signal|, send signal
 
 Events
 ------
@@ -259,15 +259,15 @@ Events
 .. csv-table:: Events
    :header: Block, Effect
 
-   |00-when-flag-clicked|,
-   |01-when-key-pressed|,
-   |02-when-codey-starts-up|,
-   |03-when-button-is-pressed|,
-   |04-when-codey-is-shaking|,
-   |05-when-codey-is-tilted|,
-   |06-when-loudness-or-timer-gt-x|,
-   |07-when-light-intensity-lt-x|,
-   |08-when-i-receive-message|,
-   |09-broadcast-message|,
-   |10-broadcast-message-and-wait|,
+   |00-when-flag-clicked|, flag is clicked
+   |01-when-key-pressed|, key is pressed
+   |02-when-codey-starts-up|, ``Codey`` is starting up
+   |03-when-button-is-pressed|, button is pressed
+   |04-when-codey-is-shaking|, ``Codey`` is shaking
+   |05-when-codey-is-tilted|, ``Codey`` is tilted
+   |06-when-loudness-or-timer-gt-x|, loudness event
+   |07-when-light-intensity-lt-x|, light event
+   |08-when-i-receive-message|, message event
+   |09-broadcast-message|, send message
+   |10-broadcast-message-and-wait|, send message and wait
 
