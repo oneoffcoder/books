@@ -25,7 +25,11 @@ Drone Programming with Tello
 Preface
 =======
 
-This book is a tutorial on programming ``Tello`` drones.
+This book is a tutorial on programming ``Tello`` drones. Please watch the video below to imagine the possibilities of programming drones with the Tello, Scratch and Python!
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/L2jLnujckLk" frameborder="0" allowfullscreen></iframe>
 
 .. toctree::
    :maxdepth: 2
