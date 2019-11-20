@@ -33,7 +33,7 @@ The ``Tello`` class is used to abstract the drone.
 Commands
 --------
 
-The ``command.txt`` file stores the sequence of string commands that we will send to the drone. Note how we have to put a ``delay 5`` in between commands? This delay gives time for the drone and your program/computer to process the data that being sent back and forth.
+The ``command.txt`` file stores the sequence of string commands that we will send to the drone. Note how we have to put a ``delay`` in between commands? This delay gives time for the drone and your program/computer to send, receive and process the data.
 
 .. literalinclude:: _static/code/python/command-program/command.txt
    :language: text
