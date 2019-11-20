@@ -29,7 +29,7 @@ This book is a tutorial on programming ``Tello`` drones. Please watch the video 
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/L2jLnujckLk" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DuLY7IHaazo" frameborder="0" allowfullscreen></iframe>
 
 .. toctree::
    :maxdepth: 2
