@@ -63,7 +63,7 @@ html_css_files = ['css/override.css']
 html_last_updated_fmt = '%b %d, %Y, %X'
 
 html_theme_options = {
-    'canonical_url': '',
+    'canonical_url': 'UA-152954186-1',
     'analytics_id': '',  #  Provided by Google in your dashboard
     'logo_only': False,
     'display_version': True,
