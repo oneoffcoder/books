@@ -33,8 +33,9 @@ This book is a tutorial on programming ``Makeblock`` robots. In particular, we w
    :caption: Contents
 
    ide
-   codey
-   mbot
+   blocks-codey
+   blocks-mbot
+   blocks-common
    resources
 
 About
