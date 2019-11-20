@@ -92,3 +92,25 @@ Sensing
    |07-ir-message-received|,
    |08-timer|,
    |09-reset-timer|,
+
+Events
+------
+
+.. |00-when-flag-clicked| image:: _static/images/mbot/04-events/00-when-flag-clicked.png
+.. |01-when-key-pressed| image:: _static/images/mbot/04-events/01-when-key-pressed.png
+.. |02-when-mbot-starts-up| image:: _static/images/mbot/04-events/02-when-mbot-starts-up.png
+.. |03-when-onboard-button-x| image:: _static/images/mbot/04-events/03-when-onboard-button-x.png
+.. |04-when-receive-message| image:: _static/images/mbot/04-events/04-when-receive-message.png
+.. |05-broadcast-message| image:: _static/images/mbot/04-events/05-broadcast-message.png
+.. |06-broadcast-message-and-wait| image:: _static/images/mbot/04-events/06-broadcast-message-and-wait.png
+
+.. csv-table:: Events
+   :header: Block, Effect
+
+   |00-when-flag-clicked|,
+   |01-when-key-pressed|,
+   |02-when-mbot-starts-up|,
+   |03-when-onboard-button-x|,
+   |04-when-receive-message|,
+   |05-broadcast-message|,
+   |06-broadcast-message-and-wait|,
