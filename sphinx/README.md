@@ -16,7 +16,7 @@ pip install \
     sphinx-autobuild \
     nbsphinx
 
-conda install -c conda-forge pandoc
+conda install -c conda-forge pandoc ipython
 ```
 
 To build.
