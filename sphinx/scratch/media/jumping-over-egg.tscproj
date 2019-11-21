@@ -18,7 +18,7 @@
   "sourceBin" : [
     {
       "id" : 1,
-      "src" : "C:\\tmp\\jumping-over-eggs\\Rec 11-19-19_008.trec",
+      "src" : "C:\\tmp\\jumping-over-egg\\Rec 11-19-19_008.trec",
       "rect" : [0, 0, 1920, 1080],
       "lastMod" : "20191119T194853",
       "sourceTracks" : [
@@ -62,7 +62,7 @@
     },
     {
       "id" : 2,
-      "src" : "C:\\tmp\\jumping-over-eggs\\Rec 11-19-19_009.trec",
+      "src" : "C:\\tmp\\jumping-over-egg\\Rec 11-19-19_009.trec",
       "rect" : [0, 0, 1920, 1080],
       "lastMod" : "20191119T195023",
       "sourceTracks" : [
@@ -106,7 +106,7 @@
     },
     {
       "id" : 3,
-      "src" : "C:\\tmp\\jumping-over-eggs\\Rec 11-19-19_019.trec",
+      "src" : "C:\\tmp\\jumping-over-egg\\Rec 11-19-19_019.trec",
       "rect" : [0, 0, 1920, 1080],
       "lastMod" : "20191119T225107",
       "sourceTracks" : [
@@ -150,7 +150,7 @@
     },
     {
       "id" : 4,
-      "src" : "C:\\tmp\\jumping-over-eggs\\Rec 11-19-19_020.trec",
+      "src" : "C:\\tmp\\jumping-over-egg\\Rec 11-19-19_020.trec",
       "rect" : [0, 0, 1920, 1080],
       "lastMod" : "20191119T230542",
       "sourceTracks" : [
@@ -194,7 +194,7 @@
     },
     {
       "id" : 5,
-      "src" : "C:\\tmp\\jumping-over-eggs\\Rec 11-19-19_024.trec",
+      "src" : "C:\\tmp\\jumping-over-egg\\Rec 11-19-19_024.trec",
       "rect" : [0, 0, 1920, 1080],
       "lastMod" : "20191119T231927",
       "sourceTracks" : [
@@ -238,7 +238,7 @@
     },
     {
       "id" : 6,
-      "src" : "C:\\tmp\\jumping-over-eggs\\Rec 11-19-19_025.trec",
+      "src" : "C:\\tmp\\jumping-over-egg\\Rec 11-19-19_025.trec",
       "rect" : [0, 0, 1920, 1080],
       "lastMod" : "20191119T233746",
       "sourceTracks" : [
@@ -282,7 +282,7 @@
     },
     {
       "id" : 7,
-      "src" : "C:\\tmp\\jumping-over-eggs\\Rec 11-19-19_013.trec",
+      "src" : "C:\\tmp\\jumping-over-egg\\Rec 11-19-19_013.trec",
       "rect" : [0, 0, 1920, 1080],
       "lastMod" : "20191119T200748",
       "sourceTracks" : [
@@ -349,7 +349,7 @@
     },
     {
       "id" : 9,
-      "src" : "C:\\Users\\ioc\\Downloads\\Logo.png",
+      "src" : "C:\\tmp\\jumping-over-egg\\Logo.png",
       "rect" : [0, 0, 150, 150],
       "lastMod" : "20191121T000808",
       "sourceTracks" : [
