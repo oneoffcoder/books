@@ -93,9 +93,9 @@ Copyright
 
 Cite this book as follows.::
 
-    @misc{oneoffcoder_drone_programming_tello_2019, 
-    title={Drone Programming with Tello}, 
-    url={https://tello.oneoffcoder.com}, 
+    @misc{oneoffcoder_r_programming_2019, 
+    title={R, No Tears}, 
+    url={https://r.oneoffcoder.com}, 
     author={One-Off Coder}, 
     year={2019}, 
     month={Nov}}
