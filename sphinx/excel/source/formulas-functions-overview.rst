@@ -1,5 +1,5 @@
-Formulas and Functions
-======================
+Formulas and Functions Overview
+===============================
 
 Formulas
 --------
@@ -68,7 +68,9 @@ The function still proceeds without errors and returns a value of ``FALSE``.
    :scale: 50%
 
 Here are some things to note in these ``if`` examples.
+
    1. If any part of the ``if`` function involves strings, they must be enclosed in quotes ``"``.
+      This applies to all functions and formulas that use strings.
    2. Conversely, quotes are not required when referencing cells or numbers.
    3. Excel does not require all three parts of the ``if`` function to be defined.
       The example above only defines a parts 1 and 2 of the ``if`` function.

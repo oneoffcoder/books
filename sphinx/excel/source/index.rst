@@ -12,7 +12,8 @@ Excel, No Tears
    :caption: Contents:
 
    shortcuts
-   formulas-functions
+   formulas-functions-overview
+   functions
 
 
 About
