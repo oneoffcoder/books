@@ -146,3 +146,39 @@ The ``min`` function evaluates a selection of cells and returns the minimum nume
    :scale: 50%
 .. image:: _static/images/functions/min/ex4.png
    :scale: 50%
+
+Concatenate
+-----------
+
+``concatenate`` joins data from various cells. There are two ways to concatenate data. 
+
+    1. ``concatenate`` - takes the form of ``=concatenate(text1,text2,text3)``
+    2. ``&``
+
+The figure below shows the joining of male first names, column ``B``, with a space and surnames, column 
+``F``. Observe that column ``G`` (method 1) and column ``H`` (method 2) both produce the same result in 
+column ``I``. 
+
+.. figure:: _static/images/functions/concatenate/ex1.png
+
+Left, Mid, Right
+----------------
+
+The ``left``, ``mid``, and ``right`` functions extract information from text or a cell. ``left`` starts
+at the left most character and returns the specified number of characters to the right. ``right`` does 
+the opposite. ``right`` starts at the right most character and returns the specified number of characters
+to the left. ``mid`` is slightly different. it takes on three parameters: text, start_num, and num_chars. 
+After specifying the text to be extracted, a starting character position in the text or cell is chosen, 
+and then the specified number of characters to the right of that starting position is returned.
+
+    1. ``left`` takes on the form ``=left(text,num_chars)``
+    2. ``mid`` takes on the form ``=mid(text,start_num,num_chars)``
+    3. ``right`` takes on the form ``=right(text,num_chars)``
+
+The ``text`` in each of the functions above can be a string like ``superior`` or it can be a cell like 
+in the figure below. The ``left`` function returns the 4 left most characters. The ``right`` function
+returns the 3 right most characters. The ``mid`` function starts at the 6th character in the string and
+returns the 3 characters to the right of the 6th character. These functions are great for parsing 
+information from cells that have uniform values. 
+
+.. figure:: _static/images/functions/left-mid-right/ex1.png

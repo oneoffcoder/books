@@ -26,6 +26,7 @@ Functions are built-in formulas in Excel.
 
 One of the most popular functions in excel is the conditional ``if``.
 The ``if`` function is composed of three (3) parts:
+
    1. logical test
    2. value if true
    3. value if false
