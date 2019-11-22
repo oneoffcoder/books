@@ -62,7 +62,7 @@ html_last_updated_fmt = '%b %d, %Y, %X'
 html_static_path = ['_static']
 html_theme_options = {
     'canonical_url': '',
-    'analytics_id': '',  #  Provided by Google in your dashboard
+    'analytics_id': 'UA-153134720-1',  #  Provided by Google in your dashboard
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
