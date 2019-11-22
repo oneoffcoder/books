@@ -32,6 +32,12 @@ This book is a tutorial on programming ``R``.
    :maxdepth: 2
    :numbered:
    :caption: Contents
+   
+   data-types
+   data-structures
+   control-structures
+   functions
+   misc
 
 About
 =====
