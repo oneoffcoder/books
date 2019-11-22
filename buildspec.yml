@@ -23,6 +23,7 @@ phases:
       - cd sphinx/scratch && make clean && make html && cd ../..
       - cd sphinx/tello && make clean && make html && cd ../..
       - cd sphinx/makeblock && make clean && make html && cd ../..
+      - cd sphinx/r-intro && make clean && make html && cd ../..
   post_build:
     commands:
       - aws s3 sync sphinx/java-intro/build/html s3://learn-java.oneoffcoder.com --quiet
@@ -35,4 +36,5 @@ phases:
       - aws s3 sync sphinx/scratch/build/html s3://scratch.oneoffcoder.com --quiet
       - aws s3 sync sphinx/tello/build/html s3://tello.oneoffcoder.com --quiet
       - aws s3 sync sphinx/makeblock/build/html s3://makeblock.oneoffcoder.com --quiet
+      - aws s3 sync sphinx/r-intro/build/html s3://r.oneoffcoder.com --quiet
       - echo Build completed on `date`
