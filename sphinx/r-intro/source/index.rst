@@ -37,6 +37,7 @@ This book is a tutorial on programming ``R``.
    data-structures
    control-structures
    functions
+   oop
    misc
 
 About
