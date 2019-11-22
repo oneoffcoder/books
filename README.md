@@ -34,6 +34,9 @@ A collection of online books for data science, computer science and coding!
   * [Book](https://tello.oneoffcoder.com)
 * Robotics Programming with Makeblock
   * [Book](https://makeblock.oneoffcoder.com)
+* R, No Tears 
+  * [Book](https://r.oneoffcoder.com)
+  * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-r-intro)
 
 # Copyright Stuff
 
