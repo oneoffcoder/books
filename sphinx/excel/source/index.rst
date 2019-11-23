@@ -17,6 +17,7 @@ Excel, No Tears
    nested-formulas
    pivot-tables
    conditional-formatting
+   downloads
 
 
 About
