@@ -39,6 +39,7 @@ This book is a tutorial on programming ``R``.
    functions
    functional
    oop
+   data-manipulation
    misc
 
 About
