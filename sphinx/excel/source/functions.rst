@@ -217,12 +217,3 @@ the first column for ``vlookup`` is column ``A``.  In cell H3 and H4, ``vlookup`
 .. figure:: _static/images/functions/vlookup/ex1.png
    :scale: 50%
 
-Index and Match
----------------
-
-``index`` and ``match`` are two separate functions that when used together in a nested formula, 
-can be a very powerful tool like ``vlookup`` and ``hlookup``. These functions are as follows:
-
-``=index(array,row_num,col_num)``
-
-``=match(lookup_value,lookup_array,match_type)``
