@@ -182,3 +182,47 @@ returns the 3 characters to the right of the 6th character. These functions are 
 information from cells that have uniform values. 
 
 .. figure:: _static/images/functions/left-mid-right/ex1.png
+
+Hlookup
+-------
+
+``hlookup`` (horizontal lookup) is a function that retrieves data from a specific row in a table. 
+The function has the following form:
+
+``=hlookup(value,table,row_index,[range_lookup])``
+
+In the example below, the value is ``Surname``, the table is starts from ``A2`` and spans to ``F22``.
+The row_index is ``15`` and the range_lookup is ``False``. ``hlookup`` needs the 2nd row to search for
+the value ``Surname``. Once it finds that value, it will count down ``15`` rows from the second row and
+grab the value at that row. Observe that the ``Surname`` of the row 15 is actually the 14th ranked 
+surname and not the 15th ranked surname which is ``Harris``. If the 15th ranked surname was desired, 
+then the row_index should be 16 and not 15. 
+
+.. figure:: _static/images/functions/hlookup/ex1.png
+   :scale: 50%
+
+Vlookup
+-------
+
+``vlookup`` (vertical lookup) is like ``hlookup`` except that it retrieves the data from a specific
+column. Its form is the same as ``hlookup`` and is listed below:
+
+``=vlookup(value,table,row_index,[range_lookup])``
+
+In the example below, row H9 and H10 is the ``vlookup`` method to obtaining the same result as the 
+``hlookup`` example that was just shown above. Just like row ``2`` was the first row in ``hlookup``, 
+the first column for ``vlookup`` is column ``A``.  In cell H3 and H4, ``vlookup`` returns for the
+15th ranked surname. While in cells H6 and H7, ``vlookup`` returns the 10th ranked male name.
+
+.. figure:: _static/images/functions/vlookup/ex1.png
+   :scale: 50%
+
+Index and Match
+---------------
+
+``index`` and ``match`` are two separate functions that when used together in a nested formula, 
+can be a very powerful tool like ``vlookup`` and ``hlookup``. These functions are as follows:
+
+``=index(array,row_num,col_num)``
+
+``=match(lookup_value,lookup_array,match_type)``
