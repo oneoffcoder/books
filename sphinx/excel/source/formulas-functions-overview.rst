@@ -28,8 +28,8 @@ One of the most popular functions in excel is the conditional ``if``.
 The ``if`` function is composed of three (3) parts:
 
    1. logical test
-   2. value if true
-   3. value if false
+   2. [value if true]
+   3. [value if false]
 
 An example can be seen below:
 
@@ -73,10 +73,19 @@ Here are some things to note in these ``if`` examples.
    1. If any part of the ``if`` function involves strings, they must be enclosed in quotes ``"``.
       This applies to all functions and formulas that use strings.
    2. Conversely, quotes are not required when referencing cells or numbers.
-   3. Excel does not require all three parts of the ``if`` function to be defined.
-      The example above only defines a parts 1 and 2 of the ``if`` function.
+   3. Excel does not require all three parts of the ``if`` function to be defined. The example 
+      above only defines a parts 1 and 2 of the ``if`` function. When typing out functions, Excel
+      will tell the user which arguments are optional by surrounding that argument with 
+      ``[`` ``]``.
 
 Excel at its core is a collection of data and the formulas that manipulate them to create more data.
-This was a brief overview of formulas and functions. The rest of this book will cover functions
-that are widely used in Excel and advanced function nesting.
+
+Formulas all start with an ``=``
+
+Functions have their own word associated with them. If these words are typed in a formula, Excel will
+show a list of built in functions it offers. Functions also have arguments. Some arguments are required
+for the function to work and some are optional. It can be thought of just like plug and play, where the
+arguments are given values and Excel evaluates the formula/function based on those values. This was a 
+brief overview of formulas and functions. 
+
 
