@@ -1,6 +1,12 @@
 Shortcuts
 =========
 
+Shortcuts are essential if users wish to be effecient and save time while working in Excel.
+It can be tedious and cumbersome to switch between mouse and keyboard usage performing the
+same tasks over a large set of data. These shortcuts help to mitigate that.
+
+Here are list of shortcuts that will aid users in becoming power excel users.
+
 File
 ----
 
