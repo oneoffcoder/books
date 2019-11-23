@@ -226,3 +226,28 @@ can be a very powerful tool like ``vlookup`` and ``hlookup``. These functions ar
 ``=index(array,row_num,col_num)``
 
 ``=match(lookup_value,lookup_array,match_type)``
+
+The ``index`` function looks at a group of cells and goes to the specified row and column and 
+returns the value of that cell. The ``match`` function searches for a value in a row or column 
+of cells and returns the position of that value. 
+
+Cells ``I6`` and ``I7`` demonstrates the use of ``index``. The group of cells spans from ``A2`` to 
+``F11``. The row and column specified are ``4`` and ``5``, respectively. Four rows and five columns
+from A2 is cell ``E6`` which has the value ``1466854``.
+
+The first example for match, cell ``I10`` searches for the number ``7`` in the column that spans 
+``A2`` to ``A17``. ``7`` is in the 8th position of the array ``A2:A17`` and is the value returned 
+in cell ``I9``. The second example, cell ``I13``, searches for the string ``Female Name`` in the
+array ``A2:F2`` and returns ``4`` as the position in ``I12``.
+
+Cell ``I2`` has the formula:
+
+``=index(A2:F17,match(H3,A2:A17,0),match(H4,A2:F2,0))``
+
+Observe that inside the ``index`` function, there are two ``match`` functions. These two match
+functions are used as the ``row_num`` and ``col_num`` parameters. They are also the same match
+functions that were used in cells ``I10`` and ``I13``. When one or more functions are inside 
+another function, this is called nesting. Nesting formulas in excel is an advanced technique
+that will be covered in the following section.
+
+.. figure:: _static/images/functions/index-match/ex1.png
