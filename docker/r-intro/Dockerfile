@@ -18,4 +18,5 @@ RUN Rscript \
     -e "libs <- c(a, b, c, d, e, f)" \
     -e "install.packages(libs, repos='https://mirrors.nics.utk.edu/cran/', Ncpus=10)" \
     -e "library(devtools)" \
-    -e "install_github('vqv/ggbiplot')"
+    -e "install_github('vqv/ggbiplot')" \
+    -e "install_version('caret', version='6.0.84')"
