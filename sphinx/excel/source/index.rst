@@ -14,6 +14,9 @@ Excel, No Tears
    shortcuts
    formulas-functions-overview
    functions
+   nested-formulas
+   pivot-tables
+   conditional-formatting
 
 
 About
