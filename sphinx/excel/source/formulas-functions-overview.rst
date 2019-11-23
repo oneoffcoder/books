@@ -82,10 +82,8 @@ Excel at its core is a collection of data and the formulas that manipulate them 
 
 Formulas all start with an ``=``
 
-Functions have their own word associated with them. If these words are typed in a formula, Excel will
+Functions have their own word associated with them. If one starts to type words in a formula, Excel will
 show a list of built in functions it offers. Functions also have arguments. Some arguments are required
 for the function to work and some are optional. It can be thought of just like plug and play, where the
 arguments are given values and Excel evaluates the formula/function based on those values. This was a 
 brief overview of formulas and functions. 
-
-
