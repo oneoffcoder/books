@@ -40,10 +40,11 @@ This book is a tutorial on programming ``R``.
    functional
    oop
    data-manipulation
-   ggplot2
    descriptive
    distribution
    hypothesis
+   plot
+   ggplot2
    regression
    misc
 
