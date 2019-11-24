@@ -41,6 +41,10 @@ This book is a tutorial on programming ``R``.
    oop
    data-manipulation
    ggplot2
+   descriptive
+   distribution
+   hypothesis
+   regression
    misc
 
 About
