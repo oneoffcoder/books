@@ -46,6 +46,7 @@ This book is a tutorial on programming ``R``.
    plot
    ggplot2
    regression
+   logistic
    misc
 
 About
