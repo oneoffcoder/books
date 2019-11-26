@@ -50,6 +50,7 @@ This book is a tutorial on programming ``R``.
    classification
    clustering
    missing
+   validation
    misc
 
 About
