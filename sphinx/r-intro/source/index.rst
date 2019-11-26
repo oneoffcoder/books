@@ -49,6 +49,7 @@ This book is a tutorial on programming ``R``.
    logistic
    classification
    clustering
+   missing
    misc
 
 About
