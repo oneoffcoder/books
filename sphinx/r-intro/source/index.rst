@@ -48,6 +48,7 @@ This book is a tutorial on programming ``R``.
    regression
    logistic
    classification
+   clustering
    misc
 
 About

@@ -10,7 +10,7 @@ RUN apt-get update -y \
 # install R packages
 RUN Rscript \
     -e "a <- c('ggplot2', 'viridis', 'corrplot', 'progress', 'devtools')" \
-    -e "b <- c('ggExtra', 'leaflet', 'plotly', 'pROC')" \
+    -e "b <- c('ggExtra', 'leaflet', 'plotly', 'pROC', 'sets', 'mclust', 'fpc')" \
     -e "c <- c('plyr', 'lsa', 'caret', 'twitteR', 'e1071', 'fastAdaboost')" \
     -e "d <- c('quanteda', 'sentimentr', 'randomForest', 'ggrepel', 'rmarkdown')" \
     -e "e <- c('R6', 'jsonlite', 'lubridate', 'microbenchmark', 'shiny', 'shinythemes')" \
