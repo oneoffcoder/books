@@ -9,6 +9,8 @@ RUN apt-get update -y \
 
 # install R packages
 RUN Rscript \
+    -e "repos <- 'https://cloud.r-project.org/'" \
+    -e "dependencies <- c('Depends', 'Imports', 'LinkingTo', 'Suggests', 'Enhances'))" \
     -e "a <- c('ggplot2', 'viridis', 'corrplot', 'progress', 'devtools')" \
     -e "b <- c('ggExtra', 'leaflet', 'plotly', 'pROC', 'sets', 'mclust', 'fpc')" \
     -e "c <- c('plyr', 'lsa', 'caret', 'twitteR', 'e1071', 'fastAdaboost')" \
@@ -17,11 +19,12 @@ RUN Rscript \
     -e "f <- c('tidyverse', 'readr', 'comprehenr', 'maps', 'mapproj', 'ggthemes')" \
     -e "g <- c('mice', 'VIM', 'Amelia', 'missForest', 'mi')" \
     -e "h <- c('skimr', 'RANN', 'gbm', 'xgboost', 'caretEnsemble', 'C50', 'earth')" \
+    -e "i <- c('Hmisc')" \
     -e "libs <- c(a, b, c, d, e, f)" \
-    -e "install.packages(libs, repos='https://mirrors.nics.utk.edu/cran/', Ncpus=10, dependencies=c('Depends', 'Imports', 'LinkingTo', 'Suggests', 'Enhances'))" \
-    -e "install.packages(g, repos='https://mirrors.nics.utk.edu/cran/', Ncpus=10)" \
-    -e "install.packages(h, repos='https://mirrors.nics.utk.edu/cran/', Ncpus=10)" \
-    -e "install.packages(c('Hmisc'), Ncpus=10)" \
+    -e "install.packages(libs, repos=repos, Ncpus=10, dependencies=dependencies" \
+    -e "install.packages(g, repos=repos, Ncpus=10), dependencies=dependencies" \
+    -e "install.packages(h, repos=repos, Ncpus=10), dependencies=dependencies" \
+    -e "install.packages(i, repos=repos, Ncpus=10), dependencies=dependencies" \
     -e "library(devtools)" \
     -e "install_github('vqv/ggbiplot')" \
     -e "install_version('caret', version='6.0-84')"
