@@ -18,7 +18,7 @@ RUN Rscript \
     -e "g <- c('mice', 'VIM', 'Amelia', 'missForest', 'mi')" \
     -e "libs <- c(a, b, c, d, e, f)" \
     -e "install.packages(libs, repos='https://mirrors.nics.utk.edu/cran/', Ncpus=10, dependencies=c('Depends', 'Imports', 'LinkingTo', 'Suggests', 'Enhances'))" \
-    -e "install.packages(g, repos='https://mirrors.nics.utk.edu/cran/', Ncpus=10))" \
+    -e "install.packages(g, repos='https://mirrors.nics.utk.edu/cran/', Ncpus=10)" \
     -e "install.packages(c('Hmisc'), Ncpus=10)" \
     -e "library(devtools)" \
     -e "install_github('vqv/ggbiplot')" \
