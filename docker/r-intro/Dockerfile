@@ -10,7 +10,7 @@ RUN apt-get update -y \
 # install R packages
 RUN Rscript \
     -e "repos <- 'https://cloud.r-project.org/'" \
-    -e "dependencies <- c('Depends', 'Imports', 'LinkingTo', 'Suggests', 'Enhances'))" \
+    -e "dependencies <- c('Depends', 'Imports', 'LinkingTo', 'Suggests', 'Enhances')" \
     -e "a <- c('ggplot2', 'viridis', 'corrplot', 'progress', 'devtools')" \
     -e "b <- c('ggExtra', 'leaflet', 'plotly', 'pROC', 'sets', 'mclust', 'fpc')" \
     -e "c <- c('plyr', 'lsa', 'caret', 'twitteR', 'e1071', 'fastAdaboost')" \
