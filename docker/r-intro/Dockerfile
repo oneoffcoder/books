@@ -22,9 +22,9 @@ RUN Rscript \
     -e "i <- c('Hmisc')" \
     -e "libs <- c(a, b, c, d, e, f)" \
     -e "install.packages(libs, repos=repos, Ncpus=10, dependencies=dependencies)" \
-    -e "install.packages(g, repos=repos, Ncpus=10), dependencies=dependencies)" \
-    -e "install.packages(h, repos=repos, Ncpus=10), dependencies=dependencies)" \
-    -e "install.packages(i, repos=repos, Ncpus=10), dependencies=dependencies)" \
+    -e "install.packages(g, repos=repos, Ncpus=10, dependencies=dependencies)" \
+    -e "install.packages(h, repos=repos, Ncpus=10, dependencies=dependencies)" \
+    -e "install.packages(i, repos=repos, Ncpus=10, dependencies=dependencies)" \
     -e "library(devtools)" \
     -e "install_github('vqv/ggbiplot')" \
     -e "install_version('caret', version='6.0-84')"
