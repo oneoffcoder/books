@@ -31,7 +31,7 @@ This book is a tutorial on programming ``R``.
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Contents
+   :caption: Core
    
    data-types
    data-structures
@@ -39,18 +39,42 @@ This book is a tutorial on programming ``R``.
    functions
    functional
    oop
+   
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Statistics
+   
    data-manipulation
    descriptive
    distribution
    hypothesis
+   
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Graphs
+   
    plot
    ggplot2
+   
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Data Science
+   
    regression
    logistic
    classification
    clustering
    missing
    validation
+   
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Other
+   
    misc
 
 About
