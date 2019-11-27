@@ -10,6 +10,8 @@ All ``docker`` containers are defined through a ``Dockerfile``. A ``Dockerfile``
    :language: docker
    :linenos:
 
+The file may be :download:`downloaded <_static/code/quickstart/Dockerfile>`.
+
 Docker CLI
 ----------
 
