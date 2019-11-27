@@ -36,6 +36,8 @@ This book is a tutorial on ``Docker``. To follow along, you will need to `instal
    :numbered:
    :caption: Contents
 
+   preflight
+   quickstart
 
 
 About
