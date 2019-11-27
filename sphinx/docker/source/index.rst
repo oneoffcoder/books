@@ -25,7 +25,11 @@ Docker, No Tears
 Preface
 =======
 
-This book is a tutorial on ``Docker``.
+This book is a tutorial on ``Docker``. To follow along, you will need to `install the following components <https://docs.docker.com/get-started/>`_.
+
+* `docker <https://docs.docker.com/install/>`_
+* `swarm <https://docs.docker.com/get-started/#enable-docker-swarm>`_
+* `kubernetes <https://kubernetes.io/docs/tasks/tools/install-kubectl>`_
 
 .. toctree::
    :maxdepth: 2
