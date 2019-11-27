@@ -13,13 +13,13 @@ The ``Angular`` application is created using `Angular CLI <https://cli.angular.i
 
 .. code:: bash
 
-    ng new my-app
+    ng new ui-app
 
 Note that all the default options are used in the interactive creation of this Angular application, as the intention is not to show how to create an Angular application, but, rather, ship one out into a container. The structure of your Angular project should look like the following.
 
 ::
 
-    my-app
+    ui-app
     ├── angular.json
     ├── browserslist
     ├── e2e
@@ -62,17 +62,20 @@ We place the ``Dockerfile`` and ``.dockerignore`` files one directory up from th
     ng
     ├── Dockerfile
     ├── .dockerignore
-    └── my-app
+    └── ui-app
 
 We are now ready to build the Angular container.
 
 .. code:: bash
 
-    docker build -t my-app:local .
+    docker build -t ui-app:local .
 
 We may now run the container as follows. Note the port mapping ``-p 80:80`` which maps the local port ``80`` to the container's port ``80``.
 
 .. code:: bash
 
-    docker run --rm -p 80:80 my-app:local
+    docker run --rm -p 80:80 ui-app:local
+
+Flask
+-----
 
