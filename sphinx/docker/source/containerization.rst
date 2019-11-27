@@ -1,7 +1,11 @@
 Containerizing Applications
 ===========================
 
-One major use of containerization is to build shippable containers out of applications. Here, we show how to containerize an ``Angular`` application and a ``Flask`` application.
+One major use of containerization is to build shippable containers out of applications. Here, we show how to containerize the following applications.
+
+* Front-end application with ``Angular`` 
+* Backend application with ``Flask``
+* Database with ``MySQL``
 
 Angular
 -------
@@ -151,3 +155,77 @@ Flask Download
 * :download:`.dockerignore <_static/code/containerization/flask/.dockerignore>`
 * :download:`config.py <_static/code/containerization/flask/rest-app/config.py>`
 * :download:`app.py <_static/code/containerization/flask/rest-app/app.py>`
+
+MySQL
+-----
+
+The ``MySQL`` container is the simplest container to define. It as simple as the following. However, what may look sophisticated is how we run our new container based off of the MySQL one.
+
+.. literalinclude:: _static/code/containerization/mysql/Dockerfile
+   :language: docker
+   :linenos:
+
+To build our new database container.
+
+.. code:: bash
+
+    docker build -t db-app:local .
+
+To run the container.
+
+.. code:: bash
+
+    docker run \
+        --rm \
+        -e MYSQL_ROOT_PASSWORD=oneoffcoder \
+        -v `pwd`/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d \
+        db-app:local
+
+When running the container the you will notice the flag ``-v`` which specifies a mount. In the command above, when we run our database container, we mount the local directory ``docker-entrypoint-initdb.d`` to the container's directory ``/docker-entrypoint-initdb.d``. According to the `documentation <https://hub.docker.com/_/mysql>`_, when the database container starts, any ``SQL`` script found in ``/docker-entrypoint-initdb.d`` will be executed in alphabetical order. In our case, we have a simple ``setup.sql`` script that creates one database, one table in that database and one user for the database.
+
+.. literalinclude:: _static/code/containerization/mysql/docker-entrypoint-initdb.d/setup.sql
+   :language: sql
+   :linenos:
+
+You will also notice the flag ``-e``, which specifies a value for an environment variable. In this case, the environment variable is the root password for the ``MySQL`` database, called ``MYSQL_ROOT_PASSWORD``, and the value is ``oneoffcoder``.
+
+When you run the database container, it will lock the terminal. Open a new terminal and you may open a shell session with the running container. First, see what is the ``Container ID`` of the running database container.
+
+.. code:: bash
+
+    docker ps
+
+You should see an output like the following.
+
+::
+
+    CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                 NAMES
+    45bee317b0d0        db-app:local        "docker-entrypoint.s…"   9 minutes ago       Up 9 minutes        3306/tcp, 33060/tcp   confident_bartik
+
+Then run the ``exec`` subcommand. Below, we use the full container ID, however, you may use only the first few characters if they uniquely identify the running container. For example, instead of using ``45bee317b0d0`` completely, you may use ``45``, ``45b``, ``45be``, and so on. If there is another container whose ID starts with ``45``, the equivocality will be stated and you must continue to use as many characters as required to distinguish which container ID you are targeting.
+
+.. code:: bash
+
+    docker exec -it 45bee317b0d0 /bin/bash
+
+A shell in the container will be created. You may then use the ``mysql`` CLI to go into the database to tinker around.
+
+.. code:: bash
+
+    mysql -u root -poneoffcoder
+    mysql -u oneoffcoder -pisthebest
+
+The structure of the files and folders is as follows.
+
+::
+
+    mysql/
+    ├── docker-entrypoint-initdb.d
+    │   └── setup.sql
+    └── Dockerfile
+
+MySQL Download
+^^^^^^^^^^^^^^
+
+* :download:`Dockerfile <_static/code/containerization/mysql/Dockerfile>`
+* :download:`setup.sql <_static/code/containerization/mysql/docker-entrypoint-initdb.d/setup.sql>`
