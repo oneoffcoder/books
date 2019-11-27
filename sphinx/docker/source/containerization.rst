@@ -6,9 +6,6 @@ One major use of containerization is to build shippable containers out of applic
 Angular
 -------
 
-Create
-^^^^^^
-
 The ``Angular`` application is created using `Angular CLI <https://cli.angular.io/>`_. To create the application we simply type in the following command.
 
 .. code:: bash
@@ -52,7 +49,7 @@ In using multi-stage build, we copy the output of the ``NodeBuilder`` stage into
 We will also create a ``.dockerignore`` file to ignore copying files and folders that we do not want to be copied into the container. Namely, the ``dist`` and ``node_modules`` directories of the Angular applications are folders that we do not want to be copied over because they are derived and should be pulled in fresh from ``npm`` to reinforce the idea of reproducible builds, respectively. Additionally, the ``node_modules`` directory is typically very large, and if we ignore it, the ``tar`` file that is created and shipped to the local Docker server will have a reduced ``build context``. 
 
 .. literalinclude:: _static/code/containerization/ng/.dockerignore
-   :language: docker
+   :language: text
    :linenos:
 
 We place the ``Dockerfile`` and ``.dockerignore`` files one directory up from the ``my-app`` directory. Your project should look structurally as follows.
@@ -76,6 +73,81 @@ We may now run the container as follows. Note the port mapping ``-p 80:80`` whic
 
     docker run --rm -p 80:80 ui-app:local
 
+Angular Download
+^^^^^^^^^^^^^^^^
+
+* :download:`Dockerfile <_static/code/containerization/ng/Dockerfile>`
+* :download:`.dockerignore <_static/code/containerization/ng/.dockerignore>`
+
 Flask
 -----
 
+Before we create, build and deploy a ``Flask`` application, we need to install some ``Python`` dependencies. Since we prefer using ``conda`` to manage our environments and dependencies for Python, we issue the following command to make sure the packages/libraries we need are available.
+
+.. code:: bash
+
+    conda install -y flask flask-cors
+
+The Flask application is very simple and has only 2 files; ``config.py`` for configuration and ``app.py`` as an application entrypoint. Here's the code for ``config.py``.
+
+.. literalinclude:: _static/code/containerization/flask/rest-app/config.py
+   :language: python
+   :linenos:
+
+Here's the code for ``app.py``. As can be seen, there is only one real route ``/v1/test`` and a catch-all route.
+
+.. literalinclude:: _static/code/containerization/flask/rest-app/app.py
+   :language: python
+   :linenos:
+
+For local testing, we could run this Flask application as follows. However, we will containerize it and run it as a container.
+
+.. code:: bash
+
+    python app.py
+
+The ``Dockerfile`` is defined as follows.
+
+.. literalinclude:: _static/code/containerization/flask/Dockerfile
+   :language: docker
+   :linenos:
+
+We do not do anything special in the ``Dockerfile``; we simply use the ``python:3`` container image as the base image, copy over the ``rest-app`` folder and install the dependencies using ``pip``. There is a new instruction ``CMD`` that we specify, however, and it provides us a way to specify which executable should run when the container is brought to a running state.
+
+The ``.dockerignore`` file is defined as follows. We ignore the ``__pycache__`` directory.
+
+.. literalinclude:: _static/code/containerization/flask/.dockerignore
+   :language: text
+   :linenos:
+
+
+In all, the structure of the folders and files should look like the following.
+
+::
+
+    flask/
+    ├── Dockerfile
+    ├── .dockerignore
+    └── rest-app
+        ├── app.py
+        └── config.py
+
+To build the Flask application.
+
+.. code:: bash
+
+    docker build -t rest-app:local .
+
+We may now run the container as follows. Note the port mapping ``-p 5000:5000`` which maps the local port ``5000`` to the container's port ``5000``.
+
+.. code:: bash
+
+    docker run --rm -p 5000:5000 rest-app:local
+
+Flask Download
+^^^^^^^^^^^^^^
+
+* :download:`Dockerfile <_static/code/containerization/flask/Dockerfile>`
+* :download:`.dockerignore <_static/code/containerization/flask/.dockerignore>`
+* :download:`config.py <_static/code/containerization/flask/rest-app/config.py>`
+* :download:`app.py <_static/code/containerization/flask/rest-app/app.py>`
