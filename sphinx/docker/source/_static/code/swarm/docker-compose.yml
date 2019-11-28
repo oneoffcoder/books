@@ -1,0 +1,30 @@
+version: "3.7"
+services:
+  db:
+    image: 127.0.0.1:5000/db
+    build: ./mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - type: bind
+        source: ./mysql/docker-entrypoint-initdb.d
+        target: /docker-entrypoint-initdb.d
+        consistency: consistent
+    environment:
+      MYSQL_ROOT_PASSWORD: "oneoffcoder"
+  flask:
+    image: 127.0.0.1:5000/rest
+    build: ./flask
+    ports:
+      - "5001:5000"
+    depends_on:
+      - db
+  ng:
+    image: 127.0.0.1:5000/ui
+    container_name: ui
+    build: ./ng
+    ports:
+      - "80:80"
+    depends_on:
+      - flask
+      - db

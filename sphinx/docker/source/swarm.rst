@@ -10,6 +10,18 @@ To start ``Swarm``, type in the following.
 
     docker swarm init
 
+You should see a similar output as follows.
+
+::
+
+    Swarm initialized: current node (891q5gj0y69y2s1kzk01xdjzy) is now a manager.
+
+    To add a worker to this swarm, run the following command:
+
+        docker swarm join --token SWMTKN-1-3mwknlzd6h75b0l8e9324l3tlhi1hhn1k9cc0vklwsf937v1dq-3ri0hmvm2390rho4irbwby0ru 192.168.0.73:2377
+
+    To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
 To list the nodes in the swarm.
 
 .. code:: bash
@@ -29,22 +41,58 @@ To leave swarm.
 
     docker swarm leave --force
 
+Set up a Docker registry
+------------------------
 
-Create Swarm yaml
------------------
+To set up a local Docker registry, type in the following.
 
-The ``stack file`` is a ``YAML`` file for Swarm that is nearly identical to the syntax of ``compose file`` for ``Docker Compose``.
+.. code:: bash
 
-.. literalinclude:: _static/code/swarm/student.yml
+    docker service create --name registry --publish published=5000,target=5000 registry:2
+
+::
+
+    mq4lk2beo4yz1hj8aqe2po3up
+    overall progress: 1 out of 1 tasks 
+    1/1: running   [==================================================>] 
+    verify: Service converged
+
+Check the status as follows.
+
+.. code:: bash
+
+    docker service ls
+
+::
+
+    ID                  NAME                MODE                REPLICAS            IMAGE               PORTS
+    mq4lk2beo4yz        registry            replicated          1/1                 registry:2          *:5000->5000/tcp
+
+Check that it's working.
+
+.. code:: bash
+
+    curl http://localhost:5000/v2/
+
+Create docker-compose.yml
+-------------------------
+
+.. literalinclude:: _static/code/swarm/docker-compose.yml
    :language: yaml
    :linenos:
+
+Publish.
+
+.. code:: bash
+
+    docker-compose push
 
 Deploy to Swarm
 ---------------
 
 .. code:: bash
 
-    docker stack deploy -c student.yml student
+    docker stack deploy -c docker-compose.yml student
 
 Output.
 
@@ -66,10 +114,11 @@ Output.
 
 ::
 
-    ID                  NAME                MODE                REPLICAS            IMAGE               PORTS
-    4kkjzq525ye4        student_db          replicated          0/1                 db-app:local        *:3306->3306/tcp
-    kxqhlgn38dxb        student_flask       replicated          0/1                 rest-app:local      *:5000->5000/tcp
-    g2alvr797i76        student_ng          replicated          0/1                 ui-app:local        *:80->80/tcp
+    ID                  NAME                MODE                REPLICAS            IMAGE                        PORTS
+    mq4lk2beo4yz        registry            replicated          1/1                 registry:2                   *:5000->5000/tcp
+    v898krzykppw        student_db          replicated          1/1                 127.0.0.1:5000/db:latest     *:3306->3306/tcp
+    bgkeb2k2skpt        student_flask       replicated          1/1                 127.0.0.1:5000/rest:latest   *:5001->5000/tcp
+    ypnuugzylzp7        student_ng          replicated          1/1                 127.0.0.1:5000/ui:latest     *:80->80/tcp
 
 Stop services
 ^^^^^^^^^^^^^
