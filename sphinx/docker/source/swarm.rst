@@ -69,8 +69,8 @@ Check that it's working.
 
     curl http://localhost:5000/v2/
 
-Create docker-compose.yml
--------------------------
+Publish stack
+-------------
 
 .. literalinclude:: _static/code/swarm/docker-compose.yml
    :language: yaml
@@ -121,8 +121,25 @@ Output.
     bgkeb2k2skpt        student_flask       replicated          1/1                 127.0.0.1:5000/rest:latest   *:5001->5000/tcp
     ypnuugzylzp7        student_ng          replicated          1/1                 127.0.0.1:5000/ui:latest     *:80->80/tcp
 
+Inspect services
+^^^^^^^^^^^^^^^^
+
+.. code:: bash
+
+    docker service inspect --pretty student_db
+    docker service inspect --pretty student_flask
+    docker service inspect --pretty student_ng
+
+Scale services
+^^^^^^^^^^^^^^
+
+.. code:: bash
+
+    docker service scale student_ng=5
+    docker service ps student_ng
+
 Stop services
-^^^^^^^^^^^^^
+-------------
 
 .. code:: bash
 
@@ -137,6 +154,9 @@ Output.
     Removing service student_flask
     Removing service student_ng
     Removing network student_default
+
+Leave swarm
+-----------
 
 To leave swarm.
 
