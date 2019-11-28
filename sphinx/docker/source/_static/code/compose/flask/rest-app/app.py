@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, Response, abort
 from flask_cors import CORS
 import json
 import time
@@ -40,23 +40,31 @@ def hello():
 
 @app.route('/v1/student', methods=['POST'])
 def create():
-    j = request.json
-    s = Student.instance(j['first_name'], j['last_name'], j['gender'])
-    session.add(s)
-    return json.dumps({'message': 'OK'})
+    try:
+        j = request.json
+        s = Student.instance(j['first_name'], j['last_name'], j['gender'])
+        session.add(s)
+        return json.dumps({'message': 'OK'})
+    except:
+        abort(400)
 
 @app.route('/v1/student/<id>', methods=['GET'])
 def read(id):
     student = session.query(Student).filter_by(id=id).first()
-    if student is None:
-        return json.dumps({'message': f'no such id {id}'})
-    return json.dumps(student.dict())
+    if student is not None:
+        return json.dumps(student.dict())
+    
+    abort(404)
+    
 
 @app.route('/v1/students', methods=['GET'])
 def read_all():
-    students = session.query(Student)
-    students = [s.dict() for s in students]
-    return json.dumps(students)
+    try:
+        students = session.query(Student)
+        students = [s.dict() for s in students]
+        return json.dumps(students)
+    except:
+        abort(400)
 
 @app.route('/v1/student/<id>', methods=['PUT'])
 def update(id):
@@ -68,8 +76,8 @@ def update(id):
         student.gender = j['gender']
         session.commit()
         return json.dumps({'message': 'OK'})
-    else:
-        return json.dumps({'message': f'no such id {id}'})
+    
+    abort(404)
 
 @app.route('/v1/student/<id>', methods=['DELETE'])
 def delete(id):
@@ -77,7 +85,8 @@ def delete(id):
     if student is not None:
         session.delete(student)
         return json.dumps({'message': 'OK'})
-    return json.dumps({'message': f'no such id {id}'})
+    
+    abort(404)
 
 
 if __name__ == '__main__':
