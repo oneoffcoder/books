@@ -134,6 +134,16 @@ Create a file called ``pod.yaml``.
 Deployment creation
 ^^^^^^^^^^^^^^^^^^^
 
+Build the docker images. 
+
+.. code:: bash
+
+    docker build --no-cache -t db-app:local .
+    docker build --no-cache -t rest-app:local .
+    docker build --no-cache -t ui-app:local .
+
+Create ``student-deployment.yml`` with the following content.       
+
 .. literalinclude:: _static/code/kubernetes/student-deployment.yml
    :language: yaml
    :linenos:
@@ -142,19 +152,18 @@ Deployment creation
 .. code:: bash
 
     # create deployment
-    kubectl apply -f student-deployment.yml
+    kubectl create -f student-deployment.yml
 
     # get pod information
     kubectl get pods
-    kubectl describe pod student-deployment
+    kubectl describe pod student-deployment-65944d97cd-x2x9j
 
     # shell access
-    kubectl exec -it student --container db -- /bin/bash
-    kubectl exec -it student --container rest -- /bin/bash
+    kubectl exec -it student-deployment-65944d97cd-x2x9j --container db -- /bin/bash
+    kubectl exec -it student-deployment-65944d97cd-x2x9j --container rest -- /bin/bash
 
     # forward port
-    # name is is from "kubectl get pods" command
-    kubectl port-forward student-deployment-65944d97cd-trcnn 5000:5000
+    kubectl port-forward student-deployment-65944d97cd-x2x9j 5000:5000
 
     ## delete service
     kubectl delete -f student-deployment.yml
