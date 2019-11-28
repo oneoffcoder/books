@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: student
+spec:
+  containers:
+  - name: db
+    image: db-app:local
+    ports:
+      - containerPort: 3306
+    env:
+      - name: MYSQL_ROOT_PASSWORD
+        value: "oneoffcoder"
+    volumeMounts:
+      - name: db-scripts
+        mountPath: /docker-entrypoint-initdb.d
+  - name: rest
+    image: rest-app:local
+    ports:
+      - containerPort: 5000
+  volumes:
+  - name: db-scripts
+    hostPath:
+      path: /hosthome/super/git/books/sphinx/docker/source/_static/code/compose/mysql/docker-entrypoint-initdb.d
+      type: Directory

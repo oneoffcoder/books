@@ -60,7 +60,7 @@ Type in the following to deploy a service through an image.
     kubectl expose deployment hello-minikube --type=NodePort --port=8080
 
     # get pod information
-    kubectl get pod
+    kubectl get pods
     
     # get the service url
     minikube service hello-minikube --url
@@ -76,7 +76,7 @@ Deploy through YAML configuration
 
 Create a file called ``pod.yaml``.
 
-.. literalinclude:: _static/code/kubernetes/pod.yaml
+.. literalinclude:: _static/code/kubernetes/pod.yml
    :language: yaml
    :linenos:
 
@@ -85,7 +85,7 @@ Then type in the following.
 .. code:: bash
 
     # create deployment
-    kubectl apply -f pod.yaml
+    kubectl apply -f pod.yml
 
     # get pod information
     kubectl get pods
@@ -94,7 +94,35 @@ Then type in the following.
     kubectl logs demo
 
     ## delete service
-    kubectl delete -f pod.yaml
+    kubectl delete -f pod.yml
+
+Pod creation
+^^^^^^^^^^^^
+
+* `deployment <https://kubernetes.io/docs/concepts/workloads/controllers/deployment>`_
+* `define evironment variables <https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/>`_
+* `shell access <https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/>`_
+* `mounting volumes <https://kubernetes.io/docs/concepts/storage/volumes>`_
+
+.. code:: bash
+
+    # create deployment
+    kubectl apply -f student.yml
+
+    # get pod information
+    kubectl get pods
+    kubectl describe pod student
+
+    # get logs of pod
+    kubectl logs student db
+    kubectl logs student rest
+
+    # shell access
+    kubectl exec -it student --container db -- /bin/bash
+    kubectl exec -it student --container rest -- /bin/bash
+
+    ## delete service
+    kubectl delete -f student.yml
 
 Using local images
 ------------------
