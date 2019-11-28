@@ -52,6 +52,12 @@ def read(id):
         return json.dumps({'message': f'no such id {id}'})
     return json.dumps(student.dict())
 
+@app.route('/v1/students', methods=['GET'])
+def read_all():
+    students = session.query(Student)
+    students = [s.dict() for s in students]
+    return json.dumps(students)
+
 @app.route('/v1/student/<id>', methods=['PUT'])
 def update(id):
     student = session.query(Student).filter_by(id=id).first()
