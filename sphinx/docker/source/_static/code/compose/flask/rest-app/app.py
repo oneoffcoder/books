@@ -38,12 +38,41 @@ def hello():
         'timestamp': current_milli_time()
     })
 
+@app.route('/v1/student', methods=['POST'])
+def create():
+    j = request.json
+    s = Student.instance(j['first_name'], j['last_name'], j['gender'])
+    session.add(s)
+    return json.dumps({'message': 'OK'})
+
 @app.route('/v1/student/<id>', methods=['GET'])
 def read(id):
     student = session.query(Student).filter_by(id=id).first()
     if student is None:
         return json.dumps({'message': f'no such id {id}'})
     return json.dumps(student.dict())
+
+@app.route('/v1/student/<id>', methods=['PUT'])
+def update(id):
+    student = session.query(Student).filter_by(id=id).first()
+    if student is not None:
+        j = request.json
+        student.first_name = j['first_name']
+        student.last_name = j['last_name']
+        student.gender = j['gender']
+        session.commit()
+        return json.dumps({'message': 'OK'})
+    else:
+        return json.dumps({'message': f'no such id {id}'})
+
+@app.route('/v1/student/<id>', methods=['DELETE'])
+def delete(id):
+    student = session.query(Student).filter_by(id=id).first()
+    if student is not None:
+        session.delete(student)
+        return json.dumps({'message': 'OK'})
+    return json.dumps({'message': f'no such id {id}'})
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

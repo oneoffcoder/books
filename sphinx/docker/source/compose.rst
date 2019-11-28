@@ -26,4 +26,5 @@ The ``YAML`` file is self-explanatory, for the most part.
 
 .. code:: bash
 
-    conda install -y mysql-connector-python SQLAlchemy flask flask-cors
+    conda install -y SQLAlchemy flask flask-cors
+    pip install mysql-connector-python

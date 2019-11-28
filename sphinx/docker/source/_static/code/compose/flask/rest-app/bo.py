@@ -11,6 +11,11 @@ class Student(Base):
     last_name = sqlalchemy.Column(sqlalchemy.String(length=50))
     gender = sqlalchemy.Column(sqlalchemy.String(length=1))
 
+    @staticmethod
+    def instance(first_name, last_name, gender):
+        s = Student(first_name=first_name, last_name=last_name, gender=gender)
+        return s
+
     def dict(self):
         return {
             'id': self.id,
