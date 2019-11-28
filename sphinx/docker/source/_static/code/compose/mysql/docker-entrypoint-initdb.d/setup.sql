@@ -18,4 +18,6 @@ INSERT INTO student (first_name, last_name, gender) VALUES
 ;
 
 CREATE USER 'oneoffcoder'@'localhost' IDENTIFIED BY 'isthebest';
-GRANT ALL PRIVILEGES ON school.* TO 'oneoffcoder'@'localhost';
+CREATE USER 'oneoffcoder'@'%' IDENTIFIED BY 'isthebest';
+GRANT ALL PRIVILEGES ON school.* TO 'oneoffcoder'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON school.* TO 'oneoffcoder'@'%' WITH GRANT OPTION;

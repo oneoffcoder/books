@@ -179,6 +179,7 @@ To run the container.
         --rm \
         -e MYSQL_ROOT_PASSWORD=oneoffcoder \
         -v `pwd`/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d \
+        -p 3306:3306 \
         db-app:local
 
 When running the container the you will notice the flag ``-v`` which specifies a mount. In the command above, when we run our database container, we mount the local directory ``docker-entrypoint-initdb.d`` to the container's directory ``/docker-entrypoint-initdb.d``. According to the `documentation <https://hub.docker.com/_/mysql>`_, when the database container starts, any ``SQL`` script found in ``/docker-entrypoint-initdb.d`` will be executed in alphabetical order. In our case, we have a simple ``setup.sql`` script that creates one database, one table in that database and one user for the database.

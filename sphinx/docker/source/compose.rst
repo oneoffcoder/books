@@ -23,3 +23,7 @@ The ``YAML`` file is self-explanatory, for the most part.
 * Each service has a specified container image: ``db-app:local``, ``rest-app:local`` and ``ui-app:local``.
 * Note that we mount volumes and set environment variables where needed.
 * Lastly, we also specify ``healthchecks`` to make sure the services are running; when they fail, an attempt will be made to bring them back up.
+
+.. code:: bash
+
+    conda install -y mysql-connector-python SQLAlchemy flask flask-cors
