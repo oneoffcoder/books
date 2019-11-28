@@ -131,6 +131,34 @@ Create a file called ``pod.yaml``.
     ## delete service
     kubectl delete -f student.yml
 
+Deployment creation
+^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: _static/code/kubernetes/student-deployment.yml
+   :language: yaml
+   :linenos:
+   :emphasize-lines: 2
+
+.. code:: bash
+
+    # create deployment
+    kubectl apply -f student-deployment.yml
+
+    # get pod information
+    kubectl get pods
+    kubectl describe pod student-deployment
+
+    # shell access
+    kubectl exec -it student --container db -- /bin/bash
+    kubectl exec -it student --container rest -- /bin/bash
+
+    # forward port
+    # name is is from "kubectl get pods" command
+    kubectl port-forward student-deployment-65944d97cd-trcnn 5000:5000
+
+    ## delete service
+    kubectl delete -f student-deployment.yml
+
 Using local images
 ------------------
 
@@ -145,6 +173,9 @@ Useful notes and commands
 
 * ``minikube dashboard`` brings up the Kubernetes dashboard
 * ``minikube ssh`` will SSH into the virutal machine
+* ``kubectl get deployment`` gets the deployments in the cluster
+* ``kubectl get events`` gets the events in the cluster
+* ``kubectl get svc`` checks the services created
 * ``/home`` (local) is mounted ``/hosthome`` (virtual machine)
 * addons in ``~/.minikube/addons`` (local) will be moved to the virtual machine on Minikube start/restart
 
