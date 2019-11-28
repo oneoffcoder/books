@@ -35,11 +35,6 @@ Output.
     ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
     16ui13y7ijoaqw6u8h05u2a2b *   ryzen               Ready               Active              Leader              19.03.3
 
-To leave swarm.
-
-.. code:: bash
-
-    docker swarm leave --force
 
 Set up a Docker registry
 ------------------------
@@ -80,6 +75,12 @@ Create docker-compose.yml
 .. literalinclude:: _static/code/swarm/docker-compose.yml
    :language: yaml
    :linenos:
+
+Build.
+
+.. code:: bash
+
+    docker-compose up
 
 Publish.
 
@@ -126,6 +127,7 @@ Stop services
 .. code:: bash
 
     docker stack rm student
+    docker service rm registry
 
 Output.
 
@@ -135,3 +137,9 @@ Output.
     Removing service student_flask
     Removing service student_ng
     Removing network student_default
+
+To leave swarm.
+
+.. code:: bash
+
+    docker swarm leave --force
