@@ -40,3 +40,4 @@ services:
       start_period: 40s
     depends_on:
       - flask
+      - db

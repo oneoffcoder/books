@@ -49,8 +49,6 @@ export class AppComponent implements OnInit {
               this.errorCreating = true;
             }
           )
-      } else {
-        this.errorCreating = true;
       }
   }
 
@@ -70,8 +68,6 @@ export class AppComponent implements OnInit {
               this.errorUpdating = true;
             }
           )
-      } else {
-        this.errorUpdating = true;
       }
   }
 
