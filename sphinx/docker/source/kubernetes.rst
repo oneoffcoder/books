@@ -154,16 +154,30 @@ Create ``student-deployment.yml`` with the following content.
     # create deployment
     kubectl create -f student-deployment.yml
 
+    # check deployment
+    kubectl get deployment
+
+    # check replication set
+    kubectl get rs
+
     # get pod information
     kubectl get pods
-    kubectl describe pod student-deployment-65944d97cd-x2x9j
+    kubectl describe pod student-deployment-75d56dc8f5-6z66z
+
+    # get logs
+    kubectl logs student-deployment-75d56dc8f5-6z66z db
+    kubectl logs student-deployment-75d56dc8f5-6z66z rest
+    kubectl logs student-deployment-75d56dc8f5-6z66z ui
 
     # shell access
-    kubectl exec -it student-deployment-65944d97cd-x2x9j --container db -- /bin/bash
-    kubectl exec -it student-deployment-65944d97cd-x2x9j --container rest -- /bin/bash
+    kubectl exec -it student-deployment-75d56dc8f5-6z66z --container db -- /bin/bash
+    kubectl exec -it student-deployment-75d56dc8f5-6z66z --container rest -- /bin/bash
+    kubectl exec -it student-deployment-75d56dc8f5-6z66z --container ui -- /bin/sh
 
     # forward port
-    kubectl port-forward student-deployment-65944d97cd-x2x9j 5000:5000
+    kubectl port-forward student-deployment-75d56dc8f5-6z66z 3306:3306
+    kubectl port-forward student-deployment-75d56dc8f5-6z66z 5000:5000
+    kubectl port-forward student-deployment-75d56dc8f5-6z66z 8080:80
 
     ## delete service
     kubectl delete -f student-deployment.yml

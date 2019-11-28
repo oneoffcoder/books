@@ -29,6 +29,10 @@ spec:
         image: rest-app:local
         ports:
           - containerPort: 5000
+      - name: ui
+        image: ui-app:local
+        ports:
+          - containerPort: 80
       volumes:
       - name: db-scripts
         hostPath:
