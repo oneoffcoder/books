@@ -99,6 +99,13 @@ Then type in the following.
 Pod creation
 ^^^^^^^^^^^^
 
+Create a file called ``pod.yaml``.
+
+.. literalinclude:: _static/code/kubernetes/student.yml
+   :language: yaml
+   :linenos:
+   :emphasize-lines: 2
+
 * `deployment <https://kubernetes.io/docs/concepts/workloads/controllers/deployment>`_
 * `define evironment variables <https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/>`_
 * `shell access <https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/>`_
