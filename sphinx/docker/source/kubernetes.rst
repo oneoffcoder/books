@@ -8,10 +8,10 @@ To deploy to ``Kubernetes``, we need the following components installed. On Linu
 
 * Install `kubectl <https://kubernetes.io/docs/tasks/tools/install-kubectl>`_
 
-   * `documentation <https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands>`_
+   * `kubectl documentation <https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands>`_
 * Install `minikube <https://kubernetes.io/docs/tasks/tools/install-minikube>`_
 
-   * `documentation <https://minikube.sigs.k8s.io/docs/>`_
+   * `minikube documentation <https://minikube.sigs.k8s.io/docs/>`_
 
 * Install `VirtualBox <https://www.virtualbox.org>`_
 
