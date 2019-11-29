@@ -119,6 +119,18 @@ Angular applications manage configuration as a first class citizen through `envr
    :language: typescript
    :linenos:
 
+The code to acquire these environment variables are stored in ``app.component.ts``.
+
+.. literalinclude:: _static/code/runtime/ng/ui-app/src/app/app.component.ts
+   :language: typescript
+   :linenos:
+
+The HTML rendering/presentation code is in ``app.component.html``.
+
+.. literalinclude:: _static/code/runtime/ng/ui-app/src/app/app.component.html
+   :language: html
+   :linenos:
+
 Here is what the files for ``ng build`` will generate.
 
 ::
