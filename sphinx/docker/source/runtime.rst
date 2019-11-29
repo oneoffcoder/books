@@ -112,3 +112,76 @@ Flask downloads
 
 Angular
 -------
+
+Angular applications manage configuration as a first class citizen through `envrionment files <https://angular.io/guide/build>`_. If you use the `Angular CLI <https://cli.angular.io/>`_ or ``ng-cli`` to initialize, scaffold and build your Angular application, there will be two files ``environment.ts`` and ``environment.prod.ts`` where you may declare the development and production settings for using with ``ng build``. After you build your application (e.g. with either ``ng build`` or ``ng build --prod``), a distribution will be created. In this example, we set ``environment.ts`` and ``environment.prod.ts`` to be as follows.
+
+.. literalinclude:: _static/code/runtime/ng/ui-app/src/environments/environment.ts
+   :language: typescript
+   :linenos:
+
+Here is what the files for ``ng build`` will generate.
+
+::
+
+    ui-app/
+    ├── favicon.ico
+    ├── index.html
+    ├── main-es2015.js
+    ├── main-es2015.js.map
+    ├── main-es5.js
+    ├── main-es5.js.map
+    ├── polyfills-es2015.js
+    ├── polyfills-es2015.js.map
+    ├── polyfills-es5.js
+    ├── polyfills-es5.js.map
+    ├── runtime-es2015.js
+    ├── runtime-es2015.js.map
+    ├── runtime-es5.js
+    ├── runtime-es5.js.map
+    ├── styles-es2015.js
+    ├── styles-es2015.js.map
+    ├── styles-es5.js
+    ├── styles-es5.js.map
+    ├── vendor-es2015.js
+    ├── vendor-es2015.js.map
+    ├── vendor-es5.js
+    └── vendor-es5.js.map
+
+Here is what the files for ``ng build --prod`` will generate.
+
+::
+
+    ui-app/
+    ├── 3rdpartylicenses.txt
+    ├── favicon.ico
+    ├── index.html
+    ├── main-es2015.c2c754009562ee4be6a8.js
+    ├── main-es5.c2c754009562ee4be6a8.js
+    ├── polyfills-es2015.2987770fde9daa1d8a2e.js
+    ├── polyfills-es5.6696c533341b95a3d617.js
+    ├── runtime-es2015.edb2fcf2778e7bf1d426.js
+    ├── runtime-es5.edb2fcf2778e7bf1d426.js
+    └── styles.3ff695c00d717f2d2a11.css
+
+The key is in the ``main-es*.js`` files. If you reference the environment settings from within your application, they will be exported as literals in the ``main-es*.js`` files (if you do not, then ``ng build --prod`` will shake these unnecessary literals off). 
+
+Here is a snippet from of the code in ``main-es2015.js``.
+
+.. code-block:: javascript
+    :linenos:
+
+    var environment = {
+        production: false,
+        serviceUrl: 'ENV_SERVICE_URL',
+        apiKey: 'ENV_API_KEY'
+    };
+
+Here is a snippet from of the code in ``main-es2015.c2c754009562ee4be6a8.js``.
+
+.. code-block:: javascript
+    :linenos:
+
+    Ra={production:!0,serviceUrl:"ENV_SERVICE_URL",apiKey:"ENV_API_KEY"}
+
+When the Angular static contents are placed in a webserver like ``nginx``, they have no runtime environment that will allow the code to sense the environment. The code is strictly meant to be sent back to the user's browser and then then browser interprets them, at which point, the code is away from the webserver environment, and cannot (and should not) access the environment from which they came. So then, how do we replace these files at runtime? The key is with the string literals, environment variables passed into the Docker container ``-e``, and string substitution. Let's see how we may use these elements to modify the string literals at runtime.
+
