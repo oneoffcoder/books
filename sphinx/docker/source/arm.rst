@@ -55,6 +55,7 @@ Notice the following.
 * We setup a mount volume at ``/ipynb`` so that we can mout our local notebooks onto the container at runtime.
 * We expose port ``8888``, which is what Jupyer Lab is running on. 
 * We use ``supervisor`` to start up Jupyter Lab at runtime.
+* If you do not like Jupyer Lab and want the old Jupyter Notebook, override at runtime with ``-e JUPYTER_TYPE=notebook``.
 
 Build.
 
