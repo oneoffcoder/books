@@ -247,3 +247,49 @@ Run the container with environment specification.
         ui-app:local
 
 You may now go to `http://localhost <http://localhost>`_ and observe the runtime string substitution.
+
+nginx
+-----
+
+``nginx`` typically runs on port ``80``. What if we want nginx to run on a different port? Again, we can use string substitution. Whereas in the Angular application we used Python, in this example, we use a simple ``bash`` script.
+
+The ``nginx-default.conf.template`` file is the template that we want to modify and place into ``/etc/nginx/conf.d/default.conf``.
+
+.. literalinclude:: _static/code/runtime/nginx/nginx-default.conf.template
+   :language: docker
+   :linenos:
+
+The ``docker-entrypoint.sh`` script does the actual string substitution with the environment variable value.
+
+.. literalinclude:: _static/code/runtime/nginx/docker-entrypoint.sh
+   :language: docker
+   :linenos:
+
+The ``Dockerfile``. Notice how we modify ``ENTRYPOINT`` and ``CMD`` and specify a default port with ``ENV``.
+
+.. literalinclude:: _static/code/runtime/nginx/Dockerfile
+   :language: docker
+   :linenos:
+   :emphasize-lines: 3, 7-8
+
+Build the container.
+
+.. code-block:: bash
+    :linenos:
+
+    docker build --no-cache -t web-app:local .
+
+Run the container on different ports.
+
+.. code-block:: bash
+    :linenos:
+
+    docker run -p 81:81 -e PORT=81 --rm web-app:local
+    docker run -p 82:82 -e PORT=82 --rm web-app:local
+    docker run -p 83:83 -e PORT=83 --rm web-app:local
+
+Depending on how you specified the port through ``-e PORT=<port>``, you may access the site as follow.
+
+* `http://localhost:81 <http://localhost:81>`_
+* `http://localhost:82 <http://localhost:82>`_
+* `http://localhost:83 <http://localhost:83>`_
