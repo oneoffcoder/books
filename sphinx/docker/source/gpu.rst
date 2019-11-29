@@ -30,7 +30,7 @@ You should see an output similar to the below.
     |=============================================================================|
     +-----------------------------------------------------------------------------+
 
-The ``Dockerfile``.
+The ``Dockerfile`` uses ``nvidia/cuda:10.0-cudnn7-devel`` as the base image. We install ``conda`` and the ``PyTorch`` packages, and we use ``supervisor`` to start up Jupyter Lab.
 
 .. literalinclude:: _static/code/gpu/Dockerfile
    :language: docker
@@ -44,7 +44,7 @@ Build.
 
     docker build --no-cache -t gpu-jupyter:local .
 
-Run.
+Run. Note that we have to specify the ``--gpus all`` flag to give GPU access to the container.
 
 .. code-block:: bash
     :linenos:
@@ -53,6 +53,7 @@ Run.
         -it \
         --rm \
         -p 8888:8888 \
+        --gpus all \
         -v `pwd`/ipynb:/ipynb \
         gpu-jupyter:local
 
