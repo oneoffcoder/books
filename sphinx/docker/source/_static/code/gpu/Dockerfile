@@ -18,9 +18,7 @@ RUN wget -q https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh 
     /bin/bash /tmp/anaconda.sh -b -p $CONDA_HOME
 
 # install python packages
-RUN conda install \
-        scikit-learn=0.21.1 pytorch torchvision cudatoolkit=10.0 \
-        -y -c pytorch -c anaconda -c conda-forge
+RUN conda install pytorch torchvision cudatoolkit=10.0 -y -c pytorch
 
 # setup mount point
 VOLUME ["/ipynb"]
