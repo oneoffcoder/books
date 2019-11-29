@@ -12,7 +12,7 @@ RUN apt-get update -y && \
 # setup supervisor
 COPY jupyter.conf /etc/supervisor/conf.d/
 
-# setup miniconda
+# setup miniconda: scikit-learn numpy scipy matplotlib
 RUN wget -q http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-armv7l.sh -O /tmp/miniconda.sh && \
     /bin/bash /tmp/miniconda.sh -b -p /root/miniconda && \
     conda update -n root conda -y && \
@@ -20,7 +20,7 @@ RUN wget -q http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-armv7l.sh
     pip install --upgrade pip && \
     conda config --add channels rpi && \
     conda install python=3.6 -y && \
-    conda install jupyter scikit-learn numpy scipy matplotlib -y -c anaconda -c conda-forge
+    conda install jupyter jupyterlab -y -c anaconda -c conda-forge
 
 # setup mount point
 RUN mkdir /ipynb
