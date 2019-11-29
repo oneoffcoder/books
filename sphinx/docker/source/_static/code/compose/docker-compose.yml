@@ -1,0 +1,43 @@
+version: "3.7"
+services:
+  db:
+    image: db-app:local
+    container_name: db
+    ports:
+      - "3306:3306"
+    volumes:
+      - type: bind
+        source: ./mysql/docker-entrypoint-initdb.d
+        target: /docker-entrypoint-initdb.d
+        consistency: consistent
+    environment:
+      MYSQL_ROOT_PASSWORD: "oneoffcoder"
+    healthcheck:
+      test: mysqladmin ping -h localhost -p$$MYSQL_ROOT_PASSWORD && test '0' -eq $$(ps aux | awk '{print $$11}' | grep -c -e '^mysql$$')
+  flask:
+    image: rest-app:local
+    container_name: rest
+    ports:
+      - "5000:5000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on:
+      - db
+  ng:
+    image: ui-app:local
+    container_name: ui
+    ports:
+      - "80:80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on:
+      - flask
+      - db

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-projects=( "java-intro" "python-intro" "pytorch-intro" "scikit-intro" "spark-intro" "datascience" "python-dothis" "scratch" )
+projects=( "java-intro" "python-intro" "pytorch-intro" "scikit-intro" "spark-intro" "datascience" "python-dothis" "scratch" "docker" )
 port=8000
 host=0.0.0.0
 

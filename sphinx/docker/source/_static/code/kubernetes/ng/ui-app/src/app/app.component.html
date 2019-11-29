@@ -1,0 +1,116 @@
+<h1>One-Off Coder</h1>
+
+<hr>
+
+<div *ngIf="students">
+    <h3>All Students</h3>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+            </tr>
+            <tr *ngFor="let s of students">
+                <td>{{s.id}}</td>
+                <td>{{s.firstName}}</td>
+                <td>{{s.lastName}}</td>
+                <td>{{s.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr>
+
+<div>
+    <h3>Create</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>First Name</td>
+                <td>
+                    <input [(ngModel)]="createStudent.firstName" maxlength="50"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    <input [(ngModel)]="createStudent.lastName" maxlength="50"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input [(ngModel)]="createStudent.gender" size="1" maxlength="1"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="create()">Create</button>
+    <div style="color: red; font-weight: bold;" *ngIf="errorCreating">
+        Error creating.
+    </div>
+</div>
+
+<hr>
+
+<div>
+    <h3>Update</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>ID</td>
+                <td>
+                    <input [(ngModel)]="updateStudent.id" size="5" maxlength="3"/>
+                </td>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td>
+                    <input [(ngModel)]="updateStudent.firstName" maxlength="50"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    <input [(ngModel)]="updateStudent.lastName" maxlength="50"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input [(ngModel)]="updateStudent.gender" size="1" maxlength="1"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="update()">Update</button>
+    <div style="color: red; font-weight: bold;" *ngIf="errorUpdating">
+        Error updating.
+    </div>
+</div>
+
+<hr>
+
+<div>
+    <h3>Delete</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>ID</td>
+                <td>
+                    <input [(ngModel)]="deleteId" size="5" maxlength="3"/>
+                </td>
+                <td>
+                    <button (click)="delete()">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="color: red; font-weight: bold;" *ngIf="errorDeleting">
+        Error deleting.
+    </div>
+</div>

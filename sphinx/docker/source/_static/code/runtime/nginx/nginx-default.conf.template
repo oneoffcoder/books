@@ -1,0 +1,12 @@
+server {
+    listen ${PORT};
+    server_name  localhost;
+    root   /usr/share/nginx/html;
+    index  index.html index.htm;
+    include /etc/nginx/mime.types;
+    access_log /dev/stdout;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}

@@ -1,0 +1,6 @@
+build/
+coverage/
+dist/
+pydemo.egg-info/
+.coverage
+.noseids

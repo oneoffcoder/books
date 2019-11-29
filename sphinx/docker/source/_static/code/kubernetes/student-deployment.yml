@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-deployment
+  labels:
+    app: student
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student
+  template:
+    metadata:
+      labels:
+        app: student
+    spec:
+      containers:
+      - name: db
+        image: db-app:local
+        ports:
+          - containerPort: 3306
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: "oneoffcoder"
+        volumeMounts:
+          - name: db-scripts
+            mountPath: /docker-entrypoint-initdb.d
+      - name: rest
+        image: rest-app:local
+        ports:
+          - containerPort: 5000
+      - name: ui
+        image: ui-app:local
+        ports:
+          - containerPort: 80
+      volumes:
+      - name: db-scripts
+        hostPath:
+          path: /hosthome/super/git/books/sphinx/docker/source/_static/code/compose/mysql/docker-entrypoint-initdb.d
+          type: Directory
