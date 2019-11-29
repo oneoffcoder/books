@@ -9,12 +9,13 @@ ENV API_REPO=$ARG_REPO
 ENV PATH /opt/conda/bin:$PATH
 
 RUN apt-get update \
-    && apt-get upgrade
-
+    && apt-get upgrade -y \
+    && apt-get install build-essential -y
+    
 WORKDIR /pydemo
 
-COPY ./pydemo .
+COPY . .
 
 RUN conda install --file requirements.txt -y
 
-RUN /py-bbn/publish.sh
+RUN /pydemo/publish.sh
