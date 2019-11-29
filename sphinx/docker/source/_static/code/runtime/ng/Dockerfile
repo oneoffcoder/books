@@ -7,7 +7,7 @@ RUN ng build
 
 FROM nginx:alpine  
 
-RUN apk update && apk add --no-cache supervisor bash
+RUN apk update && apk add --no-cache supervisor
 
 COPY ./nginx.ini /etc/supervisor.d/
 COPY ./override.ini /etc/supervisor.d/

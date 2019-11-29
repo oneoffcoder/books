@@ -185,15 +185,45 @@ Here is a snippet from of the code in ``main-es2015.c2c754009562ee4be6a8.js``.
 
 When the Angular static contents are placed in a webserver like ``nginx``, they have no runtime environment that will allow the code to sense the environment. The code is strictly meant to be sent back to the user's browser and then then browser interprets them, at which point, the code is away from the webserver environment, and cannot (and should not) access the environment from which they came. So then, how do we replace these files at runtime? The key is with the string literals, environment variables passed into the Docker container ``-e``, and string substitution. Let's see how we may use these elements to modify the string literals at runtime.
 
+This ``override.py`` file will acquire environment variables and substitute the string literals in ``.js`` and ``.map`` files.
+
+.. literalinclude:: _static/code/runtime/ng/override.py
+   :language: python
+   :linenos:
+
+This ``override.ini`` file specifies the ``override`` service for ``supervisor``.
+
+.. literalinclude:: _static/code/runtime/ng/override.ini
+   :language: ini
+   :linenos:
+
+This ``nginx.ini`` file specifies the ``nginx`` service for ``supervisor``.
+
+.. literalinclude:: _static/code/runtime/ng/nginx.ini
+   :language: ini
+   :linenos:
+
+This is the ``Dockerfile``. In the container, we copy over the ``*.ini`` and ``*.py`` files. Additionaly, install the ``supervisor`` service to help us do multiple things; namely, perform the string substitution with Python and then run ``nginx``.
+
+.. literalinclude:: _static/code/runtime/ng/Dockerfile
+   :language: docker
+   :linenos:
+
+Build the container.
+
 .. code-block:: bash
     :linenos:
 
     docker build --no-cache -t ui-app:local .
 
+Run the container without any environment specification.
+
 .. code-block:: bash
     :linenos:
 
     docker run -it --rm -p 80:80 ui-app:local
+
+Run the container with environment specification.
 
 .. code-block: bash
     :linenos:
@@ -203,3 +233,5 @@ When the Angular static contents are placed in a webserver like ``nginx``, they 
         -e ENV_SERVICE_URL="http://dummy.org" \
         -e ENV_API_KEY="adsf234kdjlfsjdkfj234" \
         ui-app:local
+
+You may now go to `http://localhost <http://localhost>`_ and observe the runtime string substitution.
