@@ -20,7 +20,8 @@ Starting minikube cluster
 
 Start minikube. This command effectively creates a virtual machine.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     minikube start
 
@@ -51,7 +52,8 @@ Deploy through an image
 
 Type in the following to deploy a service through an image.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     # create deployment
     kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
@@ -82,7 +84,8 @@ Create a file called ``pod.yaml``.
 
 Then type in the following.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     # create deployment
     kubectl apply -f pod.yml
@@ -106,12 +109,10 @@ Create a file called ``pod.yaml``.
    :linenos:
    :emphasize-lines: 2
 
-* `deployment <https://kubernetes.io/docs/concepts/workloads/controllers/deployment>`_
-* `define evironment variables <https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/>`_
-* `shell access <https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/>`_
-* `mounting volumes <https://kubernetes.io/docs/concepts/storage/volumes>`_
+Now try running the following commands to create a pod and more.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     # create deployment
     kubectl apply -f student.yml
@@ -136,7 +137,8 @@ Deployment creation
 
 Build the docker images. 
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker build --no-cache -t db-app:local .
     docker build --no-cache -t rest-app:local .
@@ -149,7 +151,10 @@ Create ``student-deployment.yml`` with the following content.
    :linenos:
    :emphasize-lines: 2
 
-.. code:: bash
+Now try running the following commands to create a deployment and more.
+
+.. code-block:: bash
+    :linenos:
 
     # create deployment
     kubectl create -f student-deployment.yml
@@ -188,7 +193,8 @@ Using local images
 
 The following command enables us to reuse Minikube's built-in docker daemon. This feature is useful to avoid building a Docker registry and pushing images into it. When you issue ``docker ps`` you will see the containers running on Minikube.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     eval $(minikube docker-env)    
 
@@ -209,12 +215,14 @@ Removing minikube cluster
 
 Stop minikube. This command effectively halts the virtual machine.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     minikube stop
 
 Delete minikube. This command effectively deletes the virtual machine.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     minikube delete

@@ -38,7 +38,8 @@ Let's build the docker container and type in the following. Note the options.
 * ``-t`` specifies the tag, which is ``donothing:local``
 * ``.`` specifies the root directory to start building from (the current)
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker build --no-cache -t donothing:local .
 
@@ -69,13 +70,15 @@ Run
 
 To run this container, type in the following.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker run donothing:local
 
 Since this container does nothing, after running the command above, the container simply exits. You should check that the container indeed did run and exited.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker ps -a
 
@@ -92,18 +95,21 @@ If we wanted to start this container and go into its shell, we may type in the f
 * ``-t`` creates a tty terminal
 * ``--rm`` automatically removes the container when it exits
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker run -i -t --rm donothing:local /bin/sh
 
 
 If we wanted to use this container to do something like ``echo`` or ``ping`` we may type in the following.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker run --rm donothing:local echo "hello, world!"
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker run --rm donothing:local ping 8.8.8.8
 
@@ -112,7 +118,8 @@ Tagging
 
 After you define and build a docker container, you may want to tag it for publication to a docker registry. To tag the container, type in the following.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker tag donothing:local oneoffcoder/donothing:0.0.1
     docker tag donothing:local oneoffcoder/donothing:latest
@@ -126,7 +133,8 @@ Note the namespace ``oneoffcoder`` followed by a forward slash ``/``. This taggi
 
 You may check to see if your tagging was successful by issuing the following command.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker images
 
@@ -155,13 +163,15 @@ Now we are ready to publish to a docker repository. We will use `Docker Hub <htt
 
 Before you may publish to Docker Hub, you need to create an account. After you create an account, you need to log into Docker Hub using the ``docker`` CLI.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker login
 
 Now you may publish by typing in the following.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker push oneoffcoder/donothing:0.0.1
     docker push oneoffcoder/donothing:latest
@@ -171,7 +181,8 @@ Docker Hub
 
 Just as in software engineering where the principle of ``code reuse`` is emphasized, in creating docker containers, it is also beneficial to reuse containers and/or build upon existing ones. Docker Hub has a plethora of published containers by major commercial vendors and products. You may use the ``search`` subcommand to search for existing images. In the example below, we search for containers related to ``Java``.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker search java
 

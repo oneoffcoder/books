@@ -6,7 +6,8 @@ Docker
 
 Let's check to make sure ``docker`` and other components are installed and working correctly. First, check to make sure docker is installed.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker --version
     
@@ -18,7 +19,8 @@ You should see an output that looks like the following.
 
 Now, let's make sure we are able to run the ``busybox`` container.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker run busybox echo "hello, world!"
 
@@ -32,7 +34,8 @@ Initialization
 
 Initialize ``swarm``.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker swarm init
 
@@ -53,7 +56,8 @@ Service creation
 
 Now let's create a toy service. This service uses the ``apline:3.5`` container to ping the Google domain name servier ``8.8.8.8``.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker service create --name demo alpine:3.5 ping 8.8.8.8
 
@@ -68,13 +72,15 @@ The output should look like the following.
 
 To see which services are running.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker service ps demo
 
 To see the logs of a service.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker service logs demo
 
@@ -82,6 +88,7 @@ To see the logs of a service.
 To stop the service.
 
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker service rm demo

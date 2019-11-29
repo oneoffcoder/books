@@ -43,13 +43,15 @@ The ``Dockerfile`` below has 2 instructions ``ENTRYPOINT`` and ``CMD``. Together
 
 Build the container as follows.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker build --no-cache -t income-model:local .
 
 You may then run the container. Note the flag ``-e`` is required by the Python program. We could also substitute ``--education`` for ``-e`` as well. The flags after the container name and tag will be passed to the Python program and override what was originally in the ``CMD`` instruction (in the Dockerfile).
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker run -it income-model:local -e 10
 

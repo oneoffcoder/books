@@ -6,7 +6,8 @@ Enable Swarm
 
 To start ``Swarm``, type in the following.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker swarm init
 
@@ -24,7 +25,8 @@ You should see a similar output as follows.
 
 To list the nodes in the swarm.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker node ls
 
@@ -41,7 +43,8 @@ Set up a Docker registry
 
 To set up a local Docker registry, type in the following.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker service create --name registry --publish published=5000,target=5000 registry:2
 
@@ -54,7 +57,8 @@ To set up a local Docker registry, type in the following.
 
 Check the status as follows.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker service ls
 
@@ -65,12 +69,15 @@ Check the status as follows.
 
 Check that it's working.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     curl http://localhost:5000/v2/
 
 Publish stack
 -------------
+
+Create ``docker-compose.yml`` as follows.
 
 .. literalinclude:: _static/code/swarm/docker-compose.yml
    :language: yaml
@@ -78,20 +85,25 @@ Publish stack
 
 Build.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker-compose up
 
 Publish.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker-compose push
 
 Deploy to Swarm
 ---------------
 
-.. code:: bash
+Now deploy the stack to the swarm.
+
+.. code-block:: bash
+    :linenos:
 
     docker stack deploy -c docker-compose.yml student
 
@@ -107,7 +119,8 @@ Output.
 List services
 ^^^^^^^^^^^^^
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker service ls
 
@@ -124,7 +137,8 @@ Output.
 Inspect services
 ^^^^^^^^^^^^^^^^
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker service inspect --pretty student_db
     docker service inspect --pretty student_flask
@@ -133,7 +147,8 @@ Inspect services
 Scale services
 ^^^^^^^^^^^^^^
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker service scale student_ng=5
     docker service ps student_ng
@@ -141,7 +156,8 @@ Scale services
 Stop services
 -------------
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker stack rm student
     docker service rm registry
@@ -160,6 +176,7 @@ Leave swarm
 
 To leave swarm.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker swarm leave --force

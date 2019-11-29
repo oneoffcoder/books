@@ -12,7 +12,8 @@ Angular
 
 The ``Angular`` application is created using `Angular CLI <https://cli.angular.io/>`_. To create the application we simply type in the following command.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     ng new ui-app
 
@@ -67,13 +68,14 @@ We place the ``Dockerfile`` and ``.dockerignore`` files one directory up from th
 
 We are now ready to build the Angular container.
 
-.. code:: bash
+.. code-block:: bash
 
     docker build -t ui-app:local .
 
 We may now run the container as follows. Note the port mapping ``-p 80:80`` which maps the local port ``80`` to the container's port ``80``.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker run --rm -p 80:80 ui-app:local
 
@@ -88,7 +90,8 @@ Flask
 
 Before we create, build and deploy a ``Flask`` application, we need to install some ``Python`` dependencies. Since we prefer using ``conda`` to manage our environments and dependencies for Python, we issue the following command to make sure the packages/libraries we need are available.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     conda install -y flask flask-cors
 
@@ -106,7 +109,8 @@ Here's the code for ``app.py``. As can be seen, there is only one real route ``/
 
 For local testing, we could run this Flask application as follows. However, we will containerize it and run it as a container.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     python app.py
 
@@ -138,13 +142,15 @@ In all, the structure of the folders and files should look like the following.
 
 To build the Flask application.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker build -t rest-app:local .
 
 We may now run the container as follows. Note the port mapping ``-p 5000:5000`` which maps the local port ``5000`` to the container's port ``5000``.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker run --rm -p 5000:5000 rest-app:local
 
@@ -167,13 +173,15 @@ The ``MySQL`` container is the simplest container to define. It as simple as the
 
 To build our new database container.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker build -t db-app:local .
 
 To run the container.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker run \
         --rm \
@@ -192,7 +200,8 @@ You will also notice the flag ``-e``, which specifies a value for an environment
 
 When you run the database container, it will lock the terminal. Open a new terminal and you may open a shell session with the running container. First, see what is the ``Container ID`` of the running database container.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker ps
 
@@ -205,13 +214,15 @@ You should see an output like the following.
 
 Then run the ``exec`` subcommand. Below, we use the full container ID, however, you may use only the first few characters if they uniquely identify the running container. For example, instead of using ``45bee317b0d0`` completely, you may use ``45``, ``45b``, ``45be``, and so on. If there is another container whose ID starts with ``45``, the equivocality will be stated and you must continue to use as many characters as required to distinguish which container ID you are targeting.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     docker exec -it 45bee317b0d0 /bin/bash
 
 A shell in the container will be created. You may then use the ``mysql`` CLI to go into the database to tinker around.
 
-.. code:: bash
+.. code-block:: bash
+    :linenos:
 
     mysql -u root -poneoffcoder
     mysql -u oneoffcoder -pisthebest
