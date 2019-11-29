@@ -75,3 +75,5 @@ Run.
         -p 8888:8888 \
         -v `pwd`/ipynb:/ipynb \
         rpi-jupyter:local
+
+You may now access the Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_.
