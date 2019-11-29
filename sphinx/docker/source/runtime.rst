@@ -185,3 +185,21 @@ Here is a snippet from of the code in ``main-es2015.c2c754009562ee4be6a8.js``.
 
 When the Angular static contents are placed in a webserver like ``nginx``, they have no runtime environment that will allow the code to sense the environment. The code is strictly meant to be sent back to the user's browser and then then browser interprets them, at which point, the code is away from the webserver environment, and cannot (and should not) access the environment from which they came. So then, how do we replace these files at runtime? The key is with the string literals, environment variables passed into the Docker container ``-e``, and string substitution. Let's see how we may use these elements to modify the string literals at runtime.
 
+.. code-block:: bash
+    :linenos:
+
+    docker build --no-cache -t ui-app:local .
+
+.. code-block:: bash
+    :linenos:
+
+    docker run -it --rm -p 80:80 ui-app:local
+
+.. code-block: bash
+    :linenos:
+
+    docker run -it --rm \
+        -p 80:80 \
+        -e ENV_SERVICE_URL="http://dummy.org" \
+        -e ENV_API_KEY="adsf234kdjlfsjdkfj234" \
+        ui-app:local
