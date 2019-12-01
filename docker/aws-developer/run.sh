@@ -7,4 +7,4 @@ docker run -it \
     -e AWS_REGION="us-east-1x" \
     -e AWS_ACCESS_KEY="NEED_TO_SET_KEYX" \
     -e AWS_SECRET_KEY="NEED_TO_SET_SECRETX" \
-    book-aws-developer:local
+    oneoffcoder/book-aws-developer:latest
