@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'AWS Developer'
+project = 'AWS Certified Developer'
 copyright = '2019, One-Off Coder'
 author = 'One-Off Coder'
 
