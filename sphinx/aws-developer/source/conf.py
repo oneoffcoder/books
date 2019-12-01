@@ -87,3 +87,5 @@ html_theme_options = {
 mathjax_config = {
     'TeX': {'equationNumbers': {'autoNumber': 'AMS', 'useLabelIds': True}},
 }
+
+nbsphinx_execute = 'never'

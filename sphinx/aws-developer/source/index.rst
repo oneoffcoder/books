@@ -25,11 +25,25 @@ AWS Certified Developer
 Preface
 =======
 
-This book is to teach students how to develop applications and solutions using the Amazon Web Services ``AWS`` platform.
+This book is to teach students how to develop applications and solutions using the Amazon Web Services ``AWS`` platform. There is a companion ``Docker`` image that you may use as follows. Note that you will have to override the following values: ``AWS_REGION``, ``AWS_ACCESS_KEY`` and ``AWS_SECRET_KEY``.
+
+.. code-block:: bash
+    :linenos:
+
+    docker run -it \
+        -p 8888:8888 \
+        -v `pwd`/ipynb:/root/ipynb \
+        -e NOTEBOOK_PASSWORD=sha1:6676da7235c8:9c7d402c01e330b9368fa9e1637233748be11cc5 \
+        -e AWS_REGION="us-east-1" \
+        -e AWS_ACCESS_KEY="<set>" \
+        -e AWS_SECRET_KEY="<set>" \
+        oneoffcoder/book-aws-developer:latest
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
+   intro
 
 
 
