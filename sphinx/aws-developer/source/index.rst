@@ -44,6 +44,7 @@ This book is to teach students how to develop applications and solutions using t
    :caption: Contents:
    
    intro
+   ec2
 
 
 
