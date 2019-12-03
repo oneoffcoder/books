@@ -45,6 +45,7 @@ This book is to teach students how to develop applications and solutions using t
    
    intro
    ec2
+   storage
 
 
 
