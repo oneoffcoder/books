@@ -10,13 +10,15 @@ RUN apt-get update -y \
     && apt-get upgrade -y
 
 # setup conda
-RUN $CONDA_HOME/bin/conda install awscli boto3 -c conda-forge -y
+RUN conda install awscli boto3 nodejs -c conda-forge -y
+
+# setup jupyter
+RUN jupyter labextension install @ijmbarr/jupyterlab_spellchecker
+COPY ubuntu/root/.jupyter /root/.jupyter
 
 # setup aws cli
-RUN mkdir /root/.aws
-COPY /ubuntu/root/.aws/config /root/.aws/config
-COPY /ubuntu/root/.aws/credentials /root/.aws/credentials
-COPY /ubuntu/usr/local/bin/setup-awscli.sh /usr/local/sbin/setup-awscli.sh
-COPY /ubuntu/etc/supervisor/conf.d/aws-cli.conf /etc/supervisor/conf.d/aws-cli.conf
+COPY ubuntu/root/.aws /root/.aws
+ADD ubuntu/usr/local/sbin /usr/local/sbin/
+ADD ubuntu/etc/supervisor/conf.d /etc/supervisor/conf.d/
 
 RUN apt-get clean

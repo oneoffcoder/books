@@ -14,6 +14,7 @@ pip install \
     sphinx_rtd_theme \
     sphinxcontrib-bibtex \
     sphinx-autobuild \
+    sphinxcontrib-blockdiag \
     nbsphinx
 
 conda install -c conda-forge pandoc ipython
