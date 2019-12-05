@@ -6,7 +6,7 @@ phases:
       python: "3.7"
     commands:
       - apt-get -qq install pandoc -y
-      - pip install ipython sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinx-autobuild nbsphinx -q
+      - pip install ipython sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinxcontrib-blockdiag sphinx-autobuild nbsphinx -q
   pre_build:
     commands:
       - python --version
