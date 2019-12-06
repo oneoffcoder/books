@@ -65,8 +65,8 @@ html_css_files = ['css/override.css']
 html_last_updated_fmt = '%b %d, %Y, %X'
 
 html_theme_options = {
-    'canonical_url': 'UA-152954186-1',
-    'analytics_id': '',  #  Provided by Google in your dashboard
+    'canonical_url': 'https://makeblock.oneoffcoder.com/',
+    'analytics_id': 'UA-152954186-1',  #  Provided by Google in your dashboard
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',

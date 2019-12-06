@@ -64,7 +64,7 @@ html_last_updated_fmt = '%b %d, %Y, %X'
 html_baseurl = 'https://excel.oneoffcoder.com/'
 html_static_path = ['_static']
 html_theme_options = {
-    'canonical_url': '',
+    'canonical_url': 'https://excel.oneoffcoder.com/',
     'analytics_id': 'UA-153134720-1',  #  Provided by Google in your dashboard
     'logo_only': False,
     'display_version': True,
