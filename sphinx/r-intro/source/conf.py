@@ -74,7 +74,7 @@ html_css_files = ['css/override.css']
 html_last_updated_fmt = '%b %d, %Y, %X'
 
 html_theme_options = {
-    'canonical_url': '',
+    'canonical_url': 'https://r.oneoffcoder.com/',
     'analytics_id': 'UA-153111459-1',  #  Provided by Google in your dashboard
     'logo_only': False,
     'display_version': True,

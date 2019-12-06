@@ -73,7 +73,7 @@ html_css_files = ['css/override.css']
 html_last_updated_fmt = '%b %d, %Y, %X'
 
 html_theme_options = {
-    'canonical_url': '',
+    'canonical_url': 'https://aws.oneoffcoder.com/',
     'analytics_id': 'UA-153553865-1',
     'logo_only': False,
     'display_version': True,
