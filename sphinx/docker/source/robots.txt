@@ -1,3 +1,3 @@
 User-agent: *
-
+Allow: /
 Sitemap: https://docker.oneoffcoder.com/sitemap.xml
