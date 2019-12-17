@@ -14,7 +14,7 @@ You may force your program to wait.
 
 .. figure:: _static/images/control/05-wait-until.png
 
-    This code block forces your program to wait until a ``termination`` condition is satisified.
+    This code block forces your program to wait until a ``termination`` condition is satisfied.
 
 .. raw:: html
 
@@ -37,7 +37,7 @@ To make your program repeat something over and over, use the following loops.
 
 .. figure:: _static/images/control/06-repeat-until.png
 
-    This code block repeats code until a ``termination`` condition is satisified.
+    This code block repeats code until a ``termination`` condition is satisfied.
 
 .. raw:: html
 
