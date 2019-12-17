@@ -15,6 +15,7 @@ pip install \
     sphinxcontrib-bibtex \
     sphinx-autobuild \
     sphinxcontrib-blockdiag \
+    sphinx-sitemap \
     nbsphinx
 
 conda install -c conda-forge pandoc ipython

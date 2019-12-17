@@ -110,7 +110,7 @@ These are code blocks that may be used to manipulate string values.
 
 .. figure:: _static/images/operators/11-join.png
 
-    This code block joins (or ``concatentates``) two strings.
+    This code block joins (or ``concatenates``) two strings.
 
 .. figure:: _static/images/operators/12-letter-1-of-apple.png
 
