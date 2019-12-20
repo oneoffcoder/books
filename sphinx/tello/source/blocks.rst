@@ -1,7 +1,7 @@
 Code Blocks
 ===========
 
-There are 12 Tello code blocks that you may used. They are described below.
+There are 12 Tello code blocks that you may use. They are described below.
 
 Take off and landing
 --------------------
