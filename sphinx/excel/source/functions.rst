@@ -217,3 +217,7 @@ the first column for ``vlookup`` is column ``A``.  In cell H3 and H4, ``vlookup`
 .. figure:: _static/images/functions/vlookup/ex1.png
    :scale: 50%
 
+In general, ``vlookup`` involves two or more spreadsheets. Spreadsheets A and B contain a set of 
+data. There is data in A that is common to B. It may be that a user may need information in B to
+be in A. It may also be that B is maintained by a user that does not maintain A. To minimize 
+data entry, using ``vlookup`` in A to grab the data in B would be the solution. 
