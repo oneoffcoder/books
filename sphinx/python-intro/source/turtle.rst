@@ -162,7 +162,16 @@ Here's a sun. Notice how we change the import statement from ``import turtle`` t
 
 Events
 ------
-We may also interact with the turtle through listening for events. In this example, we listen for key events using the screen's ``onkey`` function and call ``listen`` after we have defined all the keys we are listening to.
+We may also interact with the turtle through listening for events. In this example, we listen for key events using the screen's ``onkey`` function and call ``listen`` after we have defined all the keys we are listening to. When a user presses
+
+* the up arrow, we move up
+* the down arrow, we move down
+* the left arrow, we move left
+* the right arrow, we move right
+* the ``p`` key, we toggle the pen up and down state
+* the ``q`` key, we quit the program
+
+We use the pen's ``setheading`` to orient the cursor as appropriate (to the north, south, east or west) before we move.
 
 .. literalinclude:: code/oneoffcoder/turtle/event.py
    :language: python
