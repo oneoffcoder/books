@@ -145,3 +145,17 @@ Let's draw some crazy lines. We use ``penup`` and ``pendown`` to control when we
 .. figure:: _static/images/turtle/crazy-lines.png
 
     Crazy lines output.
+
+Bright sun
+----------
+
+Here's a sun. Notice how we change the import statement from ``import turtle`` to ``from turtle import *``? Now we have access to the ``begin_fill`` and ``end_fill`` methods, which fills up the shape we draw where we mark begin and end.
+
+.. literalinclude:: code/oneoffcoder/turtle/sun.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 1, 6, 14
+
+.. figure:: _static/images/turtle/sun.png
+
+    Sun output.
