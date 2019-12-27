@@ -181,3 +181,13 @@ We use the pen's ``setheading`` to orient the cursor as appropriate (to the nort
 .. figure:: _static/images/turtle/event.png
 
     Event output.
+
+Built-in examples
+-----------------
+
+For even more examples, type in the following.
+
+.. code-block:: bash
+    :linenos:
+
+    python -m turtledemo
