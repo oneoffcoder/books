@@ -57,3 +57,9 @@ The Tello Edu drone may be programmed in ``swarm`` mode; meaning, you may code b
    wifi?, Get WiFi SNR, ``xx``
    sdk?, Get the SDK version, ``xx``
    sn?, Get the serial number, ``xx``
+
+
+.. code-block:: bash
+    :linenos:
+
+    conda install -y -c conda-forge netifaces netaddr
