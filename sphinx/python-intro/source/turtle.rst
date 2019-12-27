@@ -159,3 +159,16 @@ Here's a sun. Notice how we change the import statement from ``import turtle`` t
 .. figure:: _static/images/turtle/sun.png
 
     Sun output.
+
+Events
+------
+We may also interact with the turtle through listening for events. In this example, we listen for key events using the screen's ``onkey`` function and call ``listen`` after we have defined all the keys we are listening to.
+
+.. literalinclude:: code/oneoffcoder/turtle/event.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 4, 10, 17, 23, 29-34, 38, 46-51, 53
+
+.. figure:: _static/images/turtle/event.png
+
+    Event output.
