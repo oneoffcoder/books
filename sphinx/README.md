@@ -14,6 +14,8 @@ pip install \
     sphinx_rtd_theme \
     sphinxcontrib-bibtex \
     sphinx-autobuild \
+    sphinxcontrib-blockdiag \
+    sphinx-sitemap \
     nbsphinx
 
 conda install -c conda-forge pandoc ipython
@@ -46,6 +48,7 @@ Then go to
 * [datascience](http://localhost:8005)
 * [python-dothis](http://localhost:8006)
 * [scratch](http://localhost:8007)
+* [docker](http://localhost:8008)
 
 To kill the `autobuild`.
 

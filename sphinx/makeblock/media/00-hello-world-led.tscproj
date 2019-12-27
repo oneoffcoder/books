@@ -1,0 +1,526 @@
+{
+  "title" : "",
+  "description" : "",
+  "author" : "",
+  "targetLoudness" : -18.0,
+  "shouldApplyLoudnessNormalization" : true,
+  "videoFormatFrameRate" : 30,
+  "audioFormatSampleRate" : 44100,
+  "width" : 1920.0,
+  "height" : 1080.0,
+  "version" : "3.0",
+  "editRate" : 30,
+  "authoringClientName" :  {
+    "name" : "Camtasia",
+    "platform" : "Windows",
+    "version" : "19.0"
+  },
+  "sourceBin" : [
+    {
+      "id" : 1,
+      "src" : "C:\\tmp\\mbot\\00-hello-world-led.MP4",
+      "rect" : [0, 0, 3840, 2160],
+      "lastMod" : "20191125T215806",
+      "sourceTracks" : [
+        {
+          "range" : [0, 225224998],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 3840, 2160],
+          "sampleRate" : "10000000/417083",
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 225224998],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -37.7347223209498,
+          "peakLevel" : 0.222890987992287,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 2,
+      "src" : "C:\\tmp\\mbot\\01-led-hello-scrolling.MP4",
+      "rect" : [0, 0, 3840, 2160],
+      "lastMod" : "20191125T220151",
+      "sourceTracks" : [
+        {
+          "range" : [0, 215214999],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 3840, 2160],
+          "sampleRate" : "10000000/417083",
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 215214999],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -44.0024704384393,
+          "peakLevel" : 0.0280913952738047,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 3,
+      "src" : "C:\\tmp\\mbot\\02-colorful-music.MP4",
+      "rect" : [0, 0, 3840, 2160],
+      "lastMod" : "20191125T211808",
+      "sourceTracks" : [
+        {
+          "range" : [0, 320319999],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 3840, 2160],
+          "sampleRate" : "10000000/417083",
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 320319999],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -31.7535743054665,
+          "peakLevel" : 0.132938951253891,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 4,
+      "src" : "C:\\tmp\\mbot\\03-endless-roaming.MP4",
+      "rect" : [0, 0, 3840, 2160],
+      "lastMod" : "20191125T231210",
+      "sourceTracks" : [
+        {
+          "range" : [0, 100099999],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 3840, 2160],
+          "sampleRate" : "10000000/417083",
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 100099999],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -28.2087559391284,
+          "peakLevel" : 0.687764465808868,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 5,
+      "src" : "C:\\tmp\\mbot\\04-led-simple.MP4",
+      "rect" : [0, 0, 3840, 2160],
+      "lastMod" : "20191125T220649",
+      "sourceTracks" : [
+        {
+          "range" : [0, 425424997],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 3840, 2160],
+          "sampleRate" : "10000000/417083",
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 425424997],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -45.2140196161291,
+          "peakLevel" : 0.486106663942337,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 6,
+      "src" : "C:\\tmp\\mbot\\05-light-dance.MP4",
+      "rect" : [0, 0, 3840, 2160],
+      "lastMod" : "20191125T214559",
+      "sourceTracks" : [
+        {
+          "range" : [0, 145144998],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 3840, 2160],
+          "sampleRate" : "10000000/417083",
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 145144998],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -39.4397841982839,
+          "peakLevel" : 0.270801931619644,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 7,
+      "src" : "C:\\tmp\\mbot\\06-light-show.MP4",
+      "rect" : [0, 0, 3840, 2160],
+      "lastMod" : "20191125T222643",
+      "sourceTracks" : [
+        {
+          "range" : [0, 200199999],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 3840, 2160],
+          "sampleRate" : "10000000/417083",
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 200199999],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -26.2671247121776,
+          "peakLevel" : 0.110577747225761,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 8,
+      "src" : "C:\\tmp\\mbot\\07-line-follower.MP4",
+      "rect" : [0, 0, 3840, 2160],
+      "lastMod" : "20191125T234721",
+      "sourceTracks" : [
+        {
+          "range" : [0, 340339997],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 3840, 2160],
+          "sampleRate" : "10000000/417083",
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 340339997],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -32.5780321149507,
+          "peakLevel" : 0.573709905147552,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 9,
+      "src" : "C:\\tmp\\mbot\\08-moving-colors.MP4",
+      "rect" : [0, 0, 3840, 2160],
+      "lastMod" : "20191125T222921",
+      "sourceTracks" : [
+        {
+          "range" : [0, 120119997],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 3840, 2160],
+          "sampleRate" : "10000000/417083",
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 120119997],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -34.4562818777004,
+          "peakLevel" : 0.401015281677246,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 10,
+      "src" : "C:\\tmp\\mbot\\11-turning with style.MP4",
+      "rect" : [0, 0, 3840, 2160],
+      "lastMod" : "20191125T225653",
+      "sourceTracks" : [
+        {
+          "range" : [0, 125124998],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 3840, 2160],
+          "sampleRate" : "10000000/417083",
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 125124998],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -21.4958080229826,
+          "peakLevel" : 0.642785727977753,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 11,
+      "src" : "C:\\tmp\\mbot\\logo.png",
+      "rect" : [0, 0, 150, 150],
+      "lastMod" : "20191120T082101",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 150, 150],
+          "sampleRate" : 0,
+          "bitDepth" : 32,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 12,
+      "src" : "C:\\ProgramData\\TechSmith\\Camtasia Studio 19\\Library 4.0\\Camtasia Libraries\\Camtasia 2019\\Intros\\tictactoe.asset\\Motion Graphics - Intro Clips - tictactoe-91.mp4",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20190205T155848",
+      "sourceTracks" : [
+        {
+          "range" : [0, 88533332],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 25,
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 88533332],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 48000,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : 0.0,
+          "peakLevel" : 0.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "assetLibraryId" : "cd17814c-c209-4bd1-839d-7ab43f483c21"
+      }
+    },
+    {
+      "id" : 13,
+      "src" : "C:\\ProgramData\\TechSmith\\Camtasia Studio 19\\Library 4.0\\Camtasia Libraries\\Camtasia 2019\\Intros\\tictactoe.asset\\Motion Graphics - Intro Clips - tictactoe-91.png",
+      "rect" : [0, 0, 512, 512],
+      "lastMod" : "20190205T155848",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 512, 512],
+          "sampleRate" : 0,
+          "bitDepth" : 32,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "assetLibraryId" : "cd17814c-c209-4bd1-839d-7ab43f483c21"
+      }
+    }
+  ],
+  "timeline" : {
+    "id" : 14,
+    "sceneTrack" : {
+      "scenes" : [
+        {
+          "duration" : 0.0,
+          "title" : "",
+          "type" : "",
+          "csml" : {
+            "tracks" : [
+              {
+                "trackIndex" : 0,
+                "medias" : [
+                ]
+              },
+              {
+                "trackIndex" : 1,
+                "medias" : [
+                ]
+              },
+              {
+                "trackIndex" : 2,
+                "medias" : [
+                ]
+              },
+              {
+                "trackIndex" : 3,
+                "medias" : [
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "trackAttributes" : [
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      }
+    ],
+    "captionAttributes" : {
+      "enabled" : true,
+      "fontName" : "Arial",
+      "fontSize" : 64,
+      "backgroundColor" : [ 0, 0, 0, 191],
+      "foregroundColor" : [ 255, 255, 255, 255],
+      "lang" : "en",
+      "alignment" : 0,
+      "defaultFontSize" : true,
+      "opacity" : 0.5,
+      "backgroundEnabled" : true,
+      "backgroundOnlyAroundText" : true
+    },
+    "backgroundColor" : [ 0, 0, 0, 255]
+  },
+  "metadata" : {
+    "AutoSaveFile" : "C:\\Users\\oneoffcoder\\AppData\\Local\\TechSmith\\Camtasia Studio\\19.0\\Auto-Saves\\00-hello-world-led6e4b5.autosave.tscproj",
+    "CanvasZoom" : 50,
+    "Date" : "2019-11-30 12:55:36 AM",
+    "IsAutoSave" : "0",
+    "Language" : "ENU",
+    "ProfileName" : "",
+    "Title" : "00-hello-world-led",
+    "audioNarrationNotes" : "",
+    "calloutStyle" : "Basic",
+    "canvasDetached" : "False",
+    "canvasPositionHeight" : "0",
+    "canvasPositionLeft" : "0",
+    "canvasPositionTop" : "0",
+    "canvasPositionWidth" : "0"
+  }
+}

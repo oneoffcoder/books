@@ -135,7 +135,7 @@ The stage has ``layers``. Layers that are in the front blocks those that are in 
 
     This code block changes which layer, ``front`` or ``back``, a sprite will be placed in.
 
-.. figure:: _static/images/looks/17-go-foward-1-layers.png
+.. figure:: _static/images/looks/17-go-forward-1-layers.png
 
     This code block sends a sprite ``forward`` or ``backward`` into the layers.
 

@@ -25,13 +25,22 @@ R, No Tears
 Preface
 =======
 
-This book is a tutorial on programming ``R``.
+This book is a tutorial on programming ``R``. To follow along and execute the code samples, you will need `Docker <https://www.docker.com/>`_ installed. The Docker container is located on `Docker Hub <https://hub.docker.com/r/oneoffcoder/book-r-intro>`_. After you have installed Docker, you may run the container as follows.
+
+.. code-block:: bash
+
+   docker run -it \
+    -p 8888:8888 \
+    -v $HOME/git/books/sphinx/r-intro/source:/root/ipynb \
+    oneoffcoder/book-r-intro
+    
+Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
 
 
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Contents
+   :caption: Core
    
    data-types
    data-structures
@@ -39,15 +48,42 @@ This book is a tutorial on programming ``R``.
    functions
    functional
    oop
+   
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Statistics
+   
    data-manipulation
    descriptive
    distribution
    hypothesis
+   
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Graphs
+   
    plot
    ggplot2
+   
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Data Science
+   
    regression
    logistic
    classification
+   clustering
+   missing
+   validation
+   
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Other
+   
    misc
 
 About

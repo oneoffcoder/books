@@ -10,6 +10,10 @@ Touching
 
     This code block detects when something is touching the mouse pointer.
 
+.. figure:: _static/images/sensing/00-touching-edge.png
+    
+    This code block detects when something is touching the edge.
+
 .. figure:: _static/images/sensing/01-touching-color.png
 
     This code block detects when something is touching a specified color.
