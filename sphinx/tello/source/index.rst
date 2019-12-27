@@ -44,6 +44,7 @@ This book is a tutorial on programming ``Tello`` drones. Please watch the video 
    python
    python-auto-flight
    python-manual-control
+   swarm
    resources
 
 
