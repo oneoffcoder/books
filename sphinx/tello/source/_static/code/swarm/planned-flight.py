@@ -38,24 +38,29 @@ def all_got_response(manager):
 
 
 def save_log(manager):
+    def merge_dict(d):
+        s = ', '.join([f'{k}={v}' for k, v in d.items()])
+        return s
+    
     log = manager.get_log()
 
     if not os.path.exists('log'):
         try:
             os.makedirs('log')
-        except Exception, e:
+        except Exception as e:
             pass
 
-    out = open('log/' + start_time + '.txt', 'w')
-    cnt = 1
-    for stat_list in log.values():
-        out.write('------\nDrone: %s\n' % cnt)
-        cnt += 1
-        for stat in stat_list:
-            #stat.print_stats()
-            str = stat.return_stats()
-            out.write(str)
-        out.write('\n')
+    start_time = str(time.strftime("%a-%d-%b-%Y_%H-%M-%S-%Z", time.localtime(time.time())))
+    fpath = f'log/{start_time}.txt'
+
+    with open(fpath, 'w') as out:
+        cnt = 1
+        for stat_list in log.values():
+            out.write(f'------\nDrone: {cnt}\n')
+            cnt += 1
+            s = '\n'.join([merge_dict(stat.get_stats()) for stat in stat_list])
+            out.write(s)
+            out.write('\n')
 
 
 def check_timeout(start_time, end_time, timeout):
