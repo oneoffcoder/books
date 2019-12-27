@@ -106,3 +106,42 @@ Let's draw a spiral helix. First, let's change the background color to black. Se
 .. figure:: _static/images/turtle/spiral-helix.png
 
     Spiral helix output.
+
+Dots
+----
+
+Here's an exercise in drawing dots. We use ``penup`` to make sure no drawing is done when moving and ``dot`` to place the pen down to create the dots. Additionally, if you want the change the shape of the pen from a classic arrow, you may use the ``shape`` method. Below, for each row of dot we are drawing, we change the shape.
+
+.. literalinclude:: code/oneoffcoder/turtle/dots.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 9, 11, 14-15, 18
+
+.. figure:: _static/images/turtle/dots.png
+
+    Dots output.
+
+We may also ``stamp`` out colorful patterns.
+
+.. literalinclude:: code/oneoffcoder/turtle/stamp.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 10, 16, 19-20, 23
+
+.. figure:: _static/images/turtle/stamp.png
+
+    Stamp output.
+
+Crazy lines
+-----------
+
+Let's draw some crazy lines. We use ``penup`` and ``pendown`` to control when we want the pen to draw onto the canvas. Note that as we iterate through the angles, we speed up the pen's drawing speed as well as change its colors.
+
+.. literalinclude:: code/oneoffcoder/turtle/crazy-lines.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 9, 21, 23, 27
+
+.. figure:: _static/images/turtle/crazy-lines.png
+
+    Crazy lines output.

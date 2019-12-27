@@ -10,7 +10,8 @@ t = turtle.Pen()
 t.speed(100)
 
 for x in range(360): 
-    t.pencolor(colors[x%6]) 
+    color = colors[x % len(colors)]
+    t.pencolor(color) 
     t.width(x / 100 + 1) 
     t.forward(x) 
     t.left(59) 
