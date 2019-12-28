@@ -7,107 +7,119 @@ import os
 import binascii
 from contextlib import suppress
 
-def create_execution_pools(num):
+class SwarmUtil(object):
     """
-    Creates execution pools.
-
-    :param num: Number of execution pools to create.
-    :return: List of Queues.
+    Swarm utility class.
     """
-    return [Queue.Queue() for x in range(num)]
+
+    @staticmethod
+    def create_execution_pools(num):
+        """
+        Creates execution pools.
+
+        :param num: Number of execution pools to create.
+        :return: List of Queues.
+        """
+        return [Queue.Queue() for x in range(num)]
 
 
-def drone_handler(tello, queue):
-    """
-    Drone handler.
+    @staticmethod
+    def drone_handler(tello, queue):
+        """
+        Drone handler.
 
-    :param tello: Tello.
-    :param queue: Queue.
-    :return: None.
-    """
-    while True:
-        while queue.empty():
-            pass
-        command = queue.get()
-        tello.send_command(command)
-
-
-def all_queue_empty(pools):
-    """
-    Checks if all queues are empty.
-
-    :param pools: List of Queues.
-    :return: Boolean indicating if all queues are empty.
-    """
-    for queue in pools:
-        if not queue.empty():
-            return False
-    return True
+        :param tello: Tello.
+        :param queue: Queue.
+        :return: None.
+        """
+        while True:
+            while queue.empty():
+                pass
+            command = queue.get()
+            tello.send_command(command)
 
 
-def all_got_response(manager):
-    """
-    Checks if all responses are received.
+    @staticmethod
+    def all_queue_empty(pools):
+        """
+        Checks if all queues are empty.
 
-    :param manager: TelloManager.
-    :return: A boolean indicating if all responses are received.
-    """
-    for log in self.manager.get_last_logs():
-        if not log.got_response():
-            return False
-    return True
-
-
-def create_dir(dpath):
-    """
-    Creates a directory if it does not exists.
-
-    :param dpath: Directory path.
-    :return: None.
-    """
-    if not os.path.exists(dpath):
-        with suppress(Exception):
-            os.makedirs(dpath)
-
-def save_log(manager):
-    """
-    Saves the logs into a file in the ./log directory.
-
-    :param manager: TelloManager.
-    :return: None.
-    """
-    dpath = './log'
-    create_dir(dpath)
-
-    start_time = str(time.strftime("%a-%d-%b-%Y_%H-%M-%S-%Z", time.localtime(time.time())))
-    fpath = f'{dpath}/{start_time}.txt'
-
-    with open(fpath, 'w') as out:
-        log = manager.get_log()
-        for cnt, stats in enumerate(log.values()):
-            out.write(f'------\nDrone: {cnt + 1}\n')
-
-            s = [stat.get_stats_delimited() for stat in stats]
-            s = '\n'.join(s)
-
-            out.write(f'{s}\n')
-    
-    print(f'[LOG] Saved log files to {fpath}')
+        :param pools: List of Queues.
+        :return: Boolean indicating if all queues are empty.
+        """
+        for queue in pools:
+            if not queue.empty():
+                return False
+        return True
 
 
-def check_timeout(start_time, end_time, timeout):
-    """
-    Checks if the duration between the end and start times
-    is larger than the specified timeout.
+    @staticmethod
+    def all_got_response(manager):
+        """
+        Checks if all responses are received.
 
-    :param start_time: Start time.
-    :param end_time: End time.
-    :param timeout: Timeout threshold.
-    :return: A boolean indicating if the duration is larger than the specified timeout threshold.
-    """
-    diff = end_time - start_time
-    time.sleep(0.1)
-    return diff > timeout
+        :param manager: TelloManager.
+        :return: A boolean indicating if all responses are received.
+        """
+        for log in self.manager.get_last_logs():
+            if not log.got_response():
+                return False
+        return True
+
+
+    @staticmethod
+    def create_dir(dpath):
+        """
+        Creates a directory if it does not exists.
+
+        :param dpath: Directory path.
+        :return: None.
+        """
+        if not os.path.exists(dpath):
+            with suppress(Exception):
+                os.makedirs(dpath)
+
+    @staticmethod
+    def save_log(manager):
+        """
+        Saves the logs into a file in the ./log directory.
+
+        :param manager: TelloManager.
+        :return: None.
+        """
+        dpath = './log'
+        SwarmUtil.create_dir(dpath)
+
+        start_time = str(time.strftime("%a-%d-%b-%Y_%H-%M-%S-%Z", time.localtime(time.time())))
+        fpath = f'{dpath}/{start_time}.txt'
+
+        with open(fpath, 'w') as out:
+            log = manager.get_log()
+            for cnt, stats in enumerate(log.values()):
+                out.write(f'------\nDrone: {cnt + 1}\n')
+
+                s = [stat.get_stats_delimited() for stat in stats]
+                s = '\n'.join(s)
+
+                out.write(f'{s}\n')
+        
+        print(f'[LOG] Saved log files to {fpath}')
+
+
+    @staticmethod
+    def check_timeout(start_time, end_time, timeout):
+        """
+        Checks if the duration between the end and start times
+        is larger than the specified timeout.
+
+        :param start_time: Start time.
+        :param end_time: End time.
+        :param timeout: Timeout threshold.
+        :return: A boolean indicating if the duration is larger than the specified timeout threshold.
+        """
+        diff = end_time - start_time
+        time.sleep(0.1)
+        return diff > timeout
 
 class Swarm(object):
     def __init__(self, fpath):
@@ -163,7 +175,7 @@ class Swarm(object):
         except Exception as e:
             self._handle_exception(e)
         finally:
-            save_log(manager)
+            SwarmUtil.save_log(manager)
 
     def _wait_for_all(self):
         """
@@ -172,12 +184,12 @@ class Swarm(object):
 
         :return: None.
         """
-        while not all_queue_empty(self.pools):
+        while not SwarmUtil.all_queue_empty(self.pools):
             time.sleep(0.5)
         
         time.sleep(1)
 
-        while not all_got_response(self.manager):
+        while not SwarmUtil.all_got_response(self.manager):
             time.sleep(0.5)
 
     def _get_commands(self, fpath):
@@ -210,12 +222,12 @@ class Swarm(object):
 
         self.manager.find_avaliable_tello(n_tellos)
         self.tellos = self.manager.get_tello_list()
-        self.pools = create_execution_pools(n_tellos)
+        self.pools = SwarmUtil.create_execution_pools(n_tellos)
 
         for x, (tello, pool) in enumerate(zip(self.tellos, self.pools)):
             ip2id[tello.tello_ip] = x
 
-            t = Thread(target=drone_handler, args=(tello, pool))
+            t = Thread(target=SwarmUtil.drone_handler, args=(tello, pool))
             t.daemon = True
             t.start()
 
@@ -336,16 +348,16 @@ class Swarm(object):
         try:
             start = time.time()
             
-            while not all_queue_empty(execution_pools):
+            while not SwarmUtil.all_queue_empty(execution_pools):
                 now = time.time()
-                if check_timeout(start, now, timeout):
+                if SwarmUtil.check_timeout(start, now, timeout):
                     raise RuntimeError('Sync failed since all queues were not empty!')
 
             print('[SYNC] All queues empty and all commands sent')
            
-            while not all_got_response(manager):
+            while not SwarmUtil.all_got_response(manager):
                 now = time.time()
-                if check_timeout(start, now, timeout):
+                if SwarmUtil.check_timeout(start, now, timeout):
                     raise RuntimeError('Sync failed since all responses were not received!')
             
             print('[SYNC] All response received')
