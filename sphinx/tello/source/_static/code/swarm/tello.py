@@ -32,6 +32,9 @@ class Tello(object):
         """
         return self.tello_manager.send_command(command, self.tello_ip)
 
+    def __repr__(self):
+        return f'TELLO@{self.tello_ip}'
+
 
 class TelloManager(object):
     """
@@ -237,7 +240,18 @@ class TelloManager(object):
                 pass
 
     def get_log(self):
+        """
+        Get all logs.
+        :return: Dictionary of logs.
+        """
         return self.log
+
+    def get_last_logs(self):
+        """
+        Gets the last logs.
+        :return: List of last logs.
+        """
+        return [log[-1] for log in self.log.values()]
 
 
 class SubnetInfo(object):
@@ -365,3 +379,13 @@ class Stats(object):
             'end_time': self.end_time,
             'duration': self.duration
         }
+
+    def get_stats_delimited(self):
+        stats = self.get_stats()
+        keys = ['id', 'command', 'response', 'start_time', 'end_time', 'duration']
+        vals = [f'{k}={stats[k]}' for k in keys]
+        vals = ', '.join(vals)
+        return vals
+
+    def __repr__(self):
+        return self.get_stats_delimited()
