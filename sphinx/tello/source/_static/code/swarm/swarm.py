@@ -260,7 +260,7 @@ class Swarm(object):
         id = command.partition('>')[0]
 
         if id == '*':
-            id_list = [t for t in self.tellos]
+            id_list = [t for t in range(len(self.tellos))]
         else:
             id_list.append(int(id)-1) 
         
