@@ -2,6 +2,7 @@ import sys
 import time
 from tello import *
 import queue
+import traceback
 import time
 import os
 import binascii
@@ -20,7 +21,7 @@ class SwarmUtil(object):
         :param num: Number of execution pools to create.
         :return: List of Queues.
         """
-        return [Queue.Queue() for x in range(num)]
+        return [queue.Queue() for x in range(num)]
 
 
     @staticmethod
@@ -61,7 +62,7 @@ class SwarmUtil(object):
         :param manager: TelloManager.
         :return: A boolean indicating if all responses are received.
         """
-        for log in self.manager.get_last_logs():
+        for log in manager.get_last_logs():
             if not log.got_response():
                 return False
         return True
@@ -188,8 +189,9 @@ class Swarm(object):
             self._handle_keyboard_interrupt()
         except Exception as e:
             self._handle_exception(e)
+            traceback.print_exc()
         finally:
-            SwarmUtil.save_log(manager)
+            SwarmUtil.save_log(self.manager)
 
     def _wait_for_all(self):
         """
@@ -239,7 +241,7 @@ class Swarm(object):
         self.pools = SwarmUtil.create_execution_pools(n_tellos)
 
         for x, (tello, pool) in enumerate(zip(self.tellos, self.pools)):
-            ip2id[tello.tello_ip] = x
+            self.ip2id[tello.tello_ip] = x
 
             t = Thread(target=SwarmUtil.drone_handler, args=(tello, pool))
             t.daemon = True
@@ -362,14 +364,14 @@ class Swarm(object):
         try:
             start = time.time()
             
-            while not SwarmUtil.all_queue_empty(execution_pools):
+            while not SwarmUtil.all_queue_empty(self.pools):
                 now = time.time()
                 if SwarmUtil.check_timeout(start, now, timeout):
                     raise RuntimeError('Sync failed since all queues were not empty!')
 
             print('[SYNC] All queues empty and all commands sent')
            
-            while not SwarmUtil.all_got_response(manager):
+            while not SwarmUtil.all_got_response(self.manager):
                 now = time.time()
                 if SwarmUtil.check_timeout(start, now, timeout):
                     raise RuntimeError('Sync failed since all responses were not received!')
