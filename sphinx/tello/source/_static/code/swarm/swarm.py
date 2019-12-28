@@ -141,9 +141,9 @@ class Swarm(object):
         self.id2sn = {}
         self.ip2id = {}
 
-    def main_loop(self):
+    def start(self):
         """
-        Main loop.
+        Main loop. Starts the swarm.
 
         :return: None.
         """
