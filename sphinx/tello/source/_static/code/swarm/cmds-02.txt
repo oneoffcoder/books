@@ -1,0 +1,7 @@
+scan 1
+battery_check 20
+correct_ip
+1=0TQZGANED0021X
+*>takeoff
+sync 1
+*>land
