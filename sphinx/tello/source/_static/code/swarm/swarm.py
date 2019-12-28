@@ -1,7 +1,7 @@
 import sys
 import time
 from tello import *
-import Queue
+import queue
 import time
 import os
 import binascii
