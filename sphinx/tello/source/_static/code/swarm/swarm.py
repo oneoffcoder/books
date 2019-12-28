@@ -91,7 +91,7 @@ class SwarmUtil(object):
         dpath = './log'
         SwarmUtil.create_dir(dpath)
 
-        start_time = str(time.strftime("%a-%d-%b-%Y_%H-%M-%S-%Z", time.localtime(time.time())))
+        start_time = str(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime(time.time())))
         fpath = f'{dpath}/{start_time}.txt'
 
         with open(fpath, 'w') as out:
