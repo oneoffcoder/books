@@ -213,8 +213,6 @@ class TelloManager(object):
                 ip = ''.join(str(ip[0]))                
                 
                 if self.response.upper() == 'OK' and ip not in self.tello_ip_list:
-                    print(f'Found Tello with IP {ip}')
-
                     self.tello_ip_list.append(ip)
                     self.last_response_index[ip] = 100
                     self.tello_list.append(Tello(ip, self))
