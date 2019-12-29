@@ -1,3 +1,4 @@
+// IP 75
 scan 1
 battery_check 20
 correct_ip
