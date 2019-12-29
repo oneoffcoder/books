@@ -1,5 +1,5 @@
 scan 3
-battery_check 20
+//battery_check 20
 correct_ip
 1=0TQZGANED0021X
 2=0TQZGANED0020C
