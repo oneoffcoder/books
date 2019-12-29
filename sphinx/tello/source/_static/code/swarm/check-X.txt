@@ -1,0 +1,6 @@
+scan 1
+battery_check 20
+correct_ip
+1=0TQZGANED0021X
+1>takeoff
+1>land
