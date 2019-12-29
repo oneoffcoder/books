@@ -184,7 +184,7 @@ class TelloManager(object):
             real_command = command[3:]
         else:
             self.socket.sendto(command.encode('utf-8'), (ip, 8889))
-            print(f'[SINGLE_COMMAND], IP={ip}, COMMAND={command}')
+            print(f'[SINGLE_COMMAND] IP={ip}, COMMAND={command}')
             real_command = command
         
         self.log[ip].append(Stats(real_command, len(self.log[ip])))
@@ -194,7 +194,7 @@ class TelloManager(object):
             now = time.time()
             diff = now - start
             if diff > self.COMMAND_TIME_OUT:
-                print(f'[NO_RESPONSE], Max timeout exceeded for command: {real_command}')
+                print(f'[NO_RESPONSE] Max timeout exceeded for command: {real_command}')
                 return    
 
     def _receive_thread(self):
