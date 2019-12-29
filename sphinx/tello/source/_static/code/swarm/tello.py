@@ -229,7 +229,7 @@ class TelloManager(object):
                         self.log[ip][-1].add_response(self.response[7:], ip)
                     self.last_response_index[ip] = response_index
                 else:
-                    print(f'[SINGLE_RESPONSE], IP={ip}, RESPONSE={self.response}')
+                    # print(f'[SINGLE_RESPONSE], IP={ip}, RESPONSE={self.response}')
                     self.log[ip][-1].add_response(self.response, ip)
                          
             except socket.error as exc:
