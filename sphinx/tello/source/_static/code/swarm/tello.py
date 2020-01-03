@@ -59,7 +59,7 @@ class TelloManager(object):
         self.tello_list = []
         self.log = defaultdict(list)
 
-        self.COMMAND_TIME_OUT = 9.0
+        self.COMMAND_TIME_OUT = 20.0
 
         self.last_response_index = {}
         self.str_cmd_index = {}
