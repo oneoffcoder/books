@@ -351,13 +351,45 @@ class Drone(object):
 if __name__ == '__main__':
     drones = [
         Drone(0, Address('192.168.3.101', 8889)),
-        Drone(1, Address('192.168.3.103', 8889))
+        Drone(1, Address('192.168.3.103', 8889)),
+        Drone(1, Address('192.168.3.104', 8889))
     ]
+
+    # drones = [
+    #     Drone(0, Address('192.168.3.104', 8889))
+    # ]
 
     commands = [
         '* > command',
+        '* > battery?',
+        '* > takeoff',
+        'sync 8',
+        '* > up 50',
+        'sync 8',
+        '* > cw 90',
+        'sync 8',
+        '* > ccw 90',
+        'sync 8',
+        '* > flip f',
+        'sync 8',
+        '* > flip b',
+        'sync 8',
+        '* > flip l',
+        'sync 8',
+        '* > flip r',
+        'sync 8',
+        '* > flip f',
+        'sync 8',
+        '* > flip b',
+        'sync 8',
+        '* > land',
         '* > battery?'
     ]
+
+    # commands = [
+    #     '* > command',
+    #     '* > battery?'
+    # ]
 
     swarm = Swarm(Address('', 8889), drones, commands)
 
