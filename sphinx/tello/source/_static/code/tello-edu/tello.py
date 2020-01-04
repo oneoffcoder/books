@@ -1,5 +1,6 @@
 from collections import namedtuple
 import socket
+import threading
 from threading import Thread
 import queue
 from datetime import datetime
@@ -7,6 +8,16 @@ import time
 import traceback
 
 Address = namedtuple('Address', 'ip, port')
+
+class AtomicInt(object):
+    def __init__(self, initial=0):
+        self.value = initial
+        self._lock = threading.Lock()
+
+    def increment(self, num=1):
+        with self._lock:
+            self.value += num
+            return self.value
 
 class LogItem(object):
     """
@@ -87,10 +98,111 @@ class LogItem(object):
     def __repr__(self):
         return self.get_stats_delimited()
 
-class Drone(object):
-    def __init__(self, tid, local_address, drone_address):
-        self.tid = tid
+class Swarm(object):
+
+    def __init__(self, local_address, drones, commands):
+        self.n_drones_ready = AtomicInt()
         self.local_address = local_address
+        self.drones = drones
+        self.commands = commands
+
+    def _get_local_address(self):
+        return (self.local_address.ip, self.local_address.port)
+
+    def init(self):
+        self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        self.socket.bind(self._get_local_address())
+
+        for drone in self.drones:
+            drone.init(self.socket, self)
+
+        n_drones = len(self.drones)
+        while True:
+            if self.n_drones_ready.value != n_drones:
+                time.sleep(0.5)
+            else:
+                print(f'SWARM | {n_drones} initialized')
+                break
+    
+    def deinit(self):
+        try:
+            self.socket.close()
+            print(f'SWARM DEINIT | socket_close | success')
+        except Exception as e:
+            print(f'SWARM DEINIT | socket_close | {e}')
+        
+        for drone in self.drones:
+            drone.deinit()
+
+    def start(self):
+        for command in self.commands:
+            if '>' in command:
+                self._handle_command(command)
+            elif 'sync' in command:
+                self._handle_sync(command)
+    
+    def _handle_command(self, command):
+        for drone in self.drones:
+            drone.add_command(command)
+
+    def _handle_sync(self, command):
+        def get_time_out(command):
+            tokens = [t.strip() for t in command.partition('sync')]
+            tokens = [t for t in tokens if len(t) > 0]
+            return float(tokens[1])
+            
+        TIME_OUT = get_time_out(command)
+
+        self._sync(TIME_OUT)
+
+    def wait(self):
+        self._sync()
+
+    def _sync(self, TIME_OUT=None):
+        def get_queues():
+            return [d.queue for d in self.drones]
+        
+        def all_queues_empty():
+            queues = [q for q in get_queues() if not q.empty()]
+            return False if len(queues) > 0 else True
+
+        def get_last_logs():
+            return [d.logs[-1] for d in self.drones]
+
+        def all_responses_received():
+            logs = [log for log in get_last_logs() if not log.got_response()]
+            return False if len(logs) > 0 else True
+
+        start = time.time()
+
+        while not all_queues_empty():
+            if TIME_OUT is not None:
+                now = time.time()
+                diff = now - start
+
+                if diff > TIME_OUT:
+                    print(f'SYNC | FAILED | queues_not_empty | waited {diff:.1f} | exceeded {TIME_OUT}')
+                    break
+            else:
+                time.sleep(0.5)
+        
+        while not all_responses_received():
+            if TIME_OUT is not None:
+                now = time.time()
+                diff = now - start
+
+                if diff > TIME_OUT:
+                    print(f'SYNC | FAILED | responses_not_received | waited {diff:.1f} | exceeded {TIME_OUT}')
+                    break
+            else:
+                time.sleep(0.5)
+    
+    def finished_initializing(self, drone):
+        self.n_drones_ready.increment()
+    
+class Drone(object):
+    def __init__(self, tid, drone_address):
+        self.tid = tid
         self.drone_address = drone_address
 
         self.queue = queue.Queue()
@@ -100,16 +212,11 @@ class Drone(object):
         self.n_commands = 0
         self.n_responses = 0
 
-    def _get_local_address(self):
-        return (self.local_address.ip, self.local_address.port)
-
     def _get_drone_address(self):
         return (self.drone_address.ip, self.drone_address.port)
 
-    def init(self):
-        self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.socket.bind(self._get_local_address())
-
+    def init(self, socket, listener=None):
+        self.socket = socket
         self.stop_thread = False
 
         self.receive_thread = Thread(target=self._receive_thread)
@@ -120,14 +227,11 @@ class Drone(object):
         self.send_thread.daemon = True
         self.send_thread.start()
 
+        if listener is not None:
+            listener.finished_initializing(self)
+
     def deinit(self):
         self.stop_thread = True
-
-        try:
-            self.socket.close()
-            print(f'DEINIT | {self.__repr__()} | socket_close | success')
-        except Exception as e:
-            print(f'DEINIT | {self.__repr__()} | socket_close | {e}')
 
         try:
             self.receive_thread.join()
@@ -229,53 +333,41 @@ class Drone(object):
                 self.n_responses = self.n_responses + 1
                 
                 if response.upper() == 'OK' and not self.active:
-                    print(f'RESPONSE | {self.__repr__()} is active | {self.logs[-1].command} | {response} | {ip}')
+                    # print(f'RESPONSE | {self.__repr__()} is active | {self.logs[-1].command} | {response} | {ip}')
+                    print(f'RESPONSE | {self.__repr__()} is active | {response} | {ip}')
                     self.active = True
                 else:
-                    print(f'RESPONSE | {self.__repr__()} | {self.logs[-1].command} | {response} | {ip}')
+                    # print(f'RESPONSE | {self.__repr__()} | {self.logs[-1].command} | {response} | {ip}')
+                    print(f'RESPONSE | {self.__repr__()} | {response} | {ip}')
                 
                 self.logs[-1].add_response(response, ip)
             except socket.error as e:
-                print(f'THREAD | RECEIVE | socket_error | {e}')
+                # print(f'THREAD | RECEIVE | socket_error | {e}')
+                pass
             finally:
                 # print(f'CR | {self.n_commands} | {self.n_responses}')
                 pass
 
 if __name__ == '__main__':
-    d0 = Drone(0, Address('', 8889), Address('192.168.3.101', 8889))
+    drones = [
+        Drone(0, Address('192.168.3.101', 8889)),
+        Drone(1, Address('192.168.3.103', 8889))
+    ]
 
     commands = [
         '* > command',
-        '* > sn?',
-        '* > speed?',
-        '* > wifi?',
-        '* > time?',
-        '* > sdk?',
-        '* > sn?',
-        '* > battery?',
-        '* > takeoff',
-        '* > up 50',
-        '* > cw 90',
-        '* > ccw 90',
-        '* > flip f',
-        '* > flip b',
-        '* > flip l',
-        '* > flip r',
-        '* > flip f',
-        '* > flip b',
-        '* > land'
+        '* > battery?'
     ]
 
-    try:
-        d0.init()
-        for command in commands:
-            d0.add_command(command)
+    swarm = Swarm(Address('', 8889), drones, commands)
 
-        while True:
-            time.sleep(1)
+    try:
+        swarm.init()
+        swarm.start()
+        swarm.wait()
     except KeyboardInterrupt as ki:
         print('KEYBOARD INTERRUPT')
     except Exception as e:
         traceback.print_exc()
     finally:
-        d0.deinit()
+        swarm.deinit()
