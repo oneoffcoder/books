@@ -8,6 +8,14 @@
   <artifactId>jtello</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
+  <dependencies>
+    <dependency>
+      <groupId>net.sourceforge.argparse4j</groupId>
+      <artifactId>argparse4j</artifactId>
+      <version>0.8.1</version>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>
