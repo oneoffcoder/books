@@ -4,7 +4,6 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
-import java.net.SocketAddress;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -16,9 +15,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Drone implements SwarmListener {
-  private int id;
+  private final int id;
+  private final String sn;
+  private final InetSocketAddress address;
   private boolean active;
-  private SocketAddress address;
   private Queue<String> queue;
   private List<LogItem> logItems;
   private AtomicInteger nCommands;
@@ -28,8 +28,9 @@ public class Drone implements SwarmListener {
   private Thread sendThread;
   private AtomicBoolean stopThread;
 
-  public Drone(int id, SocketAddress address) {
+  public Drone(int id, String sn, InetSocketAddress address) {
     this.id = id;
+    this.sn = sn;
     this.active = false;
     this.address = address;
     this.queue = new LinkedBlockingQueue<>();
@@ -85,11 +86,13 @@ public class Drone implements SwarmListener {
             DatagramPacket packet = new DatagramPacket(data, data.length, Drone.this.address);
             Drone.this.socket.send(packet);
 
-            InetSocketAddress addr = (InetSocketAddress)Drone.this.address;
-
             System.out.println("COMMAND | " +
-                addr.getAddress().toString() + " | " + command);
+                Drone.this.address.getAddress().toString() + " | " + command);
             int id = Drone.this.nCommands.incrementAndGet();
+
+            if (null != Drone.this.droneListener) {
+              Drone.this.droneListener.commandSent(Drone.this, command);
+            }
 
             LogItem logItem = new LogItem(id, command);
             Drone.this.logItems.add(logItem);
@@ -139,8 +142,7 @@ public class Drone implements SwarmListener {
 
   @Override
   public void responseReceived(InetAddress address, String response) {
-    InetSocketAddress addr = (InetSocketAddress)Drone.this.address;
-    String s1 = addr.getAddress().toString();
+    String s1 = this.address.getAddress().toString();
     String s2 = address.toString();
 
     if (s1.equalsIgnoreCase(s2)) {
@@ -151,5 +153,16 @@ public class Drone implements SwarmListener {
 
       this.nResponses.incrementAndGet();
     }
+  }
+
+  @Override
+  public String toString() {
+    return (new StringBuilder())
+        .append(this.id)
+        .append(",")
+        .append(this.sn)
+        .append(",")
+        .append(this.address)
+        .toString();
   }
 }

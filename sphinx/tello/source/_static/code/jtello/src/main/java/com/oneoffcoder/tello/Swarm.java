@@ -4,35 +4,47 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.InetSocketAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Swarm implements DroneListener {
+public class Swarm implements DroneListener, SwarmFinderListener {
 
-  final private AtomicInteger nDronesReady;
   final private int port;
-  final private List<Drone> drones;
+  final private List<String> commands;
+  final private AtomicInteger nDronesReady;
+  private List<Drone> drones;
   private DatagramSocket socket;
   private AtomicBoolean stopThread;
   private Thread receiveThread;
 
-  public Swarm(int port, List<Drone> drones) {
+  public Swarm(int port, List<String> commands) {
     this.port = port;
-    this.drones = drones;
-    this.nDronesReady = new AtomicInteger();
+    this.commands = commands;
+    this.nDronesReady = new AtomicInteger(0);
   }
 
-  public void init() throws SocketException, InterruptedException, UnknownHostException {
+  public void init(Map<Integer, String> id2sn, String ipPrefix) throws SocketException, UnknownHostException {
     this.socket = new DatagramSocket(this.port, InetAddress.getByName("0.0.0.0"));
     this.socket.setBroadcast(true);
 
+    (new SwarmFinder(id2sn, this.socket, ipPrefix, this)).start();
+  }
+
+  @Override
+  public void finishedFindingDrones(List<Drone> drones) {
+    this.drones = drones;
+    this.initDrones();
+  }
+
+  private void initDrones() {
     this.stopThread = new AtomicBoolean(false);
 
     this.receiveThread = new Thread(new Runnable() {
@@ -69,7 +81,11 @@ public class Swarm implements DroneListener {
     final int nDrones = this.drones.size();
     while (true) {
       if (this.nDronesReady.get() != nDrones) {
-        Thread.sleep(500);
+        try {
+          Thread.sleep(500);
+        } catch (InterruptedException e) {
+          // swallow
+        }
       } else {
         System.out.println("SWARM | " + nDrones + " initialized");
         break;
@@ -90,8 +106,8 @@ public class Swarm implements DroneListener {
     }
   }
 
-  public void start(List<String> commands) throws InterruptedException {
-    for (String command : commands) {
+  private void start() throws InterruptedException {
+    for (String command : this.commands) {
       if (command.indexOf(">") != -1) {
         this.handleCommand(command);
       } else if (command.indexOf("sync") != -1) {
@@ -176,20 +192,21 @@ public class Swarm implements DroneListener {
   }
 
   public static void main(String[] args) {
-    List<Drone> drones = Arrays.asList(
-        new Drone(0, new InetSocketAddress("192.168.3.101", 8889))
-    );
+    Map<Integer, String> id2sn = new HashMap<Integer, String>() {{
+      put(1, "0TQZGANED0021X");
+      put(2, "0TQZGANED0020C");
+      put(3, "0TQZGARED000KN");
+      put(4, "0TQZGANED0023H");
+    }};
 
     List<String> commands = Arrays.asList(
-        "* > command",
         "* > battery?"
     );
 
-    Swarm swarm = new Swarm(8889, drones);
+    Swarm swarm = new Swarm(8889, commands);
 
     try {
-      swarm.init();
-      swarm.start(commands);
+      swarm.init(id2sn, "192.168.3");
       swarm.waitAndBlock();
     } catch (Exception e) {
       e.printStackTrace();
