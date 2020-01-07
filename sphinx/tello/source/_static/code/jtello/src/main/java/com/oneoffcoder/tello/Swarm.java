@@ -41,10 +41,7 @@ public class Swarm implements DroneListener, SwarmFinderListener {
   @Override
   public void finishedFindingDrones(List<Drone> drones) {
     this.drones = drones;
-    this.initDrones();
-  }
 
-  private void initDrones() {
     this.stopThread = new AtomicBoolean(false);
 
     this.receiveThread = new Thread(new Runnable() {
@@ -91,6 +88,8 @@ public class Swarm implements DroneListener, SwarmFinderListener {
         break;
       }
     }
+
+    this.start();
   }
 
   public void deinit() {
@@ -106,7 +105,7 @@ public class Swarm implements DroneListener, SwarmFinderListener {
     }
   }
 
-  private void start() throws InterruptedException {
+  private void start() {
     for (String command : this.commands) {
       if (command.indexOf(">") != -1) {
         this.handleCommand(command);
@@ -120,7 +119,7 @@ public class Swarm implements DroneListener, SwarmFinderListener {
     this.drones.forEach(d -> d.addCommand(command));
   }
 
-  private void handleSync(String command) throws InterruptedException {
+  private void handleSync(String command) {
     String[] tokens = Arrays.stream(command.split(" "))
         .map(t -> t.trim())
         .filter(t -> t.length() > 0)
@@ -129,7 +128,7 @@ public class Swarm implements DroneListener, SwarmFinderListener {
     sync(timeOut);
   }
 
-  private void waitAndBlock() throws InterruptedException {
+  private void waitAndBlock() {
     sync(-1.0f);
   }
 
@@ -151,12 +150,16 @@ public class Swarm implements DroneListener, SwarmFinderListener {
     return (n > 0) ? false : true;
   }
 
-  private void sync(float timeOut) throws InterruptedException {
+  private void sync(float timeOut) {
     Date start = new Date();
 
     while (!allQueuesEmpty()) {
       if (timeOut < 0.0) {
-        Thread.sleep(500);
+        try {
+          Thread.sleep(500);
+        } catch (InterruptedException e) {
+          // swallow
+        }
       } else {
         Date now = new Date();
         float diff = TelloUtil.diff(start, now);
@@ -169,7 +172,11 @@ public class Swarm implements DroneListener, SwarmFinderListener {
 
     while (!allResponsesReceived()) {
       if (timeOut < 0.0) {
-        Thread.sleep(500);
+        try {
+          Thread.sleep(500);
+        } catch (InterruptedException e) {
+          // swallow
+        }
       } else {
         Date now = new Date();
         float diff = TelloUtil.diff(start, now);
