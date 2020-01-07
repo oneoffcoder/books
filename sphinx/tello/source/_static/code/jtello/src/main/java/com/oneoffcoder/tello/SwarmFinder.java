@@ -158,7 +158,7 @@ public class SwarmFinder {
 
   public static void main(String[] args) throws UnknownHostException, SocketException {
     try (DatagramSocket socket = new DatagramSocket(8889, InetAddress.getByName("0.0.0.0"))) {
-      socket.setBroadcast(true);
+//      socket.setBroadcast(true);
 
       Map<Integer, String> id2sn = new HashMap<Integer, String>() {{
 //        put(1, "0TQZGANED0021X");
