@@ -18,7 +18,6 @@ public class Drone implements SwarmListener {
   private final int id;
   private final String sn;
   private final InetSocketAddress address;
-  private boolean active;
   private Queue<String> queue;
   private List<LogItem> logItems;
   private AtomicInteger nCommands;
@@ -31,7 +30,6 @@ public class Drone implements SwarmListener {
   public Drone(int id, String sn, InetSocketAddress address) {
     this.id = id;
     this.sn = sn;
-    this.active = false;
     this.address = address;
     this.queue = new LinkedBlockingQueue<>();
     this.logItems = Collections.synchronizedList(new ArrayList<>());
