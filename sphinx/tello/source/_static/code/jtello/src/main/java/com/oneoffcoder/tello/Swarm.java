@@ -31,7 +31,8 @@ public class Swarm implements DroneListener, SwarmFinderListener {
     this.nDronesReady = new AtomicInteger(0);
   }
 
-  public void init(Map<Integer, String> id2sn, String ipPrefix) throws SocketException, UnknownHostException {
+  public void init(Map<Integer, String> id2sn, String ipPrefix)
+      throws SocketException, UnknownHostException {
     this.socket = new DatagramSocket(this.port, InetAddress.getByName("0.0.0.0"));
     this.socket.setBroadcast(true);
 
@@ -59,7 +60,8 @@ public class Swarm implements DroneListener, SwarmFinderListener {
 
             socket.receive(packet);
 
-            String response = (new String(Arrays.copyOf(data, packet.getLength()), StandardCharsets.UTF_8)).trim();
+            String response = (new String(Arrays.copyOf(data, packet.getLength()),
+                StandardCharsets.UTF_8)).trim();
             InetAddress address = packet.getAddress();
 
             System.out.println("RESPONSE | " + address + " | " + response);
@@ -164,7 +166,8 @@ public class Swarm implements DroneListener, SwarmFinderListener {
         Date now = new Date();
         float diff = TelloUtil.diff(start, now);
         if (diff > timeOut) {
-          System.out.println("SYNC | FAILED | queues_not_empty | waited " + diff + " | exceeded " + timeOut);
+          System.out.println(
+              "SYNC | FAILED | queues_not_empty | waited " + diff + " | exceeded " + timeOut);
           break;
         }
       }
@@ -181,7 +184,8 @@ public class Swarm implements DroneListener, SwarmFinderListener {
         Date now = new Date();
         float diff = TelloUtil.diff(start, now);
         if (diff > timeOut) {
-          System.out.println("SYNC | FAILED | responses_not_received | waited " + diff + " | exceeded " + timeOut);
+          System.out.println(
+              "SYNC | FAILED | responses_not_received | waited " + diff + " | exceeded " + timeOut);
           break;
         }
       }

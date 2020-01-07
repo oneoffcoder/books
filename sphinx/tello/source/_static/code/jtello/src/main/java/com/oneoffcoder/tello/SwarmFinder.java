@@ -26,7 +26,8 @@ public class SwarmFinder {
   final private Thread receiveThread;
   final private SwarmFinderListener listener;
 
-  public SwarmFinder(Map<Integer, String> id2sn, DatagramSocket socket, String ipPrefix, SwarmFinderListener listener) {
+  public SwarmFinder(Map<Integer, String> id2sn, DatagramSocket socket, String ipPrefix,
+      SwarmFinderListener listener) {
     this.id2sn = id2sn;
     this.ip2sn = Collections.synchronizedMap(new HashMap<>());
     this.nDrones = id2sn.size();
@@ -48,7 +49,8 @@ public class SwarmFinder {
 
             SwarmFinder.this.socket.receive(packet);
 
-            String response = (new String(Arrays.copyOf(data, packet.getLength()), StandardCharsets.UTF_8)).trim();
+            String response = (new String(Arrays.copyOf(data, packet.getLength()),
+                StandardCharsets.UTF_8)).trim();
             InetAddress address = packet.getAddress();
 
             System.out.println("RESPONSE | " + address + " | " + response);
@@ -99,7 +101,7 @@ public class SwarmFinder {
 
   private boolean shouldStopThread() {
     if (this.ip2sn.size() == this.nDrones) {
-      int n = (int)this.ip2sn.values().stream()
+      int n = (int) this.ip2sn.values().stream()
           .filter(s -> s != null)
           .count();
       if (n == this.nDrones) {

@@ -62,7 +62,8 @@ public class SetAccessPoint {
 
     socket.receive(packet);
 
-    String response = (new String(Arrays.copyOf(data, packet.getLength()), StandardCharsets.UTF_8)).trim();
+    String response = (new String(Arrays.copyOf(data, packet.getLength()), StandardCharsets.UTF_8))
+        .trim();
     System.out.println("RESPONSE | " + response);
 
     return response;

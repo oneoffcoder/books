@@ -15,6 +15,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Drone implements SwarmListener {
+
   private final int id;
   private final String sn;
   private final InetSocketAddress address;
