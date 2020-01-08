@@ -12,6 +12,10 @@ public abstract class MessageItem {
     this.message = message;
   }
 
+  public boolean addressMatches(InetSocketAddress address) {
+    return this.address.toString().equals(address.toString());
+  }
+
   public InetSocketAddress getAddress() {
     return address;
   }

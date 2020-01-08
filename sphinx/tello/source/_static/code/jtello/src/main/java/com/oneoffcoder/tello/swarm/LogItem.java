@@ -20,6 +20,10 @@ public class LogItem {
     this.startTime = new Date();
   }
 
+  public Date getStartTime() {
+    return startTime;
+  }
+
   public String getCommand() {
     return command;
   }
