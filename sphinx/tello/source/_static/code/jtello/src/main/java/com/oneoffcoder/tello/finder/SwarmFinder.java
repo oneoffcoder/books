@@ -1,5 +1,6 @@
 package com.oneoffcoder.tello.finder;
 
+import com.oneoffcoder.tello.io.CommandFile;
 import com.oneoffcoder.tello.swarm.Drone;
 import com.oneoffcoder.tello.swarm.MessageItem;
 import com.oneoffcoder.tello.swarm.ReceiveItem;
@@ -11,6 +12,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.SocketException;
+import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -121,22 +123,16 @@ public class SwarmFinder extends Thread implements SwarmManagerListener {
   }
 
   public static void main(String[] args) throws Exception {
+    CommandFile file = new CommandFile(Paths.get("cmds-01.txt"));
+
     DatagramSocket socket = new DatagramSocket(8889, InetAddress.getByName("0.0.0.0"));
     SwarmFinder finder = SwarmFinder.newSwarmFinder()
         .socket(socket)
-        .ipPrefix("192.168.3")
-        .id2sn(new HashMap<Integer, String>() {{
-//        put(1, "0TQZGANED0021X");
-//        put(2, "0TQZGANED0020C");
-//        put(3, "0TQZGARED000KN");
-          put(4, "0TQZGANED0023H");
-        }})
-        .listener(new SwarmFinderListener() {
-          @Override
-          public void finishedFindingDrones(List<Drone> drones) {
-            drones.forEach(System.out::println);
-            socket.close();
-          }
+        .ipPrefix(file.getIpPrefix())
+        .id2sn(file.getId2sn())
+        .listener(drones -> {
+          drones.forEach(System.out::println);
+          socket.close();
         })
         .build();
     finder.start();

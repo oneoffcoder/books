@@ -1,5 +1,5 @@
 ip=192.168.3
-1=0TQZGANED0021X
+1=0TQZGANED0023H
 * > battery?
 * > speed?
 * > time?
