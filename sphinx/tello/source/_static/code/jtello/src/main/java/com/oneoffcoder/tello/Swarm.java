@@ -1,117 +1,23 @@
 package com.oneoffcoder.tello;
 
+import com.oneoffcoder.tello.swarm.CommandItem;
 import com.oneoffcoder.tello.swarm.Drone;
 import com.oneoffcoder.tello.util.TelloUtil;
-import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
-import java.net.SocketException;
-import java.net.UnknownHostException;
-import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Swarm {
 
-  public interface SwarmListener {
 
-    void responseReceived(InetAddress address, String response);
-  }
-
-  final private int port;
   final private List<String> commands;
-  final private AtomicInteger nDronesReady;
-  private List<Drone> drones;
-  private DatagramSocket socket;
-  private AtomicBoolean stopThread;
-  private Thread receiveThread;
+  final private List<Drone> drones;
 
-  public Swarm(int port, List<String> commands) {
-    this.port = port;
-    this.commands = commands;
-    this.nDronesReady = new AtomicInteger(0);
-  }
-
-  public void init(Map<Integer, String> id2sn, String ipPrefix)
-      throws SocketException, UnknownHostException {
-    this.socket = new DatagramSocket(this.port, InetAddress.getByName("0.0.0.0"));
-    this.socket.setBroadcast(true);
-
-    (new SwarmFinder(id2sn, this.socket, ipPrefix, this)).start();
-  }
-
-  @Override
-  public void finishedFindingDrones(List<Drone> drones) {
+  public Swarm(List<Drone> drones, List<String> commands) {
     this.drones = drones;
-
-    this.stopThread = new AtomicBoolean(false);
-
-    this.receiveThread = new Thread(new Runnable() {
-      @Override
-      public void run() {
-        while (true) {
-          if (Swarm.this.stopThread.get()) {
-            System.out.println("THREAD | receive | stopped");
-            break;
-          }
-
-          try {
-            byte[] data = new byte[1024];
-            DatagramPacket packet = new DatagramPacket(data, data.length);
-
-            socket.receive(packet);
-
-            String response = (new String(Arrays.copyOf(data, packet.getLength()),
-                StandardCharsets.UTF_8)).trim();
-            InetAddress address = packet.getAddress();
-
-            System.out.println("RESPONSE | " + address + " | " + response);
-            Swarm.this.drones.forEach(d -> d.responseReceived(address, response));
-          } catch (IOException e) {
-            e.printStackTrace();
-          }
-        }
-      }
-    });
-    this.receiveThread.setDaemon(true);
-    this.receiveThread.start();
-
-    this.drones.forEach(d -> d.init(this.socket, this));
-
-    final int nDrones = this.drones.size();
-    while (true) {
-      if (this.nDronesReady.get() != nDrones) {
-        try {
-          Thread.sleep(500);
-        } catch (InterruptedException e) {
-          // swallow
-        }
-      } else {
-        System.out.println("SWARM | " + nDrones + " initialized");
-        break;
-      }
-    }
-
-    this.start();
-  }
-
-  public void deinit() {
-    this.drones.forEach(d -> d.deinit());
-
-    this.stopThread.set(true);
-
-    try {
-      this.socket.close();
-      System.out.println("SWARM DEINIT | socket_close | success");
-    } catch (Exception e) {
-      System.out.println("SWARM DEINIT | socket_close | " + e);
-    }
+    this.commands = commands;
   }
 
   private void start() {
@@ -122,10 +28,13 @@ public class Swarm {
         this.handleSync(command);
       }
     }
+
+    waitAndBlock();
   }
 
   private void handleCommand(String command) {
-    this.drones.forEach(d -> d.addCommand(command));
+    CommandItem commandItem = new CommandItem(command);
+    this.drones.forEach(d -> d.queue(commandItem));
   }
 
   private void handleSync(String command) {
@@ -143,18 +52,15 @@ public class Swarm {
 
   private boolean allQueuesEmpty() {
     long n = this.drones.stream()
-        .map(d -> d.getQueue())
-        .filter(q -> !q.isEmpty())
+        .map(d -> !d.isCommandQueueEmpty())
         .count();
     return (n > 0) ? false : true;
   }
 
   private boolean allResponsesReceived() {
     long n = this.drones.stream()
-        .map(d -> d.getLogItems())
-        .filter(list -> list.size() > 0)
-        .map(list -> list.get(list.size() - 1))
-        .filter(logItem -> !logItem.hasResponse())
+        .filter(d -> d.logSize() > 0)
+        .filter(d -> !d.getLastLogItem().hasResponse())
         .count();
     return (n > 0) ? false : true;
   }
@@ -211,15 +117,12 @@ public class Swarm {
         "* > battery?"
     );
 
-    Swarm swarm = new Swarm(8889, commands);
-
-    try {
-      swarm.init(id2sn, "192.168.3");
-      swarm.waitAndBlock();
-    } catch (Exception e) {
-      e.printStackTrace();
-    } finally {
-      swarm.deinit();
-    }
+//    Swarm swarm = new Swarm(8889, commands);
+//
+//    try {
+//      swarm.waitAndBlock();
+//    } catch (Exception e) {
+//      e.printStackTrace();
+//    }
   }
 }

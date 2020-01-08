@@ -49,6 +49,10 @@ public class Drone {
     }
   }
 
+  public int logSize() {
+    return this.logItems.size();
+  }
+
   private int nextLogId() {
     return this.logItems.size();
   }
@@ -74,9 +78,13 @@ public class Drone {
     }
   }
 
-  private LogItem getLastLogItem() {
+  public LogItem getLastLogItem() {
     int index = this.logItems.size() - 1;
     return this.logItems.get(index);
+  }
+
+  public boolean isCommandQueueEmpty() {
+    return this.commands.isEmpty();
   }
 
   @Override
