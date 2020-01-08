@@ -20,6 +20,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Swarm {
 
   public interface SwarmListener {
+
     void responseReceived(InetAddress address, String response);
   }
 

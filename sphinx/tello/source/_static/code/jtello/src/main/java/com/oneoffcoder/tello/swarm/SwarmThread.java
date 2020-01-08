@@ -7,6 +7,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public abstract class SwarmThread extends Thread {
 
   interface SwarmThreadListener {
+
     void processMessage(MessageItem message);
   }
 
@@ -37,6 +38,8 @@ public abstract class SwarmThread extends Thread {
   }
 
   abstract void started();
+
   abstract Optional<MessageItem> doIt();
+
   abstract void stopped();
 }

@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 public class SwarmFinder extends Thread implements SwarmManagerListener {
 
   public interface SwarmFinderListener {
+
     void finishedFindingDrones(List<Drone> drones);
   }
 

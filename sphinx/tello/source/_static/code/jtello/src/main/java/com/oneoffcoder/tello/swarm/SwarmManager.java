@@ -5,9 +5,10 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 
-public class SwarmManager extends Thread  implements SwarmThreadListener {
+public class SwarmManager extends Thread implements SwarmThreadListener {
 
   public interface SwarmManagerListener {
+
     void processMessage(MessageItem message);
   }
 
