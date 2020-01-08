@@ -43,6 +43,7 @@ public class SwarmFinder extends Thread implements SwarmManagerListener {
   @Override
   public void run() {
     this.manager.start();
+
     this.addresses.stream()
         .map(a -> new SendItem(a, "command"))
         .forEach(command -> this.manager.send(command));

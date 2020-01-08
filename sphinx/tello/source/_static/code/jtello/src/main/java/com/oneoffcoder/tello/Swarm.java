@@ -1,24 +1,36 @@
 package com.oneoffcoder.tello;
 
+import com.oneoffcoder.tello.finder.SwarmFinder;
+import com.oneoffcoder.tello.finder.SwarmFinder.Builder;
 import com.oneoffcoder.tello.io.CommandFile;
 import com.oneoffcoder.tello.swarm.CommandItem;
 import com.oneoffcoder.tello.swarm.Drone;
+import com.oneoffcoder.tello.swarm.MessageItem;
+import com.oneoffcoder.tello.swarm.SwarmManager;
+import com.oneoffcoder.tello.swarm.SwarmManager.SwarmManagerListener;
 import com.oneoffcoder.tello.util.TelloUtil;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
-public class Swarm {
+public class Swarm implements SwarmManagerListener {
 
-
+  private final SwarmManager manager;
   final private List<String> commands;
   final private List<Drone> drones;
 
-  public Swarm(List<Drone> drones, List<String> commands) {
-    this.drones = drones;
-    this.commands = commands;
+  private Swarm(Builder b) {
+    this.manager = SwarmManager.newInstance(b.socket, this);
+    this.drones = b.drones;
+    this.commands = b.commands;
+  }
+
+  @Override
+  public void processMessage(MessageItem message) {
+
   }
 
   private void start() {
@@ -106,10 +118,58 @@ public class Swarm {
     }
   }
 
+  public static Builder newSwarm() {
+    return new Builder();
+  }
+
+  public static final class Builder {
+    private DatagramSocket socket;
+    private List<Drone> drones;
+    private List<String> commands;
+
+    private Builder() {
+
+    }
+
+    public Builder socket(DatagramSocket socket) {
+      this.socket = socket;
+      return this;
+    }
+
+    public Builder drones(List<Drone> drones) {
+      this.drones = drones;
+      return this;
+    }
+
+    public Builder commands(List<String> commands) {
+      this.commands = commands;
+      return this;
+    }
+
+    public Swarm build() {
+      return new Swarm(this);
+    }
+  }
+
   public static void main(String[] args) throws Exception {
-    CommandFile file = new CommandFile(Paths.get("cmds-01.txt"));
-    Map<Integer, String> id2sn = file.getId2sn();
-    List<String> commands = file.getCommands();
+    final CommandFile file = new CommandFile(Paths.get("cmds-01.txt"));
+    final DatagramSocket socket = new DatagramSocket(8889, InetAddress.getByName("0.0.0.0"));
+
+    SwarmFinder finder = SwarmFinder.newSwarmFinder()
+        .socket(socket)
+        .ipPrefix(file.getIpPrefix())
+        .id2sn(file.getId2sn())
+        .listener(drones -> {
+          drones.forEach(System.out::println);
+
+          Swarm swarm = Swarm.newSwarm()
+              .drones(drones)
+              .commands(file.getCommands())
+              .socket(socket)
+              .build();
+        })
+        .build();
+    finder.start();
 
 //    Swarm swarm = new Swarm(8889, commands);
 //
