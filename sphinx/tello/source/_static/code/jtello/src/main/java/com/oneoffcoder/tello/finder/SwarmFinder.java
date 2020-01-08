@@ -106,7 +106,7 @@ public class SwarmFinder extends Thread implements SwarmManagerListener {
       return this;
     }
 
-    private Builder ipPrefix(String ipPrefix) {
+    public Builder ipPrefix(String ipPrefix) {
       this.ipPrefix = ipPrefix;
       return this;
     }
