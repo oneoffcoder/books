@@ -1,6 +1,6 @@
 package com.oneoffcoder.tello;
 
-import com.oneoffcoder.tello.finder.SwarmFinder.SwarmFinderListener;
+import com.oneoffcoder.tello.swarm.Drone;
 import com.oneoffcoder.tello.util.TelloUtil;
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Swarm implements SwarmFinderListener {
+public class Swarm {
 
   public interface SwarmListener {
     void responseReceived(InetAddress address, String response);

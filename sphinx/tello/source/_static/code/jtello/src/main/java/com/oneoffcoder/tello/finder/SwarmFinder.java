@@ -1,6 +1,6 @@
 package com.oneoffcoder.tello.finder;
 
-import com.oneoffcoder.tello.Drone;
+import com.oneoffcoder.tello.swarm.Drone;
 import com.oneoffcoder.tello.swarm.MessageItem;
 import com.oneoffcoder.tello.swarm.ReceiveItem;
 import com.oneoffcoder.tello.swarm.SendItem;
