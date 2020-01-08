@@ -1,8 +1,18 @@
 ip=192.168.3
 1=0TQZGANED0023H
 * > battery?
+sync 5
 * > speed?
+sync 5
 * > time?
+sync 5
 * > wifi?
+sync 5
 * > sdk?
+sync 5
 * > sn?
+sync 5
+* > takeoff
+sync 5
+* > land
+sync 5

@@ -20,6 +20,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Swarm implements SwarmManagerListener {
 
+  public interface SwarmListener {
+    void swarmFinished(Swarm swarm);
+  }
+
   private class SenderThread extends Thread {
     final private AtomicBoolean stop;
     final private SwarmManager manager;
@@ -37,6 +41,8 @@ public class Swarm implements SwarmManagerListener {
 
     @Override
     public void run() {
+      System.out.println("SENDER_THREAD | started");
+
       while (true) {
         if (stop.get()) {
           break;
@@ -48,6 +54,8 @@ public class Swarm implements SwarmManagerListener {
             .map(sendItem -> sendItem.get())
             .forEach(sendItem -> manager.send(sendItem));
       }
+
+      System.out.println("SENDER_THREAD | stopped");
     }
   }
 
@@ -55,12 +63,14 @@ public class Swarm implements SwarmManagerListener {
   final private List<String> commands;
   final private List<Drone> drones;
   final private SenderThread senderThread;
+  final private SwarmListener listener;
 
   private Swarm(Builder b) {
     this.manager = SwarmManager.newInstance(b.socket, this);
     this.drones = b.drones;
     this.commands = b.commands;
     this.senderThread = new SenderThread(manager, drones);
+    this.listener = b.listener;
   }
 
   @Override
@@ -74,7 +84,7 @@ public class Swarm implements SwarmManagerListener {
     }
   }
 
-  private void start() {
+  public void start() {
     this.manager.start();
     this.senderThread.start();
 
@@ -90,6 +100,10 @@ public class Swarm implements SwarmManagerListener {
 
     this.senderThread.stopNow();
     this.manager.stopNow();
+
+    if (null != this.listener) {
+      this.listener.swarmFinished(this);
+    }
   }
 
   private void handleCommand(String command) {
@@ -173,6 +187,7 @@ public class Swarm implements SwarmManagerListener {
     private DatagramSocket socket;
     private List<Drone> drones;
     private List<String> commands;
+    private SwarmListener listener;
 
     private Builder() {
 
@@ -190,6 +205,11 @@ public class Swarm implements SwarmManagerListener {
 
     public Builder commands(List<String> commands) {
       this.commands = commands;
+      return this;
+    }
+
+    public Builder listener(SwarmListener listener) {
+      this.listener = listener;
       return this;
     }
 
@@ -214,6 +234,13 @@ public class Swarm implements SwarmManagerListener {
               .drones(drones)
               .commands(file.getCommands())
               .socket(socket)
+              .listener(new SwarmListener() {
+                @Override
+                public void swarmFinished(Swarm swarm) {
+                  System.out.println("CLOSING SOCKET");
+                  socket.close();
+                }
+              })
               .build()
               .start();
         })
