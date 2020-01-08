@@ -1,11 +1,12 @@
 package com.oneoffcoder.tello;
 
+import com.oneoffcoder.tello.io.CommandFile;
 import com.oneoffcoder.tello.swarm.CommandItem;
 import com.oneoffcoder.tello.swarm.Drone;
 import com.oneoffcoder.tello.util.TelloUtil;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -105,17 +106,10 @@ public class Swarm {
     }
   }
 
-  public static void main(String[] args) {
-    Map<Integer, String> id2sn = new HashMap<Integer, String>() {{
-      put(1, "0TQZGANED0021X");
-      put(2, "0TQZGANED0020C");
-      put(3, "0TQZGARED000KN");
-      put(4, "0TQZGANED0023H");
-    }};
-
-    List<String> commands = Arrays.asList(
-        "* > battery?"
-    );
+  public static void main(String[] args) throws Exception {
+    CommandFile file = new CommandFile(Paths.get("cmds-01.txt"));
+    Map<Integer, String> id2sn = file.getId2sn();
+    List<String> commands = file.getCommands();
 
 //    Swarm swarm = new Swarm(8889, commands);
 //
