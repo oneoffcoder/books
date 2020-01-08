@@ -7,7 +7,7 @@ import java.net.InetSocketAddress;
 
 public class SwarmManager extends Thread  implements SwarmThreadListener {
 
-  interface SwarmManagerListener {
+  public interface SwarmManagerListener {
     void processMessage(MessageItem message);
   }
 
@@ -41,6 +41,10 @@ public class SwarmManager extends Thread  implements SwarmThreadListener {
   public void run() {
     this.receiver.start();
     this.sender.start();
+  }
+
+  public static SwarmManager newInstance(DatagramSocket socket, SwarmManagerListener listener) {
+    return new SwarmManager(socket, listener);
   }
 
   public static void main(String[] args) throws Exception {

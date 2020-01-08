@@ -1,4 +1,4 @@
-package com.oneoffcoder.tello;
+package com.oneoffcoder.tello.ap;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
