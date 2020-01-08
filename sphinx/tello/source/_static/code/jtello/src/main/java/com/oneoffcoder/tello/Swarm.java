@@ -6,6 +6,8 @@ import com.oneoffcoder.tello.io.CommandFile;
 import com.oneoffcoder.tello.swarm.CommandItem;
 import com.oneoffcoder.tello.swarm.Drone;
 import com.oneoffcoder.tello.swarm.MessageItem;
+import com.oneoffcoder.tello.swarm.ReceiveItem;
+import com.oneoffcoder.tello.swarm.SendItem;
 import com.oneoffcoder.tello.swarm.SwarmManager;
 import com.oneoffcoder.tello.swarm.SwarmManager.SwarmManagerListener;
 import com.oneoffcoder.tello.util.TelloUtil;
@@ -15,25 +17,68 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Swarm implements SwarmManagerListener {
 
-  private final SwarmManager manager;
+  private class SenderThread extends Thread {
+    final private AtomicBoolean stop;
+    final private SwarmManager manager;
+    final private List<Drone> drones;
+
+    public SenderThread(SwarmManager manager, List<Drone> drones) {
+      this.stop = new AtomicBoolean(false);
+      this.manager = manager;
+      this.drones = drones;
+    }
+
+    public void stopNow() {
+      this.stop.set(true);
+    }
+
+    @Override
+    public void run() {
+      while (true) {
+        if (stop.get()) {
+          break;
+        }
+
+        drones.stream()
+            .map(drone -> drone.nextCommand())
+            .filter(sendItem -> sendItem.isPresent())
+            .map(sendItem -> sendItem.get())
+            .forEach(sendItem -> manager.send(sendItem));
+      }
+    }
+  }
+
+  final private SwarmManager manager;
   final private List<String> commands;
   final private List<Drone> drones;
+  final private SenderThread senderThread;
 
   private Swarm(Builder b) {
     this.manager = SwarmManager.newInstance(b.socket, this);
     this.drones = b.drones;
     this.commands = b.commands;
+    this.senderThread = new SenderThread(manager, drones);
   }
 
   @Override
   public void processMessage(MessageItem message) {
-
+    if (message instanceof SendItem) {
+      System.out.println("SENT | " + message);
+    } else {
+      ReceiveItem receiveItem = (ReceiveItem) message;
+      System.out.println("RECEIVED | " + message);
+      this.drones.forEach(drone -> drone.log(receiveItem));
+    }
   }
 
   private void start() {
+    this.manager.start();
+    this.senderThread.start();
+
     for (String command : this.commands) {
       if (command.indexOf(">") != -1) {
         this.handleCommand(command);
@@ -43,6 +88,9 @@ public class Swarm implements SwarmManagerListener {
     }
 
     waitAndBlock();
+
+    this.senderThread.stopNow();
+    this.manager.stopNow();
   }
 
   private void handleCommand(String command) {
@@ -152,31 +200,25 @@ public class Swarm implements SwarmManagerListener {
   }
 
   public static void main(String[] args) throws Exception {
-    final CommandFile file = new CommandFile(Paths.get("cmds-01.txt"));
+    final CommandFile file = new CommandFile(Paths.get("./commands/cmds-01.txt"));
     final DatagramSocket socket = new DatagramSocket(8889, InetAddress.getByName("0.0.0.0"));
 
-    SwarmFinder finder = SwarmFinder.newSwarmFinder()
+    SwarmFinder.newSwarmFinder()
         .socket(socket)
         .ipPrefix(file.getIpPrefix())
         .id2sn(file.getId2sn())
         .listener(drones -> {
+          System.out.println("FINDER | finished");
           drones.forEach(System.out::println);
 
-          Swarm swarm = Swarm.newSwarm()
+          Swarm.newSwarm()
               .drones(drones)
               .commands(file.getCommands())
               .socket(socket)
-              .build();
+              .build()
+              .start();
         })
-        .build();
-    finder.start();
-
-//    Swarm swarm = new Swarm(8889, commands);
-//
-//    try {
-//      swarm.waitAndBlock();
-//    } catch (Exception e) {
-//      e.printStackTrace();
-//    }
+        .build()
+        .start();
   }
 }

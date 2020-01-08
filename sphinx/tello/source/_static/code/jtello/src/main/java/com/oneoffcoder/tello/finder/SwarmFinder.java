@@ -124,7 +124,7 @@ public class SwarmFinder extends Thread implements SwarmManagerListener {
   }
 
   public static void main(String[] args) throws Exception {
-    CommandFile file = new CommandFile(Paths.get("cmds-01.txt"));
+    CommandFile file = new CommandFile(Paths.get("./commands/cmds-01.txt"));
 
     DatagramSocket socket = new DatagramSocket(8889, InetAddress.getByName("0.0.0.0"));
     SwarmFinder finder = SwarmFinder.newSwarmFinder()
@@ -132,6 +132,7 @@ public class SwarmFinder extends Thread implements SwarmManagerListener {
         .ipPrefix(file.getIpPrefix())
         .id2sn(file.getId2sn())
         .listener(drones -> {
+          System.out.println("FINDER | finished");
           drones.forEach(System.out::println);
           socket.close();
         })

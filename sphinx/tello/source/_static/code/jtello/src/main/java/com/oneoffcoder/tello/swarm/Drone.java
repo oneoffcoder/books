@@ -91,9 +91,9 @@ public class Drone {
   public String toString() {
     return (new StringBuilder())
         .append(this.id)
-        .append(",")
+        .append(", ")
         .append(this.sn)
-        .append(",")
+        .append(", ")
         .append(this.address)
         .toString();
   }
