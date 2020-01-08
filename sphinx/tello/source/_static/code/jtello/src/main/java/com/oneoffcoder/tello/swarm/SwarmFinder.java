@@ -1,11 +1,6 @@
-package com.oneoffcoder.tello.finder;
+package com.oneoffcoder.tello.swarm;
 
 import com.oneoffcoder.tello.io.CommandFile;
-import com.oneoffcoder.tello.swarm.Drone;
-import com.oneoffcoder.tello.swarm.MessageItem;
-import com.oneoffcoder.tello.swarm.ReceiveItem;
-import com.oneoffcoder.tello.swarm.SendItem;
-import com.oneoffcoder.tello.swarm.SwarmManager;
 import com.oneoffcoder.tello.swarm.SwarmManager.SwarmManagerListener;
 import com.oneoffcoder.tello.util.AddressUtil;
 import java.net.DatagramSocket;

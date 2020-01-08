@@ -1,7 +1,6 @@
 package com.oneoffcoder.tello;
 
-import com.oneoffcoder.tello.finder.SwarmFinder;
-import com.oneoffcoder.tello.finder.SwarmFinder.Builder;
+import com.oneoffcoder.tello.swarm.SwarmFinder;
 import com.oneoffcoder.tello.io.CommandFile;
 import com.oneoffcoder.tello.swarm.CommandItem;
 import com.oneoffcoder.tello.swarm.Drone;
