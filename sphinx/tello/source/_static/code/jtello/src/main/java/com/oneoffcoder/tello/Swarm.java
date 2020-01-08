@@ -1,5 +1,7 @@
 package com.oneoffcoder.tello;
 
+import com.oneoffcoder.tello.finder.SwarmFinder.SwarmFinderListener;
+import com.oneoffcoder.tello.util.TelloUtil;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -15,7 +17,11 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Swarm implements DroneListener, SwarmFinderListener {
+public class Swarm implements SwarmFinderListener {
+
+  public interface SwarmListener {
+    void responseReceived(InetAddress address, String response);
+  }
 
   final private int port;
   final private List<String> commands;
@@ -190,16 +196,6 @@ public class Swarm implements DroneListener, SwarmFinderListener {
         }
       }
     }
-  }
-
-  @Override
-  public void finishedInit(Drone drone) {
-    this.nDronesReady.incrementAndGet();
-  }
-
-  @Override
-  public void commandSent(Drone drone, String command) {
-
   }
 
   public static void main(String[] args) {

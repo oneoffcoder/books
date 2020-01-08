@@ -1,5 +1,7 @@
 package com.oneoffcoder.tello;
 
+import com.oneoffcoder.tello.swarm.LogItem;
+import com.oneoffcoder.tello.util.TelloUtil;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -14,7 +16,12 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Drone implements SwarmListener {
+public class Drone {
+
+  public interface DroneListener {
+    void finishedInit(Drone drone);
+    void commandSent(Drone drone, String command);
+  }
 
   private final int id;
   private final String sn;
@@ -139,7 +146,6 @@ public class Drone implements SwarmListener {
     return logItems;
   }
 
-  @Override
   public void responseReceived(InetAddress address, String response) {
     String s1 = this.address.getAddress().toString();
     String s2 = address.toString();

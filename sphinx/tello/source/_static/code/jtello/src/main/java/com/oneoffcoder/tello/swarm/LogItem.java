@@ -1,5 +1,6 @@
-package com.oneoffcoder.tello;
+package com.oneoffcoder.tello.swarm;
 
+import com.oneoffcoder.tello.util.TelloUtil;
 import java.net.InetAddress;
 import java.util.Date;
 
