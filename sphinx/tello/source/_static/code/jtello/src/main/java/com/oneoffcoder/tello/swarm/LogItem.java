@@ -20,6 +20,10 @@ public class LogItem {
     this.startTime = new Date();
   }
 
+  public Integer getId() {
+    return id;
+  }
+
   public Date getStartTime() {
     return startTime;
   }
@@ -43,14 +47,20 @@ public class LogItem {
   public String toString() {
     return new StringBuilder()
         .append("id=").append(id)
-        .append(",")
+        .append(", ")
         .append("ip=").append(ip)
-        .append(",")
+        .append(", ")
         .append("command=").append(command)
-        .append(",")
+        .append(", ")
         .append("response=").append(response)
-        .append(",")
+        .append(", ")
+        .append("start=").append(startTime)
+        .append(", ")
+        .append("stop=").append(stopTime)
+        .append(", ")
         .append("duration=").append(duration)
+        .append(", ")
+        .append("hasResponse=").append(hasResponse())
         .toString();
   }
 }

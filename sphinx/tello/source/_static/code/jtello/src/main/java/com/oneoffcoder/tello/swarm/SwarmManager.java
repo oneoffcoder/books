@@ -60,7 +60,7 @@ public class SwarmManager extends Thread implements SwarmThreadListener {
             if (message instanceof ReceiveItem) {
               System.out.println("RECEIVED | " + message);
             } else {
-              System.out.println("SENT | " + message);
+              System.out.println("MANAGER | SENT | " + message);
             }
           }
         });

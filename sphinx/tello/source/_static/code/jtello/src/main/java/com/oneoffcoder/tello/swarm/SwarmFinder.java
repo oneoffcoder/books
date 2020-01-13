@@ -12,13 +12,14 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 
 public class SwarmFinder extends Thread implements SwarmManagerListener {
 
   public interface SwarmFinderListener {
 
-    void finishedFindingDrones(List<Drone> drones);
+    void finishedFindingDrones(List<Drone> drones, SwarmFinder swarmFinder);
   }
 
   private final SwarmManager manager;
@@ -26,6 +27,7 @@ public class SwarmFinder extends Thread implements SwarmManagerListener {
   private final SwarmFinderListener listener;
   private final Map<Integer, String> id2sn;
   private final Map<String, InetSocketAddress> sn2ip;
+  private final AtomicBoolean stop;
 
   private SwarmFinder(Builder b) throws SocketException {
     this.manager = SwarmManager.newInstance(b.socket, this);
@@ -33,6 +35,7 @@ public class SwarmFinder extends Thread implements SwarmManagerListener {
     this.id2sn = b.id2sn;
     this.sn2ip = Collections.synchronizedMap(new HashMap<>());
     this.addresses = AddressUtil.getAddresses(b.ipPrefix);
+    this.stop = new AtomicBoolean(false);
   }
 
   @Override
@@ -44,6 +47,10 @@ public class SwarmFinder extends Thread implements SwarmManagerListener {
         .forEach(command -> this.manager.send(command));
 
     while (!this.shouldStop()) {
+      if (this.stop.get()) {
+        break;
+      }
+
       try {
         Thread.sleep(500);
       } catch (Exception e) {
@@ -57,7 +64,7 @@ public class SwarmFinder extends Thread implements SwarmManagerListener {
       List<Drone> drones = this.id2sn.entrySet().stream()
           .map(e -> new Drone(e.getKey(), e.getValue(), this.sn2ip.get(e.getValue())))
           .collect(Collectors.toList());
-      this.listener.finishedFindingDrones(drones);
+      this.listener.finishedFindingDrones(drones, this);
     }
   }
 
@@ -72,6 +79,10 @@ public class SwarmFinder extends Thread implements SwarmManagerListener {
         this.sn2ip.put(receiveItem.getMessage(), receiveItem.getAddress());
       }
     }
+  }
+
+  public void stopNow() {
+    this.stop.set(true);
   }
 
   private boolean shouldStop() {
@@ -126,10 +137,11 @@ public class SwarmFinder extends Thread implements SwarmManagerListener {
         .socket(socket)
         .ipPrefix(file.getIpPrefix())
         .id2sn(file.getId2sn())
-        .listener(drones -> {
+        .listener((drones, swarmFinder) -> {
           System.out.println("FINDER | finished");
           drones.forEach(System.out::println);
           socket.close();
+          swarmFinder.stopNow();
         })
         .build();
     finder.start();

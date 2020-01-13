@@ -53,6 +53,12 @@ public class Swarm implements SwarmManagerListener {
             .filter(sendItem -> sendItem.isPresent())
             .map(sendItem -> sendItem.get())
             .forEach(sendItem -> manager.send(sendItem));
+
+        try {
+          Thread.sleep(1000L);
+        } catch (Exception e) {
+          // swallow
+        }
       }
 
       System.out.println("SENDER_THREAD | stopped");
@@ -76,10 +82,9 @@ public class Swarm implements SwarmManagerListener {
   @Override
   public void processMessage(MessageItem message) {
     if (message instanceof SendItem) {
-      System.out.println("SENT | " + message);
+      System.out.println("SWARM | SENT | " + message);
     } else {
       ReceiveItem receiveItem = (ReceiveItem) message;
-      System.out.println("RECEIVED | " + message);
       this.drones.forEach(drone -> drone.log(receiveItem));
     }
   }
@@ -98,10 +103,13 @@ public class Swarm implements SwarmManagerListener {
 
     waitAndBlock();
 
+    System.out.println("STOPPING SENDER THREAD");
     this.senderThread.stopNow();
+    System.out.println("STOPPING MANAGER THREADS");
     this.manager.stopNow();
 
     if (null != this.listener) {
+      System.out.println("SWARM FINISHED");
       this.listener.swarmFinished(this);
     }
   }
@@ -226,7 +234,8 @@ public class Swarm implements SwarmManagerListener {
         .socket(socket)
         .ipPrefix(file.getIpPrefix())
         .id2sn(file.getId2sn())
-        .listener(drones -> {
+        .listener((drones, swarmFinder) -> {
+          swarmFinder.stopNow();
           System.out.println("FINDER | finished");
           drones.forEach(System.out::println);
 
@@ -234,12 +243,9 @@ public class Swarm implements SwarmManagerListener {
               .drones(drones)
               .commands(file.getCommands())
               .socket(socket)
-              .listener(new SwarmListener() {
-                @Override
-                public void swarmFinished(Swarm swarm) {
-                  System.out.println("CLOSING SOCKET");
-                  socket.close();
-                }
+              .listener(swarm -> {
+                System.out.println("CLOSING SOCKET");
+                socket.close();
               })
               .build()
               .start();

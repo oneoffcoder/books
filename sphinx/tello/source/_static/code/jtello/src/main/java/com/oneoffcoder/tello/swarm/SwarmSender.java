@@ -21,8 +21,16 @@ public class SwarmSender extends SwarmThread {
   }
 
   @Override
+  public String getThreadId() {
+    return new StringBuilder()
+        .append("SENDER | ")
+        .append(this.id)
+        .toString();
+  }
+
+  @Override
   void started() {
-    System.out.println("SENDER | started");
+    System.out.println("SENDER | " + this.id + " | started");
   }
 
   @Override
@@ -48,6 +56,6 @@ public class SwarmSender extends SwarmThread {
 
   @Override
   void stopped() {
-    System.out.println("SENDER | stopped");
+    System.out.println("SENDER | " + this.id + " | stopped");
   }
 }

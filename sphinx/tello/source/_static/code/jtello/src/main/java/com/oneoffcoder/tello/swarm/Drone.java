@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Drone {
 
@@ -19,6 +20,7 @@ public class Drone {
   private final InetSocketAddress address;
   private final List<LogItem> logItems;
   private final Queue<SendItem> commands;
+  private final AtomicBoolean isReady;
 
   public Drone(int id, String sn, InetSocketAddress address) {
     this.id = id;
@@ -26,17 +28,23 @@ public class Drone {
     this.address = address;
     this.logItems = Collections.synchronizedList(new ArrayList<>());
     this.commands = new LinkedBlockingQueue<>();
+    this.isReady = new AtomicBoolean(true);
   }
 
   public void queue(CommandItem command) {
     if (command.matchesId(this.id)) {
-      this.logItems.add(new LogItem(this.nextLogId(), command.getCommand()));
+      LogItem logItem = new LogItem(this.nextLogId(), command.getCommand());
+      System.out.println("QUEUED | " + logItem);
+      this.logItems.add(logItem);
+
+
       this.commands.add(new SendItem(this.address, command.getCommand()));
     }
   }
 
   public Optional<SendItem> nextCommand() {
     if (this.ready() && !this.commands.isEmpty()) {
+      this.isReady.set(false);
       return Optional.of(this.commands.remove());
     }
     return Optional.empty();
@@ -46,6 +54,8 @@ public class Drone {
     if (receiveItem.addressMatches(this.address)) {
       LogItem logItem = getLastLogItem();
       logItem.addResponse(receiveItem.getMessage(), receiveItem.getAddress().getAddress());
+      System.out.println("RECEIVED | " + logItem);
+      this.isReady.set(true);
     }
   }
 
@@ -58,28 +68,16 @@ public class Drone {
   }
 
   private boolean ready() {
-    if (this.logItems.size() < 1) {
-      return true;
-    } else {
-      LogItem logItem = this.getLastLogItem();
-      if (logItem.hasResponse()) {
-        return true;
-      } else {
-        Date start = logItem.getStartTime();
-        Date now = new Date();
-        float diff = TelloUtil.diff(start, now);
-
-        if (diff > TIME_OUT) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-    }
+    return this.isReady.get();
   }
 
   public LogItem getLastLogItem() {
-    int index = this.logItems.size() - 1;
+    int index = this.logItems.stream()
+        .filter(logItem -> !logItem.hasResponse())
+        .sorted((a, b) -> a.getId().compareTo(b.getId()))
+        .findFirst()
+        .get()
+        .getId();
     return this.logItems.get(index);
   }
 

@@ -11,11 +11,13 @@ public abstract class SwarmThread extends Thread {
     void processMessage(MessageItem message);
   }
 
+  protected final long id;
   protected final DatagramSocket socket;
   private final AtomicBoolean stop;
   private final SwarmThreadListener listener;
 
   public SwarmThread(DatagramSocket socket, SwarmThreadListener listener) {
+    this.id = System.currentTimeMillis();
     this.socket = socket;
     this.stop = new AtomicBoolean(false);
     this.listener = listener;
@@ -33,9 +35,15 @@ public abstract class SwarmThread extends Thread {
       if (null != this.listener && message.isPresent()) {
         this.listener.processMessage(message.get());
       }
+
+      if (!getThreadId().startsWith("SENDER")) {
+        System.out.println(getThreadId() + " | still alive");
+      }
     }
     stopped();
   }
+
+  abstract String getThreadId();
 
   abstract void started();
 
