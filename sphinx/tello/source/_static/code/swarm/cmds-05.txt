@@ -1,0 +1,20 @@
+scan 3
+//battery_check 20
+//correct_ip
+//1=0TQZGANED0021X
+//2=0TQZGANED0020C
+//3=0TQZGANED0023H
+//4=0TQZGARED000KN
+*>takeoff
+sync 10
+*>cw 90
+sync 10
+*>ccw 90
+sync 10
+*>forward 50
+sync 10
+*>back 50
+sync 10
+*>flip f
+sync 10
+*>land

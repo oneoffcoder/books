@@ -45,6 +45,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    generate-gaussian-distributed-values
    kullback-leibler-divergence
    dirichlet-multinomial-distribution
+   scheduling-distributions
    gmm
    gmm-dirichlet
    gmm-data-discretization

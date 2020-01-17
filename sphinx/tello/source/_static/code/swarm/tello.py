@@ -59,7 +59,7 @@ class TelloManager(object):
         self.tello_list = []
         self.log = defaultdict(list)
 
-        self.COMMAND_TIME_OUT = 9.0
+        self.COMMAND_TIME_OUT = 20.0
 
         self.last_response_index = {}
         self.str_cmd_index = {}
@@ -113,7 +113,7 @@ class TelloManager(object):
         """
         infos = self.get_subnets()
         ips = SubnetInfo.flatten([info.get_ips() for info in infos])
-        ips = list(filter(lambda ip: ip.startswith('192.168.1.'), ips))
+        ips = list(filter(lambda ip: ip.startswith('192.168.3.'), ips))
         return ips
 
     def get_subnets(self):
@@ -184,7 +184,7 @@ class TelloManager(object):
             real_command = command[3:]
         else:
             self.socket.sendto(command.encode('utf-8'), (ip, 8889))
-            print(f'[SINGLE_COMMAND], IP={ip}, COMMAND={command}')
+            print(f'[SINGLE_COMMAND] IP={ip}, COMMAND={command}')
             real_command = command
         
         self.log[ip].append(Stats(real_command, len(self.log[ip])))
@@ -194,7 +194,7 @@ class TelloManager(object):
             now = time.time()
             diff = now - start
             if diff > self.COMMAND_TIME_OUT:
-                print(f'[NO_RESPONSE], Max timeout exceeded for command: {real_command}')
+                print(f'[NO_RESPONSE] Max timeout exceeded for command: {real_command}')
                 return    
 
     def _receive_thread(self):
@@ -229,7 +229,7 @@ class TelloManager(object):
                         self.log[ip][-1].add_response(self.response[7:], ip)
                     self.last_response_index[ip] = response_index
                 else:
-                    print(f'[SINGLE_RESPONSE], IP={ip}, RESPONSE={self.response}')
+                    # print(f'[SINGLE_RESPONSE], IP={ip}, RESPONSE={self.response}')
                     self.log[ip][-1].add_response(self.response, ip)
                          
             except socket.error as exc:
