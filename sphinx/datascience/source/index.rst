@@ -71,6 +71,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    chernoff-inception_v3
    restricted-boltzmann-machine
    rnn-classify-signals
+   pose-estimation
 
 About
 =====
