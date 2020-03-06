@@ -60,6 +60,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    pca
    lda
    latent-semantic-analysis
+   topic-modeling-gensim
    mvn-conditional
    partial-correlation
    precision-recall-roc
