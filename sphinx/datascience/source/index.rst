@@ -73,6 +73,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    restricted-boltzmann-machine
    rnn-classify-signals
    pose-estimation
+   covid-patient-level
 
 About
 =====

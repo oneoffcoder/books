@@ -1,0 +1,1 @@
+Downloaded from [https://docs.google.com/spreadsheets/d/1itaohdPiAeniCXNlntNztZ_oRvjh0HsGuJXUJWET008/edit#gid=0](https://docs.google.com/spreadsheets/d/1itaohdPiAeniCXNlntNztZ_oRvjh0HsGuJXUJWET008/edit#gid=0). The [original article](https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30119-5/fulltext).
