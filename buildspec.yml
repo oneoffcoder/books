@@ -5,6 +5,7 @@ phases:
     runtime-versions:
       python: "3.7"
     commands:
+      - lsb_release -a
       - apt-get -qq install pandoc -y
       - pip install ipython sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinxcontrib-blockdiag sphinx-autobuild sphinx-sitemap nbsphinx -q
   pre_build:
