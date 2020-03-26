@@ -74,6 +74,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    rnn-classify-signals
    pose-estimation
    covid-patient-level
+   covid-diagnosis
 
 About
 =====
