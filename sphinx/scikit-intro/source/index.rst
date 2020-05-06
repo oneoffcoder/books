@@ -62,6 +62,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    plot-bar
    plot-heatmap
    plot-dist
+   plot-box
 
 About
 =====
