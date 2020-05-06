@@ -54,6 +54,15 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    pipelines
    validation
 
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Matplotlib
+
+   plot-bar
+   plot-heatmap
+   plot-dist
+
 About
 =====
 
