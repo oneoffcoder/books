@@ -63,6 +63,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    gmm-dirichlet
    gmm-data-discretization
    kmc-bic-aic
+   pdf-cdf
    s-curve
    
 .. toctree::
