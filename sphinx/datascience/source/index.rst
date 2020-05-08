@@ -40,7 +40,20 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
 .. toctree::
    :maxdepth: 1
    :numbered:
-   :caption: Contents
+   :caption: General
+
+   missing-data
+   psuedo-r-squared-logistic-regression
+   pca
+   lda
+   mvn-conditional
+   partial-correlation
+   precision-recall-roc
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Distributions
 
    generate-gaussian-distributed-values
    kullback-leibler-divergence
@@ -50,31 +63,61 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    gmm-dirichlet
    gmm-data-discretization
    kmc-bic-aic
-   missing-data
+   
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Gradient Descent
+
    gradient-descent
    autograd-regression-gradient-descent
    autograd-logistic-regression-gradient-descent
    autograd-poisson-regression-gradient-descent
    neural-network-gradient-descent
-   psuedo-r-squared-logistic-regression
-   pca
-   lda
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Natural Language Processing
+
    latent-semantic-analysis
    topic-modeling-gensim
-   mvn-conditional
-   partial-correlation
-   precision-recall-roc
-   generate-random-bbn
+   
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Deep Learning
+
    neural-network-handcraft
+   restricted-boltzmann-machine
+   rnn-classify-signals
+   pose-estimation
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: COVID-19
+      
+   covid-patient-level
+   covid-diagnosis
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Chernoff Faces
+
    chernoff-faces
    chernoff-deeplearning
    chernoff-classification
    chernoff-inception_v3
-   restricted-boltzmann-machine
-   rnn-classify-signals
-   pose-estimation
-   covid-patient-level
-   covid-diagnosis
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Graphical Models
+
+   generate-random-bbn
+   
 
 About
 =====
