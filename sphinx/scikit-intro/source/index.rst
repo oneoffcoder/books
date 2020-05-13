@@ -57,13 +57,16 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
 .. toctree::
    :maxdepth: 1
    :numbered:
-   :caption: Matplotlib
+   :caption: Plotting
 
    plot-bar
    plot-heatmap
    plot-dist
    plot-box
    plot-area
+   plot-pie
+   plot-scatter
+   plot-parallel-coordinates
 
 About
 =====

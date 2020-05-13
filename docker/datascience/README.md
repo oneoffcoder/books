@@ -20,6 +20,13 @@ docker run -it \
     -p 8888:8888 \
     -p 6006:6006 \
     -v $HOME/git/books/sphinx/datascience/source:/root/ipynb \
+    --gpus all \
+    oneoffcoder/book-datascience
+
+docker run -it \
+    -p 8888:8888 \
+    -p 6006:6006 \
+    -v $HOME/git/books/sphinx/datascience/source:/root/ipynb \
     oneoffcoder/book-datascience
 
 docker run -it \
