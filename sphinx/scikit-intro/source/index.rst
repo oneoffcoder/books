@@ -67,6 +67,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    plot-pie
    plot-scatter
    plot-parallel-coordinates
+   plot-graph
 
 About
 =====
