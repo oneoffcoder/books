@@ -9,5 +9,6 @@ RUN apt-get update -y \
 
 # setup libraries
 RUN conda install autograd gensim nltk pyldavis nodejs pygraphviz tqdm missingno wordcloud shap -c conda-forge -y \
+    && conda install -c anaconda pygraphviz -y \
     && pip install yellowbrick librosa textblob fancyimpute \
     && python -m nltk.downloader all
