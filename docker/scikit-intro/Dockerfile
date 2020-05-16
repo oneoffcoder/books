@@ -10,7 +10,7 @@ RUN sed -i -e 's|disco|eoan|g' /etc/apt/sources.list \
 
 # setup conda
 RUN conda update -n base -c defaults conda \
-    && conda install scikit-learn missingno pygraphviz yellowbrick \
+    && conda install scikit-learn missingno pygraphviz yellowbrick squarify \
         -c anaconda \
         -c conda-forge \
         -c districtdatalabs \

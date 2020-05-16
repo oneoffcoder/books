@@ -58,7 +58,8 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    :maxdepth: 1
    :numbered:
    :caption: Plotting
-
+   
+   plot-line
    plot-bar
    plot-heatmap
    plot-dist
