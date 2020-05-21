@@ -119,6 +119,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    :caption: Graphical Models
 
    generate-random-bbn
+   creating-junction-tree
    gaussian-network-inference
    
 
