@@ -1,5 +1,6 @@
 FROM oneoffcoder/book-base:latest
-LABEL One-Off Coder "info@oneoffcoder.com"
+LABEL author="One-Off Coder"
+LABEL email="info@oneoffcoder.com"
 
 # setup ubuntu
 # https://stackoverflow.com/questions/53800051/repository-does-not-have-a-release-file-error

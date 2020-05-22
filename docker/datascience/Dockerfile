@@ -1,5 +1,6 @@
 FROM oneoffcoder/conda-deeplearning:latest
-LABEL One-Off Coder "info@oneoffcoder.com"
+LABEL author="One-Off Coder"
+LABEL email="info@oneoffcoder.com"
 
 # setup ubuntu
 RUN apt-get update -y \

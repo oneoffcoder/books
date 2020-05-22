@@ -1,5 +1,6 @@
 FROM oneoffcoder/book-base:latest
-LABEL One-Off Coder "info@oneoffcoder.com"
+LABEL author="One-Off Coder"
+LABEL email="info@oneoffcoder.com"
 
 ENV IJAVA_COMPILER_OPTS="--source 12 --enable-preview"
 ENV IJAVA_CLASSPATH="/root/libs/"

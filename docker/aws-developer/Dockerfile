@@ -1,5 +1,6 @@
 FROM oneoffcoder/book-base:latest
-LABEL One-Off Coder "info@oneoffcoder.com"
+LABEL author="One-Off Coder"
+LABEL email="info@oneoffcoder.com"
 
 ENV AWS_REGION="us-east-1"
 ENV AWS_ACCESS_KEY="NEED_TO_SET_KEY"

@@ -1,5 +1,6 @@
 FROM ubuntu:disco
-LABEL One-Off Coder "info@oneoffcoder.com"
+LABEL author="One-Off Coder"
+LABEL email="info@oneoffcoder.com"
 
 ENV CONDA_HOME=/usr/local/conda
 ENV PATH=${CONDA_HOME}/bin:${PATH}
