@@ -14,6 +14,7 @@ LABEL linkedin="https://www.linkedin.com/company/one-off-coder"
 RUN sed -i -e 's|disco|eoan|g' /etc/apt/sources.list \
     && apt-get update -y \
     && apt-get upgrade -y \
+    && apt-get install libgraphviz-dev ffmpeg -y \
     && apt-get clean
 
 # setup conda
