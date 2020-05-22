@@ -1,6 +1,13 @@
 FROM ubuntu:disco
-LABEL author="One-Off Coder"
+LABEL org="One-Off Coder"
+LABEL author="Jee Vang, Ph.D."
+LABEL website="https://www.oneoffcoder.com"
 LABEL email="info@oneoffcoder.com"
+LABEL facebook="https://www.facebook.com/oneoffcoder"
+LABEL twitter="https://twitter.com/oneoffcoder"
+LABEL instagram="https://www.instagram.com/oneoffcoder/"
+LABEL youtube="https://www.youtube.com/channel/UCCCv8Glpb2dq2mhUj5mcHCQ"
+LABEL linkedin="https://www.linkedin.com/company/one-off-code"
 
 ENV CONDA_HOME=/usr/local/conda
 ENV PATH=${CONDA_HOME}/bin:${PATH}
