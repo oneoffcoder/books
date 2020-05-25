@@ -11,8 +11,7 @@ LABEL linkedin="https://www.linkedin.com/company/one-off-coder"
 
 # setup ubuntu
 # https://stackoverflow.com/questions/53800051/repository-does-not-have-a-release-file-error
-RUN sed -i -e 's|disco|eoan|g' /etc/apt/sources.list \
-    && apt-get update -y \
+RUN apt-get update -y \
     && apt-get upgrade -y \
     && apt-get install libgraphviz-dev ffmpeg -y \
     && apt-get clean

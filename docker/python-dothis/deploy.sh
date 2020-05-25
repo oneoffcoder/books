@@ -2,8 +2,8 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-python-dothis
-VERSION=0.0.1
-IMAGEID=$(docker images | awk -v repo="$REPOSITORY" -v tag="local" 'index($1, repo) && index($2, tag) {print $3}')
+VERSION=0.0.2
+IMAGEID=book-python-dothis:local
 
 echo ${IMAGEID}
 
