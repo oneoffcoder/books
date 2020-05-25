@@ -25,6 +25,9 @@ CPP, No Tears
 .. toctree::
    :maxdepth: 2
    :caption: Contents
+   
+   hello
+   vectors
 
 
 

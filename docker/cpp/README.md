@@ -12,7 +12,6 @@ To run the container.
 docker run -it \
     -p 8888:8888 \
     -v $HOME/git/books/sphinx/cpp/source:/root/ipynb \
-    --gpus all \
     oneoffcoder/book-cpp
 ```
 
