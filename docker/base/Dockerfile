@@ -14,13 +14,14 @@ ENV PATH=${CONDA_HOME}/bin:${PATH}
 ENV NOTEBOOK_PASSWORD=""
 
 # setup ubuntu
-RUN apt-get update -y \
+RUN sed -i -e 's|disco|eoan|g' /etc/apt/sources.list \
+    && apt-get update -y \
     && apt-get upgrade -y \
     && apt-get -y install wget supervisor \
     && apt-get clean
 
 # setup conda
-RUN wget -q https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh -O /tmp/anaconda.sh \
+RUN wget -q https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -O /tmp/anaconda.sh \
     && /bin/bash /tmp/anaconda.sh -b -p $CONDA_HOME \
     && $CONDA_HOME/bin/conda update -n root conda -y
 COPY ubuntu/root/.jupyter /root/.jupyter/
