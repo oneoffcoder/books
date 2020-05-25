@@ -1,4 +1,4 @@
-FROM ubuntu:disco
+FROM ubuntu:groovy
 LABEL org="One-Off Coder"
 LABEL author="Jee Vang, Ph.D."
 LABEL email="info@oneoffcoder.com"
@@ -14,8 +14,7 @@ ENV PATH=${CONDA_HOME}/bin:${PATH}
 ENV NOTEBOOK_PASSWORD=""
 
 # setup ubuntu
-RUN sed -i -e 's|disco|eoan|g' /etc/apt/sources.list \
-    && apt-get update -y \
+RUN apt-get update -y \
     && apt-get upgrade -y \
     && apt-get -y install wget supervisor \
     && apt-get clean
