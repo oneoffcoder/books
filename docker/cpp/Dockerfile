@@ -1,4 +1,4 @@
-FROM oneoffcoder/book-base:latest
+FROM ubuntu:eoan
 LABEL org="One-Off Coder"
 LABEL author="Jee Vang, Ph.D."
 LABEL email="info@oneoffcoder.com"
@@ -9,30 +9,32 @@ LABEL instagram="https://www.instagram.com/oneoffcoder/"
 LABEL youtube="https://www.youtube.com/channel/UCCCv8Glpb2dq2mhUj5mcHCQ"
 LABEL linkedin="https://www.linkedin.com/company/one-off-coder"
 
+ENV CONDA_HOME=/usr/local/conda
+ENV PATH=${CONDA_HOME}/bin:${PATH}
+ENV NOTEBOOK_PASSWORD=""
+
 # setup ubuntu
-RUN apt-get update \
+RUN apt-get update -y \
     && apt-get upgrade -y \
+    && apt-get -y install wget supervisor \
     && apt-get clean
 
-# && apt-get -y install build-essential \
-#         cmake \
-#         libboost-all-dev \
-#         gcc \
-#         clang \
-#         gdb \
-#         libblkid-dev \
-#         e2fslibs-dev \
-#         libaudit-dev \
-#         valgrind \
-#         ninja-build \
-#         doxygen \
-#         graphviz \
-#         mscgen \
-#         dia \
-#         lcov \
-
 # setup conda
-RUN conda install xeus-cling -c conda-forge -y
+RUN wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/anaconda.sh \
+    && /bin/bash /tmp/anaconda.sh -b -p $CONDA_HOME \
+    && $CONDA_HOME/bin/conda install xeus-cling -c conda-forge -y \
+    && conda install -c conda-forge jupyterlab -y
+COPY ubuntu/root/.jupyter /root/.jupyter/
+
+# setup volumes
+RUN mkdir /root/ipynb
+VOLUME [ "/root/ipynb" ]
+
+# setup supervisor
+COPY ubuntu/etc/supervisor/supervisor.conf /etc/supervisor/supervisor.conf
+COPY ubuntu/etc/supervisor/conf.d/all.conf /etc/supervisor/conf.d/all.conf
 
 # clean up
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf", "-n"]

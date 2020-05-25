@@ -12,7 +12,7 @@ To run the container.
 docker run -it \
     -p 8888:8888 \
     -v $HOME/git/books/docker/cpp/ipynb:/root/ipynb \
-    local:book-cpp
+    book-cpp:local
 
 docker run -it \
     -p 8888:8888 \
