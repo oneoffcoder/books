@@ -11,14 +11,9 @@ To run the container.
 ```bash
 docker run -it \
     -p 8888:8888 \
-    -v $HOME/git/books/docker/cpp/ipynb:/root/ipynb \
-    book-cpp:local
-
-docker run -it \
-    -p 8888:8888 \
-    -v $HOME/git/books/docker/cpp/ipynb:/root/ipynb \
-    oneoffcoder:book-cpp
-
+    -v $HOME/git/books/sphinx/cpp/source:/root/ipynb \
+    --gpus all \
+    oneoffcoder/book-cpp
 ```
 
 Then point your browser to [http://localhost:8888](http://localhost:8888).
