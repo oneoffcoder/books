@@ -2,13 +2,7 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-java-intro
-VERSION=0.0.9
-IMAGEID=$(docker images | awk -v repo="$REPOSITORY" -v tag="local" 'index($1, repo) && index($2, tag) {print $3}')
-
-echo ${IMAGEID}
-
-docker tag ${IMAGEID} ${ORGANIZATION}/${REPOSITORY}:${VERSION}
-docker tag ${IMAGEID} ${ORGANIZATION}/${REPOSITORY}:latest
+VERSION=0.1.0
 
 docker push ${ORGANIZATION}/${REPOSITORY}:${VERSION}
 docker push ${ORGANIZATION}/${REPOSITORY}:latest

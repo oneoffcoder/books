@@ -2,13 +2,7 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-base
-VERSION=0.0.7
-IMAGEID=book-base:local
-
-echo ${IMAGEID}
-
-docker tag ${IMAGEID} ${ORGANIZATION}/${REPOSITORY}:${VERSION}
-docker tag ${IMAGEID} ${ORGANIZATION}/${REPOSITORY}:latest
+VERSION=0.0.8
 
 docker push ${ORGANIZATION}/${REPOSITORY}:${VERSION}
 docker push ${ORGANIZATION}/${REPOSITORY}:latest
