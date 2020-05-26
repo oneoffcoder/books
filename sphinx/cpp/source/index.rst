@@ -42,7 +42,10 @@ To follow along and execute the code samples, you will need `Docker <https://www
    hello
    vector
    set
+   pair
    map
+   oop
+   misc
 
 
 
