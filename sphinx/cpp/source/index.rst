@@ -22,6 +22,19 @@
 CPP, No Tears
 =============
 
+Preface
+=======
+
+This book shows how to program in ``C++17``. 
+
+To follow along and execute the code samples, you will need `Docker <https://www.docker.com/>`_ installed. The Docker container is located on `Docker Hub <https://hub.docker.com/r/oneoffcoder/book-python-dothis>`_. After you have installed Docker, you may run the container as follows.
+
+.. code-block:: bash
+
+   docker run -it \
+    -p 8888:8888 \
+    oneoffcoder/book-cpp
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents
