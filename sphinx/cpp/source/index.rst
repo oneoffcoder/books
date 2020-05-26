@@ -40,7 +40,9 @@ To follow along and execute the code samples, you will need `Docker <https://www
    :caption: Contents
    
    hello
-   vectors
+   vector
+   set
+   map
 
 
 
