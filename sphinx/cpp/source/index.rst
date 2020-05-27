@@ -40,10 +40,12 @@ To follow along and execute the code samples, you will need `Docker <https://www
    :caption: Contents
    
    hello
+   string
    vector
    set
    pair
    map
+   function
    oop
    misc
 
