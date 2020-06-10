@@ -9,13 +9,13 @@ LABEL instagram="https://www.instagram.com/oneoffcoder/"
 LABEL youtube="https://www.youtube.com/channel/UCCCv8Glpb2dq2mhUj5mcHCQ"
 LABEL linkedin="https://www.linkedin.com/company/one-off-coder"
 
-ENV IJAVA_COMPILER_OPTS="--source 12 --enable-preview"
+ENV IJAVA_COMPILER_OPTS="--source 14 --enable-preview"
 ENV IJAVA_CLASSPATH="/root/libs/"
 
 # setup ubuntu
 RUN apt-get update -y \
-    && apt-get upgrade -y \
-    && apt-get -y install openjdk-12-jdk unzip \
+    && DEBIAN_FRONTEND=noninteractive apt-get upgrade -y \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y install openjdk-14-jdk unzip \
     && apt-get clean
 
 # setup conda

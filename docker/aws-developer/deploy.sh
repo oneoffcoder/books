@@ -2,8 +2,8 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-aws-developer
-VERSION=0.0.3
-IMAGEID=$(docker images | awk -v repo="$REPOSITORY" -v tag="local" 'index($1, repo) && index($2, tag) {print $3}')
+VERSION=0.0.4
+IMAGEID=book-aws-developer:local
 
 echo ${IMAGEID}
 
