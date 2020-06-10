@@ -48,6 +48,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    lda
    mvn-conditional
    mi-gaussian
+   cmi-gaussian
    partial-correlation
    precision-recall-roc
 
