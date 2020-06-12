@@ -47,6 +47,8 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    pca
    lda
    mvn-conditional
+   bivariate-cond-gaussian
+   multivariate-cond-gaussian
    mi-gaussian
    cmi-gaussian
    partial-correlation
