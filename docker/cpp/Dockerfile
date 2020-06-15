@@ -9,8 +9,9 @@ LABEL instagram="https://www.instagram.com/oneoffcoder/"
 LABEL youtube="https://www.youtube.com/channel/UCCCv8Glpb2dq2mhUj5mcHCQ"
 LABEL linkedin="https://www.linkedin.com/company/one-off-coder"
 
+ENV NODE_HOME=/usr/local/node-v14.4.0-linux-x64
 ENV CONDA_HOME=/usr/local/conda
-ENV PATH=${CONDA_HOME}/bin:${PATH}
+ENV PATH=${NODE_HOME}/bin:${CONDA_HOME}/bin:${PATH}
 ENV NOTEBOOK_PASSWORD=""
 
 # setup ubuntu
@@ -19,11 +20,23 @@ RUN apt-get update -y \
     && apt-get -y install wget supervisor \
     && apt-get clean
 
+# setup nodejs
+RUN wget -q https://nodejs.org/dist/v14.4.0/node-v14.4.0-linux-x64.tar.xz -O /tmp/node-v14.4.0-linux-x64.tar.xz \
+    && tar xf /tmp/node-v14.4.0-linux-x64.tar.xz -C /usr/local \
+    && node --version \
+    && npm --version
+
 # setup conda
 RUN wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/anaconda.sh \
     && /bin/bash /tmp/anaconda.sh -b -p $CONDA_HOME \
-    && $CONDA_HOME/bin/conda install xeus-cling -c conda-forge -y \
-    && conda install -c conda-forge jupyterlab -y
+    && conda update --all \
+    && conda install -c conda-forge nodejs \
+    && conda install xeus-cling -c conda-forge -y \
+    && conda install -c conda-forge jupyterlab -y \
+    && conda update -c conda-forge jupyterlab \
+    && pip install jupyterlab-commenting-service \
+    && jupyter labextension install @jupyterlab/commenting-extension @jupyterlab/toc @krassowski/jupyterlab-lsp \
+    && conda install -c conda-forge python-language-server r-languageserver
 COPY ubuntu/root/.jupyter /root/.jupyter/
 
 # setup volumes

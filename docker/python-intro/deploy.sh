@@ -2,7 +2,7 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-python-intro
-VERSION=0.0.5
+VERSION=0.0.6
 IMAGEID=book-python-intro:local
 
 echo ${IMAGEID}
