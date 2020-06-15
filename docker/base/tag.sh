@@ -2,7 +2,7 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-base
-VERSION=0.0.8
+VERSION=0.0.9
 IMAGEID=book-base:local
 
 echo ${IMAGEID}
