@@ -2,7 +2,7 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-cpp
-VERSION=0.0.2
+VERSION=0.0.3
 IMAGEID=book-cpp:local
 
 echo ${IMAGEID}

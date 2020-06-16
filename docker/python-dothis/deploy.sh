@@ -2,7 +2,7 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-python-dothis
-VERSION=0.0.3
+VERSION=0.0.4
 IMAGEID=book-python-dothis:local
 
 echo ${IMAGEID}
