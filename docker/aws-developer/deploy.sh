@@ -2,7 +2,7 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-aws-developer
-VERSION=0.0.4
+VERSION=0.0.6
 IMAGEID=book-aws-developer:local
 
 echo ${IMAGEID}
