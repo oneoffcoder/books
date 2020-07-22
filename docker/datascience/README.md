@@ -29,6 +29,12 @@ docker run -it \
     -v $HOME/git/books/sphinx/datascience/source:/root/ipynb \
     oneoffcoder/book-datascience
 
+docker run -it ^
+    -p 8888:8888 ^
+    -p 6006:6006 ^
+    -v %HOMEDRIVE%%HOMEPATH%\git\books\sphinx\datascience\source:/root/ipynb ^
+    oneoffcoder/book-datascience
+
 docker run -it \
     -p 8888:8888 \
     -p 6006:6006 \
