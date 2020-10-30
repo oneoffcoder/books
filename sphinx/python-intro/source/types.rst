@@ -46,6 +46,29 @@ The value ``32`` will be printed to the terminal, and not the variable name ``ag
 .. note::
    Said by Phil Karlton, "There are only two hard things in computer science: cache invalidation and naming things." Do not underestimate how difficult it is to give meaningful names to variables. A variable name such as ``x``, ``y`` or ``z`` does not indicate or hint at any context. 
 
+.. warning::
+   When giving names to variables in Python, there are some words that cannot be used since these words are themselves used as a part of the Python language's syntax. Such words are called ``keywords`` and a few examples are as follows.
+
+   - for
+   - in
+   - set 
+   - list
+   - tuple
+   - and
+
+   Another useful rule in naming variables is that variable names cannot have spaces. The convention in Python is that when you name a variable and there should be spaces, substitute underscores ``_`` for the spaces. For example, if we have a variable to store a first name, we should name that variable ``first_name``.
+
+.. note::
+   There are 3 main conventions to name variables across programming languages. The conventions arise from dealing with variable names that have multiple words. For example, if we have a variable to store a person's last name, we can name the variable using Pascal casing, camel casing or snake casing (also called kebab casing).
+
+   .. code:: python
+
+      LastName = 'Doe' # pascal casing, used in C#
+      lastName = 'Doe' # camel casing, used in Java
+      last_name = 'Doe' # snake casing, used in Python
+
+   In Python, snake casing is the convention to use in naming variables, although your code will still work if you use Pascal or camel casing.
+
 Question
 ^^^^^^^^
 
@@ -167,16 +190,55 @@ Anything enclosed with single (or double) quotes is considered a string. All the
 String concatenation and interpolation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Building strings in Python is rather fun and may be accomplished in a few different ways. You may build a string from other strings, a process called concatenation. You may create a string template and format that template with values. Or, lastly, you may use the new ``f-string`` approach. Below, we show different ways to build strings.
+
 .. literalinclude:: code/oneoffcoder/type/stringconcat.py
    :language: python
    :linenos:
 
+Exercise
+^^^^^^^^
+
+Use a f-string to create a string with the following pieces of information about a person.
+
+.. code:: python
+
+   name = 'John'
+   age = 55
+   weight = 170.8
+
+Solution.
+
+.. code:: python
+
+   s = f'{name} is {age} years old and weighs {weight} pounds.'
+   print(s)
+
 String manipulation
 ^^^^^^^^^^^^^^^^^^^
+
+It's pretty neat what we can do to strings in Python. If we want parts of a string, we can slice a string using the bracket and index notation ``[:]``. Additionally, associated with every string are many utility methods such as ones to upper case and lower case a string. We show a few examples of string manipulations below.
 
 .. literalinclude:: code/oneoffcoder/type/stringmanip.py
    :language: python
    :linenos:
+
+Exercise
+^^^^^^^^
+
+Assume we have a person's first name and last name. Create a new string to store the initials of this person.
+
+.. code:: python
+
+   first_name = 'John'
+   last_name = 'Doe'
+
+Solution.
+
+.. code:: python
+
+   initial = f'{first_name[0]}.{last_name[0]}.'
+   print(initial)
 
 List
 ----
