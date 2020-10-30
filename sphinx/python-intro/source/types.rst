@@ -299,6 +299,17 @@ When using sets, the ordering of elements is not guaranteed. If you run the foll
    print({'john', 'mary', 'jack'}) # could print {'mary', 'john', 'jack'}
    print({'john', 'mary', 'jack'}) # could print {'mary', 'jack', 'john'}
 
+.. note::
+   It's easy to convert between a set and a list.
+
+   .. code:: python
+
+      s = {1, 1, 2, 3, 4}
+      l = list(s) # convert the set to a list
+
+      l = [1, 1, 2, 3, 4]
+      s = set(l) # convert the list to a set
+
 Exercise
 ^^^^^^^^
 
@@ -333,13 +344,133 @@ Solution.
 Map
 ---
 
+A map is a collection of key-value pairs. A map is synonomously called a dictionary or an associative-array. The keys in a map must be unique, and the values in a map can be any data structure. Additionally, keys must be hashable, meaning, keys must be able to be represented (nearly) uniquely as integers. If something is not hashable, then it cannot be used as a key in a map. Typically, strings are the best types of data to use as keys in maps.
+
+
+.. note::
+   Like sets, maps are declared and initialized using curly braces ``{}``. Unlike sets, elements (or the key-value pairs) of a map must be specified using colon ``:`` e.g. :code:`{'age': 32}`.
+
+   Like lists, values associated keys are accessed using square brackets ``[]``. Unlike lists, the key must be used to access the corresponding value (instead of the index) e.g. :code:`map['age']`.
+
 .. literalinclude:: code/oneoffcoder/type/maptype.py
    :language: python
    :linenos:
 
+Maps can be nested. Here's an example of someone's address information stored in a nested map.
+
+.. code:: python
+
+   information = {
+      'first_name': 'Mary',
+      'last_name': 'Doe',
+      'address': {
+         'street': {
+            'number': 123,
+            'street': 'New York Blvd.',
+            'suite': 'C03'
+         },
+         'city': 'Beverly Hills',
+         'state': 'CA',
+         'zip': 90210
+      }
+   }
+
+Exercise
+^^^^^^^^
+
+Let's say we have data about Moesha and Shania; we know which toppings they like on their pizza and also which sports they like to watch on TV.
+
+* If we wanted to order a pizza with all the toppings they both like, which toppings would we request?
+* Which sports do they both like?
+
+.. code:: python
+
+   moesha = {
+      'name': 'moesha',
+      'toppings': {'cheese', 'jalepanos', 'bell pepper', 'mushroom'},
+      'sports': ['football', 'baseball', 'hockey']
+   }
+
+   shania = {
+      'name': 'shania',
+      'toppings': {'bell pepper', 'suasage', 'mushroom'},
+      'sports': ['football', 'soccer', 'basketball']
+   }
+
+Solution.
+
+.. code:: python
+
+   # toppings they both like
+   toppings = moesha['toppings'] & shania['toppings']
+   print(toppings)
+
+   # sports they both like
+   # note we convert the lists to sets and then do an intersection
+   sports = set(moesha['sports']) & set(shania['sports'])
+   print(sports)
+
 Tuple
 -----
+
+A tuple looks and smells like a list. When declaring and initializing a tuple, however, we use parentheses ``()``. There is a huge difference between a tuple and a list in that a tuple is ``immutable`` and a list is ``mutable``. Immutable means that a tuple cannot be changed; elements cannot be added, removed or changed. Once a tuple is defined, you cannot change it. 
 
 .. literalinclude:: code/oneoffcoder/type/tupletype.py
    :language: python
    :linenos:
+
+Certain operations like sorting are not allowed on a tuple. As such, mixed variable types are often be stored in a tuple without worrying about the side-effects. Below, we have data on a person: name, age, weight and favorite sports.
+
+.. code:: python
+
+   data = ('John', 32, 150.5, ['baseball', 'basketball'])
+
+One important concept with tuples is that of ``unpacking`` values from a tuple. Note the underscore ``_`` character to ignore or throw away unpacked values.
+
+.. code:: python
+
+   data = ('John', 32, 150.5, ['baseball', 'basketball'])
+
+   # unpack the values of the tuple into variables
+   name, age, weight, sports = data
+
+   # ignoring unpacked values with underscore _
+   name, _, _, sports = data
+
+   # ignoring unpacked values with a wildcard and underscore
+   # if we only care about unpacking the name and sports
+   name, *_, sports = data
+
+   # if we only care about unpacking the name and age
+   name, age, *_ = data
+
+It should make more sense to unpack elements from a tuple before operating on those elements, as doing so is more meaningful. Otherwise, we will operate on the elements through bracket-index notation and meaning and context will be lost.
+
+.. code:: python
+
+   data = ('John', 32, 150.5, ['baseball', 'basketball'])
+   name, age, *_ = data
+
+   # is this not more clear?
+   print(f'name: {name}, age: {age}') 
+
+   # is this not unclear?
+   # what is data[0]?
+   # what is data[1]?
+   print(f'name: {data[0]}, age: {data[1]}') 
+
+Exercise
+^^^^^^^^
+
+Unpack the following tuple into the variables make, model and year.
+
+.. code:: python
+
+   car = ('Toyota', 'Camry', 2019)
+
+Solution.
+
+.. code:: python
+
+   make, model, year = car
+   print(f'make={make}, model={model}, year={year}')

@@ -1,5 +1,5 @@
 # empty set
-s = {}
+s = set()
 
 # declare with curly braces
 s = {1, 1, 2, 3}
