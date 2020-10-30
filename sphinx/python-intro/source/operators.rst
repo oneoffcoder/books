@@ -133,19 +133,90 @@ Solution.
 Relational operators 
 --------------------
 
+Relational operators are also called ``comparison operators``. These operators compare two things and the evaluation of the comparison must always be ``True`` or ``False``. 
+
 .. literalinclude:: code/oneoffcoder/operator/relational.py
    :language: python
    :linenos:
 
+Exercise
+^^^^^^^^
+
+You have the ages of Jack, John, Mary and Jane.
+
+* Is Jack older than John?
+* Is Jack younger than Mary?
+* Is Jack's age equal to Jane?
+
+.. code:: python
+
+   jack = 28
+   john = 35
+   mary = 24
+   jane = 28
+
+Solution.
+
+.. code:: python
+
+   # is jack older than john?
+   print(jack > john)
+
+   # is jack younger than mary?
+   print(jack < mary)
+
+   # is jack equal to jane?
+   print(jack == mary)
+
 Boolean logical operators 
 -------------------------
+
+You can chain boolean values or comparisons to evaluate to True or False using boolean logical operators. The following are examples of such operators.
 
 .. literalinclude:: code/oneoffcoder/operator/booleanlogical.py
    :language: python
    :linenos:
 
+.. note::
+   When you have a boolean expression with all boolean ``and``, this expression is called a ``conjunction``. When you have a boolean expression with all boolean ``or``, this expression is called a ``disjunction``. In a conjunction, all sub-expressions or evaluations must be true for the overall evaluation to be true. In a disjunction, only 1 sub-expression must be true for the overall evaluation to be true. 
+   
+   Here's some examples of conjunctions :code:`True and True and True` and :code:`True and True and False and True`. The first conjunction evaluates to true since all sub-expressions are true. The second conjunction evaluates to false since one of the sub-expression is false.
+
+   Here's some examples of disjunctions :code:`True or False or True or False` and :code:`False or False`. The first disjunction evaluates to true since at least one of the sub-expression is true. The second disjunction evaluates to false since none of the sub-expressions are true.
+
+Exercise
+^^^^^^^^
+
+You have the ages of Jack, John, Mary and Jane.
+
+* Is Jack older than John or Mary?
+* Is Jack younger than Mary and Jane?
+* Is Jack's age equal to Jane and less than John?
+
+.. code:: python
+
+   jack = 28
+   john = 35
+   mary = 24
+   jane = 28
+
+Solution.
+
+.. code:: python
+
+   # is jack older than john or mary?
+   print(jack > john or jack > mary)
+
+   # is jack younger than mary and jane?
+   print(jack < mary and jack < jane)
+
+   # is jack equal to jane and less than john?
+   print(jack == mary and jack < john)
+
 Parentheses
 -----------
+
+Parentheses can be used in math operations to give priority to which operations to do first. Look at the examples below. There is a difference between :code:`4 + 2 * 2` versus :code:`(4 + 2) * 2`.
 
 .. literalinclude:: code/oneoffcoder/operator/parentheses.py
    :language: python
@@ -154,29 +225,39 @@ Parentheses
 List unpacking
 --------------
 
+We have talked about unpacking tuples, but lists may also be unpacked.
+
 .. literalinclude:: code/oneoffcoder/operator/listunpacking.py
    :language: python
    :linenos:
    :emphasize-lines: 6
 
-List unpacking ignoring some values
------------------------------------
+Just as in unpacking values from tuples, when we unpack values from a list, we can use ``_`` to ignore values or ranges of values.
 
 .. literalinclude:: code/oneoffcoder/operator/listunpackingignoring.py
    :language: python
    :linenos:
    :emphasize-lines: 5
 
-Merging lists via unpacking
----------------------------
+We can also use list unpacking to merge two lists as follows.
 
 .. literalinclude:: code/oneoffcoder/operator/mergelistviaunpacking.py
    :language: python
    :linenos:
    :emphasize-lines: 4
 
+Note that you do not have to unpack lists to merge their elements into one list. You can simply use the ``+`` operator to merge the elements of two lists as follows.
+
+.. code:: python
+
+   boys = ['John', 'Jack', 'Jeremy']
+   girls = ['Mary', 'Nancy', 'Joyce']
+   names = boys + girls
+
 Merging dictionaries via unpacking
 ----------------------------------
+
+If you want to merge the key-value pairs of 2 maps/dictionaries, use the ``**`` operator as follows.
 
 .. literalinclude:: code/oneoffcoder/operator/mergedictionaryviaunpacking.py
    :language: python
