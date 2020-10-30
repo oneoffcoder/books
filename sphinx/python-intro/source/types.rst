@@ -116,7 +116,7 @@ Solution.
    print(pizza)
 
 Specifying a variable's type
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In Python, the variable type is inferred from what it is storing; we do not have to explicitly declare the variable type with the variable name. Python is said to be a ``dynamically typed`` language, as compared with other languages that are ``statically typed`` where when you declare the variable name, you must also declare the variable type. However, in later versions of Python, you may declare the variable type associated with the variable name as follows. (As programmers from other statically typed languages have begun to adopt Python, you will see more Python code that specify type information with variables.)
 
@@ -243,16 +243,92 @@ Solution.
 List
 ----
 
+A list is a type of collection of items. The items in a list are called elements. If a variable may be thought of as a box, then a list may be thought of as a box of boxes. 
+
+Lists are defined using square brackets ``[]``. Although a list can store mixed types of elements, avoid doing so; try to store values or variables of only one type in lists. If you store mixed variable types in a list, some operations, such as sorting, will not work out of the box as order comparison will break down (how do you compare if a string is less than an integer?). 
+
 .. literalinclude:: code/oneoffcoder/type/listtype.py
    :language: python
    :linenos:
 
+Exercise
+^^^^^^^^
+
+Let's say you have the lists of favorite sports for two people, Jack and John, from most favorite to least favorite. 
+
+* How do you combine the lists?
+* How do you sort the combined lists?
+* How do you get Jack's favorite sport?
+* How do you get John's least favorite sport?
+
+.. code:: python
+
+   jack = ['baseball', 'basketball', 'football']
+   john = ['rugby', 'soccer', 'judo']
+
+Solution.
+
+.. code:: python
+
+   # combine the list
+   sports = jack + john
+
+   # sort the combined list
+   sports.sort()
+
+   # jack's most favorite sport
+   print(f'{jack[0]}')
+
+   # john's least favorite sport
+   print(f'{john[2]}')
+
 Set
 ---
+
+A set is also a type of collection of items. The difference between a list and a set is that a set does not allow for duplicate elements; only unique elements are allowed in sets. No matter how you try to insert duplicate elements into a set, the set will only have one copy of an element. Note that we use curly braces ``{}`` to create a set. 
 
 .. literalinclude:: code/oneoffcoder/type/settype.py
    :language: python
    :linenos:
+
+When using sets, the ordering of elements is not guaranteed. If you run the following code, the ordering of the elements in the sets may change. If order is important, use a list or convert the set into a list. Sets are intended to be used for existence checks where ordering plays no role.
+
+.. code:: python
+
+   print({'john', 'mary', 'jack'}) # could print {'john', 'mary', 'jack'}
+   print({'john', 'mary', 'jack'}) # could print {'mary', 'john', 'jack'}
+   print({'john', 'mary', 'jack'}) # could print {'mary', 'jack', 'john'}
+
+Exercise
+^^^^^^^^
+
+Let's say we have the set of toppings that Mary and Jane want to have on their pizzas. 
+
+* Which toppings does Mary like that Jane does not like?
+* Which toppings does Jane like that Mary does not like?
+* Which toppings do Mary and Jane both like?
+* If we need to order a pizza with all the toppings they both like, what would be all the toppings?
+
+.. code:: python
+
+   mary = {'bacon', 'bell pepper', 'cheese'}
+   jane = {'jalepanos', 'cheese', 'sausage'}
+
+Solution.
+
+.. code:: python
+
+   # mary likes, jane does not like
+   print(f'{mary - jane}')
+
+   # jane likes, mary does not like
+   print(f'{jane - mary}')
+
+   # jane and mary like
+   print(f'{jane & mary}')
+
+   # all liked toppings
+   print(f'{mary | jane}')
 
 Map
 ---
