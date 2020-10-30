@@ -263,3 +263,13 @@ If you want to merge the key-value pairs of 2 maps/dictionaries, use the ``**`` 
    :language: python
    :linenos:
    :emphasize-lines: 9
+
+Exercise
+^^^^^^^^
+
+.. code:: python
+
+   john = {
+      'name': 'John',
+      'toppings': ['cheese', 'pepperoni'],
+   }
