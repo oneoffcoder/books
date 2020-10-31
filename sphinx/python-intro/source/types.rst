@@ -36,7 +36,8 @@ A lesser known Python type is a ``complex number`` value. Below, we declare and 
 
 After you declare a variable and assign a value to it, you may print it to the terminal.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    age = 32
    print(age)
@@ -61,7 +62,8 @@ The value ``32`` will be printed to the terminal, and not the variable name ``ag
 .. note::
    There are 3 main conventions to name variables across programming languages. The conventions arise from dealing with variable names that have multiple words. For example, if we have a variable to store a person's last name, we can name the variable using Pascal casing, camel casing or snake casing (also called kebab casing).
 
-   .. code:: python
+   .. code-block:: python
+      :linenos:
 
       LastName = 'Doe' # pascal casing, used in C#
       lastName = 'Doe' # camel casing, used in Java
@@ -80,7 +82,8 @@ In the code below,
 * what type is the variable ``f``?
 * what type is the variable ``c``?
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    s = 'test'
    b = False
@@ -103,7 +106,8 @@ Create variables to store your name, age, height and whether you like pizza. Pri
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    name = 'John'
    age = 32
@@ -127,7 +131,8 @@ In Python, the variable type is inferred from what it is storing; we do not have
 .. note::
    There is a difference between dynamically- versus statically-typed languages and weakly- versus strongly-typed languages. Dynamically- and statically-typed languages refer to what types of values a variable can store after they are declared. For example, in Python, we can declare a variable and assign anything to it later without problem.
 
-   .. code:: python
+   .. code-block:: python
+      :linenos:
 
       a = 'test'
       a = 3
@@ -135,7 +140,8 @@ In Python, the variable type is inferred from what it is storing; we do not have
 
    In Java, once we declare a variable and its type, we cannot assign values to that variables that are not of the same type.
 
-   .. code:: java
+   .. code-block:: java
+      :linenos:
 
       int a = 32;
       a = 42; // legal, since 42 is an int
@@ -143,16 +149,22 @@ In Python, the variable type is inferred from what it is storing; we do not have
 
    Weakly- versus strongly-typed languages refers to the ability to force values into unrelated types. Weakly-typed languages can force values into unrelated types (e.g. an integer to a string), while strongly-typed languages cannot. Python is a strongly-typed language and JavaScript is a weakly-typed language. For example, in Python, we cannot add or concatenate a string with an integer.
 
-   .. code:: python
+   .. code-block:: python
+      :linenos:
 
       a = 1
       b = '1'
-      c = a + b # illegal in python, error will be thrown
-      d = str(a) + b # legal in python now, since a is forced into being a string
+
+      # illegal in python, error will be thrown
+      c = a + b 
+
+      # legal in python now, since a is forced into being a string
+      d = str(a) + b 
 
    In JavaScript, we can add or concantentate a string with an integer.
 
    .. code:: javascript
+      :linenos:
 
       const a = 1;
       const b = '1';
@@ -180,7 +192,8 @@ If you are using single quotes to create a string and your text has a single quo
 
 Anything enclosed with single (or double) quotes is considered a string. All the variables below are string variables since they are storing string literals. One might jump to the conclusion that ``b`` should be considered an integer variable, however, ``b`` is assigned to a string :code:`b = '32'`; if we did :code:`b = 32` (no single quotes), then ``b`` would be an integer variable.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    a = 'car'
    b = '32'
@@ -201,7 +214,8 @@ Exercise
 
 Use a f-string to create a string with the following pieces of information about a person.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    name = 'John'
    age = 55
@@ -209,7 +223,8 @@ Use a f-string to create a string with the following pieces of information about
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    s = f'{name} is {age} years old and weighs {weight} pounds.'
    print(s)
@@ -228,14 +243,16 @@ Exercise
 
 Assume we have a person's first name and last name. Create a new string to store the initials of this person.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    first_name = 'John'
    last_name = 'Doe'
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    initial = f'{first_name[0]}.{last_name[0]}.'
    print(initial)
@@ -261,14 +278,16 @@ Let's say you have the lists of favorite sports for two people, Jack and John, f
 * How do you get Jack's favorite sport?
 * How do you get John's least favorite sport?
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    jack = ['baseball', 'basketball', 'football']
    john = ['rugby', 'soccer', 'judo']
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    # combine the list
    sports = jack + john
@@ -293,7 +312,8 @@ A set is also a type of collection of items. The difference between a list and a
 
 When using sets, the ordering of elements is not guaranteed. If you run the following code, the ordering of the elements in the sets may change. If order is important, use a list or convert the set into a list. Sets are intended to be used for existence checks where ordering plays no role.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    print({'john', 'mary', 'jack'}) # could print {'john', 'mary', 'jack'}
    print({'john', 'mary', 'jack'}) # could print {'mary', 'john', 'jack'}
@@ -302,7 +322,8 @@ When using sets, the ordering of elements is not guaranteed. If you run the foll
 .. note::
    It's easy to convert between a set and a list.
 
-   .. code:: python
+   .. code-block:: python
+      :linenos:
 
       s = {1, 1, 2, 3, 4}
       l = list(s) # convert the set to a list
@@ -320,14 +341,16 @@ Let's say we have the set of toppings that Mary and Jane want to have on their p
 * Which toppings do Mary and Jane both like?
 * If we need to order a pizza with all the toppings they both like, what would be all the toppings?
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    mary = {'bacon', 'bell pepper', 'cheese'}
    jane = {'jalepanos', 'cheese', 'sausage'}
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    # mary likes, jane does not like
    print(f'{mary - jane}')
@@ -358,7 +381,8 @@ A map is a collection of key-value pairs. A map is synonomously called a diction
 
 Maps can be nested. Here's an example of someone's address information stored in a nested map.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    information = {
       'first_name': 'Mary',
@@ -383,7 +407,8 @@ Let's say we have data about Moesha and Shania; we know which toppings they like
 * If we wanted to order a pizza with all the toppings they both like, which toppings would we request?
 * Which sports do they both like?
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    moesha = {
       'name': 'moesha',
@@ -399,7 +424,8 @@ Let's say we have data about Moesha and Shania; we know which toppings they like
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    # toppings they both like
    toppings = moesha['toppings'] & shania['toppings']
@@ -421,13 +447,15 @@ A tuple looks and smells like a list. When declaring and initializing a tuple, h
 
 Certain operations like sorting are not allowed on a tuple. As such, mixed variable types are often be stored in a tuple without worrying about the side-effects. Below, we have data on a person: name, age, weight and favorite sports.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    data = ('John', 32, 150.5, ['baseball', 'basketball'])
 
 One important concept with tuples is that of ``unpacking`` values from a tuple. Note the underscore ``_`` character to ignore or throw away unpacked values.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    data = ('John', 32, 150.5, ['baseball', 'basketball'])
 
@@ -446,7 +474,8 @@ One important concept with tuples is that of ``unpacking`` values from a tuple. 
 
 It should make more sense to unpack elements from a tuple before operating on those elements, as doing so is more meaningful. Otherwise, we will operate on the elements through bracket-index notation and meaning and context will be lost.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    data = ('John', 32, 150.5, ['baseball', 'basketball'])
    name, age, *_ = data
@@ -464,13 +493,15 @@ Exercise
 
 Unpack the following tuple into the variables make, model and year.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    car = ('Toyota', 'Camry', 2019)
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    make, model, year = car
    print(f'make={make}, model={model}, year={year}')

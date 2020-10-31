@@ -28,14 +28,16 @@ For the following 2 variables,
 * print what is a x b?
 * print what is a ÷ b?
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    a = 17
    b = 5
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    print(f'{a} + {b} = {a + b}')
    print(f'{a} - {b} = {a - b}')
@@ -49,7 +51,8 @@ Can you express 4 divided by 3 in terms of an improper fraction?
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    dividen = 4
    divisor = 3
@@ -64,14 +67,16 @@ Compound assignment operators
 
 If you had an integer variable, and wanted to add a number to it and reassign the result back to itself, how would you do so? Here's a way.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    a = 15
    a = a + 2 # add 2 to a, and assign the result back to a
 
 A shorter way of expressing this operation is through using a compound assignment operator.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    a = 15
    a += 2
@@ -92,13 +97,15 @@ Let's say you have someone's age.
 * What's double the person's age from the previous result?
 * What's half the person's age from the previous result?
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    age = 15
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    age += 10
    print(f'age: {age}')
@@ -144,7 +151,8 @@ What is the result of 16
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    print(16 << 1) # 32
    print(16 << 2) # 64
@@ -171,7 +179,8 @@ You have the ages of Jack, John, Mary and Jane.
 * Is Jack younger than Mary?
 * Is Jack's age equal to Jane?
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    jack = 28
    john = 35
@@ -180,7 +189,8 @@ You have the ages of Jack, John, Mary and Jane.
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    # is jack older than john?
    print(jack > john)
@@ -216,7 +226,8 @@ You have the ages of Jack, John, Mary and Jane.
 * Is Jack younger than Mary and Jane?
 * Is Jack's age equal to Jane and less than John?
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    jack = 28
    john = 35
@@ -225,7 +236,8 @@ You have the ages of Jack, John, Mary and Jane.
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    # is jack older than john or mary?
    print(jack > john or jack > mary)
@@ -271,7 +283,8 @@ We can also use list unpacking to merge two lists as follows.
 
 Note that you do not have to unpack lists to merge their elements into one list. You can simply use the ``+`` operator to merge the elements of two lists as follows.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    boys = ['John', 'Jack', 'Jeremy']
    girls = ['Mary', 'Nancy', 'Joyce']
@@ -292,7 +305,8 @@ Exercise
 
 There are four major competitions, called ``slams``, in tennis: Australian Open, French Open, Wimbledon and US Open. The results (data) below are how many times Roger Federer has won each one. Combine these individual results at the slams into one map (dictionary).
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    australian_slam = {'australian': 6}
    french_slam = {'french': 1}
@@ -301,7 +315,8 @@ There are four major competitions, called ``slams``, in tennis: Australian Open,
 
 Solution.
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    slams = {**australian_slam, **french_slam, **wimbledon_slam, **us_slam}
    print(slams)

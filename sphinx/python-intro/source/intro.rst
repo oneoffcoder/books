@@ -27,7 +27,8 @@ Try printing your name to the terminal.
 
 Solution
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    print('John Doe')
    print('Jane Smith')
@@ -38,7 +39,8 @@ Try printing a complete sentence to the terminal.
 
 Solution
 
-.. code:: python
+.. code-block:: python
+   :linenos:
 
    print('I am feeling fine today.')
    print('Today is very cold.')
