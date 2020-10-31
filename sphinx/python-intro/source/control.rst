@@ -205,17 +205,97 @@ Solution.
 Multiple comparison in if-else
 ------------------------------
 
+When evaluating conditions, you can use multiple comparisons to test for ``True`` or ``False``.
+
 .. literalinclude:: code/oneoffcoder/control/multicompare.py
    :language: python
    :linenos:
    :emphasize-lines: 3,5
 
+Exercise
+^^^^^^^^
+
+Modify the code below to use multiple comparison instead of boolean logic.
+
+.. code-block:: python
+   :linenos:
+
+   score = 84
+
+   if score <= 100 and score >= 90:
+      print('A')
+   elif score <= 89 and score >= 80:
+      print('B')
+   elif score <= 79 and score >= 70:
+      print('C')
+   elif score <= 69 and score >= 60:
+      print('D')
+   else:
+      print('F')
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   score = 84
+
+   if 90 <= score <= 100:
+      print('A')
+   elif 80 <= score <= 89:
+      print('B')
+   elif 70 <= score <= 79:
+      print('C')
+   elif 60 <= score <= 69:
+      print('D')
+   else:
+      print('F')
 
 Nested if-else
 --------------
+
+``if-else`` statements could also be nested as shown below.
 
 .. literalinclude:: code/oneoffcoder/control/nestedifelse.py
    :language: python
    :linenos:
    :emphasize-lines: 8-11
 
+.. warning::
+   Nested ``if-else`` statements produces `cyclomatic complexity <https://en.wikipedia.org/wiki/Cyclomatic_complexity#:~:text=Cyclomatic%20complexity%20is%20a%20software,in%201976.>`_. Try to stay away from nested ``if-else`` statements when possible.
+
+Exercise
+^^^^^^^^
+
+For some reason, John likes to do certain sports dependent on what the weather is like and what the day is. John looks at the weather in terms of sunny or rainy, and he looks at the day in terms of whether it's odd or even. 
+
+* If it's sunny and an even numbered day, John likes play basketball.
+* If it's sunny and an odd numbered day, John likes play baseball.
+* If it's rainy and an even numbered day, John likes play football.
+* If it's rainy and an odd numbered day, John likes play soccer.
+
+Write a program to tell John what to do if the given weather and day is specified.
+
+.. code-block:: python
+   :linenos:
+
+   weather = 'sunny'
+   day = 2
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   weather = 'sunny'
+   day = 2
+   is_even = day % 2 == 0
+
+   if weather == 'sunny' and is_even:
+      print('basketball')
+   elif weather == 'sunny' and not is_even:
+      print('baseball')
+   elif weather == 'rainy' and is_even:
+      print('football')
+   else:
+      print('soccer')
