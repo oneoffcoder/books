@@ -169,6 +169,36 @@ In an ``if-else`` statement, the ``if`` must always come first, the ``else`` mus
    else:
       print('a >= 20')
 
+Exercise
+^^^^^^^^
+
+A percentage score on a test will be assigned a letter grade according to the following.
+
+* [100, 90] is A
+* [89, 80] is B
+* [79, 70] is C
+* [69, 60] is D
+* [59, 0] is F
+
+A person has a 84 on a test. Write a ``if-else`` statement to assign (or map) this score to a letter grade.
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   score = 84
+
+   if 90 <= score <= 100:
+      print('A')
+   elif 80 <= score <= 89:
+      print('B')
+   elif 70 <= score <= 79:
+      print('C')
+   elif 60 <= score <= 69:
+      print('D')
+   else:
+      print('F')
 
 Nested if-else
 --------------
