@@ -182,6 +182,8 @@ A percentage score on a test will be assigned a letter grade according to the fo
 
 A person has a 84 on a test. Write a ``if-else`` statement to assign (or map) this score to a letter grade.
 
+- Hint: use boolean logic
+
 Solution.
 
 .. code-block:: python
@@ -189,16 +191,25 @@ Solution.
 
    score = 84
 
-   if 90 <= score <= 100:
+   if score <= 100 and score >= 90:
       print('A')
-   elif 80 <= score <= 89:
+   elif score <= 89 and score >= 80:
       print('B')
-   elif 70 <= score <= 79:
+   elif score <= 79 and score >= 70:
       print('C')
-   elif 60 <= score <= 69:
+   elif score <= 69 and score >= 60:
       print('D')
    else:
       print('F')
+
+Multiple comparison in if-else
+------------------------------
+
+.. literalinclude:: code/oneoffcoder/control/multicompare.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 3,5
+
 
 Nested if-else
 --------------
@@ -208,10 +219,3 @@ Nested if-else
    :linenos:
    :emphasize-lines: 8-11
 
-Multiple comparison in if-else
-------------------------------
-
-.. literalinclude:: code/oneoffcoder/control/multicompare.py
-   :language: python
-   :linenos:
-   :emphasize-lines: 3,5
