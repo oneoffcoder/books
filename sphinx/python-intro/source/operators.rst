@@ -12,6 +12,12 @@ When dealing with integers and floats, you can apply the following basic math op
    :language: python
    :linenos:
 
+Pay attention to the multiplication and division operators, as they are ``*`` (asterisk) and ``/`` (forward slash), correspondingly. Also, there are 3 ways to divide using ``/``, ``//`` and ``%``. 
+
+* ``/`` gives you a real number (decimal)
+* ``//`` gives you the quotient
+* ``%`` gives you the remainder
+
 Exercise
 ^^^^^^^^
 
@@ -35,6 +41,23 @@ Solution.
    print(f'{a} - {b} = {a - b}')
    print(f'{a} * {b} = {a * b}')
    print(f'{a} / {b} = {a / b}')
+
+Exercise
+^^^^^^^^
+
+Can you express 4 divided by 3 in terms of an improper fraction?
+
+Solution.
+
+.. code:: python
+
+   dividen = 4
+   divisor = 3
+   quotient = dividen // divisor
+   remainder = dividen % divisor
+
+   s = f'{dividen} / {divisor} = {quotient} and {remainder}/{divisor}'
+   print(s)
 
 Compound assignment operators 
 -----------------------------
@@ -263,3 +286,22 @@ If you want to merge the key-value pairs of 2 maps/dictionaries, use the ``**`` 
    :language: python
    :linenos:
    :emphasize-lines: 9
+
+Exercise
+^^^^^^^^
+
+There are four major competitions, called ``slams``, in tennis: Australian Open, French Open, Wimbledon and US Open. The results (data) below are how many times Roger Federer has won each one. Combine these individual results at the slams into one map (dictionary).
+
+.. code:: python
+
+   australian_slam = {'australian': 6}
+   french_slam = {'french': 1}
+   wimbledon_slam = {'wimbledon': 8},
+   us_slam = {'us': 5}
+
+Solution.
+
+.. code:: python
+
+   slams = {**australian_slam, **french_slam, **wimbledon_slam, **us_slam}
+   print(slams)
