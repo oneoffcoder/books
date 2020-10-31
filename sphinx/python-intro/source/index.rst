@@ -44,6 +44,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    types
    operators
    control
+   user-input
    loops
    function
    clazz
