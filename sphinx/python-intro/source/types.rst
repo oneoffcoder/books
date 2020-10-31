@@ -163,7 +163,7 @@ In Python, the variable type is inferred from what it is storing; we do not have
 
    In JavaScript, we can add or concantentate a string with an integer.
 
-   .. code:: javascript
+   .. code-block:: javascript
       :linenos:
 
       const a = 1;
