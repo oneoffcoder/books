@@ -436,7 +436,7 @@ Comprehensions are a way to transform an existing collection into a new one usin
 List comprehension
 ^^^^^^^^^^^^^^^^^^
 
-The ``list comprehension`` has the following syntax: :code:`[<expression> for]`.
+The ``list comprehension`` has the following syntax: :code:`[<expression> for <element> in <collectin> <filter:optional>]`.
 
 .. literalinclude:: code/oneoffcoder/loop/listcomprehension.py
    :language: python
