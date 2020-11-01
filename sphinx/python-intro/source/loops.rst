@@ -431,46 +431,161 @@ Loop through both lists below. Only print the name and age if the name starts wi
 Comprehension
 -------------
 
-Comprehensions are a way to transform an existing collection into a new one using the ``for-each`` loop. There comprehensions to generate lists, sets and dictionaries.
+Comprehensions are a way to transform an existing collection into a new one using the ``for-each`` loop. There are comprehensions to generate lists, sets and dictionaries.
 
 List comprehension
 ^^^^^^^^^^^^^^^^^^
 
-The ``list comprehension`` has the following syntax: :code:`[<expression> for <element> in <collectin> <filter:optional>]`.
+The ``list comprehension`` has the following syntax: :code:`[<expression> for <element> in <collection> <filter:optional>]`. The ``<expression>`` is required and the ``<filter:optional>`` is optional. The ``<expression>`` is typically a transformation of the ``<element>``. Let's say we have a list :code:`numbers = [1, 2, 3, 4]` and we want to transform this list into a new one where each element is multiplied by two. We can use a regular ``for-each`` loop or a list comprehension. 
 
 .. literalinclude:: code/oneoffcoder/loop/listcomprehension.py
    :language: python
    :linenos:
    :emphasize-lines: 9
 
+An example of using a filter is as follows. In this example, we transform each integer to a new number by multiplying it by 3 and we filter for for only odd-indexed numbers.
+
+.. code-block:: python
+   :linenos:
+
+   numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+   nums = [number * 3 for i, number in numbers if i % 2 != 0]
+
+Exercise
+^^^^^^^^
+Transform the list below into a new one with all boolean values, where each element in the new list indicates if the corresponding element in the existing list is even ``True`` or odd ``False``.
+
+.. code-block:: python
+   :linenos:
+
+   numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+.. code-block:: python
+   :linenos:
+
+   numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+   nums = [True if number % 2 == 0 else False for number in numbers]
+
+
 Nested list comprehension
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+List comprehensions can also be nested as in the example below. Note that we have a list of lists, which represents a two-dimensional matrix. So we have to iterate over the rows and then the columns in that row. The result is that we end up with a ``flattened`` list (the new list is not like the first list, which is a list of lists).
 
 .. literalinclude:: code/oneoffcoder/loop/nestedlistcomprehension.py
    :language: python
    :linenos:
    :emphasize-lines: 3
 
+Exercise
+^^^^^^^^
+
+Flatten the matrix below using a nested list comprehension, but, only include those elements whose row and column indices are equal.
+
+.. code-block:: python
+   :linenos:
+
+   matrix = [[1, 2, 3], [3, 4, 5], [5, 6, 7]]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   matrix = [[1, 2, 3], [3, 4, 5], [5, 6, 7]]
+   diagonal = [col for i, row in enumerate(matrix) for j, col in enumerate(row) if i == j]
+
 Set comprehension
 ^^^^^^^^^^^^^^^^^
+
+``Set comprehensions`` are just like list comprensions, except, instead of using ``[]`` to setup the comprehension, we use ``{}``. The ``set comprehension`` has the following syntax: :code:`{<expression> for <element> in <collection> <filter:optional>}`.
 
 .. literalinclude:: code/oneoffcoder/loop/setcomprehension.py
    :language: python
    :linenos:
    :emphasize-lines: 9
 
+Exercise
+^^^^^^^^
+
+Find all the unique odd numbers in the following list of numbers.
+
+.. code-block:: python
+   :linenos:
+
+   numbers = [1, 2, 3, 4, 5, 2, 3, 5, 1, 1]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   numbers = [1, 2, 3, 4, 5, 2, 3, 5, 1, 1]
+   nums = {number for number in numbers if number % 2 != 0}
+
 Dictionary comprehension
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+A ``dictionary comprehension`` is used to generate a new dictionary. The ``dictionary comprehension`` has the following syntax: :code:`{<key>: <expression> for <element> in <collection> <filter:optional>}`.
 
 .. literalinclude:: code/oneoffcoder/loop/dictionarycomprehension.py
    :language: python
    :linenos:
    :emphasize-lines: 12
 
+Exercise
+^^^^^^^^
+
+Below is a list of names. Note that the elements are tuples, where the first element in the tuple is the first name and the second element is the last name. Transform the list into a dictionary where they key is the initials of each name and the corresponding value is the full name.
+
+.. code-block:: python
+   :linenos:
+
+   names = [('Jack', 'Washington'), ('John', 'Doe'), ('Joe', 'Black'), ('Mary', 'Swanson')]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   names = [('Jack', 'Washington'), ('John', 'Doe'), ('Joe', 'Black'), ('Mary', 'Swanson')]
+   persons = {f'{fname[0]}.{lname[0]}.': f'{fname} {lname}' for fname, lname in names}
+   print(persons)
+
+   # should print {'J.W.': 'Jack Washington', 'J.D.': 'John Doe', 'J.B.': 'Joe Black', 'M.S.': 'Mary Swanson'}
+
 Generator comprehension
 ^^^^^^^^^^^^^^^^^^^^^^^
+
+With list, set and dictionary comprehensions, the resulting data is evaluated and created immediately. The ``generator comprehension``, however, only evaluates the expression as needed. The former comprehensions are ``eagerly`` evaluated and the latter comprehension is ``lazily`` evaluated. If we need to generate a new collection that does not need to be stored, use a generator comprehension as intermediary results will not be stored. The syntax for a generator comprehension is nearly identical to the list comprehension, except that we use ``()`` instead of ``[]``: :code:`(<expression> for <element> in <collection> <filter:optional>)`
 
 .. literalinclude:: code/oneoffcoder/loop/generatorcomprehension.py
    :language: python
    :linenos:
    :emphasize-lines: 7
+
+Exercise
+^^^^^^^^
+
+Write a program to ask the user to input a number over and over (until the user requests to quit by entering ``q`` to quit). Each time a user enters a number, whatever that number is, compute the list of numbers that results when multiplying it by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. 
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   # we use a tuple for the collection
+   # why? because we do not want this collection to ever be modified
+   # we define this collection of numbers outside the while loop
+   # why? because we only need to define it once, not over and over inside the loop
+   multipliers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+   while True:
+      user_input = input('enter a number or "q" to quit: ')
+
+      if user_input == 'q':
+         break
+      
+      num = int(user_input)
+      numbers = [n * num for n in multipliers]
+      print(numbers)
