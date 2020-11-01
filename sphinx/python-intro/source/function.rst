@@ -181,6 +181,13 @@ Write a function to characterize the weather qualitatively based on the temperat
 * else if the temperature is less than or equal to 90, return **warm**
 * else return **hot**
 
+Convert the list of quantitative temperatures below to one of qualitative values using the new function defined.
+
+.. code-block:: python
+   :linenos:
+
+   temperatures = [30.2, 77.5, 80.2, 101.1]
+
 Solution.
 
 .. code-block:: python
@@ -196,46 +203,342 @@ Solution.
       else:
          return 'hot'
 
-   # invoke the function once
-   describe_weather(77.7)
-
-   # invoke the function many times using a loop
+   # use a list comprehension
    temperatures = [30.2, 77.5, 80.2, 101.1]
+   conditions = [describe_weather(t) for t in temperatures]
+   print(conditions)
 
-   for temperature in temperatures:
-      describe_weather(temperature)
+Exercise
+^^^^^^^^
+
+Write a functions to compute compute the area and perimeter of a square e.g. ``get_area(side)`` and ``get_perimeter(side)``.
+
+* area = side x side
+* perimeter = side x 4
+
+Compute the areas and perimeters for the following squares (represented by integers) in the list.
+
+.. code-block:: python
+   :linenos:
+
+   squares = [10, 5, 88, 3, 4, 3]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def get_area(side):
+      return side * side
+
+   def get_perimeter(side):
+      return side * 4
+
+   squares = [10, 5, 88, 3, 4, 3]
+   
+   for side in squares:
+      area = get_area(side)
+      perimeter = get_perimeter(side)
+
+      s = f'side={side} | area = {area} | perimeter = {perimeter}'
+      print(s)
+
+Exercise
+^^^^^^^^
+
+Write a functions to compute compute the area and circumference of a circle e.g. ``get_area(radius)`` and ``get_circumference(radius)``.
+
+* area = 3.14 x radius x radius
+* circumference = 2 x 3.14 x radius
+
+Compute the areas and perimeters for the following circles (represented by integers) in the list.
+
+.. code-block:: python
+   :linenos:
+
+   circles = [10, 5, 88, 3, 4, 3]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def get_area(radius):
+      return 3.14 * radius ** 2
+
+   def get_circumference(radius):
+      return 2 * 3.14 * radius
+
+   circles = [10, 5, 88, 3, 4, 3]
+   
+   for radius in circles:
+      area = get_area(radius)
+      circumference = get_circumference(radius)
+
+      s = f'radius={radius} | area = {area} | circumference = {circumference}'
+      print(s)
 
 Function with two arguments
 ---------------------------
+
+Here is a demonstration of a function with two arguments and a return value. 
 
 .. literalinclude:: code/oneoffcoder/function/twoargs.py
    :language: python
    :linenos:
    :emphasize-lines: 2,3
 
+Exercise
+^^^^^^^^
+
+Create the following functions.
+
+* ``add(a, b)`` should add ``a`` and ``b`` and return the result
+* ``minus(a, b)`` should subtract ``a`` from ``b`` and return the result
+* ``times(a, b)`` should multiply ``a`` and ``b`` and return the result
+* ``divide(a, b)`` should divide ``b`` by ``a`` and return the result
+
+Invoke these functions for a variety of pairs of numbers and print the results.
+
+.. code-block:: python
+   :linenos:
+
+   pairs = [(10, 2), (13, 4), (16, 5), (88, 7)]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def add(a, b):
+      return a + b
+
+   def minus(a, b):
+      return b - a
+
+   def times(a, b):
+      return a * b
+
+   def divide(a, b):
+      return b / a
+
+   pairs = [(10, 2), (13, 4), (16, 5), (88, 7)]
+
+   for a, b in pairs:
+      s = """
+      {a} + {b} = {add(a, b)}
+      {a} - {b} = {minus(a, b)}
+      {a} * {b} = {times(a, b)}
+      {a} / {b} = {divide(a, b)}
+      """.strip()
+
+      print(s)
+      print('')
+
+Exercise
+^^^^^^^^
+
+Write a functions to compute compute the area and perimeter of a rectangle e.g. ``get_area(width, length)`` and ``get_perimeter(width, length)``.
+
+* area = width x length
+* perimeter = 2 x width + 2 x length
+
+Compute the areas and perimeters for the following rectangles (represented by tuples) in the list.
+
+.. code-block:: python
+   :linenos:
+
+   rectangles = [(10, 5), (88, 3), (4, 3)]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def get_area(width, length):
+      return width * length
+
+   def get_perimeter(width, length):
+      return 2 * width + 2 * length
+
+   rectangles = [(10, 5), (88, 3), (4, 3)]
+
+   for width, length in rectangles:
+      area = get_area(width, length)
+      perimeter = get_perimeter(width, length)
+
+      s = f'width={width}, length={length} | area = {area} | perimeter = {perimeter}'
+      print(s)
+
+Exercise
+^^^^^^^^
+
+Write a functions to compute compute the area of a triangle e.g. ``get_area(base, height)``.
+
+* area = 0.5 x base x height
+
+Compute the areas for the following triangles (represented by tuples) in the list.
+
+.. code-block:: python
+   :linenos:
+
+   triangles = [(10, 5), (88, 3), (4, 3)]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def get_area(base, height):
+      return 0.5 * base * height
+
+   triangles = [(10, 5), (88, 3), (4, 3)]
+
+   for base, height in triangles:
+      area = get_area(base, height)
+
+      s = f'base={base}, height={height} | area = {area}'
+      print(s)
+   
+
 Function with three arguments
 -----------------------------
+
+Here is an example of a function with 3 arguments as inputs, and the output is the product of the inputs.
 
 .. literalinclude:: code/oneoffcoder/function/threeargs.py
    :language: python
    :linenos:
    :emphasize-lines: 2,3
 
+Exercise
+^^^^^^^^
+
+Write a function that takes in 3 integer arguments ``compute(x, y, z)``. The function return the result of ``x + y * z``.
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def compute(x, y, z):
+      return x + y * z
+
+   print(compute(10, 5, 8))
+
 Function with a list argument
 -----------------------------
+
+A function can accept anything as input, including other other functions! Here, ``concat()`` accepts a list of strings as input and returns the concatenation of the strings in the list using the ``join()`` function.
 
 .. literalinclude:: code/oneoffcoder/function/listarg.py
    :language: python
    :linenos:
    :emphasize-lines: 2,3
 
+Exercise
+^^^^^^^^
+
+Python has many ``built-in`` functions for math operations. The ``sum()`` function takes in a collection of numbers and returns the sum across all the values. The ``len()`` function takes in a collection of numbers and returns the number of elements in that collection. Write a function ``get_average(numbers)`` that returns the expected value of a list of numbers. Remember, the expected value is the sum of the numbers divided by the total number of elements. 
+
+.. code-block:: python
+   :linenos:
+
+   numbers = [5, 18, 29, 787, 2, 3, 88]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def get_average(numbers):
+      total = sum(numbers)
+      n = len(numbers)
+      average = total / n
+      return average
+
+   numbers = [5, 18, 29, 787, 2, 3, 88]
+   average = get_average(numbers)
+   print(f'The average is {average:.5f}')
+
+Exercise
+^^^^^^^^
+
+Write a function to compute the sample variance of a list of numbers. 
+
+* the variance :math:`\sigma^2` is defined as :math:`\sigma^2 = \frac{\sum (x_i - \bar x)^2}{n - 1}`
+
+.. code-block:: python
+   :linenos:
+
+   numbers = [5, 18, 29, 787, 2, 3, 88]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def get_average(numbers):
+      total = sum(numbers)
+      n = len(numbers)
+      average = total / n
+      return average
+
+   def get_variance(numbers):
+      avg = get_average(numbers)
+      n = len(numbers)
+      variance = sum([(n - avg)**2 for n in numbers]) / (n - 1)
+      return variance
+
+   numbers = [5, 18, 29, 787, 2, 3, 88]
+   variance = get_variance(numbers)
+   print(f'The variance is {variance:.5f}')
+
 Function with default value argument
 ------------------------------------
+
+The inputs required by a function can be set to default values. Note that if an input has a default value, it must always come last! Below, we pass in a list of strings and want to join them. The default delimiter is a comma, but the user can choose to override that delimiter when they invoke the function.
 
 .. literalinclude:: code/oneoffcoder/function/defaultvalarg.py
    :language: python
    :linenos:
    :emphasize-lines: 2,3,11
+
+Exercise
+^^^^^^^^
+
+Write a function that takes in two integer ``a`` and ``b`` as well as a math operation (``+``, ``-``, ``*``, ``/``). The math operation should be set to ``+`` by default. Depending on the math operation, apply such operation to ``a`` and ``b`` and return the result.
+
+.. code-block:: python
+   :linenos:
+
+   a = 14
+   b = 8
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def do_operation(a, b, op='+'):
+      if '+' == op:
+         return a + b
+      elif '-' == op:
+         return a - b
+      elif '*' == op:
+         return a * b
+      else:
+         return a / b
+
+   a = 14
+   b = 8
+
+   ops = ['+', '-', '*', '/']
+   
+   for op in ops:
+      result = do_operation(a, b)
+      s = f'{a} {op} {b} = {result}'
+      print(s)
 
 Non-keyworded, variable-length argument
 ---------------------------------------
