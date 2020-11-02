@@ -543,21 +543,120 @@ Solution.
 Non-keyworded, variable-length argument
 ---------------------------------------
 
+If you require any number of inputs to a function, but do not know what these inputs will look like or how many of them there will be, you can define the inputs as a ``non-keyworded, variable-length`` argument. Such argument is conventionally defined as ``*args`` and must always come after all keyworded arguments are defined.
+
 .. literalinclude:: code/oneoffcoder/function/nonkeywordedarg.py
    :language: python
    :linenos:
    :emphasize-lines: 2-4,7-9
 
+.. note::
+   You can pretty much achieve the same effect of a non-keyworded, variable-length argument with an argument that is a list. What do you think is the difference between a function defined as :code:`do_it(*args)` vs :code:`do_it(args=[])`?
+
+Exercise
+^^^^^^^^
+
+Write a function to calculate the price of a pizza based on the toppings added to the pizza. The pizza itself cost $10.50. The topping costs are as follows.
+
+* mushroom: $3.50
+* suasage: $4.40
+* olives: $1.25
+* pepperoni: $2.00
+* cheese: $1.25
+* anchovy: $3.25
+
+The function should specify a non-keyworded, variable-length argument to represent the toppings. 
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def compute_cost(*toppings):
+      prices = {
+         'mushroom': 3.50,
+         'suasage': 4.40,
+         'olives': 1.25,
+         'pepperoni': 2.00,
+         'cheese': 1.25,
+         'anchovy': 3.25
+      }
+      cost = sum([prices[topping] for topping in toppings if topping in prices])
+      cost += 10.50
+      return cost
+
+   print(compute_cost(*['mushroom', 'suasage']))
+   print(compute_cost(*['olives', 'pepperoni']))
+   print(compute_cost(*['cheese', 'pepperoni']))
+   print(compute_cost(*['mushroom', 'suasage', 'olives', 'pepperoni', 'cheese', 'anchovy']))
+
 Keyworded, variable-length argument
 -----------------------------------
+
+In the case when you require any number of inputs to a function, but want the caller of the function to supply keywords associated with each of the inputs, you can define the inputs as a ``keyworded, variable-length`` argument. Such argument is conventionally defined as ``**kwargs`` and must come as the very last argument when defining a function.
 
 .. literalinclude:: code/oneoffcoder/function/keywordedarg.py
    :language: python
    :linenos:
    :emphasize-lines: 2-4,7-9
 
+.. note::
+   You can also pretty much achieve the same effect of a keyworded, variable-length argument with an argument that is a dictionary. What do you think is the difference between a function defined as :code:`do_it(**kwargs)` vs :code:`do_it(kwargs=dict())`?
+
+Exercise
+^^^^^^^^
+
+We have students who are left- or right-handed as shown below. Write a function to get the average age of the left- and right-handed individuals. Return the results. Make sure you use a keyworded, variable-length argument function.
+
+.. code-block:: python
+   :linenos:
+
+   students = {
+      'john': {'hand': 'left', 'age': 17},
+      'jack': {'hand': 'right', 'age': 18},
+      'jane': {'hand': 'left', 'age': 14},
+      'mary': {'hand': 'right', 'age': 13},
+      'joe': {'hand': 'left', 'age': 17},
+      'james': {'hand': 'right', 'age': 14},
+      'nancy': {'hand': 'left', 'age': 12},
+      'norah': {'hand': 'right', 'age': 19},
+   }
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def get_average_ages(**persons):
+      left_hand_ages = [data['age'] for _, data in persons.items() if data['hand'] == 'left']
+      right_hand_ages = [data['age'] for _, data in persons.items() if data['hand'] == 'right']
+
+      left_avg_age = sum(left_hand_ages) / len(left_hand_ages)
+      right_avg_age = sum(right_hand_ages) / len(right_hand_ages)
+
+      return {
+         'left': left_avg_age,
+         'right': right_avg_age
+      }
+   
+   students = {
+      'john': {'hand': 'left', 'age': 17},
+      'jack': {'hand': 'right', 'age': 18},
+      'jane': {'hand': 'left', 'age': 14},
+      'mary': {'hand': 'right', 'age': 13},
+      'joe': {'hand': 'left', 'age': 17},
+      'james': {'hand': 'right', 'age': 14},
+      'nancy': {'hand': 'left', 'age': 12},
+      'norah': {'hand': 'right', 'age': 19},
+   }
+
+   results = get_average_ages(**students)
+   print(results)
+
 Mixed arguments
 ---------------
+
+Here's an example of a function with mixed argument/input types.
 
 .. literalinclude:: code/oneoffcoder/function/mixedargs.py
    :language: python
@@ -566,6 +665,8 @@ Mixed arguments
 
 Unpacking tuple return type
 ---------------------------
+
+We have already seen how to unpack tuples, here, we show how we can unpack a tuple returned from a function.
 
 .. literalinclude:: code/oneoffcoder/function/unpackingtuple.py
    :language: python
