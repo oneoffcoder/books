@@ -239,3 +239,168 @@ Solution.
 
     sorted_data = [sorted(arr) for arr in data]
     print(sorted_data)
+
+Range
+-----
+
+The ``range()`` function generates a range of values. To generate a range of numbers from [0, 9], we would do the following.
+
+.. code-block:: python
+   :linenos:
+
+   numbers = list(range(10))
+   print(numbers)
+
+Note that ``range()`` does not create the numbers in the range until we start asking for the elements. ``range()`` is said to be a ``generator function``. To get the actual numbers out, we have to convert the output of ``range()`` to a list.
+
+We can specify the range of integers to output by supplying start and stop (exclusive) integers.
+
+.. code-block:: python
+   :linenos:
+
+   numbers = list(range(10, 21))
+   print(numbers)
+
+We can also specify what number to increment the current number by to step over numbers.
+
+.. code-block:: python
+   :linenos:
+
+   numbers = list(range(10, 21, 2))
+   print(numbers)
+
+Exercise
+^^^^^^^^
+
+Generate a list of numbers from [0, 10] with only odd numbers.
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   numbers = [num for num in range(11) if num % 2 != 0]
+   print(numbers)
+
+Random
+------
+
+Functions are also stored in built-in Python ``libraries`` (or ``modules``). A library is just a collection of code that logically and/or conceptually belong together. To use these functions, we must import the function from the library. One built-in Python library is the ``random`` library, which deals with generating random numbers. Let's see how we can import the ``randint()`` function. 
+
+.. code-block:: python
+   :linenos:
+
+   from random import randint
+
+The syntax to import a function from a library is :code:`from <library> import <function>`. After we import a function from a library, then we can use the function. The ``randint()`` function generates random number between two numbers (inclusive on both ends). 
+
+.. code-block:: python
+   :linenos:
+
+   from random import randint
+
+   # generate 3 random numbers in the range [0, 9]
+   a = randint(0, 9)
+   b = randint(0, 9)
+   c = randint(0, 9)
+
+   print(a)
+   print(b)
+   print(c)
+
+The ``choice()`` function selects an element from a collection at random (all elements have an equal chance of being selected).
+
+.. code-block:: python
+   :linenos:
+
+   from random import choice
+
+   numbers = [1, 2, 3, 4, 5, 6]
+
+   a = choice(numbers)
+   b = choice(numbers)
+   c = choice(numbers)
+
+   print(a)
+   print(b)
+   print(c)
+
+The ``random()`` function generates a real number in the range [0, 1.0). 
+
+.. code-block:: python
+   :linenos:
+
+   from random import random
+
+   a = random()
+   b = random()
+   c = random()
+
+   print(a)
+   print(b)
+   print(c)
+
+Exercise
+^^^^^^^^
+
+Generate 10 random numbers in the range [0, 9].
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   from random import randint
+
+   numbers = [randint(0, 9) for _ in range(10)]
+
+Exercise
+^^^^^^^^
+
+Generate 10 random numbers in the range [0, 9] only if the index associated with the random number is even.
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   from random import randint
+
+   numbers = [randint(0, 9) for i, _ in enumerate(range(10)) if i % 2 == 0]
+   print(numbers)
+
+Exercise
+^^^^^^^^
+
+Simulate rolling a die 1000 times. Each time you roll an even number, you win. How many times did you win?
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   from random import choice
+
+   die = [1, 2, 3, 4, 5, 6]
+
+   rolls = [choice(die) for _ in range(1000)]
+   wins = sum([1 for roll in rolls if roll in {2, 4, 6}])
+   print(wins)
+
+Exercise
+^^^^^^^^
+
+Simulate rolling two dice 1000. Each time you roll the dice and the sum of the outcomes is 7, you win. How many times did you win?
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   from random import choice
+
+   die = [1, 2, 3, 4, 5, 6]
+
+   rolls = [choice(die) + choice(die) for _ in range(1000)]
+   wins = sum([1 for roll in rolls if roll == 7])
+   print(wins)
