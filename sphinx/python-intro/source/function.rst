@@ -672,3 +672,150 @@ We have already seen how to unpack tuples, here, we show how we can unpack a tup
    :language: python
    :linenos:
    :emphasize-lines: 1,2,12
+
+Lambda
+------
+
+A ``lambda`` is a function, however, lambda functions are strictly defined as one line logic or ``one-liners``. Take the ``say_hello()`` function below. This function can have multiple lines of statement, although, in this case, it only has one statement which is to print **hello**.
+
+.. code-block:: python
+   :linenos:
+
+   def say_hello():
+      print('hello')
+
+   # call the function
+   say_hello()
+
+Now, look at this function re-defined as a lambda.
+
+.. code-block:: python
+   :linenos:
+
+   say_hello = lambda: print('hello')
+
+   # call the lambda
+   say_hello()
+
+It seems lambdas are suited for very simple logic (one-liners), and if you have complicated logic, you are better off using a function. Lambdas can also take in parameters/arguments.
+
+.. code-block:: python
+   :linenos:
+
+   # lambda with 1 argument
+   say_hello = lambda name: print(f'hello, {name}')
+   
+   # call lambda
+   say_hello('John')
+   say_hello('Mary')
+
+   # lambda with 2 arguments
+   say_bye = lambda fname, lname: print(f'bye, {fname} {lname}')
+
+   # call lambda
+   say_hello('John', 'Doe')
+   say_hello('Mary', 'Smith')
+
+Lambdas can return values.
+
+.. code-block:: python
+   :linenos:
+
+   # define lambdas
+   add_one = lambda x: x + 1
+   minus_one = lambda x: x - 1
+   times_two = lambda x: x * 2
+   divide_half = lambda x: x / 2
+
+   # call lambdas one at a time
+   print(add_one(1)) # should print 2
+   print(minus_one(1)) # should print 0
+   print(times_two(1)) # should print 2
+   print(divide_half(1)) # should print 0.5
+
+   # compose operations using lambdas
+   # should print 50
+   # 50 / 2 = 25
+   # 25 * 2 = 50
+   # 50 - 1 = 49
+   # 49 + 1 = 50
+   print(add_one(minus_one(times_two(divide_half(50)))))
+
+Functions and lambdas can be passed as arguments themselves. Below, we have a generic math lambda called ``do_math()`` which takes in two numbers ``a`` and ``b`` as well as a function/lambda as ``op``. 
+
+.. code-block:: python
+   :linenos:
+
+   # define lambdas
+   add = lambda a, b: a + b
+   subtract = lambda a, b: a - b
+   multiply = lambda a, b: a * b
+   divide = lambda a, b: a / b
+
+   # this lambda takes in 3 arguments
+   # a and b are integers
+   # op is a function or lambda and will be applied to a and b
+   do_math = lambda a, b, op: op(a, b)
+
+   # call do_math and change the op
+   a, b = 12, 7
+   print(do_math(a, b, add))
+   print(do_math(a, b, subtract))
+   print(do_math(a, b, multiply))
+   print(do_math(a, b, divide))
+
+   # note here, we inline a lambda
+   print(do_math(a, b, lambda a, b: a ** b))
+
+Exercise
+^^^^^^^^
+
+If we have the following list of first and last names of people, transform that list to a new one where each element in the new list is the initials of the corresponding person. Try using lambdas to solve this problem.
+
+.. code-block:: python
+   :linenos:
+
+   names = [('John', 'Doe'), ('Jane', 'Smith')]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   get_initial = lambda name: f'{name.capitalize()[0]}'
+   get_initials = lambda fname, lname: f'{get_initial(fname)}.{get_initial(lname)}.'
+
+   names = [('John', 'Doe'), ('Jane', 'Smith')]
+   initials = [get_initials(fname, lname) for fname, lname in names]
+
+   print(initials)
+
+Exercise
+^^^^^^^^
+
+If you have the list of numbers below, create a new list from this one by including only 
+
+* those numbers that start with a 1 and 
+* have at least 3 digits 
+
+and transform those numbers by dividing by 2 and then raising the result to the power of 2.
+
+.. code-block:: python
+   :linenos:
+
+   numbers = [101, 100, 1003, 10002, 202, 13, 1234]
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   transform = lambda x: (x / 2.0) ** 2.0
+   has_three_or_more_digits = lambda x: True if len(str(x)) >= 3 else False
+   starts_with_one = lambda x: str(x).startswith('1')
+   is_valid = lambda x: has_three_or_more_digits(x) and starts_with_one(x)
+
+   numbers = [101, 100, 1003, 10002, 202, 13, 1234]
+   nums = [transform(n) for n in numbers if is_valid(n)]
+
+   print(nums)
