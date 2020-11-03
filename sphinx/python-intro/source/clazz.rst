@@ -1,7 +1,7 @@
 Classes
 =======
 
-Classes are the way to model your code after real-world objects. Classes define two things about objects: their properties and actions. Properties are simply traits, characteristics or attributes of an object. Actions are what the object can do. **As such, properties are variables attached to a class and actions are functions attached to a class.** When you start defining an object with a class (or start writing a class definition), always keep in mind the properties and actions that are important to that object and make a sketch or outline. Let's do some examples.
+Classes are the way to model your code after real-world objects. The act of coding to model real-world objects is called ``Object Oriented Programming`` or ``OOP``. Classes define two things about objects: their properties and actions. Properties are simply traits, characteristics or attributes of an object. Actions are what the object can do. **As such, properties are variables attached to a class and actions are functions attached to a class.** When you start defining an object with a class (or start writing a class definition), always keep in mind the properties and actions that are important to that object and make a sketch or outline. Let's do some examples.
 
 If you are trying to model a person, what are some properties of a person and what can a person do? A person has a first and last name, as well as an age. A person can also eat, sleep or talk.
 
@@ -193,23 +193,33 @@ If you come from other languages like Java or C#, it is typical to prevent direc
 Private method
 ^^^^^^^^^^^^^^
 
-Unlike many other languages, such as Java or C#, Python does not have a way to specify access levels (e.g. private, protected or public). However, by convention, class methods that are determined to be private should start with a double underscore. Below, we have defined ``__check_year()`` to be private, and users should not invoke this method directly. The ``set_year()`` method calls ``__check_year()`` when the year is being mutated.
+Unlike many other languages, such as Java or C#, Python does not have a way to specify access levels (e.g. private, protected or public). However, by convention, class methods that are determined to be private should start with a double underscore. Below, we have defined ``__check_year()`` to be private, and users should not invoke this method directly. The ``set_year()`` method calls ``__check_year()`` internally when the year is being mutated.
 
 .. literalinclude:: code/oneoffcoder/clazz/privatemethod.py
    :language: python
    :linenos:
-   :emphasize-lines: 7-8
+   :emphasize-lines: 7-8, 26
 
 Static method
 ^^^^^^^^^^^^^
 
+You can define functions at the class level, as opposed to the instance level, by annotating a function with ``@staticmethod``. Such function is said to be a ``static method`` and is defined **without** using ``self`` as an argument since the function is not associated with an instance, but, rather, with the class. You do not need an instance of a class to call static methods, you can access a static method through the class name using dot ``.`` notation.
+
+
 .. literalinclude:: code/oneoffcoder/clazz/staticmethod.py
    :language: python
    :linenos:
-   :emphasize-lines: 7-8
+   :emphasize-lines: 7-8, 27
 
 Method overriding dunders
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Overriding a method means to redefine it (assumes that a method has been previously defined). When defining a class, two dunder functions that should be overridden are ``__str__()`` and ``__repr__()``. Both methods return a string representation of the instance (of a class), however,
+
+* ``__str__()`` returns an informal representation, and
+* ``__repr__()`` returns a formal representation.
+
+By convention, the string returned by ``__repr__()`` should be able to be used to reconstruct the instance. Many times, ``__str__()`` can just call ``__repr()__`` (or vice-versa).
 
 .. literalinclude:: code/oneoffcoder/clazz/methodoverriding.py
    :language: python
@@ -218,6 +228,94 @@ Method overriding dunders
 
 Inheritance
 -----------
+One of the core tenets of coding is to reuse existing code. Why? Writing code is hard and testing code to assure quality and correctness is resource intensive. When you can, reuse code. This core tenent is so highly valued, we create languages like Python with features like OOP to encourage and enable code reuse. Specifically, ``inheritance`` is the feature of OOP that maximizes code-reuse. If we define a base class, there may be many sub-classes that share the same properties and actions, but with slight caveats. Inheritance enables the sub-classes to acquire the properties and actions of the base or parent class, and we can extend or modify the parent class' features by adding or overriding its features. 
+
+Let's understand inheritance a bit better with an example dealing with shapes. In particular, we want to model a rectangle as follows. A rectangle has a width and length (properties). A rectangle should be able to compute its own area and perimeter (actions).
+
+* Rectangle
+   - properties
+      * width
+      * length
+   - actions
+      * computes area
+      * computes perimeter
+
+A ``Rectangle`` class definition could look like the following.
+
+.. code-block:: python
+   :linenos:
+
+   class Rectangle(object):
+      def __init__(self, width, length):
+         self.name = type(self).__name__
+         self.width = width
+         self.length = length
+
+      def get_area(self):
+         return self.width * self.length
+
+      def get_perimeter(self):
+         return self.width * 2 + self.length * 2
+
+      def __str__(self):
+         return self.__repr__()
+
+      def __repr__(self):
+         return f'{self.name}[width={self.width}, length={self.length}]'
+
+   r = Rectangle(10, 5)
+   print(r)
+   print(r.get_area())
+   print(r.get_perimeter())
+
+Now we want to create a class definition for a square. We know that a square **is a** rectangle with all sides equaled to one another. We do not want to recreate all the logic of that goes into computing the area and perimeter of a square since we have that logic defined in the ``Rectangle`` class. We should use inheritance to achieve the goal of logical relationship and code reuse. In the ``Square`` class definition, the constructor is different by requiring only the value of one side (all sides are equal, or width is the same as length). Also, we use ``super()`` to call the ctor of ``Rectangle``; ``Rectangle`` is called the base, parent or super class of ``Square``. Lastly, notice how ``Square`` does not have to define ``get_area()``, ``get_perimeter()``, ``__str__()`` or ``__repr__()``? ``Square`` has inherited such methods from ``Rectangle``.
+
+.. code-block:: python
+   :linenos:
+
+   class Square(Rectangle):
+      def __init__(self, side):
+         super().__init__(side, side)
+
+Here is the all-in-one example of class inheritance.
+
+.. code-block:: python
+   :linenos:
+
+   class Rectangle(object):
+      def __init__(self, width, length):
+         self.name = type(self).__name__
+         self.width = width
+         self.length = length
+
+      def get_area(self):
+         return self.width * self.length
+
+      def get_perimeter(self):
+         return self.width * 2 + self.length * 2
+
+      def __str__(self):
+         return self.__repr__()
+
+      def __repr__(self):
+         return f'{self.name}[width={self.width}, length={self.length}]'
+
+   class Square(Rectangle):
+      def __init__(self, side):
+         super().__init__(side, side)
+
+   r = Rectangle(10, 5)
+   print(r)
+   print(r.get_area())
+   print(r.get_perimeter())
+
+   s = Square(5)
+   print(s)
+   print(s.get_area())
+   print(s.get_perimeter())
+
+Abstract Classes
+----------------
 
 Here, we have a base class ``Animal``. Noticed how the Animal class itself inherits from ``ABC`` (Abstract Base Class)?
 We annotate the ``make_noise`` method ``@abstractmethod`` decorator. A class that inherits from ``ABC`` cannot be 
