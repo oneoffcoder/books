@@ -1,5 +1,5 @@
-Built-in Functions
-==================
+Built-in Functions and Types
+============================
 
 There are many functions that are built into Python that you should reuse and try to not re-invent yourself. The ``print()`` function that we have been using from the start is one of those functions. As you progress and study more into Python, you will acquire exposures to ever more utility functions available. 
 
@@ -503,3 +503,34 @@ Solution.
 
     n = sum([1 for play in product(combinations(white_nums, 5), red_nums)])
     print(f'{n:,}') # 292,201,338
+
+Date
+----
+
+The ``datetime`` module has a lot of date functions and data structures (types) that we may use to speed up our ability to solve problems. Below, we show how to use the ``date`` type.
+
+.. literalinclude:: code/oneoffcoder/library/datesimple.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 4,8,12
+
+The ``time`` type deals with the time. 
+
+.. literalinclude:: code/oneoffcoder/library/timesimple.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 4,8
+
+The ``datetime`` type (not the module) deals with both date and time.
+
+.. literalinclude:: code/oneoffcoder/library/datetimesimple.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 4,8,12,16,22
+
+The ``timedelta`` type enables us to do math operations on durations.
+
+.. literalinclude:: code/oneoffcoder/library/duration.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 6
