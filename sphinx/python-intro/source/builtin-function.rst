@@ -404,3 +404,102 @@ Solution.
    rolls = [choice(die) + choice(die) for _ in range(1000)]
    wins = sum([1 for roll in rolls if roll == 7])
    print(wins)
+
+itertools
+---------
+
+Check out the ``itertools`` module. There are a lot of utility functions you can use to make working with collections easier. The ``cycle()`` function endlessly cycles through a list of elements. Imagine you have a list of people that you need to assign to two teams, Team Red and Team Blue. How can we assign the list of people to these two teams?
+
+.. code-block:: python
+    :linenos:
+
+    from itertools import cycle
+
+    colors = ['red', 'green']
+    persons = ['Jack', 'John', 'Mary', 'Mandy', 'Moesha', 'Fatimah']
+
+    teams = [(person, color) for person, color in zip(persons, cycle(colors))]
+    print(teams)
+
+What if we have a list of lists and wanted to flatten the list? Try the ``chain()`` function.
+
+.. code-block:: python
+    :linenos:
+
+    from itertools import chain
+
+    teams = [['Jack', 'Mary'], ['John', 'Moesha'], ['Mandy', 'Fatimah']]
+    persons = list(chain(*teams))
+    print(persons)
+
+What if we have a list of names and we wanted to group them by the first letter of the name? The ``groupby()`` function will produce a key-value pair for us, where the key is what we want to group by and the value is an iterable.
+
+.. code-block:: python
+    :linenos:
+
+    from itertools import groupby
+
+    persons = ['Jack', 'Mary', 'John', 'Moesha', 'Mandy', 'Fatimah']
+
+    by_first_letter = lambda name: name.lower()[0]
+    name_map = {k: list(v) for k, v in groupby(persons, key=by_first_letter)}
+    print(name_map)
+
+If you have two lists and you want the resulting cross-product of the elements in those lists, try the ``product()`` function.
+
+.. code-block:: python
+    :linenos:
+
+    from itertools import product
+
+    products = list(product([1, 2, 3], ['A', 'B', 'C']))
+    print(products)
+
+What if you have a list of elements and you want the **n** permutations or combinations of elements from that list? In permutation, order is important, so a pair of number **2 and 3** is not the same as **3 and 2**. In combination, order is not important, so **2 and 3** is the same as **3 and 2**. Remember, a combination lock is a misnomer, and should be a permutation lock. At any rate, try ``permutations()`` and ``combinations()``.
+
+.. code-block:: python
+    :linenos:
+
+    from itertools import combinations, permutations
+
+    # [(1, 2), (1, 3), (2, 1), (2, 3), (3, 1), (3, 2)]
+    print(list(permutations([1, 2, 3], 2)))
+
+    # [(1, 2), (1, 3), (2, 3)]
+    print(list(combinations([1, 2, 3], 2)))
+
+Exercise
+^^^^^^^^
+
+The Mega Millions is based on a player selecting 5 numbers from the range [1, 70] and one number from the range [1, 25]. How many combinations of numbers are possible?
+
+Solution.
+
+.. code-block:: python
+    :linenos:
+
+    from itertools import combinations, product
+
+    white_nums = list(range(1, 71, 1))
+    gold_nums = list(range(1, 26, 1))
+
+    n = sum([1 for play in product(combinations(white_nums, 5), gold_nums)])
+    print(f'{n:,}') # 302,575,350
+
+Exercise
+^^^^^^^^
+
+The Power Ball is based on a player selecting 5 numbers from the range [1, 69] and one number from the range [1, 26]. How many combinations of numbers are possible?
+
+Solution.
+
+.. code-block:: python
+    :linenos:
+
+    from itertools import combinations, product
+
+    white_nums = list(range(1, 70, 1))
+    red_nums = list(range(1, 27, 1))
+
+    n = sum([1 for play in product(combinations(white_nums, 5), red_nums)])
+    print(f'{n:,}') # 292,201,338
