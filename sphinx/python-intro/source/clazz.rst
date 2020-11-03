@@ -314,6 +314,9 @@ Here is the all-in-one example of class inheritance.
    print(s.get_area())
    print(s.get_perimeter())
 
+.. note::
+   In OOP, much discussion is around differentiating between ``inheritance`` and ``composition``. Inheritance is when one class (sub-class) derives from another class (base class). Composition is when one class has another class as one of its properties. Along with our ``Car`` class, we can also create a ``Wheel`` class, and specify that a ``Car`` has 4 ``Wheel``. Two classes in an inheritance relationship is called a ``is-a`` relationship and two classes in a compos relationship is called a ``has-a`` relationship.
+
 Abstract Classes
 ----------------
 
@@ -361,3 +364,191 @@ Notice that the ``MailingLabel`` class behaves like a dictionary?
 .. literalinclude:: code/oneoffcoder/clazz/mixinmapping.py
    :language: python
    :linenos:
+
+Exercise
+--------
+
+Model a teacher and students in a classroom. The class definitions required are as follows. 
+
+* Person
+   - properties
+      * first name
+      * last name
+      * gender
+   - actions
+      * a check to see if the person is a male
+* Teacher
+   - properties
+      * a list of students
+      * course name
+   - actions
+      * a way to count the number of students
+      * a way to get the average grade of all students
+      * a way to get the average grade of all male students
+      * a way to get the average grade of all female students
+* Student
+   - properties
+      * a list of numeric grades
+   - actions
+      * a way to return the list of numeric grades as a list of letter grades
+      * a way to get the overall grade numerically
+      * a way to get the overall letter grade
+
+Create instances of a ``Teacher`` and a list of ``Students`` with the following data.
+
+* What is the number grade of each student?
+* What is the letter grade of each student?
+* What is the average grade of all students of the teacher?
+* What is the average grade of all male students?
+* What is the average grade of all female students?
+
+.. code-block:: python
+   :linenos:
+
+   def get_teacher_data():
+      return {
+         'first_name': 'Janet',
+         'last_name': 'Wang',
+         'gender': 'female',
+         'course': 'Intro to Python'
+      }
+
+   def get_student_data():
+      import random
+      random.seed(37)
+      get_grades = lambda lower, upper: [random.randrange(lower, upper) for _ in range(10)]
+
+      return [
+         {'first_name': 'Jack', 'last_name': 'Smith', 'gender': 'Male', 'grades': get_grades(75, 85)},
+         {'first_name': 'Joe', 'last_name': 'Johnson', 'gender': 'Male', 'grades': get_grades(85, 95)},
+         {'first_name': 'Jeremy', 'last_name': 'Zhang', 'gender': 'Male', 'grades': get_grades(55, 100)},
+         {'first_name': 'Justin', 'last_name': 'Ali', 'gender': 'Male', 'grades': get_grades(75, 90)},
+         {'first_name': 'Jeff', 'last_name': 'McDaniel', 'gender': 'Male', 'grades': get_grades(75, 90)},
+         {'first_name': 'Nancy', 'last_name': 'Wu', 'gender': 'Female', 'grades': get_grades(75, 100)},
+         {'first_name': 'Norah', 'last_name': 'Cortez', 'gender': 'Female', 'grades': get_grades(85, 100)},
+         {'first_name': 'Natasha', 'last_name': 'Canseco', 'gender': 'Female', 'grades': get_grades(80, 100)},
+         {'first_name': 'Natalie', 'last_name': 'Ronaldo', 'gender': 'Female', 'grades': get_grades(60, 100)},
+         {'first_name': 'Noella', 'last_name': 'Kim', 'gender': 'Female', 'grades': get_grades(90, 100)}
+      ]
+
+   def get_data():
+      return {
+         'teacher': get_teacher_data(),
+         'students': get_student_data()
+      }
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   def get_teacher_data():
+      return {
+         'first_name': 'Janet',
+         'last_name': 'Wang',
+         'gender': 'female',
+         'course': 'Intro to Python'
+      }
+
+   def get_student_data():
+      import random
+      random.seed(37)
+      get_grades = lambda lower, upper: [random.randrange(lower, upper) for _ in range(10)]
+
+      return [
+         {'first_name': 'Jack', 'last_name': 'Smith', 'gender': 'Male', 'grades': get_grades(75, 85)},
+         {'first_name': 'Joe', 'last_name': 'Johnson', 'gender': 'Male', 'grades': get_grades(85, 95)},
+         {'first_name': 'Jeremy', 'last_name': 'Zhang', 'gender': 'Male', 'grades': get_grades(55, 100)},
+         {'first_name': 'Justin', 'last_name': 'Ali', 'gender': 'Male', 'grades': get_grades(75, 90)},
+         {'first_name': 'Jeff', 'last_name': 'McDaniel', 'gender': 'Male', 'grades': get_grades(75, 90)},
+         {'first_name': 'Nancy', 'last_name': 'Wu', 'gender': 'Female', 'grades': get_grades(75, 100)},
+         {'first_name': 'Norah', 'last_name': 'Cortez', 'gender': 'Female', 'grades': get_grades(85, 100)},
+         {'first_name': 'Natasha', 'last_name': 'Canseco', 'gender': 'Female', 'grades': get_grades(80, 100)},
+         {'first_name': 'Natalie', 'last_name': 'Ronaldo', 'gender': 'Female', 'grades': get_grades(60, 100)},
+         {'first_name': 'Noella', 'last_name': 'Kim', 'gender': 'Female', 'grades': get_grades(90, 100)}
+      ]
+
+   def get_data():
+      return {
+         'teacher': get_teacher_data(),
+         'students': get_student_data()
+      }
+
+   class Person(object):
+      def __init__(self, first_name, last_name, gender):
+         self.first_name = first_name
+         self.last_name = last_name
+         self.gender = gender
+
+      def is_male(self):
+         return self.gender.lower() == 'male'
+
+   class Teacher(Person):
+      def __init__(self, first_name, last_name, gender, course, students=[]):
+         super().__init__(first_name, last_name, gender)
+         self.course = course
+         self.students = students
+
+      @staticmethod
+      def convert_number_to_letter(number):
+         if 88.5 <= number <= 100.0:
+               return 'A'
+         elif 78.5 <= number < 88.5:
+               return 'B'
+         elif 68.5 <= number < 78.5:
+               return 'C'
+         elif 58.5 <= number < 68.5:
+               return 'D'
+         else:
+               return 'F'
+
+      def get_num_students(self):
+         return len(self.students)
+
+      def get_average_grade(self):
+         grades = [s.grade for s in self.students]
+         total = sum(grades)
+         n = len(grades)
+         average = total / n
+         return average
+
+      def __get_average_grade_by_gender(self, gender='Male'):
+         grades = [s.grade for s in self.students if s.gender == gender]
+         total = sum(grades)
+         n = len(grades)
+         average = total / n
+         return average
+
+      def get_male_average_grade(self):
+         return self.__get_average_grade_by_gender()
+      
+      def get_female_average_grade(self):
+         return self.__get_average_grade_by_gender(gender='Female')
+
+      def get_student_grades(self, letter=True):
+         return [(s.first_name, s.last_name, s.letter_grade if letter else s.grade) for s in self.students]
+
+   class Student(Person):
+      def __init__(self, first_name, last_name, gender, grades=[]):
+         super().__init__(first_name, last_name, gender)
+         self.grades = grades
+         self.letter_grades = [Teacher.convert_number_to_letter(g) for g in grades]
+         self.grade = sum(self.grades) / len(self.grades)
+         self.letter_grade = Teacher.convert_number_to_letter(self.grade)
+
+   data = get_data()
+
+   to_student = lambda s: Student(s['first_name'], s['last_name'], s['gender'], s['grades'])
+   students = [to_student(s) for s in data['students']]
+
+   teacher = Teacher(
+      data['teacher']['first_name'], 
+      data['teacher']['last_name'], 
+      data['teacher']['gender'], 
+      data['teacher']['course'], students)
+
+   print(teacher.get_student_grades(letter=False))
+   print(teacher.get_student_grades())
+   print(teacher.get_average_grade())
+   print(teacher.get_male_average_grade())
+   print(teacher.get_female_average_grade())
