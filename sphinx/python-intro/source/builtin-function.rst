@@ -1,9 +1,7 @@
 Built-in Functions and Types
 ============================
 
-There are many functions that are built into Python that you should reuse and try to not re-invent yourself. The ``print()`` function that we have been using from the start is one of those functions. As you progress and study more into Python, you will acquire exposures to ever more utility functions available. 
-
-Here are some useful built-in functions.
+There are many functions and types (data structures) that are built into Python that you should reuse and try to not re-invent yourself. As you progress and study more into Python, you will acquire exposure to ever more utility functions and data structures available. Below are just some samples of what we think will be useful.
 
 Types
 -----
@@ -534,3 +532,23 @@ The ``timedelta`` type enables us to do math operations on durations.
    :language: python
    :linenos:
    :emphasize-lines: 6
+
+File Paths
+----------
+
+For interacting with files, try the ``pathlib`` module. Below, we create a collection of all Python files.
+
+.. literalinclude:: code/oneoffcoder/library/listdirrecursively.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 3
+
+HTTP
+----
+
+If you need to interact with websites, try the ``urllib`` module.
+
+.. literalinclude:: code/oneoffcoder/library/httpop.py
+   :language: python
+   :linenos:
+   :emphasize-lines: 5,17,30-31
