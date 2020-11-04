@@ -118,28 +118,6 @@ We can also throw or raise an exception.
    print(get_area(10))
    print(get_area(-10))
 
-User-defined exceptions
------------------------
-
-We can define our own exceptions by extending the ``Exception`` class. All built-in Python exceptions inherits from ``Exception``, however, they all have the word ``Error`` as a part of their names (e.g. ``IndexError``, ``KeyError``, ``ValueError``, etc.). This naming convention is a bit confusing as errors cannot be handled (but exceptions can) and if the root class is ``Exception`` why not have that word as a part of the name instead of ``Error`` (e.g. ``IndexException``).
-
-.. code-block:: python
-   :linenos:
-
-   class NegativeValueError(Exception):
-      def __init__(self, value):
-         self.value = value
-         super().__init__(f'{value} is negative.')
-
-   def get_area(side):
-      if side < 1:
-         raise NegativeValueError(side)
-      return side * side
-
-   print(get_area(10))
-   print(get_area(-10))
-
-
 Exercise
 ^^^^^^^^
 
@@ -180,3 +158,71 @@ Solution.
 
    print(get_average(john))
    print(get_average(jack))
+
+User-defined exceptions
+-----------------------
+
+We can define our own exceptions by extending the ``Exception`` class. All built-in Python exceptions inherits from ``Exception``, however, they all have the word ``Error`` as a part of their names (e.g. ``IndexError``, ``KeyError``, ``ValueError``, etc.). This naming convention is a bit confusing as errors cannot be handled (but exceptions can) and if the root class is ``Exception`` why not have that word as a part of the name instead of ``Error`` (e.g. ``IndexException``).
+
+.. code-block:: python
+   :linenos:
+
+   class NegativeValueError(Exception):
+      def __init__(self, value):
+         self.value = value
+         super().__init__(f'{value} is negative.')
+
+   def get_area(side):
+      if side < 1:
+         raise NegativeValueError(side)
+      return side * side
+
+   print(get_area(10))
+   print(get_area(-10))
+
+
+Exercise
+^^^^^^^^
+Write a function to generate random dimensions for a triangle, square and rectangle. The dimensions (e.g. base, height, width, length) should be in the range [1, 10]. The function should return a dictionary that looks like the following.
+
+* :code:`{'shape': 'triangle', 'dimensions': [4, 10]}`
+* :code:`{'shape': 'square', 'dimensions': [2]}`
+* :code:`{'shape': 'rectangle', 'dimensions': [8, 7]}`
+
+If a user requests a random circle, throw an ``InvalidShapeError`` (you have to create a new exception type). Invoke this new function passing in randomly a request for triangle, square, rectangle and circle.
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   from random import randint, choice
+
+   class InvalidShapeError(Exception):
+      def __init__(self, shape):
+         self.shape = shape
+         super().__init__(f'{shape} is invalid.')
+
+   def get_shape(shape):
+      shapes = {
+         'triangle': 2,
+         'square': 1,
+         'rectangle': 2
+      }
+
+      if shape not in shapes:
+         raise InvalidShapeError(shape)
+
+      return {
+         'shape': shape,
+         'dimensions': [randint(1, 10) for _ in range(shapes[shape])]
+      }
+
+   all_shapes = ['triangle', 'square', 'rectangle', 'circle']
+
+   for _ in range(10):
+      try:
+         shape = get_shape(choice(all_shapes))
+         print(shape)
+      except InvalidShapeError as ise:
+         print(f'Problem: {ise}')
