@@ -280,7 +280,7 @@ Solution.
    numbers = [num for num in range(11) if num % 2 != 0]
    print(numbers)
 
-Random
+random
 ------
 
 Functions are also stored in built-in Python ``libraries`` (or ``modules``). A library is just a collection of code that logically and/or conceptually belong together. To use these functions, we must import the function from the library. One built-in Python library is the ``random`` library, which deals with generating random numbers. Let's see how we can import the ``randint()`` function. 
@@ -502,8 +502,8 @@ Solution.
     n = sum([1 for play in product(combinations(white_nums, 5), red_nums)])
     print(f'{n:,}') # 292,201,338
 
-Date
-----
+datetime
+--------
 
 The ``datetime`` module has a lot of date functions and data structures (types) that we may use to speed up our ability to solve problems. Below, we show how to use the ``date`` type.
 
@@ -533,8 +533,62 @@ The ``timedelta`` type enables us to do math operations on durations.
    :linenos:
    :emphasize-lines: 6
 
-File Paths
-----------
+The ``calendar`` module is very useful. We can use it to get the number of days for any particular month and year combination.
+
+.. code-block:: python
+
+    from calendar import monthrange
+
+    start, stop = monthrange(2011, 2)
+    print(f'start = {start}, stop = {stop}')
+
+Exercise
+^^^^^^^^
+
+Write a program to ask the user for a year. After you get the year: 
+
+* print out the number of days per month for that year
+* print out the total number of days in that year
+* print out the total number of months with 31 days
+* print out the total number of months with even days
+* print out the total number of months with odd days
+
+Solution.
+
+.. code-block:: python
+
+    from calendar import monthrange
+
+    year = int(input('year: '))
+
+    data = [(year, month, monthrange(year, month)[1]) for month in range(1, 13)]
+
+    print(f'number of days per month in {year}')
+    for y, m, d in data:
+        print(f'{y}-{m}: {d}')
+
+    print('-' * 15)
+
+    n = sum([days for *_, days in data])
+    print(f'total days in {year}: {n}')
+
+    print('-' * 15)
+
+    n = sum([1 for *_, days in data if days == 31])
+    print(f'total months in {year} with 31 days: {n}')
+
+    print('-' * 15)
+
+    n = sum([1 for *_, days in data if days % 2 == 0])
+    print(f'total months in {year} with even total number of days: {n}')
+
+    print('-' * 15)
+
+    n = sum([1 for *_, days in data if days % 2 != 0])
+    print(f'total months in {year} with odd total number of days: {n}')
+
+pathlib
+-------
 
 For interacting with files, try the ``pathlib`` module. Below, we create a collection of all Python files.
 
@@ -543,8 +597,8 @@ For interacting with files, try the ``pathlib`` module. Below, we create a colle
    :linenos:
    :emphasize-lines: 3
 
-HTTP
-----
+urllib
+------
 
 If you need to interact with websites, try the ``urllib`` module.
 
@@ -552,3 +606,60 @@ If you need to interact with websites, try the ``urllib`` module.
    :language: python
    :linenos:
    :emphasize-lines: 5,17,30-31
+
+Exercise
+^^^^^^^^
+
+Write a program to get the contents of ``https://www.oneoffcoder.com``. How many times did the vowels **a, e, i, o and u** appear?
+
+Solution.
+
+.. code-block:: python
+
+    import urllib.request
+
+    vowels = {'a', 'e', 'i', 'o', 'u'}
+
+    with urllib.request.urlopen('https://www.oneoffcoder.com/') as response:
+        content = response.read()
+        
+        n = sum([1 for letter in content if chr(letter) in vowels])
+        print(f'total vowels: {n}')
+
+Exercise
+^^^^^^^^
+
+Write a program to get the contents of ``https://www.oneoffcoder.com``.
+
+* What is the number of times the each character in the range [a, z] appeared?
+* What is the number of times each special characters (characters not in the range [a, z]) appeared?
+
+Solution.
+
+.. code-block:: python
+
+    import urllib.request
+    from itertools import groupby
+    import string
+
+    letters = set(list(string.ascii_lowercase))
+
+    with urllib.request.urlopen('https://www.oneoffcoder.com/') as response:
+        content = response.read().lower()
+        
+        is_valid = lambda letter: chr(letter) in letters
+        get_key = lambda letter: letter
+
+        # letters in [a, z]
+        counts = sorted([chr(letter) for letter in content if is_valid(letter)], key=get_key)
+        
+        for k, v in groupby(counts, key=get_key):
+            print(f'{k} => {len(list(v))}')
+
+        print('-' * 15)
+
+        # special characters not in [a, z]
+        counts = sorted([chr(letter) for letter in content if not is_valid(letter)], key=get_key)
+        
+        for k, v in groupby(counts, key=get_key):
+            print(f'{k} => {len(list(v))}')
