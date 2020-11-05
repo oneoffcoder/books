@@ -819,3 +819,60 @@ Solution.
    nums = [transform(n) for n in numbers if is_valid(n)]
 
    print(nums)
+
+
+Generators
+----------
+
+Generator functions are those that returns a stream of data back to the caller. The caller is able to treat the output of a generator function like an iterable collection. Here's a simple example of a generator function that generates random colors in the set of red, green and blue. Note that we have to use ``yield`` to return the color.
+
+.. code-block:: python
+   :linenos:
+   :emphasize-lines: 6
+
+   from random import choice
+
+   def get_colors():
+      n = 0
+      while n < 100:
+         yield choice(['red', 'green', 'blue'])
+         n += 1
+
+   # get_colors() returns something 
+   colors = get_colors()
+
+   # what do we get when we print colors?
+   print(colors)
+
+   # what is the type of colors?
+   print(type(colors))
+
+   # we can iterate through colors
+   for c in colors:
+      print(c)
+
+   # we can convert the outputs of a generator to a list
+   colors = list(get_colors())
+   print(colors)
+
+Exercise
+^^^^^^^^
+
+Write a generator function that produces 50 random numbers in the range [0, 10]. Try using this generator function.
+
+Solution.
+
+.. code-block:: python
+   :linenos:
+
+   from random import randint
+
+   def get_numbers():
+      n = 0
+      while n < 50:
+         n += 1
+         yield randint(0, 10)
+         
+
+   numbers = list(get_numbers())
+   print(numbers)
