@@ -16,6 +16,9 @@ If a context manager is being used, Python provides the ``with`` idiom to expres
 
 .. highlight:: python
 
+Basic
+-----
+
 A context manager is defined by creating a class and implementing at least two methods. 
 
 * :code:`__enter__()`
@@ -47,7 +50,7 @@ Note the method signature of ``__exit__(self, exc_type, exc_value, exc_traceback
 These arguments are not optional when defining ``__exit__()``; they must be part of the method signature of Python will assume that we are not implementing a cleanup for the exit phase. 
 
 Exercise
---------
+^^^^^^^^
 
 Create a context manager that generates the width and length randomly for a rectangle. Try using that context manager.
 
@@ -78,7 +81,7 @@ Solution.
         print(f'what did RandomRectManager return? {rect}')
 
 Exercise
---------
+^^^^^^^^
 
 Create a context manager that generates the width and length randomly for 10 rectangle. Try using a generator function to help you. 
 
@@ -116,3 +119,92 @@ Solution.
     with RandomRectManager(1, 10) as rects:
         for rect in rects:
             print(rect)
+
+Functions as context managers
+-----------------------------
+We can also ``annotate`` functions with the ``@contextmanager`` decorator to make them context manager. Here's an example below where we decorate ``get_rects()`` to be a context manager. See how we use ``try-except`` to manage the lifecycle of the context manager? Also, there should be only one ``yield``.
+
+.. code-block:: python
+    :linenos:
+    :emphasize-lines: 2,4,8
+
+    from random import randint
+    from contextlib import contextmanager
+
+    @contextmanager
+    def get_rects(a, b):
+        print('initialization goes here')
+        try:
+            yield ({'width': randint(a, b), 'height': randint(a, b)} for _ in range(10))
+        except:
+            print('exception handling goes here')
+        finally:
+            print('clean up goes here')
+
+    with get_rects(1, 10) as rects:
+        for rect in rects:
+            print(rect)
+
+You can use multiple context managers in tandem as follows. 
+
+.. code-block:: python
+    :linenos:
+    :emphasize-lines: 29
+
+    from random import randint
+    from contextlib import contextmanager
+
+    @contextmanager
+    def get_rects(a=1, b=10, n=10):
+        try:
+            yield ({'width': randint(a, b), 'height': randint(a, b)} for _ in range(n))
+        except:
+            pass
+        finally:
+            pass
+
+    @contextmanager
+    def get_tris(a=1, b=10, n=10):
+        try:
+            yield ({'base': randint(a, b), 'height': randint(a, b)} for _ in range(n))
+        except:
+            pass
+        finally:
+            pass
+
+    # avoid nested with if you can
+    with get_rects() as rects:
+        with get_tris() as tris:
+            for rect, tri in zip(rects, tris):
+                print(rect, ' | ', tri)
+
+    # you can reference multiple context managers
+    with get_rects(1, 10) as rects, get_tris(1, 10) as tris:
+        for rect, tri in zip(rects, tris):
+            print(rect, ' | ', tri)
+
+Exercise
+^^^^^^^^
+
+Write a function that can be used as a context manager to generate any number of radiuses. Make sure you parameterize the range of randiuses and the number of radiuses to generate.
+
+Solution.
+
+.. code-block:: python
+    :linenos:
+
+    from random import randint
+    from contextlib import contextmanager
+
+    @contextmanager
+    def get_circles(a=1, b=10, n=20):
+        try:
+            yield ({'radius': randint(a, b)} for _ in range(n))
+        except:
+            pass
+        finally:
+            pass
+
+    with get_circles(5, 50, 10) as circles:
+        for c in circles:
+            print(c)
