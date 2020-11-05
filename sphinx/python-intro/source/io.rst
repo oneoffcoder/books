@@ -3,40 +3,37 @@ Input/Output (IO)
 
 .. highlight:: python
 
-Write data to a file
---------------------
+File write and read
+-------------------
 
 .. literalinclude:: code/oneoffcoder/io/writingfile.py
    :language: python
    :linenos:
    :emphasize-lines: 1
 
-Read data from a file
----------------------
-
 .. literalinclude:: code/oneoffcoder/io/readingfile.py
    :language: python
    :linenos:
    :emphasize-lines: 1
 
-Writing/reading to/from a JSON file
------------------------------------
+JSON file write and read
+------------------------
 
 .. literalinclude:: code/oneoffcoder/io/wrjson.py
    :language: python
    :linenos:
    :emphasize-lines: 6,10,14
 
-Pickle/unpickle data to/from a file
------------------------------------
+Pickle/unpickle data
+--------------------
 
 .. literalinclude:: code/oneoffcoder/io/pickledata.py
    :language: python
    :linenos:
    :emphasize-lines: 7,11
 
-Shelving/unshelfing data to/from a file
----------------------------------------
+Shelving/unshelfing data
+------------------------
 
 .. literalinclude:: code/oneoffcoder/io/shelvingdata.py
    :language: python
