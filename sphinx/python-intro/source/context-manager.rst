@@ -16,9 +16,6 @@ If a context manager is being used, Python provides the ``with`` idiom to expres
 
 .. highlight:: python
 
-Basic
------
-
 A context manager is defined by creating a class and implementing at least two methods. 
 
 * :code:`__enter__()`
@@ -50,7 +47,8 @@ Note the method signature of ``__exit__(self, exc_type, exc_value, exc_traceback
 These arguments are not optional when defining ``__exit__()``; they must be part of the method signature of Python will assume that we are not implementing a cleanup for the exit phase. 
 
 Exercise
-^^^^^^^^
+--------
+
 Create a context manager that generates the width and length randomly for a rectangle. Try using that context manager.
 
 Solution.
@@ -79,4 +77,42 @@ Solution.
     with RandomRectManager(1, 10) as rect:
         print(f'what did RandomRectManager return? {rect}')
 
-File
+Exercise
+--------
+
+Create a context manager that generates the width and length randomly for 10 rectangle. Try using a generator function to help you. 
+
+Solution.
+
+.. code-block:: python
+    :linenos:
+
+    from random import randint
+
+    class RandomRectManager(object):
+        def __init__(self, a, b):
+            self.a = a
+            self.b = b
+
+        def __enter__(self):
+            return self.__get_rect()
+
+        def __exit__(self, etype, eval, etrace):
+            pass
+
+        def __get_rect(self):
+            n = 0
+            while n < 10:
+                n += 1
+
+                width = randint(self.a, self.b)
+                length = randint(self.a, self.b)
+                
+                yield {
+                    'width': width,
+                    'length': length
+                }
+
+    with RandomRectManager(1, 10) as rects:
+        for rect in rects:
+            print(rect)
