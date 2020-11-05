@@ -217,6 +217,24 @@ You can chain boolean values or comparisons to evaluate to True or False using b
 
    Here's some examples of disjunctions :code:`True or False or True or False` and :code:`False or False`. The first disjunction evaluates to true since at least one of the sub-expression is true. The second disjunction evaluates to false since none of the sub-expressions are true.
 
+
+.. note::
+   Another way to mimic the ternary operator is to use tuples with indexing. For example, if we have the tuple :code:`('boy', 'girl')`, we can get **boy** if we do :code:`('boy', 'girl')[0]` or **girl** if we do :code:`('boy', 'girl')[1]`. We can also use booleans, since ``True`` is **1** and ``False`` is **0**
+   
+   * :code:`('boy', 'girl')[False]` results in **boy**
+   * :code:`('boy', 'girl')[True]` results in **girl**
+
+   .. code:: python
+
+      # True is saying 1, 'girl'
+      # False is saying 0, 'boy'
+      print(('boy', 'girl')[True])
+      print(('boy', 'girl')[False])
+
+      # or if we had gender as a boolean
+      gender = True
+      print(('boy', 'girl')[gender])
+
 Exercise
 ^^^^^^^^
 
