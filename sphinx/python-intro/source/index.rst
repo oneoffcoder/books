@@ -49,6 +49,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    function
    builtin-function
    functional
+   decorators
    clazz
    libraries
    exceptions
