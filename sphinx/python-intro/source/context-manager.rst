@@ -47,7 +47,7 @@ Note the method signature of ``__exit__(self, exc_type, exc_value, exc_traceback
 * ``exc_value`` to ``exception_value``
 * ``exc_traceback`` to ``traceback``
 
-These arguments are not optional when defining ``__exit__()``; they must be part of the method signature of Python will assume that we are not implementing a cleanup for the exit phase. 
+These arguments are not optional when defining ``__exit__()``; they must be part of the method signature or Python will assume that we are not implementing a cleanup for the exit phase. 
 
 Exercise
 ^^^^^^^^
