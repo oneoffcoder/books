@@ -44,11 +44,16 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    types
    operators
    control
+   user-input
    loops
    function
+   builtin-function
+   functional
+   decorators
    clazz
    libraries
    exceptions
+   context-manager
    threads
    io
    turtle

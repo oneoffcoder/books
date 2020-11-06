@@ -20,8 +20,8 @@
 project = 'Python, No Tears'
 copyright = '2019, One-Off Coder'
 author = 'One-Off Coder'
-version = '0.0.1'
-release = '0.0.1'
+version = '1.0.0'
+release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 

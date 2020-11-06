@@ -1,8 +1,11 @@
-# declare with set
-s = set([1, 1, 2, 3])
+# empty set
+s = set()
 
 # declare with curly braces
 s = {1, 1, 2, 3}
+
+# create a set from a list
+s = set([1, 1, 2, 3])
 
 # add item
 s.add(4)
@@ -19,14 +22,14 @@ s.remove(4)
 a = {0, 2, 4, 6}
 b = {1, 2, 3, 4}
 
-# uinion
+# uinion: {0, 1, 2, 3, 4, 6}
 union = a | b
 
-# intersection
+# intersection: {2, 4}
 intersection = a & b
 
-# difference
+# difference: {0, 4, 6}
 diff = a - b
 
-# symmetric difference
+# symmetric difference: {0, 1, 3, 6}
 symmetric_diff = a ^ b

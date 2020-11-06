@@ -1,10 +1,10 @@
-def get_best_car(make, rank):
+def get_best_car(make, model):
     makes = {
         'honda': ['accord', 'civic', 'crv'],
         'toyota': ['camry', 'avalon', 'sienna']
     };
 
-    return makes[make.lower()][rank]
+    return makes[make.lower()][model]
 
 
 # valid
@@ -20,6 +20,6 @@ print(get_best_car('Ford', 1))
 try:
     print(get_best_car('Ford', 3))
 except IndexError:
-    print('invalid rank')
+    print('invalid model')
 except KeyError:
     print('invalid make')

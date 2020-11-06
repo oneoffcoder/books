@@ -3,87 +3,101 @@ Libraries
 
 .. highlight:: python
 
-Range function
---------------
+The built-in Python modules do a lot that you need, but there are many external Application Programming Interfaces (APIs), libraries or modules. We will look at some of these external libraries.
 
-.. literalinclude:: code/oneoffcoder/library/rangefunction.py
-   :language: python
-   :linenos:
-   :emphasize-lines: 6
-
-Generate random integers
-------------------------
-
-.. literalinclude:: code/oneoffcoder/library/mathrandom.py
-   :language: python
-   :linenos:
-
-CSV
+pip
 ---
 
-Writing data to a CSV
-^^^^^^^^^^^^^^^^^^^^^
+One popular way to install external libraries is through ``pip``. ``pip`` is a commandline tool that allows you to install Python libraries from the `Python Package Index <https://pypi.org/>`_ ``PyPi``. In order to install a Python library from PyPi, all you need to know is the package name, e.g. ``pandas``, and then you can issue the installation as follows.
+
+.. code-block:: bash
+
+   pip install <package_name>
+
+You can also install multiple packages in one line.
+
+.. code-block:: bash
+
+   pip install <package_name_1> <package_name_2>
+
+
+.. note::
+   ``pip`` will work its hardest to resolve ``transitive`` dependencies and bring those in. Transitive dependencies are those that a package you are trying to install depends on to work. 
+
+Pandas
+------
+
+.. code-block:: bash
+
+   pip install pandas
+
+``Pandas`` is a library for interacting with data. Writing CSV files is easy using Pandas.
 
 .. literalinclude:: code/oneoffcoder/library/pandaswritecsv.py
    :language: python
    :linenos:
    :emphasize-lines: 9
 
-Reading data from a CSV
-^^^^^^^^^^^^^^^^^^^^^^^
+Reading data from a CSV using Pandas is just as easy.
 
 .. literalinclude:: code/oneoffcoder/library/pandasreadcsv.py
    :language: python
    :linenos:
    :emphasize-lines: 3
 
-Date
-----
+Numpy
+-----
 
-Basic date
-^^^^^^^^^^
+.. code-block:: bash
 
-.. literalinclude:: code/oneoffcoder/library/datesimple.py
-   :language: python
-   :linenos:
-   :emphasize-lines: 4,8,12
+   pip install pandas scipy
 
-Basic time
-^^^^^^^^^^
+``Numpy`` is a numerical library. ``SciPy`` builds on numpy and is a general purpose scientific computing library. If we wanted to draw samples from a normal distribution centered on 0 with a scale of 1, :math:`\mathcal{N}(0, 1)`, we can use the ``normal()`` function.
 
-.. literalinclude:: code/oneoffcoder/library/timesimple.py
-   :language: python
-   :linenos:
-   :emphasize-lines: 4,8
+.. code-block:: python
 
-Date and time
-^^^^^^^^^^^^^
+   from numpy.random import normal
 
-.. literalinclude:: code/oneoffcoder/library/datetimesimple.py
-   :language: python
-   :linenos:
-   :emphasize-lines: 4,8,12,16,22
+   values = normal(0, 1, 100)
+   print(values)
 
-Duration
-^^^^^^^^
+Scikit-Learn
+------------
 
-.. literalinclude:: code/oneoffcoder/library/duration.py
-   :language: python
-   :linenos:
-   :emphasize-lines: 6
+.. code-block:: bash
 
-Listing files
--------------
+   pip install scikit-learn
 
-.. literalinclude:: code/oneoffcoder/library/listdirrecursively.py
-   :language: python
-   :linenos:
-   :emphasize-lines: 3
+``Scikit-Learn`` is a data science library. We can use this library to learn predictive models, generate data, transform data and so on.
 
-HTTP
-----
+.. code-block:: python
 
-.. literalinclude:: code/oneoffcoder/library/httpop.py
-   :language: python
-   :linenos:
-   :emphasize-lines: 5,17,30-31
+   from sklearn.datasets import make_regression
+
+   X, y = make_regression(**{
+      'n_samples': 1000,
+      'n_features': 50,
+      'n_informative': 10,
+      'n_targets': 1,
+      'bias': 5.3,
+      'random_state': 37
+   })
+
+   print(f'X shape = {X.shape}, y shape {y.shape}')
+
+joblib
+------
+
+.. code-block:: bash
+
+   pip install joblib
+
+``Joblib`` is an library to make multi-core processing easier in Python.
+
+.. code-block:: python
+
+   from math import sqrt
+   from joblib import Parallel, delayed
+
+   results = Parallel(n_jobs=2)(delayed(sqrt) (i ** 2) for i in range(10))
+   print(results)
