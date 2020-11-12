@@ -41,6 +41,9 @@ What about modeling a car? A car has a make, model, year, doors and gas efficien
 
 .. highlight:: python
 
+.. note::
+   It is very helpful to name properties to be like ``nouns`` and to name functions (actions) to be like ``verbs``. Names of properties should be ``nouny`` and names of functions should be ``verby``.
+
 Basic
 -----
 
@@ -190,15 +193,52 @@ If you come from other languages like Java or C#, it is typical to prevent direc
 .. note::
    In general, ``getters`` are called ``accessors`` and ``setters`` are called ``mutators``. Typically, in Python, it is not common to see getters and setters being defined for classes. It seems to be that Pythonistas want code to be concise. 
 
-Private method
-^^^^^^^^^^^^^^
+Access specifiers
+^^^^^^^^^^^^^^^^^
 
-Unlike many other languages, such as Java or C#, Python does not have a way to specify access levels (e.g. private, protected or public). However, by convention, class methods that are determined to be private should start with a double underscore. Below, we have defined ``__check_year()`` to be private, and users should not invoke this method directly. The ``set_year()`` method calls ``__check_year()`` internally when the year is being mutated.
+In OOP, you may desire to specify who can reference your class properties or invoke your class functions. Typically, there are three levels of access.
+
+- ``public``: anyone can have access
+- ``protected``: only sub-classes can have access
+- ``private``: only the class itself can have access
+
+The convention to signal ``access specifiers`` is with underscores ``_``. 
+
+- ``public``: names of properties or functions of a class without any underscore are public
+- ``protected``: names of properties or functions of a class with one underscore as the prefix are protected
+- ``private``: names of properties or functions of a class with two underscores as the prefix are private
+
+Below, we have defined ``__check_year()`` to be private, and users cannot not invoke this method directly. The ``set_year()`` method calls ``__check_year()`` internally when the year is being mutated.
 
 .. literalinclude:: code/oneoffcoder/clazz/privatemethod.py
    :language: python
    :linenos:
    :emphasize-lines: 7-8, 26
+
+Here's another example of modeling a student. Notice that the first and last names are stored internally as private properties (two double underscores). Thus, we cannot access those properties directly. We have to access through the decorated methods (those methods are public). 
+
+.. code-block:: python
+   :linenos:
+   :emphasize-lines: 3,4,18
+
+   class Student(object):
+      def __init__(self, fname, lname):
+         self.__fname = fname
+         self.__lname = lname
+
+      @property
+      def fname(self):
+         return self.__fname
+
+      @property
+      def lname(self):
+         return self.__lname
+
+   student1 = Student('John', 'Doe')
+   student2 = Student('Jane', 'Smith')
+
+   print(student1.fname) # will work
+   print(student1.__fname) # private, will NOT work
 
 Static method
 ^^^^^^^^^^^^^
