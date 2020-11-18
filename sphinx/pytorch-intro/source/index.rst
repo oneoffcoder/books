@@ -131,3 +131,9 @@ Author
 ======
 
 Jee Vang, Ph.D.
+
+- |Patreon_Link|
+
+.. |Patreon_Link| raw:: html
+
+   <a href="https://www.patreon.com/vangj" target="_blank">Patreon</a>
