@@ -128,3 +128,9 @@ Authors
 
 - Jee Vang, Ph.D.
 - Joyce Vang
+
+- |Patreon_Link|
+
+.. |Patreon_Link| raw:: html
+
+   <a href="https://www.patreon.com/vangj" target="_blank">Patreon</a>

@@ -36,7 +36,7 @@ docker run -it \
     -p 301:301 \
     -v $HOME/git/books/sphinx/spark-intro/source:/root/ipynb \
     -e PYSPARK_MASTER=spark://localhost:7077 \
-    book-spark-intro:local
+    oneoffcoder/book-spark-intro
 
 docker run -it \
     -p 9870:9870 \
@@ -52,7 +52,7 @@ docker run -it \
     -v $HOME/git/books/sphinx/spark-intro/source:/root/ipynb \
     -e PYSPARK_MASTER=spark://localhost:7077 \
     -e NOTEBOOK_PASSWORD=sha1:6676da7235c8:9c7d402c01e330b9368fa9e1637233748be11cc5 \
-    book-spark-intro:local
+    oneoffcoder/book-spark-intro
 ```
 
 # Docker Hub
