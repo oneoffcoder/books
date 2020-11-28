@@ -169,3 +169,15 @@ Each bitstring is only 7 characters long and each position in the bitstring repr
       - Pride and Prejudice
 
 Which books would you recommend to Abdul to read based on what he has read in the past and his similarity to other readers?
+
+Rock Paper Scissor
+------------------
+
+The class game of Rock Paper Scissor ``RPS`` is played between two people. Each round, each of the players picks either rock, paper or scissor. The rules for win, lose or tie is as follows.
+
+- If both players pick the same item (e.g. rock and rock), then the outcome is a tie.
+- Rock always beats scissor.
+- Scissor always beats paper.
+- Paper always beats rock.
+
+Write a terminal-based game of ``RPS`` where a user gets to challenge the computer. The game should loop endlessly and handle the situation when a user wants to quit. Before the game ends, the user should have information of the number of times they have won, total games played and percentage of wins. On each round, let the user pick rock, paper or scissor, and then randomly let the computer pick as well. Compute the result for the user (win, lose or tie). Always show what the user and computer picked as well as the result each time.
