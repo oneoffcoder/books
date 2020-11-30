@@ -10,16 +10,11 @@ LABEL youtube="https://www.youtube.com/channel/UCCCv8Glpb2dq2mhUj5mcHCQ"
 LABEL linkedin="https://www.linkedin.com/company/one-off-coder"
 
 # setup ubuntu
-# https://stackoverflow.com/questions/53800051/repository-does-not-have-a-release-file-error
 RUN apt-get update -y \
     && apt-get upgrade -y \
-    && apt-get install libgraphviz-dev ffmpeg -y \
+    && DEBIAN_FRONTEND=noninteractive apt-get install graphviz libgraphviz-dev pkg-config ffmpeg -y \
     && apt-get clean
 
 # setup conda
-RUN conda update -n base -c defaults conda \
-    && conda install scikit-learn missingno pygraphviz yellowbrick squarify \
-        -c anaconda \
-        -c conda-forge \
-        -c districtdatalabs \
-        -y
+RUN conda install -c conda-forge pygraphviz missingno squarify -y \
+    && conda install -c districtdatalabs yellowbrick -y

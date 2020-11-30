@@ -57,6 +57,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    threads
    io
    turtle
+   more-practice
 
 About
 =====

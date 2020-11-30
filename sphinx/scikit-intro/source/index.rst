@@ -71,6 +71,13 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    plot-graph
    plot-animation
 
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Supporting APIs
+
+   pandas
+
 About
 =====
 
