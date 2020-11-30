@@ -76,7 +76,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    :numbered:
    :caption: Supporting APIs
 
-   pandas-dataframe
+   pandas
 
 About
 =====
