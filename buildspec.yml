@@ -8,7 +8,7 @@ phases:
       - apt-get update
       - lsb_release -a
       - apt-get -qq install pandoc -y
-      - pip install ipython sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinxcontrib-blockdiag sphinx-autobuild sphinx-sitemap nbsphinx -q
+      - pip install ipython sphinx sphinx_rtd_theme sphinxcontrib-bibtex sphinxcontrib-blockdiag sphinx-autobuild sphinx-sitemap jupyter-sphinx nbsphinx -q
   pre_build:
     commands:
       - python --version
