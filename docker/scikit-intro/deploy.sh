@@ -2,7 +2,7 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-scikit-intro
-VERSION=0.3.0
+VERSION=0.4.0
 IMAGEID=book-scikit-intro:local
 
 echo ${IMAGEID}
