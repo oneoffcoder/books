@@ -1,3 +1,7 @@
 div .wy-side-nav-search .version {
     color: white;
 }
+
+div.output_area.docutils.container > div.widget-subarea:first-child {
+    display: none;
+}

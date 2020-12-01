@@ -33,7 +33,7 @@ RUN wget -q https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh 
     && conda update -c conda-forge jupyterlab \
     && conda install -c conda-forge nodejs \
     && pip install jupyterlab-commenting-service \
-    && jupyter labextension install @jupyterlab/commenting-extension @jupyterlab/toc @krassowski/jupyterlab-lsp \
+    && jupyter labextension install @jupyter-widgets/jupyterlab-manager @jupyterlab/commenting-extension @jupyterlab/toc @krassowski/jupyterlab-lsp \
     && conda install -c conda-forge python-language-server r-languageserver
 COPY ubuntu/root/.jupyter /root/.jupyter/
 

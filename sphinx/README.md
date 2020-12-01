@@ -16,6 +16,7 @@ pip install \
     sphinx-autobuild \
     sphinxcontrib-blockdiag \
     sphinx-sitemap \
+    jupyter-sphinx \
     nbsphinx -U
 
 conda install -c conda-forge pandoc ipython -y
