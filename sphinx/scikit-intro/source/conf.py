@@ -32,7 +32,8 @@ extensions = [
     'sphinxcontrib.bibtex',
     'nbsphinx',
     'sphinx.ext.mathjax',
-    'sphinx_sitemap'
+    'sphinx_sitemap',
+    'jupyter_sphinx'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

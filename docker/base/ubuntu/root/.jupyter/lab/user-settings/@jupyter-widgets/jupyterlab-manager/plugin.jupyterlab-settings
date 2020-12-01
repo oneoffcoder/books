@@ -1,0 +1,10 @@
+{
+    // Jupyter Widgets
+    // @jupyter-widgets/jupyterlab-manager:plugin
+    // Jupyter widgets settings.
+    // ******************************************
+
+    // Save Jupyter widget state in notebooks
+    // Automatically save Jupyter widget state when a notebook is saved.
+    "saveState": true
+}
