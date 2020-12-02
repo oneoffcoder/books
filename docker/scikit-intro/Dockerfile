@@ -16,5 +16,6 @@ RUN apt-get update -y \
     && apt-get clean
 
 # setup conda
-RUN conda install -c conda-forge pygraphviz missingno squarify -y \
-    && conda install -c districtdatalabs yellowbrick -y
+RUN conda install -c conda-forge pygraphviz missingno squarify shap -y \
+    && conda install -c districtdatalabs yellowbrick -y \
+    && pip install lime
