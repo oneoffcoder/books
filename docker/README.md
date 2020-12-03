@@ -53,3 +53,11 @@ docker-compose events
 # observe status e.g. health
 docker ps
 ```
+
+# Scripts and EOL
+
+To fix EOL issues, use the following command.
+
+```bash
+sed -i -e 's/\r$//' *.sh
+```
