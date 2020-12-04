@@ -13,7 +13,8 @@ LABEL linkedin="https://www.linkedin.com/company/one-off-coder"
 RUN apt-get update -y \
     && apt-get upgrade -y \
     && DEBIAN_FRONTEND=noninteractive apt-get install libcurl4-openssl-dev libssl-dev libv8-dev -y \
-    && apt-get clean
+    && apt-get clean \
+    && ln -s /bin/tar /bin/gtar
 
 # install R packages
 RUN Rscript \
