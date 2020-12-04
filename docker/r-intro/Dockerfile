@@ -12,7 +12,7 @@ LABEL linkedin="https://www.linkedin.com/company/one-off-coder"
 # setup ubuntu
 RUN apt-get update -y \
     && apt-get upgrade -y \
-    && DEBIAN_FRONTEND=noninteractive apt-get install libcurl4-openssl-dev libssl-dev -y \
+    && DEBIAN_FRONTEND=noninteractive apt-get install libcurl4-openssl-dev libssl-dev libv8-dev -y \
     && apt-get clean
 
 # install R packages
