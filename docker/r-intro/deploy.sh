@@ -3,7 +3,7 @@
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-r-intro
 VERSION=0.0.9
-IMAGEID=$(docker images | awk -v repo="$REPOSITORY" -v tag="local" 'index($1, repo) && index($2, tag) {print $3}')
+IMAGEID=book-r-intro:local
 
 echo ${IMAGEID}
 
