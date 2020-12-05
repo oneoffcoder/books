@@ -55,7 +55,7 @@ RUN Rscript \
 RUN Rscript \
     -e "repos <- 'https://cloud.r-project.org/'" \
     -e "dependencies <- c('Depends', 'Imports', 'LinkingTo', 'Suggests', 'Enhances')" \
-    -e "libs <- c('skimr', 'RANN', 'gbm', 'xgboost', 'caretEnsemble', 'C50', 'earth')" \
+    -e "libs <- c('skimr', 'RANN', 'gbm', 'xgboost', 'caret', 'caretEnsemble', 'C50', 'earth')" \
     -e "install.packages(libs, repos=repos, Ncpus=10, dependencies=dependencies)"
 RUN Rscript \
     -e "repos <- 'https://cloud.r-project.org/'" \
@@ -79,5 +79,4 @@ RUN Rscript \
     -e "install.packages(libs, repos=repos, Ncpus=10, dependencies=dependencies)"
 RUN Rscript \
     -e "library(devtools)" \
-    -e "install_github('vqv/ggbiplot')" \
-    -e "install_version('caret', version='6.0-84')"
+    -e "install_github('vqv/ggbiplot')"

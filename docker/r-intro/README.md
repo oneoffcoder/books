@@ -13,4 +13,4 @@ docker run -it ^
 
 [R package sources are available](http://cloud.r-project.org/src/).
 
-Use [simple mass downloader](https://chrome.google.com/webstore/detail/simple-mass-downloader/abdkkegmcbiomijcbdaodaflgehfffed?hl=en-US) with Chrome to download all these packages.
+Use [simple mass downloader](https://chrome.google.com/webstore/detail/simple-mass-downloader/abdkkegmcbiomijcbdaodaflgehfffed?hl=en-US) with Chrome to download all these packages. You can install packages [from local source](https://riptutorial.com/r/example/5556/install-package-from-local-source).
