@@ -29,11 +29,14 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinxcontrib.bibtex',
     'nbsphinx',
     'sphinx.ext.mathjax',
     'sphinx_sitemap',
     'jupyter_sphinx'
 ]
+
+bibtex_bibfiles = ['references.bib']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
