@@ -6,6 +6,6 @@ host=0.0.0.0
 
 for project in "${projects[@]}"
 do
-    python -m sphinx_autobuild $project/source $project/build -b html -H $host -p $port -B &
+    python -m sphinx_autobuild $project/source $project/build -b html --host $host --port $port -B &
     port=$((port+1))
 done
