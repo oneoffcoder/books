@@ -19,5 +19,5 @@ RUN apt-get update -y \
 RUN conda install -c conda-forge pygraphviz missingno squarify shap -y \
     && conda install -c districtdatalabs yellowbrick -y \
     && pip install lime \
-    && conda install -y -c conda-forge python-blosc cytoolz dask lz4 dask-labextension \
+    && conda install -y -c conda-forge python-blosc cytoolz dask dask-ml lz4 dask-labextension \
     && jupyter labextension install dask-labextension
