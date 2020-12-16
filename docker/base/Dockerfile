@@ -17,7 +17,7 @@ ENV NOTEBOOK_PASSWORD=""
 # setup ubuntu
 RUN apt-get update -y \
     && apt-get upgrade -y \
-    && apt-get -y install wget supervisor libomp-dev \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y install wget supervisor libomp-dev \
     && apt-get clean
 
 # setup nodejs

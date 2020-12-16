@@ -48,6 +48,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    functions
    functional
    oop
+   formula
    
 .. toctree::
    :maxdepth: 2

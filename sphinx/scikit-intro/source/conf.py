@@ -29,7 +29,6 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinxcontrib.bibtex',
     'nbsphinx',
     'sphinx.ext.mathjax',
     'sphinx_sitemap',
