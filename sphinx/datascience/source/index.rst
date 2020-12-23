@@ -126,6 +126,12 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    creating-junction-tree
    gaussian-network-inference
    causal-inference
+
+.. toctree::
+   :maxdepth: 1
+   :caption: References
+
+   zzz-bib
    
 
 About
