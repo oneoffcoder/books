@@ -3,9 +3,7 @@
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-cpp
 VERSION=0.0.3
-IMAGEID=book-cpp:local
-
-echo ${IMAGEID}
+IMAGEID=${REPOSITORY}:local
 
 docker tag ${IMAGEID} ${ORGANIZATION}/${REPOSITORY}:${VERSION}
 docker tag ${IMAGEID} ${ORGANIZATION}/${REPOSITORY}:latest

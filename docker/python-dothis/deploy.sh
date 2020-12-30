@@ -3,9 +3,7 @@
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-python-dothis
 VERSION=0.0.4
-IMAGEID=book-python-dothis:local
-
-echo ${IMAGEID}
+IMAGEID=${REPOSITORY}:local
 
 docker tag ${IMAGEID} ${ORGANIZATION}/${REPOSITORY}:${VERSION}
 docker tag ${IMAGEID} ${ORGANIZATION}/${REPOSITORY}:latest
