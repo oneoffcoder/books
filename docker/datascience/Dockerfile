@@ -17,7 +17,7 @@ RUN apt-get update -y \
 
 # setup libraries
 RUN conda update -n base -c defaults conda \
-    && conda install autograd gensim nltk pyldavis nodejs pygraphviz tqdm missingno wordcloud shap -c conda-forge -y \
+    && conda install autograd gensim nltk pyldavis nodejs pygraphviz tqdm missingno wordcloud shap xgboost lightgbm catboost plotly eli5 sklearn-contrib-lightning boruta_py stumpy tsfresh -c conda-forge -y \
     && conda install -c anaconda pygraphviz -y \
     && pip install yellowbrick librosa textblob fancyimpute \
     && pip install pybbn \
