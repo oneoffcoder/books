@@ -3,9 +3,7 @@
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-spark-intro
 VERSION=0.0.3
-IMAGEID=$(docker images | awk -v repo="$REPOSITORY" -v tag="local" 'index($1, repo) && index($2, tag) {print $3}')
-
-echo ${IMAGEID}
+IMAGEID=${REPOSITORY}:local
 
 docker tag ${IMAGEID} ${ORGANIZATION}/${REPOSITORY}:${VERSION}
 docker tag ${IMAGEID} ${ORGANIZATION}/${REPOSITORY}:latest

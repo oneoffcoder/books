@@ -12,12 +12,12 @@ LABEL linkedin="https://www.linkedin.com/company/one-off-coder"
 # setup ubuntu
 RUN apt-get update -y \
     && apt-get upgrade -y \
-    && apt-get install libgraphviz-dev ffmpeg -y \
+    && DEBIAN_FRONTEND=noninteractive apt-get install libgraphviz-dev ffmpeg -y \
     && apt-get clean
 
 # setup libraries
 RUN conda update -n base -c defaults conda \
-    && conda install autograd gensim nltk pyldavis nodejs pygraphviz tqdm missingno wordcloud shap -c conda-forge -y \
+    && conda install autograd gensim nltk pyldavis nodejs pygraphviz tqdm missingno wordcloud shap xgboost lightgbm catboost plotly eli5 sklearn-contrib-lightning boruta_py stumpy tsfresh -c conda-forge -y \
     && conda install -c anaconda pygraphviz -y \
     && pip install yellowbrick librosa textblob fancyimpute \
     && pip install pybbn \
