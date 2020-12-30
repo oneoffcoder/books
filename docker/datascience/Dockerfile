@@ -12,7 +12,7 @@ LABEL linkedin="https://www.linkedin.com/company/one-off-coder"
 # setup ubuntu
 RUN apt-get update -y \
     && apt-get upgrade -y \
-    && apt-get install libgraphviz-dev ffmpeg -y \
+    && DEBIAN_FRONTEND=noninteractive apt-get install libgraphviz-dev ffmpeg -y \
     && apt-get clean
 
 # setup libraries
