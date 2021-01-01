@@ -54,6 +54,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    partial-correlation
    precision-recall-roc
    kalman-filter
+   kalman-filter-ii
 
 .. toctree::
    :maxdepth: 1
