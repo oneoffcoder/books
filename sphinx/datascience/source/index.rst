@@ -53,6 +53,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    cmi-gaussian
    partial-correlation
    precision-recall-roc
+   kalman-filter
 
 .. toctree::
    :maxdepth: 1
