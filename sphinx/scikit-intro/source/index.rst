@@ -53,6 +53,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    imputation
    pipelines
    validation
+   hyperparam-tuning
 
 .. toctree::
    :maxdepth: 1
