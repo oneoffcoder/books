@@ -84,6 +84,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    statsmodels
    xgboost
    shap
+   imbalanced-learn
 
 About
 =====
