@@ -16,7 +16,7 @@ RUN apt-get update -y \
     && apt-get clean
 
 # setup conda
-RUN conda install -c conda-forge pygraphviz missingno squarify shap xgboost lightgbm catboost plotly eli5 sklearn-contrib-lightning boruta_py stumpy tsfresh -y \
+RUN conda install -c conda-forge pygraphviz missingno squarify shap xgboost lightgbm catboost plotly eli5 sklearn-contrib-lightning boruta_py stumpy tsfresh imbalanced-learn -y \
     && conda install -c districtdatalabs yellowbrick -y \
     && pip install lime \
     && conda install -y -c conda-forge python-blosc cytoolz dask dask-ml lz4 dask-labextension \
