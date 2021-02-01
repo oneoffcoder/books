@@ -2,7 +2,7 @@
 
 ORGANIZATION=oneoffcoder
 REPOSITORY=book-scikit-intro
-VERSION=0.9.0
+VERSION=1.0.0
 IMAGEID=${REPOSITORY}:local
 
 docker tag ${IMAGEID} ${ORGANIZATION}/${REPOSITORY}:${VERSION}
