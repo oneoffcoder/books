@@ -20,4 +20,5 @@ RUN conda install -c conda-forge pygraphviz missingno squarify shap xgboost ligh
     && conda install -c districtdatalabs yellowbrick -y \
     && pip install lime \
     && conda install -y -c conda-forge python-blosc cytoolz dask dask-ml lz4 dask-labextension \
-    && jupyter labextension install dask-labextension
+    && jupyter labextension install dask-labextension \
+    && pip install tune-sklearn ray[tune]
