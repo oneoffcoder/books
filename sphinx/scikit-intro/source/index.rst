@@ -55,6 +55,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    validation
    hyperparam-tuning
    feature-selection
+   customized-estimators
 
 .. toctree::
    :maxdepth: 1
