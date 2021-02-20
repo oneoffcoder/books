@@ -59,6 +59,13 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    turtle
    more-practice
 
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Nifty Libraries
+   
+   extralib
+
 About
 =====
 
