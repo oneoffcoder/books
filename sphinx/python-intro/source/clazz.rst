@@ -592,3 +592,31 @@ Solution.
    print(teacher.get_average_grade())
    print(teacher.get_male_average_grade())
    print(teacher.get_female_average_grade())
+
+Data classes
+------------
+
+Data classes are available in Python 3.7. Notice the following:
+
+- the ``@dataclass`` annotation is placed on the class
+- properties defined in a data class requires type hints
+- the ``__eq__`` and ``__repr__`` dunders are implemented 
+
+.. code-block:: python
+   :linenos:
+
+   from dataclasses import dataclass
+
+   @dataclass
+   class Person:
+      first_name: str
+      last_name: str
+      age: int
+
+   p1 = Person('john', 'doe', 23)
+   p2 = Person('jane', 'smith', 22)
+
+   print(p1)
+   print(p2)
+
+   print(p1 == p2)

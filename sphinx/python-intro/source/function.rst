@@ -663,6 +663,21 @@ Here's an example of a function with mixed argument/input types.
    :linenos:
    :emphasize-lines: 2-9
 
+
+Required keyword arguments
+--------------------------
+
+You can enforce keyword arguments by using an asterisk before the arguments you want to force as keyword arguments.
+
+.. code-block:: python
+   :linenos:
+
+   def print_name(*, first_name, last_name):
+      print(f'{first_name} {last_name}')
+
+   # print_name('john', 'doe') will not work
+   print_name(first_name='john', last_name='doe')
+
 Unpacking tuple return type
 ---------------------------
 
