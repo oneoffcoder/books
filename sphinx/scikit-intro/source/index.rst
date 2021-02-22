@@ -89,6 +89,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    shap
    imbalanced-learn
    nltk
+   gensim
    
 .. toctree::
    :maxdepth: 1
