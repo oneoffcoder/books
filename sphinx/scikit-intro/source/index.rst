@@ -88,6 +88,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    xgboost
    shap
    imbalanced-learn
+   nltk
    
 .. toctree::
    :maxdepth: 1
