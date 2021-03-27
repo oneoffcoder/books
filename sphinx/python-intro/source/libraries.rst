@@ -50,7 +50,7 @@ Numpy
 
 .. code-block:: bash
 
-   pip install pandas scipy
+   pip install numpy scipy
 
 ``Numpy`` is a numerical library. ``SciPy`` builds on numpy and is a general purpose scientific computing library. If we wanted to draw samples from a normal distribution centered on 0 with a scale of 1, :math:`\mathcal{N}(0, 1)`, we can use the ``normal()`` function.
 

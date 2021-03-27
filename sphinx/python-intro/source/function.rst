@@ -728,8 +728,8 @@ It seems lambdas are suited for very simple logic (one-liners), and if you have 
    say_bye = lambda fname, lname: print(f'bye, {fname} {lname}')
 
    # call lambda
-   say_hello('John', 'Doe')
-   say_hello('Mary', 'Smith')
+   say_bye('John', 'Doe')
+   say_bye('Mary', 'Smith')
 
 Lambdas can return values.
 
