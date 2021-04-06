@@ -1,11 +1,6 @@
 package com.oneoffcoder.java.record;
 
 public class RecordDemo {
-  public record Person(String firstName, String lastName) {
-    public String getFullName() {
-      return firstName + " " + lastName;
-    }
-  }
 
   public static void main(String[] args) {
     Person p1 = new Person("John", "Doe");
@@ -20,5 +15,12 @@ public class RecordDemo {
     System.out.println(p1.getFullName());
 
     // p1.firstName = "Tom"; // Cannot assign a value to a final variable
+  }
+
+  public record Person(String firstName, String lastName) {
+
+    public String getFullName() {
+      return firstName + " " + lastName;
+    }
   }
 }
