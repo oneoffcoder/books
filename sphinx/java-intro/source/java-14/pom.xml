@@ -9,8 +9,8 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <properties>
-    <maven.compiler.source>14</maven.compiler.source>
-    <maven.compiler.target>14</maven.compiler.target>
+    <maven.compiler.source>15</maven.compiler.source>
+    <maven.compiler.target>15</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -21,7 +21,7 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <release>14</release>
+          <release>15</release>
           <compilerArgs>--enable-preview</compilerArgs>
         </configuration>
       </plugin>
