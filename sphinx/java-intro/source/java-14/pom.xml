@@ -9,6 +9,7 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <properties>
+    <java.version>15</java.version>
     <maven.compiler.source>15</maven.compiler.source>
     <maven.compiler.target>15</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
