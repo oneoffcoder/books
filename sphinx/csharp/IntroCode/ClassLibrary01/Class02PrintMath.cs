@@ -6,6 +6,8 @@ namespace ClassLibrary01
     {
         static void Main(string[] args)
         {
+            // you can print math expressions
+            
             // basic math operations
             Console.WriteLine(3 + 2);
             Console.WriteLine(3 - 2);

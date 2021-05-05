@@ -6,6 +6,7 @@ namespace ClassLibrary01
     {
         static void Main(string[] args)
         {
+            // hello world example
             Console.WriteLine("hello, world!");
         }
     }

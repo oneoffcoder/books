@@ -17,6 +17,7 @@ namespace ClassLibrary01
             bool o = true;
             string t = "Hello, world!";
             
+            // you can print variables
             Console.WriteLine(b);
             Console.WriteLine(s);
             Console.WriteLine(i);

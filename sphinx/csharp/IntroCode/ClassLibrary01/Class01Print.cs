@@ -6,6 +6,7 @@ namespace ClassLibrary01
     {
         static void Main(string[] args)
         {
+            // you can print other stuff
             Console.WriteLine("coding is fun!");
             Console.WriteLine("abraham lincoln is the 16th president");
         }
