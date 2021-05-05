@@ -2,7 +2,7 @@ using System;
 
 namespace ClassLibrary01
 {
-    public class Class01Print
+    public class C01Print
     {
         static void Main(string[] args)
         {

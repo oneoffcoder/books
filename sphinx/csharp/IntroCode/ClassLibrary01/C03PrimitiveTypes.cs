@@ -2,7 +2,7 @@ using System;
 
 namespace ClassLibrary01
 {
-    public class Class03PrimitiveTypes
+    public class C03PrimitiveTypes
     {
         static void Main(string[] args)
         {

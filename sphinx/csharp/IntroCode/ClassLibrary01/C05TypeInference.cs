@@ -2,7 +2,7 @@ using System;
 
 namespace ClassLibrary01
 {
-    public class Class05TypeInference
+    public class C05TypeInference
     {
         static void Main(string[] args)
         {

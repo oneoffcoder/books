@@ -2,7 +2,7 @@ using System;
 
 namespace ClassLibrary01
 {
-    public class Class04ObjectTypes
+    public class C04ObjectTypes
     {
         static void Main(string[] args)
         {

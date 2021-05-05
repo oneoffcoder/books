@@ -2,7 +2,7 @@
 
 namespace ClassLibrary01
 {
-    public class Class00Hello
+    public class C00Hello
     {
         static void Main(string[] args)
         {

@@ -2,7 +2,7 @@ using System;
 
 namespace ClassLibrary01
 {
-    public class Class06String
+    public class C06String
     {
         static void Main(string[] args)
         {
