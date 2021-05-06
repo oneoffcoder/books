@@ -20,6 +20,27 @@ namespace ClassLibrary02
             Console.WriteLine(r);
             Console.WriteLine(s);
             Console.WriteLine(t);
+
+            // shifting bits
+            a = 1;
+            var x = a << 1;
+            var y = a << 2;
+            var z = a << 3;
+
+            Console.WriteLine(a);
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+            Console.WriteLine(z);
+
+            a = 8;
+            x = a >> 1;
+            y = a >> 2;
+            z = a >> 3;
+
+            Console.WriteLine(a);
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+            Console.WriteLine(z);
         }
     }
 }
