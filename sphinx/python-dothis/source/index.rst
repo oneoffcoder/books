@@ -51,6 +51,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    :numbered:
    :caption: Contents
 
+   collection-initialization
    basic-chained-comparison
    basic-falsy-truthy
    basic-ternary-operator
