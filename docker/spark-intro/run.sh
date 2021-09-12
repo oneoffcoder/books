@@ -1,7 +1,10 @@
 #!/bin/bash
 
 docker run -it \
+    -p 9870:9870 \
+    -p 8088:8088 \
+    -p 8080:8080 \
+    -p 18080:18080 \
     -p 8888:8888 \
-    -v $HOME/git/books/sphinx/scikit-intro/source:/root/ipynb \
-    -e NOTEBOOK_PASSWORD=sha1:6676da7235c8:9c7d402c01e330b9368fa9e1637233748be11cc5 \
-    oneoffcoder/book-scikit-intro:latest
+    -v $HOME/git/books/sphinx/spark-intro/source:/root/ipynb \
+    oneoffcoder/book-spark-intro:latest
