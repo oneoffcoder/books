@@ -47,6 +47,7 @@ This book is a tutorial on ``Docker``. To follow along, you will need to `instal
    devops
    arm
    gpu
+   encryption
    references
 
 
