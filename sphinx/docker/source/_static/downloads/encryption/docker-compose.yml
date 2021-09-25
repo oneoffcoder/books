@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+  rest:
+    image: localhost:5000/rest.enc:latest
+    container_name: rest
+    ports:
+      - "8000:80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+  ng:
+    image: localhost:5000/www.enc:latest
+    container_name: www
+    ports:
+      - "4200:80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4200"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on: 
+      - rest
