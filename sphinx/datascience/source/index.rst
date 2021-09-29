@@ -49,6 +49,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    mvn-conditional
    bivariate-cond-gaussian
    multivariate-cond-gaussian
+   normalized-entropy-mi
    mi-gaussian
    cmi-gaussian
    partial-correlation
