@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        init();
+
+        function init() {
+            // invoke multiple promises concurrently with Promise.any()
+            // the first resolved promise is returned
+            
+            const odd = new Promise((resolve, reject) => reject('not sure'));
+            const even = new Promise((resolve, reject) => {});
+            const prime = new Promise((resolve, reject) => resolve(37));
+
+            // get the first resolved promise
+            Promise.any([odd, even, prime])
+                .then(r => console.log(r));
+        }
+    </script>
+</body>
+
+</html>

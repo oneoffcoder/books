@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Fetch</title>
+</head>
+
+<body>
+    <script>
+        init();
+
+        function init() {
+            // fetch returns a Promise
+            // the Promise will resolve to a Response object
+            // https://developer.mozilla.org/en-US/docs/Web/API/Response
+
+            fetch('http://localhost:8000/number')
+                .then(r => r.json())
+                .then(j => j.number)
+                .then(r => console.log(r));
+        }
+    </script>
+</body>
+
+</html>

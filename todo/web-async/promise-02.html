@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        init();
+
+        function init() {
+            // "chain" transformations on results using .then() fluent programming style
+            
+            const p1 = new Promise((resolve, reject) => {
+                resolve([22, 23, 24, 25]);
+            });
+
+            p1
+                .then(arr => arr.map(x => x + 1))
+                .then(arr => arr.filter(x => x % 2 === 1))
+                .then(arr => console.log(arr))
+                .catch(e => console.error(e))
+                .finally(() => console.log('done'));
+        }
+    </script>
+</body>
+
+</html>

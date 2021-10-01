@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        init();
+
+        function init() {
+            // invoke multiple promises concurrently with Promise.allSettled()
+            // wait for all to be resolved or rejected
+            
+            const odd = new Promise((resolve, reject) => setTimeout(reject, 2000, 'just reject'));
+            const even = new Promise((resolve, reject) => setTimeout(resolve, 3500, 2));
+            const prime = new Promise((resolve, reject) => resolve(37));
+
+            // all results come back in an object
+            Promise.allSettled([odd, even, prime])
+                .then(r => console.table(r));
+        }
+    </script>
+</body>
+
+</html>

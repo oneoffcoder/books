@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Fetch</title>
+</head>
+
+<body>
+    <script>
+        init();
+
+        async function init() {
+            // if you want to call this endpoint and wait for it, you must "await"
+            // await is blocking
+            // the next statement will not execute until this one is finished
+            // you can only use "await" inside an "async" function!
+            
+            await fetch('http://localhost:8000/number')
+                .then(r => r.json())
+                .then(j => j.number)
+                .then(r => console.log(r));
+
+            // this fetch is faster, but must wait for the previous fetch to start
+            await fetch('http://localhost:8000/color')
+                .then(r => r.json())
+                .then(j => j.color)
+                .then(r => console.log(r));
+        }
+    </script>
+</body>
+
+</html>
