@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Fetch</title>
+</head>
+
+<body>
+    <script>
+        init();
+
+        async function init() {
+            // remember Promise.all()?
+            const p1 = fetch('http://localhost:8000/number').then(r => r.json());
+            const p2 = fetch('http://localhost:8000/color').then(r => r.json());
+
+            const data = await Promise
+                .all([p1, p2])
+                .then(arr => arr.map(item => item.number !== undefined ? item.number : item.color));
+            
+            console.log(data);
+        }
+    </script>
+</body>
+
+</html>

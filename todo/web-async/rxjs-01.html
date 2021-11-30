@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>RxJS</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="https://npmcdn.com/@reactivex/rxjs@5.0.0-beta.11/dist/global/Rx.umd.js"></script>
+    <script>
+        init();
+
+        function init() {
+            Rx.Observable.of(1, 2, 3)
+                .map(x => [x, x + 1, x + 2])
+                .do(x => console.log(`after map: ${x}`))
+                .flatMap(x => x)
+                .map(x => x * x)
+                .subscribe(x => console.log(x));
+        }
+    </script>
+</body>
+
+</html>

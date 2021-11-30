@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Fetch</title>
+</head>
+
+<body>
+    <script>
+        init();
+
+        async function init() {
+            // you can store the results from fetches
+
+            const number = await fetch('http://localhost:8000/number')
+                .then(r => r.json())
+                .then(j => j.number);
+
+            const color = await fetch('http://localhost:8000/color')
+                .then(r => r.json())
+                .then(j => j.color);
+
+            console.log(`${number}, ${color}`);
+        }
+    </script>
+</body>
+
+</html>

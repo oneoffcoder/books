@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        init();
+
+        function init() {
+            // invoke multiple promises concurrently with Promise.all()
+            
+            const p1 = new Promise((resolve, reject) => resolve('Alan'));
+            const p2 = new Promise((resolve, reject) => resolve('Mathison'));
+            const p3 = new Promise((resolve, reject) => resolve('Turing'));
+
+            // get the full name
+            Promise.all([p1, p2, p3])
+                .then(arr => arr.join(' '))
+                .then(fullName => console.log(`${fullName}`));
+            
+            // get the initials
+            Promise.all([p1, p2, p3])
+                .then(arr => arr.map(n => n[0]))
+                .then(arr => arr.join('.'))
+                .then(initials => console.log(`${initials}`));
+        }
+    </script>
+</body>
+
+</html>

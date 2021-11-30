@@ -1,0 +1,169 @@
+﻿team1,team2,score1,score2,week
+Cowboys,Buccaneers,29,31,1
+Eagles,Falcons,32,6,1
+Chargers,Washington,20,16,1
+Steelers,Bills,23,16,1
+49ers,Lions,41,33,1
+Vikings,Bengals,24,27,1
+Jets,Panthers,14,19,1
+Cardinals,Titans ,38,13,1
+Seahawks,Colts,28,16,1
+Jaguars ,Texans,21,37,1
+Browns,Chiefs,29,33,1
+Dolphins,Patriots,17,16,1
+Broncos,Giants,27,13,1
+Packers,Saints,3,38,1
+Bears,Rams,14,34,1
+Ravens,Raiders,27,33,1
+Giants,Washington,29,30,2
+Raiders,Steelers,26,17,2
+49ers,Eagles,17,11,2
+Texans,Browns,21,31,2
+Broncos,Jaguars,23,13,2
+Saints,Panthers,7,26,2
+Rams,Colts,27,24,2
+Bills,Dolphins,35,0,2
+Patriots,Jets,25,6,2
+Bengals,Bears,17,20,2
+Falcons,Buccaneers,25,48,2
+Vikings,Cardinals,33,34,2
+Titans,Seahawks,33,30,2
+Cowboys,Chargers,20,17,2
+Chiefs,Ravens,35,36,2
+Lions,Packers,17,35,2
+Panthers,Texans,24,9,3
+Chargers,Chiefs,30,24,3
+Cardinals,Jaguars,31,19,3
+Bears,Browns,6,26,3
+Washington,Bills,21,43,3
+Colts,Titans ,16,25,3
+Saints,Patriots,28,13,3
+Falcons,Giants,17,14,3
+Bengals,Steelers,24,10,3
+Ravens,Lions,19,17,3
+Jets,Broncos,0,26,3
+Dolphins,Raiders,28,31,3
+Buccaneers ,Rams,24,34,3
+Seahawks,Vikings,17,30,3
+Packers,49ers,30,28,3
+Eagles,Cowboys,21,41,3
+Jaguars ,Bengals,21,24,4
+Texans,Bills,0,40,4
+Giants,Saints,27,21,4
+Chiefs,Eagles,42,30,4
+Panthers,Cowboys,28,36,4
+Titans,Jets,24,27,4
+Lions,Bears,14,24,4
+Colts,Dolphins,27,17,4
+Browns,Vikings,14,7,4
+Washington,Falcons,34,30,4
+Seahawks,49ers,28,21,4
+Cardinals,Rams,37,20,4
+Steelers,Packers,17,27,4
+Ravens,Broncos,23,7,4
+Buccaneers ,Patriots,19,17,4
+Raiders,Chargers,14,28,4
+Rams,Seahawks,26,17,5
+Jets ,Falcons,20,27,5
+Patriots,Texans,25,22,5
+Lions,Vikings,17,19,5
+Eagles,Panthers,21,18,5
+Packers,Bengals,25,22,5
+Saints,Washington,33,22,5
+Titans,Jaguars,37,19,5
+Dolphins,Buccaneers,17,45,5
+Broncos,Steelers,19,27,5
+Bears,Raiders,20,9,5
+Browns,Chargers,42,47,5
+Giants,Cowboys,20,44,5
+49ers,Cardinals,10,17,5
+Bills,Chiefs,38,20,5
+Colts,Ravens,25,31,5
+Buccaneers ,Eagles,28,22,6
+Dolphins,Jaguars,20,23,6
+Vikings,Panthers,34,28,6
+Chargers,Ravens,6,34,6
+Rams,Giants,38,11,6
+Texans,Colts,3,31,6
+Chiefs,Washington,31,13,6
+Packers,Bears,24,14,6
+Bengals,Lions,34,11,6
+Cardinals,Browns,37,14,6
+Cowboys,Patriots,35,29,6
+Raiders,Broncos,34,24,6
+Seahawks,Steelers,20,23,6
+Bills,Titans ,31,34,6
+Broncos,Browns,14,17,7
+Chiefs,Titans ,3,27,7
+Washington ,Packers,10,24,7
+Bengals,Ravens,41,17,7
+Panthers,Giants,3,25,7
+Falcons,Dolphins,30,28,7
+Jets,Patriots,13,54,7
+Eagles,Raiders,22,33,7
+Lions,Rams,19,28,7
+Bears,Buccaneers,3,38,7
+Texans,Cardinals,5,31,7
+Colts,49ers,30,18,7
+Saints,Seahawks,13,10,7
+Packers,Cardinals,24,21,8
+Panthers,Falcons,19,13,8
+Titans,Colts,34,31,8
+Dolphins,Bills,11,26,8
+Bengals,Jets,31,34,8
+Steelers,Browns,15,10,8
+Eagles,Lions,44,6,8
+Rams,Texans,38,22,8
+49ers,Bears,33,22,8
+Patriots,Chargers,27,24,8
+Jaguars ,Seahawks,7,31,8
+Buccaneers ,Saints,27,36,8
+Washington,Broncos,10,17,8
+Cowboys,Vikings,20,16,8
+Giants,Chiefs,17,20,8
+Jets,Colts,30,45,9
+Falcons,Saints,27,25,9
+Bills,Jaguars,6,9,9
+Browns,Bengals,41,16,9
+Patriots,Panthers,24,6,9
+Raiders,Giants,16,23,9
+Broncos,Cowboys,30,16,9
+Texans,Dolphins,9,17,9
+Vikings,Ravens,31,34,9
+Chargers,Eagles,27,24,9
+Packers,Chiefs,7,13,9
+Cardinals,49ers,31,17,9
+Titans,Rams,28,16,9
+Bears,Steelers,27,29,9
+Ravens,Dolphins,10,22,10
+Saints,Titans ,21,23,10
+Bills,Jets,45,17,10
+Lions,Steelers,16,16,10
+Jaguars ,Colts,17,23,10
+Buccaneers ,Washington,19,29,10
+Browns,Patriots,7,45,10
+Falcons,Cowboys,3,43,10
+Panthers,Cardinals,34,10,10
+Vikings,Chargers,27,20,10
+Seahawks,Packers,0,17,10
+Eagles,Broncos,30,13,10
+Chiefs,Raiders,41,14,10
+Rams,49ers,10,31,10
+Patriots,Falcons,25,0,11
+Ravens,Bears,16,13,11
+Packers,Vikings,31,34,11
+Colts,Bills,41,15,11
+Lions,Browns,10,13,11
+Washington,Panthers,27,21,11
+Texans,Titans ,22,13,11
+49ers,Jaguars,30,10,11
+Dolphins,Jets,24,17,11
+Saints,Eagles,29,40,11
+Bengals,Raiders,32,13,11
+Cowboys,Chiefs,9,19,11
+Cardinals,Seahawks,23,13,11
+Steelers,Chargers,37,41,11
+Giants,Buccaneers,10,30,11
+Bears,Lions,16,14,12
+Raiders,Cowboys,36,33,12
+Bills,Saints,31,6,12

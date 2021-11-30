@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Fetch</title>
+</head>
+
+<body>
+    <script>
+        init();
+
+        function init() {
+            // this fetch is called first, but takes longer
+            fetch('http://localhost:8000/number')
+                .then(r => r.json())
+                .then(j => j.number)
+                .then(r => console.log(r));
+
+            // this fetch is called second, but resolves faster
+            fetch('http://localhost:8000/color')
+                .then(r => r.json())
+                .then(j => j.color)
+                .then(r => console.log(r));
+
+            // which gets printed first? number or color?
+            // the color
+        }
+    </script>
+</body>
+
+</html>

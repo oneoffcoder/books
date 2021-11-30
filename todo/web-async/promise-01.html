@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        init();
+
+        function init() {
+            // promises can exists in these 3 states
+            
+            // promise in fulfilled state
+            const p1 = new Promise((resolve, reject) => {
+                resolve([22, 23, 24, 25]);
+            });
+
+            // promise in rejected state
+            const p2 = new Promise((resolve, reject) => {
+                reject('something is wrong')
+            });
+
+            // promise in pending state
+            const p3 = new Promise((resolve, reject) => {
+                // do nothing
+            });
+
+            console.log(p1);
+            console.log(p2);
+            console.log(p3);
+        }
+    </script>
+</body>
+
+</html>

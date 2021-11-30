@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>RxJS</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="https://npmcdn.com/@reactivex/rxjs@5.0.0-beta.11/dist/global/Rx.umd.js"></script>
+    <script>
+        // https://www.learnrxjs.io/
+        init();
+
+        function init() {
+            const observable = new Rx.Observable(s => {
+                s.next(32);
+                s.next(44);
+                setTimeout(() => {
+                    s.next(88);
+                    setTimeout(() => {
+                        s.next(95.5);
+                        s.complete();
+                    }, 2000);
+                }, 1000);
+            });
+
+            const observer = {
+                next: n => console.log(n),
+                error: e => console.error(e),
+                complete: () => console.log('done')
+            };
+
+            observable.subscribe(observer);
+        }
+    </script>
+</body>
+
+</html>

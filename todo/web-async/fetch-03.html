@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Fetch</title>
+</head>
+
+<body>
+    <script>
+        // fetches are wrapped in own async functions
+        // which one will finish first?
+        // does await matter? will "await" block another async function?
+        get_number();
+        get_color();
+
+        async function get_number() {
+            await fetch('http://localhost:8000/number')
+                .then(r => r.json())
+                .then(j => j.number)
+                .then(r => console.log(r));
+        }
+
+        async function get_color() {
+            await fetch('http://localhost:8000/color')
+                .then(r => r.json())
+                .then(j => j.color)
+                .then(r => console.log(r));
+        }
+    </script>
+</body>
+
+</html>
