@@ -58,7 +58,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    kalman-filter-ii
    regression-errors
    logistic-nb
-   blt-model
+   btl-model
 
 .. toctree::
    :maxdepth: 1
