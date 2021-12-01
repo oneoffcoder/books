@@ -56,10 +56,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    precision-recall-roc
    kalman-filter
    kalman-filter-ii
-   regression-errors
-   logistic-nb
-   btl-model
-
+   
 .. toctree::
    :maxdepth: 1
    :numbered:
@@ -75,6 +72,17 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    kmc-bic-aic
    pdf-cdf
    s-curve
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Regression
+   
+   regression-errors
+   logistic-nb
+   btl-model
+   estimating-standard-error-coefficients
+   logreg-y-probability
    
 .. toctree::
    :maxdepth: 1
