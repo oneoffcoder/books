@@ -82,6 +82,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    logistic-nb
    btl-model
    estimating-standard-error-coefficients
+   logreg-y-probability
    
 .. toctree::
    :maxdepth: 1
