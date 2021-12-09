@@ -83,6 +83,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    btl-model
    massey-method
    massey-method-ii
+   colley-method
    estimating-standard-error-coefficients
    logreg-y-probability
    
