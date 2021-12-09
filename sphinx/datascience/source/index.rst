@@ -82,6 +82,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    logistic-nb
    btl-model
    massey-method
+   massey-method-ii
    estimating-standard-error-coefficients
    logreg-y-probability
    
