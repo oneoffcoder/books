@@ -81,14 +81,21 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    
    regression-errors
    logistic-nb
+   estimating-standard-error-coefficients
+   logreg-y-probability
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Rating and Ranking
+   
    btl-model
    massey-method
    massey-method-ii
    colley-method
    keener-method
    markov-method
-   estimating-standard-error-coefficients
-   logreg-y-probability
+   reordering-method
    
 .. toctree::
    :maxdepth: 1
