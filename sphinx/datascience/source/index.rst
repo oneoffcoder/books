@@ -95,6 +95,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    colley-method
    keener-method
    markov-method
+   reordering-method
    
 .. toctree::
    :maxdepth: 1
