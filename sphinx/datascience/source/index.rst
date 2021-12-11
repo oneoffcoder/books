@@ -72,6 +72,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    kmc-bic-aic
    pdf-cdf
    s-curve
+   markov-chain-stationary-distribution
 
 .. toctree::
    :maxdepth: 1
