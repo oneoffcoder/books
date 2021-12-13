@@ -153,6 +153,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    creating-junction-tree
    gaussian-network-inference
    causal-inference
+   dbn-markov-chain
    dbn-hmm
 
 .. toctree::
