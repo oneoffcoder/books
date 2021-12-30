@@ -1,5 +1,23 @@
 version: "3.7"
 services:
+  db:
+    build: db
+    image: ecs-db:local
+    container_name: db
+    ports:
+      - "3306:3306"
+    networks:
+      - demo-network
+    volumes:
+      - ./db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=oneoffcoder
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2048M
   rest:
     build: rest
     image: ecs-rest:local
@@ -12,6 +30,8 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    depends_on:
+      - db
     deploy:
       resources:
         limits:
