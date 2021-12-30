@@ -29,6 +29,7 @@ class PersonDao:
         })
 
         self.__db.add(m_person)
+        self.__db.commit()
         self.__db.flush()
         self.__db.refresh(m_person)
 
