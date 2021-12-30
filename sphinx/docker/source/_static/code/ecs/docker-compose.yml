@@ -1,0 +1,43 @@
+version: "3.7"
+services:
+  rest:
+    build: rest
+    image: ecs-rest:local
+    container_name: rest
+    networks:
+      - demo-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://rest"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+  ng:
+    build: www
+    image: ecs-www:local
+    container_name: www
+    ports:
+      - "80:80"
+    networks:
+      - demo-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://ng"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on: 
+      - rest
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 512M
+networks:
+  demo-network:
+    driver: bridge
