@@ -21,4 +21,5 @@ RUN conda update -n base -c defaults conda \
     && conda install -c anaconda pygraphviz -y \
     && pip install yellowbrick librosa textblob fancyimpute \
     && pip install pybbn \
+    && pip install pyod combo \
     && python -m nltk.downloader all
