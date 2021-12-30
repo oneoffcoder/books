@@ -22,6 +22,8 @@ services:
     build: rest
     image: ecs-rest:local
     container_name: rest
+    ports:
+      - "8000:80"
     networks:
       - demo-network
     healthcheck:
