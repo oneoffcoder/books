@@ -9,7 +9,7 @@ def get_db() -> Session:
         db.close()
 
 def get_person_dao() -> dao.PersonDao:
-    return dao.PersonDao(get_db())
+    return dao.PersonDao(next(get_db()))
 
 def get_person_service():
     return service.PersonService(get_person_dao())

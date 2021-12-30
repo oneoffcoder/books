@@ -7,7 +7,7 @@ from ..api.dependency import get_person_service
 router = APIRouter(tags=['person'])
 
 @router.get(
-    path='/v1/person/{id}', 
+    path='/v1/person/{person_id}', 
     response_model=schemas.Person,
     summary='Get person by id.'
 )
@@ -71,7 +71,7 @@ def create(
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.put(
-    path='/v1/person/{id}',
+    path='/v1/person/{person_id}',
     response_model=schemas.Message,
     summary='Updates a single person.'
 )
@@ -95,13 +95,13 @@ def update(
         person_service.update(person_id, person)
         return schemas.Message(**{
             'status': 'ok',
-            'message': 'Update completed.'
+            'content': 'Update completed.'
         })
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.delete(
-    path='/v1/person/{id}', 
+    path='/v1/person/{person_id}', 
     response_model=schemas.Message,
     summary='Delete person by id.'
 )
@@ -113,7 +113,7 @@ def delete(
         person_service.delete(person_id)
         return schemas.Message(**{
             'status': 'ok',
-            'message': 'Delete completed.'
+            'content': 'Delete completed.'
         })
     except Exception as e:
         raise HTTPException(status_code=404, detail=str(e))
