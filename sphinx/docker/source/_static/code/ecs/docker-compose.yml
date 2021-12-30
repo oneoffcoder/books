@@ -37,8 +37,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1'
-          memory: 512M
+          cpus: '2'
+          memory: 2048M
   ng:
     build: www
     image: ecs-www:local
