@@ -1,2 +1,4 @@
 SQLAlchemy
 mysqlclient
+elasticsearch
+elasticsearch-dsl
