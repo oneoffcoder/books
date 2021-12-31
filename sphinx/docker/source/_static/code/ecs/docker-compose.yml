@@ -19,6 +19,29 @@ services:
         limits:
           cpus: '2'
           memory: 2048M
+  es:
+    build: es
+    image: ecs-es:local
+    container_name: es
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - demo-network
+    volumes:
+      - ./es/datadir:/usr/share/elasticsearch/data
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2048M
   rest:
     build: rest
     image: ecs-rest:local
@@ -37,6 +60,7 @@ services:
       start_period: 40s
     depends_on:
       - db
+      - es
     deploy:
       resources:
         limits:
