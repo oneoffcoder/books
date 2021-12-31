@@ -50,13 +50,13 @@ def read_all(
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.get(
-    path='/v1/person/search',
+    path='/v1/search/person',
     response_model=List[schemas.Person],
     summary='Search: gets a list of people.'
 )
-def read_all(
-    skip: int = Query(0, ge=-1),
-    limit: int = Query(10, ge=1, le=100),
+def search_all(
+    skip: int = Query(0, ge=-1), 
+    limit: int = Query(10, ge=1, le=100), 
     person_service: service.PersonService = Depends(get_person_service)
     ):
     try:

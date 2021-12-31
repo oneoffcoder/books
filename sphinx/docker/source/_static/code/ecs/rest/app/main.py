@@ -34,7 +34,7 @@ app.add_middleware(
 
 @app.on_event('startup')
 async def init_search():
-    es_host = os.getenv('ES_HOST')
+    es_host = os.getenv('ES_HOST', 'localhost:9200')
     n_tries = 0
 
     while n_tries < 100:
