@@ -26,6 +26,8 @@ services:
       - "8000:80"
     networks:
       - demo-network
+    environment:
+      - DATABASE_URL=mysql+mysqldb://oneoffcoder:isthebest@db/ecsdb
     healthcheck:
       test: ["CMD", "curl", "-f", "http://rest/v1/health"]
       interval: 60s
