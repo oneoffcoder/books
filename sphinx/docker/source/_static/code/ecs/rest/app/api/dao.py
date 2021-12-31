@@ -1,9 +1,10 @@
 from typing import List
 from sqlalchemy.orm import Session
+from elasticsearch_dsl import Search
 
-from . import models, schemas
+from . import models, schemas, indices
 
-class PersonDao:
+class RdbmsPersonDao:
     def __init__(self, db: Session):
         self.__db = db
 
@@ -54,6 +55,38 @@ class PersonDao:
             .delete()
         self.__db.commit()
 
-    
+class SearchPersonDao:
+    def read(self, person_id: int) -> indices.Person:
+        return indices.Person.get(id=person_id)
 
-    
+    def read_all(self, skip: int = 0, limit: int = 100) -> List[indices.Person]:
+        s = Search(index='person')
+        s.update_from_dict({'from': skip, 'size': limit, 'query': {'match_all': {}}})
+
+        hits = s.execute()
+        return [indices.Person(meta={'id': h.meta.id}, **h.to_dict()) for h in hits]
+
+    def create(self, person: schemas.Person) -> indices.Person:
+        p = indices.Person(**{
+            'meta': {'id': person.id},
+            'first_name': person.first_name,
+            'last_name': person.last_name,
+            'gender': person.gender,
+            'age': person.age
+        })
+        p.save()
+
+        return self.read(person.id)
+
+    def update(self, person_id: int, person: schemas.PersonUpdate) -> None:
+        p = indices.Person(**{
+            'meta': {'id': person_id},
+            'first_name': person.first_name,
+            'last_name': person.last_name,
+            'gender': person.gender,
+            'age': person.age
+        })
+        p.save()
+
+    def delete(self, person_id: int) -> None:
+        indices.Person.get(id=person_id).delete()

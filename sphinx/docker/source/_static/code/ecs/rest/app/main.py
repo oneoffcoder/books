@@ -1,8 +1,13 @@
+import os
+import asyncio
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from elasticsearch_dsl import connections
 
 from .router import person
 from .router import health
+from .api import indices
 
 tags_metadata = [
     {'name': 'person', 'description': 'Person.'},
@@ -26,3 +31,19 @@ app.add_middleware(
     allow_methods=['*'],
     allow_headers=['*']
 )
+
+@app.on_event('startup')
+async def init_search():
+    es_host = os.getenv('ES_HOST')
+    n_tries = 0
+
+    while n_tries < 100:
+        try:
+            connections.create_connection(hosts=[es_host], timeout=20)
+            indices.Person.init()
+
+            break
+        except:
+            await asyncio.sleep(5)
+        finally:
+            n_tries += 1

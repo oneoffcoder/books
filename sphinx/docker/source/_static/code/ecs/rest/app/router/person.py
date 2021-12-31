@@ -9,7 +9,7 @@ router = APIRouter(tags=['person'])
 @router.get(
     path='/v1/person/{person_id}', 
     response_model=schemas.Person,
-    summary='Get person by id.'
+    summary='Gets person by id.'
 )
 def read(
     person_id: int = Query(..., ge=0),
@@ -17,6 +17,20 @@ def read(
     ):
     try:
         return person_service.read(person_id)
+    except Exception as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+@router.get(
+    path='/v1/person/search/{person_id}', 
+    response_model=schemas.Person,
+    summary='Search: gets person by id.'
+)
+def search(
+    person_id: int = Query(..., ge=0),
+    person_service: service.PersonService = Depends(get_person_service)
+    ):
+    try:
+        return person_service.search(person_id)
     except Exception as e:
         raise HTTPException(status_code=404, detail=str(e))
 
@@ -32,6 +46,21 @@ def read_all(
     ):
     try:
         return person_service.read_all(skip, limit)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get(
+    path='/v1/person/search',
+    response_model=List[schemas.Person],
+    summary='Search: gets a list of people.'
+)
+def read_all(
+    skip: int = Query(0, ge=-1),
+    limit: int = Query(10, ge=1, le=100),
+    person_service: service.PersonService = Depends(get_person_service)
+    ):
+    try:
+        return person_service.search_all(skip, limit)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

@@ -52,6 +52,7 @@ services:
       - demo-network
     environment:
       - DATABASE_URL=mysql+mysqldb://oneoffcoder:isthebest@db/ecsdb
+      - ES_HOST=es:9200
     healthcheck:
       test: ["CMD", "curl", "-f", "http://rest/v1/health"]
       interval: 60s
