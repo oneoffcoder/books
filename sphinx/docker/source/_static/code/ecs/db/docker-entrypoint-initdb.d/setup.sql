@@ -1,6 +1,8 @@
 CREATE DATABASE ecsdb;
+
 CREATE USER 'oneoffcoder'@'localhost' IDENTIFIED BY 'isthebest';
 CREATE USER 'oneoffcoder'@'%' IDENTIFIED BY 'isthebest';
+
 GRANT ALL PRIVILEGES ON ecsdb.* TO 'oneoffcoder'@'localhost';
 GRANT ALL PRIVILEGES ON ecsdb.* TO 'oneoffcoder'@'%';
 
