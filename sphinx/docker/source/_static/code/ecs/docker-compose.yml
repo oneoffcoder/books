@@ -10,6 +10,7 @@ services:
       - demo-network
     volumes:
       - ./db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./db/datadir:/var/lib/mysql
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=oneoffcoder

@@ -1,0 +1,12 @@
+*_temp/
+ecsdb
+mysql
+performance_schema
+sys
+*.dblwr
+*.cnf
+binlog*
+*.pem
+ib*
+*.ibd
+undo*
