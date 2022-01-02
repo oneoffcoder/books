@@ -127,6 +127,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    rnn-classify-signals
    pose-estimation
    autoencoder-anomaly
+   autoencoder-data-imputation
 
 .. toctree::
    :maxdepth: 1
