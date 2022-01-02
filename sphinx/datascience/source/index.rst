@@ -126,6 +126,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    restricted-boltzmann-machine
    rnn-classify-signals
    pose-estimation
+   autoencoder-anomaly
 
 .. toctree::
    :maxdepth: 1
