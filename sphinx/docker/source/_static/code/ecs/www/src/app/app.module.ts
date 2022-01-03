@@ -6,11 +6,21 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { DefaultComponent } from './default/default.component';
+import { CreateComponent } from './create/create.component';
+import { DeleteComponent } from './delete/delete.component';
+import { PersonListComponent } from './person-list/person-list.component';
+import { ReadComponent } from './read/read.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DefaultComponent
+    DefaultComponent,
+    CreateComponent,
+    DeleteComponent,
+    PersonListComponent,
+    ReadComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

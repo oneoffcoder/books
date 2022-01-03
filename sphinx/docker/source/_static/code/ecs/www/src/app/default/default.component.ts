@@ -16,8 +16,13 @@ export class DefaultComponent implements OnInit {
         r => console.log(r),
         e => console.error(e)
       );
-    
-    this.apiService.getPerson()
+
+    this.apiService.getPersonById(1)
+      .subscribe(
+        r => console.log(r),
+        e => console.error(e)
+      );
+    this.apiService.getPeople()
       .subscribe(
         r => console.log(r),
         e => console.error(e)

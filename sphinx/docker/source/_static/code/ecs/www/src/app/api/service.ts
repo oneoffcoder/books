@@ -2,6 +2,7 @@ import {environment} from './../../environments/environment';
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Message, Person, PersonCreate, PersonUpdate} from "./model";
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,30 @@ export class ApiService {
       return this.http.get(this.healthUrl);
   }
 
-  public getPerson(): Observable<any> {
-      return this.http.get(this.personUrl);
+  public createPerson(person: PersonCreate): Observable<Person> {
+    return this.http.post<Person>(this.personUrl, person);
+  }
+
+  public getPersonById(id: number): Observable<Person> {
+    const url = `${this.personUrl}/${id}`;
+    return this.http.get<Person>(url);
+  }
+
+  public getPeople(skip = 0, limit = 10): Observable<Array<Person>> {
+    const opts = {
+      params: {skip, limit}
+    };
+
+    return this.http.get<Array<Person>>(this.personUrl, opts);
+  }
+
+  public updatePerson(id: number, person: PersonUpdate): Observable<Message> {
+    const url = `${this.personUrl}/${id}`;
+    return this.http.put<Message>(url, person);
+  }
+
+  public deletePerson(id: number): Observable<Message> {
+    const url = `${this.personUrl}/${id}`;
+    return this.http.delete<Message>(url);
   }
 }

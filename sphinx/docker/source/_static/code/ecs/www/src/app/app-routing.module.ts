@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {DefaultComponent} from "./default/default.component";
+import {CreateComponent} from "./create/create.component";
+import {ReadComponent} from "./read/read.component";
+import {UpdateComponent} from "./update/update.component";
+import {DeleteComponent} from "./delete/delete.component";
 
 const routes: Routes = [
-  {path: 'default', component: DefaultComponent},
-  {path: '**', component: DefaultComponent}
+  {path: 'create', component: CreateComponent},
+  {path: 'read', component: ReadComponent},
+  {path: 'update', component: UpdateComponent},
+  {path: 'delete', component: DeleteComponent},
+  {path: '', component: ReadComponent},
+  {path: '***', component: ReadComponent}
 ];
 
 @NgModule({
