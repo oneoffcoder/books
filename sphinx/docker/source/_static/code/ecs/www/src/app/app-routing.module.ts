@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'read', component: ReadComponent},
   {path: 'update', component: UpdateComponent},
   {path: 'delete', component: DeleteComponent},
+  {path: 'default', component: ReadComponent},
   {path: '', component: ReadComponent},
   {path: '***', component: ReadComponent}
 ];
