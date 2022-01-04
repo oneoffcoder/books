@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+  db1:
+    build: db1
+    image: db1:local
+    container_name: db1
+    ports:
+      - "3306:3306"
+    networks:
+      - demo-network
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2048M
+volumes:
+  db_data:
+    name: ${DB_VOLUME_ID}
+networks:
+  demo-network:
+    driver: bridge
