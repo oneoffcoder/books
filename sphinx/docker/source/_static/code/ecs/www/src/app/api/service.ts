@@ -13,8 +13,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) {
     // FIXME: remove later
-    const baseUrl = environment.apiService.urls.base.replace(':4200', '');
-    // const baseUrl = environment.apiService.urls.base;
+    // const baseUrl = environment.apiService.urls.base.replace(':4200', '');
+    const baseUrl = environment.apiService.urls.base;
     this.healthUrl = `${baseUrl}/${environment.apiService.urls.health}`;
     this.personUrl = `${baseUrl}/${environment.apiService.urls.person}`;
   }
