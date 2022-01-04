@@ -20,3 +20,4 @@ docker compose up
 - [Deploy applications on Amazon ECS using Docker Compose](https://aws.amazon.com/blogs/containers/deploy-applications-on-amazon-ecs-using-docker-compose/?utm_source=pocket_mylist)
 - [yelb](https://github.com/mreferre/yelb/)
 - [compose-cli](https://github.com/docker/compose-cli)
+- [Externalize environment variables](https://docs.docker.com/compose/environment-variables/)
