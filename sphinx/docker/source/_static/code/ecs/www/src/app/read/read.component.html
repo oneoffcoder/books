@@ -1,4 +1,18 @@
 <div class="row" *ngIf="people.length > 0">
+  <!-- paging -->
+  <div class="row">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <button type="button" class="btn btn-info" (click)="prevClicked()">&laquo;</button>
+        </li>
+        <li class="page-item">
+          <button type="button" class="btn btn-info" (click)="nextClicked()">&raquo;</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
   <!-- table -->
   <div class="row">
     <div class="row">
@@ -32,23 +46,5 @@
         </button>
       </div>
     </div>
-  </div>
-
-  <!-- paging -->
-  <div class="row">
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous" (click)="prevClicked()">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next" (click)="nextClicked()">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
   </div>
 </div>

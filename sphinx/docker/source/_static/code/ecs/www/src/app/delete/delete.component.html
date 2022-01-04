@@ -2,6 +2,23 @@
   <div class="col">
     Really delete?
     <button type="button" class="btn btn-danger" (click)="delete()">YES</button>
+    <button type="button" class="btn btn-primary" (click)="cancelDelete()">NO</button>
+  </div>
+  <div class="row">
+    <div class="col">First Name</div>
+    <div class="col">{{person.first_name}}</div>
+  </div>
+  <div class="row">
+    <div class="col">Last Name</div>
+    <div class="col">{{person.last_name}}</div>
+  </div>
+  <div class="row">
+    <div class="col">Gender</div>
+    <div class="col">{{person.gender}}</div>
+  </div>
+  <div class="row">
+    <div class="col">Age</div>
+    <div class="col">{{person.age}}</div>
   </div>
 </div>
 

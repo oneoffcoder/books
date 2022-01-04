@@ -12,7 +12,7 @@ export class ReadComponent implements OnInit {
 
   people: Array<Person>;
   skip = 0;
-  limit = 1;
+  limit = 10;
 
   constructor(private api: ApiService, private router: Router, private route: ActivatedRoute) {
     this.people = [];

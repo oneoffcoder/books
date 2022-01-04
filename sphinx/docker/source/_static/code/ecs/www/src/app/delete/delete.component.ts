@@ -49,4 +49,8 @@ export class DeleteComponent implements OnInit {
     }
   }
 
+  cancelDelete(): void {
+    this.router.navigate(['/default']);
+  }
+
 }

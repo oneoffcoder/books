@@ -1,1 +1,32 @@
-<p>update works!</p>
+<div class="row" *ngIf="person">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="firstName" formControlName="firstName"/>
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="lastName" formControlName="lastName"/>
+    </div>
+    <div class="mb-3">
+      <label for="gender" class="form-label">Gender</label>
+      <select class="form-select" id="gender" formControlName="gender">
+        <option selected>Select</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input type="number" class="form-control" id="age" formControlName="age"/>
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary" [disabled]="formGroup.status !== 'VALID'">Update</button>
+      <button type="button" class="btn btn-primary" (click)="cancelUpdate()">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<div class="row" *ngIf="updated">
+  Person updated.
+</div>
