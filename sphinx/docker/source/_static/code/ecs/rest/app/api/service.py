@@ -1,6 +1,9 @@
 from typing import List
+import logging
 
 from . import models, schemas, indices, dao
+
+logger = logging.getLogger(__name__)
 
 class PersonService:
     def __init__(self, rdbms_dao: dao.RdbmsPersonDao, search_dao: dao.SearchPersonDao):
@@ -41,6 +44,8 @@ class PersonService:
 
     def create(self, person: schemas.PersonCreate) -> schemas.Person:
         m_person = self.__rdbms_dao.create(person)
+        logger.debug(f'created person with id={m_person.id} in database')
+
         _ = self.__search_dao.create(schemas.Person(**{
             'id': m_person.id,
             'first_name': m_person.first_name,
@@ -48,12 +53,20 @@ class PersonService:
             'gender': m_person.gender,
             'age': m_person.age
         }))
+        logger.debug(f'created person with id={m_person.id} in index')
+
         return PersonService.__convert_m2s(m_person)
 
     def update(self, person_id: int, person: schemas.PersonUpdate) -> None:
         self.__rdbms_dao.update(person_id, person)
+        logger.debug(f'updated person with id={person_id} in database')
+
         self.__search_dao.update(person_id, person)
+        logger.debug(f'updated person with id={person_id} in index')
 
     def delete(self, person_id: int) -> None:
         self.__rdbms_dao.delete(person_id)
+        logger.debug(f'deleted person with id={person_id} in database')
+
         self.__search_dao.delete(person_id)
+        logger.debug(f'deleted person with id={person_id} in index')
