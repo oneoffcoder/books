@@ -1,1 +1,54 @@
-<p>read works!</p>
+<div class="row" *ngIf="people.length > 0">
+  <!-- table -->
+  <div class="row">
+    <div class="row">
+      <div class="col">ID</div>
+      <div class="col">First Name</div>
+      <div class="col">Last Name</div>
+      <div class="col">Gender</div>
+      <div class="col">Age</div>
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+
+    <div class="row" *ngFor="let p of people">
+      <div class="col">{{p.id}}</div>
+      <div class="col">{{p.first_name}}</div>
+      <div class="col">{{p.last_name}}</div>
+      <div class="col">{{p.gender}}</div>
+      <div class="col">{{p.age}}</div>
+      <div class="col">
+        <button type="button"
+                class="btn btn-primary"
+                (click)="updateClicked(p.id)">
+          update
+        </button>
+      </div>
+      <div class="col">
+        <button type="button"
+                class="btn btn-danger"
+                (click)="deleteClicked(p.id)">
+          delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- paging -->
+  <div class="row">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous" (click)="prevClicked()">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next" (click)="nextClicked()">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -1,1 +1,10 @@
-<p>delete works!</p>
+<div class="row" *ngIf="person">
+  <div class="col">
+    Really delete?
+    <button type="button" class="btn btn-danger" (click)="delete()">YES</button>
+  </div>
+</div>
+
+<div class="row" *ngIf="deleted">
+  Person deleted.
+</div>

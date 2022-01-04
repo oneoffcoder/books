@@ -12,8 +12,10 @@ export class ApiService {
   private readonly personUrl: string;
 
   constructor(private http: HttpClient) {
-    this.healthUrl = `${environment.apiService.urls.base}/${environment.apiService.urls.health}`;
-    this.personUrl = `${environment.apiService.urls.base}/${environment.apiService.urls.person}`;
+    // FIXME: remove later
+    const baseUrl = environment.apiService.urls.base.replace(':4200', '');
+    this.healthUrl = `${baseUrl}/${environment.apiService.urls.health}`;
+    this.personUrl = `${baseUrl}/${environment.apiService.urls.person}`;
   }
 
   public getHealth(): Observable<any> {
