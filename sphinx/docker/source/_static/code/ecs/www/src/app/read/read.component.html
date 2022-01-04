@@ -1,50 +1,61 @@
-<div class="row" *ngIf="people.length > 0">
-  <!-- paging -->
-  <div class="row">
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item">
-          <button type="button" class="btn btn-info" (click)="prevClicked()">&laquo;</button>
-        </li>
-        <li class="page-item">
-          <button type="button" class="btn btn-info" (click)="nextClicked()">&raquo;</button>
-        </li>
-      </ul>
-    </nav>
+<h1>People</h1>
+
+<div *ngIf="people.length > 0">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let p of people">
+        <td>{{p.id}}</td>
+        <td>{{p.first_name}}</td>
+        <td>{{p.last_name}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.age}}</td>
+        <td>
+          <button (click)="updateClicked(p.id)"
+                  class="btn btn-primary"
+                  type="button">
+            <i class="bi bi-pencil-fill"></i>
+          </button>
+        </td>
+        <td>
+          <button (click)="deleteClicked(p.id)"
+                  class="btn btn-danger"
+                  type="button">
+            <i class="bi bi-x-circle-fill"></i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 
-  <!-- table -->
   <div class="row">
-    <div class="row">
-      <div class="col">ID</div>
-      <div class="col">First Name</div>
-      <div class="col">Last Name</div>
-      <div class="col">Gender</div>
-      <div class="col">Age</div>
-      <div class="col"></div>
-      <div class="col"></div>
-    </div>
-
-    <div class="row" *ngFor="let p of people">
-      <div class="col">{{p.id}}</div>
-      <div class="col">{{p.first_name}}</div>
-      <div class="col">{{p.last_name}}</div>
-      <div class="col">{{p.gender}}</div>
-      <div class="col">{{p.age}}</div>
-      <div class="col">
-        <button type="button"
-                class="btn btn-primary"
-                (click)="updateClicked(p.id)">
-          update
-        </button>
-      </div>
-      <div class="col">
-        <button type="button"
-                class="btn btn-danger"
-                (click)="deleteClicked(p.id)">
-          delete
-        </button>
-      </div>
+    <div class="col text-center">
+      <nav aria-label="table paging">
+        <div class="btn-group">
+          <button (click)="prevClicked()" class="btn btn-info" type="button">
+            <i class="bi bi-caret-left-fill"></i>
+          </button>
+          <button (click)="nextClicked()" class="btn btn-info" type="button">
+            <i class="bi bi-caret-right-fill"></i>
+          </button>
+        </div>
+      </nav>
     </div>
   </div>
+</div>
+
+<div *ngIf="people.length < 1">
+  No data yet!
 </div>
