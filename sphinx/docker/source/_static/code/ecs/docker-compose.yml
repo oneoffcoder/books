@@ -12,7 +12,7 @@ services:
       - ${DATABASE_DATA_DIR}:/var/lib/mysql
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=oneoffcoder
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     deploy:
       resources:
         limits:
