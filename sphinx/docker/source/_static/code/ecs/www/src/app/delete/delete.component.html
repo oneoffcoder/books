@@ -1,27 +1,53 @@
 <div class="row" *ngIf="person">
   <div class="col">
-    Really delete?
-    <button type="button" class="btn btn-danger" (click)="delete()">YES</button>
-    <button type="button" class="btn btn-primary" (click)="cancelDelete()">NO</button>
+    <h1>Really delete?</h1>
+    <table>
+      <tbody>
+      <tr>
+        <td>
+          <h4>ID</h4>
+          <p>{{person.id}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4>First Name</h4>
+          <p>{{person.first_name}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4>Last Name</h4>
+          <p>{{person.last_name}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4>Gender</h4>
+          <p>{{person.gender}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4>Age</h4>
+          <p>{{person.age}}</p>
+        </td>
+      </tr>
+      </tbody>
+    </table>
   </div>
   <div class="row">
-    <div class="col">First Name</div>
-    <div class="col">{{person.first_name}}</div>
-  </div>
-  <div class="row">
-    <div class="col">Last Name</div>
-    <div class="col">{{person.last_name}}</div>
-  </div>
-  <div class="row">
-    <div class="col">Gender</div>
-    <div class="col">{{person.gender}}</div>
-  </div>
-  <div class="row">
-    <div class="col">Age</div>
-    <div class="col">{{person.age}}</div>
+    <div class="col">
+      <button type="button" class="btn btn-danger me-3" (click)="delete()">YES</button>
+      <button type="button" class="btn btn-warning" (click)="cancelDelete()">NO</button>
+    </div>
   </div>
 </div>
 
 <div class="row" *ngIf="deleted">
-  Person deleted.
+  <div class="col">
+    <p>
+      Person deleted.
+    </p>
+  </div>
 </div>
