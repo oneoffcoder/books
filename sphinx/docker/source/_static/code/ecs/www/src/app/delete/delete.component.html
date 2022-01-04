@@ -1,40 +1,29 @@
 <div class="row" *ngIf="person">
   <div class="col">
     <h1>Delete Person</h1>
-    <table>
-      <tbody>
-      <tr>
-        <td>
-          <h4>ID</h4>
-          <p>{{person.id}}</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h4>First Name</h4>
-          <p>{{person.first_name}}</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h4>Last Name</h4>
-          <p>{{person.last_name}}</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h4>Gender</h4>
-          <p>{{person.gender}}</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h4>Age</h4>
-          <p>{{person.age}}</p>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+
+    <ul class="list-group mb-3">
+      <li class="list-group-item">
+        <h4>ID</h4>
+        <p class="mb-0">{{person.id}}</p>
+      </li>
+      <li class="list-group-item">
+        <h4>First Name</h4>
+        <p class="mb-0">{{person.first_name}}</p>
+      </li>
+      <li class="list-group-item">
+        <h4>Last Name</h4>
+        <p class="mb-0">{{person.last_name}}</p>
+      </li>
+      <li class="list-group-item">
+        <h4>Gender</h4>
+        <p class="mb-0">{{person.gender}}</p>
+      </li>
+      <li class="list-group-item">
+        <h4>Age</h4>
+        <p class="mb-0">{{person.age}}</p>
+      </li>
+    </ul>
   </div>
   <div class="row">
     <div class="col">
