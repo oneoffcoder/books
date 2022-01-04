@@ -17,14 +17,14 @@ CREATE TABLE IF NOT EXISTS person (
     constraint pk_example primary key (id) 
 );
 
-INSERT INTO person (id, first_name, last_name, gender, age) VALUES 
-(1, 'John', 'Doe', 'M', 32),
-(2, 'Jane', 'Smith', 'F', 31),
-(3, 'Joe', 'Smith', 'M', 28),
-(4, 'Joyce', 'Doe', 'F', 29)
-ON DUPLICATE KEY UPDATE 
-    first_name=VALUES(first_name),
-    last_name=VALUES(last_name),
-    gender=VALUES(gender),
-    age=VALUES(age)
-;
+-- INSERT INTO person (id, first_name, last_name, gender, age) VALUES 
+-- (1, 'John', 'Doe', 'M', 32),
+-- (2, 'Jane', 'Smith', 'F', 31),
+-- (3, 'Joe', 'Smith', 'M', 28),
+-- (4, 'Joyce', 'Doe', 'F', 29)
+-- ON DUPLICATE KEY UPDATE 
+--     first_name=VALUES(first_name),
+--     last_name=VALUES(last_name),
+--     gender=VALUES(gender),
+--     age=VALUES(age)
+-- ;
