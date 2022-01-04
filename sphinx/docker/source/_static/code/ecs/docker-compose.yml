@@ -9,8 +9,8 @@ services:
     networks:
       - demo-network
     volumes:
-      - ./db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
-      - ./db/datadir:/var/lib/mysql
+      - ${DATABASE_ENTRYPOINT}:/docker-entrypoint-initdb.d
+      - ${DATABASE_DATA_DIR}:/var/lib/mysql
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=oneoffcoder
@@ -29,7 +29,7 @@ services:
     networks:
       - demo-network
     volumes:
-      - ./es/datadir:/usr/share/elasticsearch/data
+      - ${ES_DATA_DIR}:/usr/share/elasticsearch/data
     environment:
       - discovery.type=single-node
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
@@ -51,7 +51,7 @@ services:
     networks:
       - demo-network
     environment:
-      - DATABASE_URL=mysql+mysqldb://oneoffcoder:isthebest@db/ecsdb
+      - DATABASE_URL=${DATABASE_URL}
       - ES_HOST=es:9200
     healthcheck:
       test: ["CMD", "curl", "-f", "http://rest/v1/health"]
