@@ -53,6 +53,6 @@ async def init_search():
             break
         except:
             logger.debug(f'failed to initialize elasticsearch with n_tries={n_tries} of max_tries={max_tries}')
-            await asyncio.sleep(5)
+            await asyncio.sleep(30)
         finally:
             n_tries += 1

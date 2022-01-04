@@ -9,7 +9,6 @@ services:
     networks:
       - demo-network
     volumes:
-      - ${DATABASE_ENTRYPOINT}:/docker-entrypoint-initdb.d
       - ${DATABASE_DATA_DIR}:/var/lib/mysql
     restart: always
     environment:
