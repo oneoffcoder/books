@@ -1,16 +1,12 @@
 version: "3.7"
 services:
   db1:
-    build: db1
-    image: db1:local
+    image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/db1:latest
     container_name: db1
     ports:
       - "3306:3306"
-    networks:
-      - demo-network
     volumes:
       - db_data:/var/lib/mysql
-    restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     deploy:
@@ -21,6 +17,4 @@ services:
 volumes:
   db_data:
     name: ${DB_VOLUME_ID}
-networks:
-  demo-network:
-    driver: bridge
+x-aws-vpc: "vpc-0ca5772d21c774589"
