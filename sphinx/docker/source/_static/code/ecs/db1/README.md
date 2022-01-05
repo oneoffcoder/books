@@ -7,4 +7,6 @@ aws --region us-east-1 ec2 describe-subnets --filter Name=vpc-id,Values=vpc-0ca5
 
 docker context use myecscontext
 docker compose up
+docker compose ps
+docker compose down
 ```
