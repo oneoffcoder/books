@@ -6,7 +6,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - db_data:/var/lib/mysql
+      - db_volume_001:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     deploy:
@@ -15,6 +15,5 @@ services:
           cpus: '2'
           memory: 2048M
 volumes:
-  db_data:
-    name: ${DB_VOLUME_ID}
+  db_volume_001:
 x-aws-vpc: "vpc-0ca5772d21c774589"
