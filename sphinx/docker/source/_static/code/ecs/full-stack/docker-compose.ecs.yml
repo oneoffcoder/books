@@ -1,0 +1,77 @@
+version: "3.7"
+services:
+  db:
+    image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-db:latest
+    container_name: fs-demo-db
+    volumes:
+      - fs_demo_db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2048M
+  es:
+    image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-es:latest
+    container_name: fs-demo-es
+    volumes:
+      - fs_demo_es:/usr/share/elasticsearch/data
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2048M
+  rest:
+    image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-rest:latest
+    container_name: fs-demo-rest
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - ES_HOST=${ES_HOST}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://fs-demo-rest/v1/health"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on:
+      - db
+      - es
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2048M
+  ng:
+    image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-www:latest
+    container_name: fs-demo-www
+    ports:
+      - "80:80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://fs-demo-www"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on: 
+      - rest
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 512M
+volumes:
+  fs_demo_db:
+    external: true
+    name: "fs-0f4301284e38d3dd8"
+  fs_demo_es:      
+    external: true
+    name: "fs-0ff03551e314c54c7"
+networks:
+  default:
+    external: true
+    name: sg-0e2015a49eb2db10d
+x-aws-vpc: "vpc-0ca5772d21c774589"

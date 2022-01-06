@@ -39,7 +39,7 @@ docker context use myecscontext
 docker context use default
 
 # ecs deploy
-docker compose up
+docker compose -f docker-compose.ecs.yml --env-file .env.ecs up
 docker compose down
 ```
 
