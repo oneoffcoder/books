@@ -43,6 +43,8 @@ async def init_search():
     max_tries = 100
     n_tries = 0
 
+    await asyncio.sleep(30)
+
     while n_tries < max_tries:
         try:
             connections.create_connection(hosts=[es_host], timeout=20)

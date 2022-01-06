@@ -2,8 +2,8 @@
 
 ```bash
 # local
-docker-compose build --force-rm --no-cache
-docker-compose up --force-recreate
+docker-compose -f docker-compose.local.yml build --force-rm --no-cache 
+docker-compose -f docker-compose.local.yml up --force-recreate 
 
 # context
 docker context ls
