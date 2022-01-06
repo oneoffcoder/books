@@ -12,6 +12,12 @@ services:
         limits:
           cpus: '2'
           memory: 4096M
+    logging:
+      driver: awslogs
+      options: 
+        awslogs-group: fs_demo
+        awslogs-region: us-east-1
+        awslogs-stream-prefix: fs_demo_db
   rest:
     image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-rest:latest
     container_name: fs-demo-rest
