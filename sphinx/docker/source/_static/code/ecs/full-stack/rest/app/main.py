@@ -1,14 +1,11 @@
-import os
-import asyncio
 import logging
+import os
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from elasticsearch_dsl import connections
 
-from .router import person
 from .router import health
-from .api import indices
+from .router import person
 
 logging_conf = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logging.conf')
 logging.config.fileConfig(logging_conf, disable_existing_loggers=False)
@@ -36,25 +33,3 @@ app.add_middleware(
     allow_methods=['*'],
     allow_headers=['*']
 )
-
-@app.on_event('startup')
-async def init_search():
-    es_host = os.getenv('ES_HOST', 'localhost:9200')
-    max_tries = 100
-    n_tries = 0
-
-    await asyncio.sleep(30)
-
-    while n_tries < max_tries:
-        try:
-            connections.create_connection(hosts=[es_host], timeout=20)
-            indices.Person.init()
-
-            logger.debug(f'initalized elasticsearch with n_tries={n_tries}')
-
-            break
-        except:
-            logger.debug(f'failed to initialize elasticsearch with n_tries={n_tries} of max_tries={max_tries}')
-            await asyncio.sleep(30)
-        finally:
-            n_tries += 1

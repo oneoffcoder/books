@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class PersonBase(BaseModel):
     first_name: str
     last_name: str
@@ -10,15 +11,17 @@ class PersonBase(BaseModel):
 class PersonCreate(PersonBase):
     ...
 
+
 class PersonUpdate(PersonBase):
     ...
 
 
 class Person(PersonBase):
     id: int
-    
+
     class Config:
         orm_mode = True
+
 
 class Message(BaseModel):
     status: str

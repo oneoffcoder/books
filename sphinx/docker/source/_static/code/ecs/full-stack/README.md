@@ -14,17 +14,14 @@ docker-compose -f docker-compose.local.yml --env-file .env.local up --force-recr
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 982057254752.dkr.ecr.us-east-1.amazonaws.com
 
 docker build --no-cache -t fs-demo-db:local .
-docker build --no-cache -t fs-demo-es:local .
 docker build --no-cache -t fs-demo-rest:local .
 docker build --no-cache -t fs-demo-www:local .
 
 docker tag fs-demo-db:local 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-db:latest
-docker tag fs-demo-es:local 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-es:latest
 docker tag fs-demo-rest:local 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-rest:latest
 docker tag fs-demo-www:local 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-www:latest
 
 docker push 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-db:latest
-docker push 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-es:latest
 docker push 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-rest:latest
 docker push 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-www:latest
 ```
