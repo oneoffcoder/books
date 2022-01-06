@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  es1:
+    image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/es1:latest
+    container_name: es1
+    ports:
+      - "9200:9200"
+    volumes:
+      - es_volume_001:/usr/share/elasticsearch/data
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4096M
+volumes:
+  es_volume_001:
+x-aws-vpc: "vpc-0ca5772d21c774589"
