@@ -11,7 +11,7 @@ services:
       resources:
         limits:
           cpus: '2'
-          memory: 2048M
+          memory: 4096M
   es:
     image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-es:latest
     container_name: fs-demo-es
@@ -19,12 +19,11 @@ services:
       - fs_demo_es:/usr/share/elasticsearch/data
     environment:
       - discovery.type=single-node
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     deploy:
       resources:
         limits:
           cpus: '2'
-          memory: 2048M
+          memory: 4096M
   rest:
     image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-rest:latest
     container_name: fs-demo-rest
@@ -44,7 +43,7 @@ services:
       resources:
         limits:
           cpus: '2'
-          memory: 2048M
+          memory: 4096M
   ng:
     image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-www:latest
     container_name: fs-demo-www
