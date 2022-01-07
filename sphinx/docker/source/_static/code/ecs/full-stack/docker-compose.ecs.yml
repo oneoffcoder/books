@@ -57,7 +57,7 @@ services:
 volumes:
   fs_demo_db:
     external: true
-    name: "fs-0f4301284e38d3dd8"
+    name: "fs-0a2d660afcab36370"
 networks:
   default:
     external: true
