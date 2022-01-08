@@ -1,0 +1,61 @@
+<h1>People</h1>
+
+<div *ngIf="people.length > 0">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let p of people">
+        <td>{{p.id}}</td>
+        <td>{{p.first_name}}</td>
+        <td>{{p.last_name}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.age}}</td>
+        <td>
+          <button (click)="updateClicked(p.id)"
+                  class="btn btn-primary"
+                  type="button">
+            <i class="bi bi-pencil-fill"></i>
+          </button>
+        </td>
+        <td>
+          <button (click)="deleteClicked(p.id)"
+                  class="btn btn-danger"
+                  type="button">
+            <i class="bi bi-x-circle-fill"></i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row">
+    <div class="col text-center">
+      <nav aria-label="table paging">
+        <div class="btn-group">
+          <button (click)="prevClicked()" class="btn btn-info" type="button">
+            <i class="bi bi-caret-left-fill"></i>
+          </button>
+          <button (click)="nextClicked()" class="btn btn-info" type="button">
+            <i class="bi bi-caret-right-fill"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="people.length < 1">
+  No data yet!
+</div>
