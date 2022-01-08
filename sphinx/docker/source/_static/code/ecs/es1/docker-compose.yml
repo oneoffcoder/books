@@ -1,22 +1,21 @@
 version: "3.7"
 services:
   es1:
-    image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/es1:latest
+    image: elasticsearch:7.16.2
     container_name: es1
     ports:
       - "9200:9200"
     volumes:
-      - es_volume_001:/usr/share/elasticsearch/data
+      - data_volume:/usr/share/elasticsearch/data
     environment:
       - discovery.type=single-node
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-    deploy:
-      resources:
-        limits:
-          cpus: '2'
-          memory: 4096M
 volumes:
-  es_volume_001:
+  data_volume:
     external: true
-    name: fs-079ea8d52f2d0fe40
-x-aws-vpc: vpc-0ca5772d21c774589
+    name: ${VOLUME_ID}
+networks:
+  default:
+    external: true
+    name: ${AWS_SECURITY_GROUP}
+x-aws-vpc: ${AWS_VPC}
