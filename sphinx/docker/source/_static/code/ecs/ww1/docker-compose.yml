@@ -5,11 +5,17 @@ services:
     container_name: ww1
     ports:
       - "80:80"
+    volumes:
+      - data_volume:/data
     deploy:
       resources:
         limits:
           cpus: '0.25'
           memory: 512M
+volumes:
+  data_volume:
+    external: True
+    name: ${VOLUME_ID}
 networks:
   default:
     external: true
