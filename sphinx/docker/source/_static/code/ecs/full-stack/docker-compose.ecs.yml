@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   db:
-    image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-db:latest
+    image: ${DOCKER_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-db:latest
     container_name: fs-demo-db
     volumes:
       - fs_demo_db:/var/lib/mysql
@@ -16,10 +16,10 @@ services:
       driver: awslogs
       options: 
         awslogs-group: fs_demo
-        awslogs-region: us-east-1
+        awslogs-region: ${AWS_REGION}
         awslogs-stream-prefix: fs_demo_db
   rest:
-    image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-rest:latest
+    image: ${DOCKER_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-rest:latest
     container_name: fs-demo-rest
     environment:
       - DATABASE_URL=${DATABASE_URL}
@@ -37,7 +37,7 @@ services:
           cpus: '2'
           memory: 4096M
   ng:
-    image: 982057254752.dkr.ecr.us-east-1.amazonaws.com/fs-demo-www:latest
+    image: ${DOCKER_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-www:latest
     container_name: fs-demo-www
     ports:
       - "80:80"
@@ -61,5 +61,5 @@ volumes:
 networks:
   default:
     external: true
-    name: sg-0e2015a49eb2db10d
-x-aws-vpc: "vpc-0ca5772d21c774589"
+    name: ${AWS_SECURITY_GROUP}
+x-aws-vpc: ${AWS_VPC}
