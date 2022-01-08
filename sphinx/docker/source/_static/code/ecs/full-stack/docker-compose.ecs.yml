@@ -36,6 +36,12 @@ services:
         limits:
           cpus: '2'
           memory: 4096M
+    logging:
+      driver: awslogs
+      options: 
+        awslogs-group: fs_demo
+        awslogs-region: ${AWS_REGION}
+        awslogs-stream-prefix: fs_demo_rest
   ng:
     image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-www:latest
     container_name: fs-demo-www
@@ -54,10 +60,16 @@ services:
         limits:
           cpus: '0.25'
           memory: 512M
+    logging:
+      driver: awslogs
+      options: 
+        awslogs-group: fs_demo
+        awslogs-region: ${AWS_REGION}
+        awslogs-stream-prefix: fs_demo_www
 volumes:
   fs_demo_db:
     external: true
-    name: "fs-0a2d660afcab36370"
+    name: ${MYSQL_VOLUME}
 networks:
   default:
     external: true
