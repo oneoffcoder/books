@@ -18,5 +18,5 @@ services:
 volumes:
   es_volume_001:
     external: true
-    name: "fs-079ea8d52f2d0fe40"
-x-aws-vpc: "vpc-0ca5772d21c774589"
+    name: fs-079ea8d52f2d0fe40
+x-aws-vpc: vpc-0ca5772d21c774589

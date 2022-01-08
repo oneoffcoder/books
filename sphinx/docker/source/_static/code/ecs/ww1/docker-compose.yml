@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  ng:
+    image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/ww1:latest
+    container_name: ww1
+    ports:
+      - "80:80"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 512M
+networks:
+  default:
+    external: true
+    name: ${AWS_SECURITY_GROUP}
+x-aws-vpc: ${AWS_VPC}
