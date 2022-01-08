@@ -1,0 +1,68 @@
+version: "3.7"
+services:
+  db:
+    build: db
+    image: ecs-db:local
+    container_name: db
+    ports:
+      - "3306:3306"
+    networks:
+      - demo-network
+    volumes:
+      - ${DATABASE_DATA_DIR}:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2048M
+  rest:
+    build: rest
+    image: ecs-rest:local
+    container_name: rest
+    ports:
+      - "8000:80"
+    networks:
+      - demo-network
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://rest/v1/health"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on:
+      - db
+      - es
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2048M
+  ng:
+    build: www
+    image: ecs-www:local
+    container_name: www
+    ports:
+      - "80:80"
+    networks:
+      - demo-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://ng"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on: 
+      - rest
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 512M
+networks:
+  demo-network:
+    driver: bridge

@@ -57,6 +57,8 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    kalman-filter
    kalman-filter-ii
    gaussian-hmm
+   ipf
+   ipf-ii
    
 .. toctree::
    :maxdepth: 1
