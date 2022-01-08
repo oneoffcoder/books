@@ -6,7 +6,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - data_mount:/var/lib/mysql
+      - data_volume:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     deploy:
@@ -15,7 +15,7 @@ services:
           cpus: '2'
           memory: 2048M
 volumes:
-  data_mount:
+  data_volume:
     external: True
     name: ${VOLUME_ID}
 networks:

@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   es1:
-    image: elasticsearch:7.16.2
+    image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/es1:latest
     container_name: es1
     ports:
       - "9200:9200"

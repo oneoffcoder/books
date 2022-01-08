@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   db:
-    image: ${DOCKER_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-db:latest
+    image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-db:latest
     container_name: fs-demo-db
     volumes:
       - fs_demo_db:/var/lib/mysql
@@ -19,7 +19,7 @@ services:
         awslogs-region: ${AWS_REGION}
         awslogs-stream-prefix: fs_demo_db
   rest:
-    image: ${DOCKER_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-rest:latest
+    image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-rest:latest
     container_name: fs-demo-rest
     environment:
       - DATABASE_URL=${DATABASE_URL}
@@ -37,7 +37,7 @@ services:
           cpus: '2'
           memory: 4096M
   ng:
-    image: ${DOCKER_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-www:latest
+    image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-www:latest
     container_name: fs-demo-www
     ports:
       - "80:80"
