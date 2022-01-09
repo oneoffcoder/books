@@ -130,6 +130,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    pose-estimation
    autoencoder-anomaly
    autoencoder-data-imputation
+   autoencoder-malicious-urls
 
 .. toctree::
    :maxdepth: 1
