@@ -1,0 +1,42 @@
+<div class="row" *ngIf="person">
+  <div class="col">
+    <h1>Delete Person</h1>
+
+    <ul class="list-group mb-3">
+      <li class="list-group-item">
+        <h4>ID</h4>
+        <p class="mb-0">{{person.id}}</p>
+      </li>
+      <li class="list-group-item">
+        <h4>First Name</h4>
+        <p class="mb-0">{{person.first_name}}</p>
+      </li>
+      <li class="list-group-item">
+        <h4>Last Name</h4>
+        <p class="mb-0">{{person.last_name}}</p>
+      </li>
+      <li class="list-group-item">
+        <h4>Gender</h4>
+        <p class="mb-0">{{person.gender}}</p>
+      </li>
+      <li class="list-group-item">
+        <h4>Age</h4>
+        <p class="mb-0">{{person.age}}</p>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button type="button" class="btn btn-danger me-3" (click)="delete()">YES</button>
+      <button type="button" class="btn btn-warning" (click)="cancelDelete()">NO</button>
+    </div>
+  </div>
+</div>
+
+<div class="row" *ngIf="deleted">
+  <div class="col">
+    <p>
+      Person deleted.
+    </p>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+version: "3.7"
+services:
+  db:
+    image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-db:latest
+    container_name: fs-demo-db
+    volumes:
+      - fs_demo_db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4096M
+  rest:
+    image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-rest:latest
+    container_name: fs-demo-rest
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    depends_on:
+      - db
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4096M
+  ng:
+    image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-www:latest
+    container_name: fs-demo-www
+    ports:
+      - "80:80"
+    depends_on: 
+      - rest
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 512M
+volumes:
+  fs_demo_db:
+    external: true
+    name: ${MYSQL_VOLUME}
+networks:
+  default:
+    external: true
+    name: ${AWS_SECURITY_GROUP}
+x-aws-vpc: ${AWS_VPC}

@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  es1:
+    image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/es1:latest
+    container_name: es1
+    ports:
+      - "9200:9200"
+    volumes:
+      - data_volume:/usr/share/elasticsearch/data
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+volumes:
+  data_volume:
+    external: true
+    name: ${VOLUME_ID}
+networks:
+  default:
+    external: true
+    name: ${AWS_SECURITY_GROUP}
+x-aws-vpc: ${AWS_VPC}

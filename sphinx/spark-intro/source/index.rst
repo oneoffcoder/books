@@ -49,6 +49,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    graphs
    machine-learning
    tips
+   tips-datetime
 
 About
 =====

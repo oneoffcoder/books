@@ -56,6 +56,9 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    precision-recall-roc
    kalman-filter
    kalman-filter-ii
+   gaussian-hmm
+   ipf
+   ipf-ii
    
 .. toctree::
    :maxdepth: 1
@@ -72,6 +75,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    kmc-bic-aic
    pdf-cdf
    s-curve
+   markov-chain-stationary-distribution
 
 .. toctree::
    :maxdepth: 1
@@ -80,9 +84,21 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    
    regression-errors
    logistic-nb
-   btl-model
    estimating-standard-error-coefficients
    logreg-y-probability
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Rating and Ranking
+   
+   btl-model
+   massey-method
+   massey-method-ii
+   colley-method
+   keener-method
+   markov-method
+   reordering-method
    
 .. toctree::
    :maxdepth: 1
@@ -112,6 +128,9 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    restricted-boltzmann-machine
    rnn-classify-signals
    pose-estimation
+   autoencoder-anomaly
+   autoencoder-data-imputation
+   autoencoder-malicious-urls
 
 .. toctree::
    :maxdepth: 1
@@ -140,6 +159,8 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    creating-junction-tree
    gaussian-network-inference
    causal-inference
+   dbn-markov-chain
+   dbn-hmm
 
 .. toctree::
    :maxdepth: 1
