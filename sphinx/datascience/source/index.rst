@@ -86,6 +86,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    logistic-nb
    estimating-standard-error-coefficients
    logreg-y-probability
+   lasso-safe-strong
 
 .. toctree::
    :maxdepth: 1
