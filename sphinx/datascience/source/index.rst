@@ -155,7 +155,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
 .. toctree::
    :maxdepth: 1
    :numbered:
-   :caption: Graphical Models
+   :caption: Causality
 
    generate-random-bbn
    creating-junction-tree
@@ -163,6 +163,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    causal-inference
    dbn-markov-chain
    dbn-hmm
+   psm
 
 .. toctree::
    :maxdepth: 1
