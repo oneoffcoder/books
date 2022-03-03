@@ -44,6 +44,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    visualizing
    regression
    logistic-regression
+   poisson-regression
    classification
    clustering
    nearest-neighbors
