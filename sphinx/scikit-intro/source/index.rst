@@ -94,6 +94,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    pyod
    combo
    pygam
+   rpy2
    
 .. toctree::
    :maxdepth: 1
