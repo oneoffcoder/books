@@ -87,6 +87,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    estimating-standard-error-coefficients
    logreg-y-probability
    lasso-safe-strong
+   log-linear-model
 
 .. toctree::
    :maxdepth: 1
