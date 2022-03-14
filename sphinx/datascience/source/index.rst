@@ -43,7 +43,6 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    :caption: General
 
    missing-data
-   psuedo-r-squared-logistic-regression
    pca
    lda
    mvn-conditional
@@ -83,11 +82,13 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    :caption: Regression
    
    regression-errors
+   psuedo-r-squared-logistic-regression
    logistic-nb
    estimating-standard-error-coefficients
    logreg-y-probability
    lasso-safe-strong
    log-linear-model
+   lmm
    irwls
 
 .. toctree::
