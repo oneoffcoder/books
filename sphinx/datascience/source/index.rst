@@ -83,6 +83,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    
    regression-errors
    psuedo-r-squared-logistic-regression
+   simple-mcfadden
    logistic-nb
    estimating-standard-error-coefficients
    logreg-y-probability
