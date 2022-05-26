@@ -50,6 +50,7 @@ This book is a tutorial on ``Docker``. To follow along, you will need to `instal
    encryption
    ecr
    ecs
+   sagemaker
    references
 
 
