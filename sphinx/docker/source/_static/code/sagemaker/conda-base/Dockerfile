@@ -9,7 +9,7 @@ RUN apt-get update -y \
         scikit-learn \
         numpy \
         pip \
-    && pip install mlflow boto3 s3fs fsspec \
+    && pip install mlflow==1.26.0 boto3 s3fs fsspec \
     && pip install sagemaker-training \
     && pip install lifelines scikit-survival sagemaker-training imbalanced-learn \
     && apt-get clean \
