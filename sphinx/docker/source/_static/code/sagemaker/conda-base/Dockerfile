@@ -12,5 +12,6 @@ RUN apt-get update -y \
     && pip install mlflow==1.26.0 boto3 s3fs fsspec \
     && pip install sagemaker-training \
     && pip install lifelines scikit-survival sagemaker-training imbalanced-learn \
+    && pip install protobuf==3.20.1 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
