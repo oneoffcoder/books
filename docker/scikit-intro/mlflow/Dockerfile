@@ -1,23 +1,13 @@
 FROM continuumio/miniconda3:4.11.0
 
-ENV BACKEND_URI sqlite:///mlflow.db
-ENV ARTIFACT_ROOT /mlflow/mlflow-artifacts
-
 WORKDIR /mlflow/
 
 RUN mkdir -p /mlflow/ \
-  && apt-get update \
-  && apt-get -y install --no-install-recommends default-libmysqlclient-dev libpq-dev build-essential \
-  && pip install \
-    mlflow==1.26.1 \
-    sqlalchemy \
-    boto3 \
-    google-cloud-storage \
-    psycopg2 \
-    mysql
+    && pip install  \
+        mlflow==1.26.1 
 
 EXPOSE 5000
 CMD mlflow server \
-    --backend-store-uri ${BACKEND_URI} \
-    --default-artifact-root ${ARTIFACT_ROOT} \
+    --backend-store-uri sqlite:///mlflow.db \
+    --default-artifact-root /tmp/mlflow \
     --host 0.0.0.0
