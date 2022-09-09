@@ -96,6 +96,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    pygam
    rpy2
    mlflow
+   optuna
    
 .. toctree::
    :maxdepth: 1
