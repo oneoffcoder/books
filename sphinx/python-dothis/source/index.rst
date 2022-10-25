@@ -75,6 +75,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    tuple-namedtuple
    string-concatenation
    string-interpolation
+   string-debug
    string-dry
    string-reversal
    function-clarification
