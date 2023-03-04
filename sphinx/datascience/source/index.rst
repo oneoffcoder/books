@@ -92,6 +92,13 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    log-linear-graphical
    lmm
    irwls
+   
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Survival Analysis
+   
+   survival-functions
 
 .. toctree::
    :maxdepth: 1
