@@ -99,6 +99,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    :caption: Survival Analysis
    
    survival-functions
+   survival-mva
 
 .. toctree::
    :maxdepth: 1
