@@ -45,6 +45,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    missing-data
    pca
    pca-iris
+   dimension-reduction
    lda
    mvn-conditional
    bivariate-cond-gaussian
