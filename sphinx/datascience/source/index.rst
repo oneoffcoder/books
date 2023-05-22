@@ -60,6 +60,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    gaussian-hmm
    ipf
    ipf-ii
+   anova
    
 .. toctree::
    :maxdepth: 1
