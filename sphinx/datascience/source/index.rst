@@ -84,6 +84,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    :numbered:
    :caption: Regression
    
+   corr-coef
    regression-errors
    psuedo-r-squared-logistic-regression
    simple-mcfadden
