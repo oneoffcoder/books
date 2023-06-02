@@ -86,7 +86,6 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    widgets
    patsy
    statsmodels
-   xgboost
    shap
    imbalanced-learn
    nltk
@@ -97,6 +96,8 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    rpy2
    mlflow
    optuna
+   xgboost
+   lightgbm
    
 .. toctree::
    :maxdepth: 1
