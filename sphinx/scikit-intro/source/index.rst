@@ -74,6 +74,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    plot-scatter
    plot-parallel-coordinates
    plot-graph
+   plot-mosaic
    plot-animation
 
 .. toctree::
