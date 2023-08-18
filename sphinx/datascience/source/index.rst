@@ -96,6 +96,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    log-linear-graphical
    lmm
    irwls
+   mixed-effect-regression
    
 .. toctree::
    :maxdepth: 1
