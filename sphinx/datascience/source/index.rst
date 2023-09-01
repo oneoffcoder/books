@@ -97,8 +97,6 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    lmm
    irwls
    mixed-effect-regression
-   pricing-elasticity-basics
-   pricing-elasticity-modeling
    
 .. toctree::
    :maxdepth: 1
@@ -185,6 +183,15 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    dbn-markov-chain
    dbn-hmm
    psm
+   
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Retail
+   
+   pricing-elasticity-basics
+   pricing-elasticity-modeling
+   optimizing-demand-curve
 
 .. toctree::
    :maxdepth: 1
