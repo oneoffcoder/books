@@ -193,6 +193,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    pricing-elasticity-modeling
    optimizing-demand-curve
    optimizing-demand-curve-kaggle
+   fitting-demand-curves
 
 .. toctree::
    :maxdepth: 1
