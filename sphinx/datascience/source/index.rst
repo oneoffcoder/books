@@ -61,6 +61,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    ipf
    ipf-ii
    anova
+   finding-optimal-parameters
    
 .. toctree::
    :maxdepth: 1
