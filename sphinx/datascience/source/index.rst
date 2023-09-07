@@ -61,6 +61,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    ipf
    ipf-ii
    anova
+   finding-optimal-parameters
    
 .. toctree::
    :maxdepth: 1
@@ -193,6 +194,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    pricing-elasticity-modeling
    optimizing-demand-curve
    optimizing-demand-curve-kaggle
+   optimizing-demand-curve-multiobjective
    fitting-demand-curves
 
 .. toctree::
