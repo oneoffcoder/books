@@ -131,6 +131,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    autograd-poisson-regression-gradient-descent
    neural-network-gradient-descent
    online-sgd
+   differentiation
 
 .. toctree::
    :maxdepth: 1
