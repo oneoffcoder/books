@@ -61,6 +61,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    ipf
    ipf-ii
    anova
+   finding-optimal-parameters
    
 .. toctree::
    :maxdepth: 1
@@ -130,6 +131,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    autograd-poisson-regression-gradient-descent
    neural-network-gradient-descent
    online-sgd
+   differentiation
 
 .. toctree::
    :maxdepth: 1
@@ -183,6 +185,18 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    dbn-markov-chain
    dbn-hmm
    psm
+   
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Retail
+   
+   pricing-elasticity-basics
+   pricing-elasticity-modeling
+   optimizing-demand-curve
+   optimizing-demand-curve-kaggle
+   optimizing-demand-curve-multiobjective
+   fitting-demand-curves
 
 .. toctree::
    :maxdepth: 1
