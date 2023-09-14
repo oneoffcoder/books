@@ -185,6 +185,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    dbn-markov-chain
    dbn-hmm
    psm
+   estimating-conditional-probabilities
    
 .. toctree::
    :maxdepth: 1
