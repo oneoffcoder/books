@@ -131,6 +131,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    autograd-poisson-regression-gradient-descent
    neural-network-gradient-descent
    online-sgd
+   differentiation
 
 .. toctree::
    :maxdepth: 1
@@ -184,6 +185,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    dbn-markov-chain
    dbn-hmm
    psm
+   estimating-conditional-probabilities
    
 .. toctree::
    :maxdepth: 1
