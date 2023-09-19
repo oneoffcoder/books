@@ -14,5 +14,5 @@ sudo apt install r-base
 R --version
 R
 install.packages('IRkernel')
-IRkernel::installspec(name = 'ir36', displayname = 'R')
+IRkernel::installspec(name = 'ir4', displayname = 'R')
 ```
