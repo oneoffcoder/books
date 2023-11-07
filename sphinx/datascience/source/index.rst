@@ -62,6 +62,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    ipf-ii
    anova
    finding-optimal-parameters
+   brier-score
    
 .. toctree::
    :maxdepth: 1
