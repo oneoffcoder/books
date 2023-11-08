@@ -190,6 +190,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    dbn-hmm
    psm
    estimating-conditional-probabilities
+   explain-predict
    
 .. toctree::
    :maxdepth: 1
