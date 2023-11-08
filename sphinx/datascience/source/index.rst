@@ -63,6 +63,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    anova
    finding-optimal-parameters
    brier-score
+   log-loss
    
 .. toctree::
    :maxdepth: 1
