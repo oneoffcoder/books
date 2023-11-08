@@ -65,6 +65,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    brier-score
    log-loss
    spherical-payoff
+   scoring-rules
    
 .. toctree::
    :maxdepth: 1
