@@ -64,6 +64,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    finding-optimal-parameters
    brier-score
    log-loss
+   spherical-payoff
    
 .. toctree::
    :maxdepth: 1
