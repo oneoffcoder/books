@@ -191,6 +191,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    psm
    estimating-conditional-probabilities
    explain-predict
+   fwl-theorem
    
 .. toctree::
    :maxdepth: 1
