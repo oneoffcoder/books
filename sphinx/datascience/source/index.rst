@@ -182,6 +182,8 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    :caption: Causality
 
    simpson-paradox
+   d-separation
+   d-separation-ii
    generate-random-bbn
    creating-junction-tree
    gaussian-network-inference
@@ -191,6 +193,8 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    psm
    estimating-conditional-probabilities
    explain-predict
+   explain-predict-ii
+   fwl-theorem
    
 .. toctree::
    :maxdepth: 1
