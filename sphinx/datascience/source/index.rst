@@ -184,6 +184,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    simpson-paradox
    d-separation
    d-separation-ii
+   backdoor-criterion
    generate-random-bbn
    creating-junction-tree
    gaussian-network-inference
