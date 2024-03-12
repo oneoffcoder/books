@@ -1,0 +1,10 @@
+Java: The Complete Reference
+Core Java An Integrated Approach (Black Book)
+Head First Java
+Effective Java
+Thinking in Java
+The Java Language Specification
+The Java™ Programming Language
+Java Puzzlers: Traps, Pitfalls, and Corner Cases
+Core Java Volume I–Fundamentals
+Spring in Action

@@ -1,0 +1,10 @@
+The C# Player's Guide (3rd Edition)
+C# in Depth: Fourth Edition
+Microsoft Visual C# Step by Step (Developer Reference) 8th Edition
+Pro C# 7: With .NET and .NET Core 8th ed. Edition
+C# 9.0 in a Nutshell: The Definitive Reference
+Head First C#: A Learner's Guide to Real-World Programming with C# and .NET Core
+Learning C# by Developing Games with Unity 2019
+Agile Principles, Patterns, and Practices in C#
+Microsoft Visual C# Step by Step 9th edition
+C# 7.0 in a Nutshell: The Definitive Reference
