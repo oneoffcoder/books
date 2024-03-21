@@ -198,6 +198,7 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    explain-predict
    explain-predict-ii
    fwl-theorem
+   pch
    
 .. toctree::
    :maxdepth: 1
