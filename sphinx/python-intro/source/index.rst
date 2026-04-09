@@ -74,14 +74,24 @@ The Docker container starts `JupyterLab <https://jupyter.org/>`_ on port ``8888`
    enum
    typing
    libraries
+   json
+   csv
    pathlib
+   random
    datetime-zoneinfo
+   tomllib
+   argparse
+   subprocess
+   logging
    exceptions
    context-manager
    threads
    io
+   testing
    turtle
+   mini-projects
    more-practice
+   python-3-13-notes
 
 .. toctree::
    :maxdepth: 1
