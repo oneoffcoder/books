@@ -809,3 +809,29 @@ Data classes are available in Python 3.7. A data class is mostly a declaration o
    print(p2)
 
    print(p1 == p2)
+
+Exercise 2
+^^^^^^^^^^
+
+Create a ``BankAccount`` class with ``deposit()``, ``withdraw()``, and ``transfer_to()`` methods. Then make a ``SavingsAccount`` subclass that inherits from it and adds an ``interest_rate`` field plus a method to apply interest.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   class BankAccount {
+     balance
+     deposit(amount)
+     withdraw(amount)
+     transfer_to(other, amount)
+   }
+
+   class SavingsAccount {
+     interest_rate
+     apply_interest()
+   }
+
+   BankAccount <|-- SavingsAccount
+   @enduml

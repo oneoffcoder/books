@@ -204,3 +204,75 @@ The class game of Rock Paper Scissor ``RPS`` is played between two people. Each 
    @enduml
 
 Write a terminal-based game of ``RPS`` where a user gets to challenge the computer. The game should loop endlessly and handle the situation when a user wants to quit. Before the game ends, the user should have information of the number of times they have won, total games played and percentage of wins. On each round, let the user pick rock, paper or scissor, and then randomly let the computer pick as well. Compute the result for the user (win, lose or tie). Always show what the user and computer picked as well as the result each time.
+
+Maze Runner
+-----------
+
+Represent a maze as a grid of characters where:
+
+- ``S`` is the start
+- ``E`` is the exit
+- ``#`` is a wall
+- ``.`` is an open path
+
+Write a program that finds whether a path exists from ``S`` to ``E``. You may use a queue, stack, or recursion.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   start
+   :Find start cell;
+   :Visit reachable neighbors;
+   if (exit found?) then (yes)
+     :Report success;
+   else (no)
+     :Keep exploring until no cells remain;
+   endif
+   stop
+   @enduml
+
+Treasure Map
+------------
+
+You are given a grid of integers where each number represents treasure at that location. Starting in the top-left corner, move only right or down until you reach the bottom-right corner. Find the path with the largest total treasure.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "(0,0)" as a
+   rectangle "(0,1)" as b
+   rectangle "(1,0)" as c
+   rectangle "(1,1)" as d
+   a --> b : right
+   a --> c : down
+   b --> d : down
+   c --> d : right
+   @enduml
+
+Music Playlist Shuffle
+----------------------
+
+Model a playlist as a queue of songs. Support these operations:
+
+- add a song to the end
+- play the next song
+- skip the current song and move it to the back
+- show the next three songs coming up
+
+Use ``deque`` so the data structure matches the problem.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "playlist deque" as q
+   rectangle "play next" as play
+   rectangle "skip to back" as skip
+   rectangle "peek next three" as peek
+
+   q --> play
+   q --> skip
+   q --> peek
+   @enduml

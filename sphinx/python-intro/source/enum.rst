@@ -63,3 +63,24 @@ When to use enums
 -----------------
 
 Use enums when the set of choices is stable and meaningful. If you simply need arbitrary user-provided strings, a normal string is still the right tool.
+
+Exercise
+--------
+
+Create an enum named ``TicketStatus`` for a bug tracker with the values ``OPEN``, ``IN_PROGRESS``, ``BLOCKED``, and ``DONE``. Then:
+
+- create a list of fake tickets using those values
+- count how many tickets are in each status
+- print a friendly menu by looping over the enum
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   enum TicketStatus {
+     OPEN
+     IN_PROGRESS
+     BLOCKED
+     DONE
+   }
+   @enduml

@@ -66,3 +66,27 @@ Why dataclasses matter
 ----------------------
 
 Dataclasses are especially useful when a class mainly represents structured data rather than complicated behavior. They keep examples short, make code easier to read, and encourage you to model data with named fields instead of anonymous dictionaries or tuples.
+
+Exercise
+--------
+
+Model a small library system with dataclasses. Create a ``Book`` dataclass with ``title``, ``author``, ``year``, and ``tags``. Then:
+
+- give ``tags`` a safe default with ``field(default_factory=list)``
+- create at least three books
+- compare two books for equality
+- print the books so you can see the generated ``__repr__()``
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   class Book <<dataclass>> {
+     title: str
+     author: str
+     year: int
+     tags: list[str]
+   }
+   @enduml

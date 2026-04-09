@@ -51,3 +51,32 @@ Why this matters
 ----------------
 
 Pattern matching is useful when you are decoding commands, events, messages, or other structured inputs. It keeps the branching logic compact and makes each case read like a description of the shape you expect.
+
+Exercise
+--------
+
+Build a tiny chat command router using ``match``. Support commands such as:
+
+- ``{'type': 'join', 'room': 'python'}``
+- ``{'type': 'message', 'room': 'python', 'text': 'hello'}``
+- ``{'type': 'leave', 'room': 'python'}``
+
+Print a different message for each command shape, and use a guard to reject empty messages.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   start
+   :Receive command dict;
+   if (join?) then (yes)
+     :announce room join;
+   elseif (message and text?) then (yes)
+     :print chat message;
+   elseif (leave?) then (yes)
+     :announce room leave;
+   else
+     :report unknown command;
+   endif
+   stop
+   @enduml

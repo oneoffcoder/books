@@ -57,3 +57,26 @@ Why type hints help
 -------------------
 
 Type hints are useful documentation. They show readers what shape of data the code expects, and they work well with tools such as type checkers, editors, and code review. They are most helpful when they clarify interfaces, not when they repeat the obvious everywhere.
+
+Exercise
+--------
+
+Annotate a small student-report module. Write:
+
+- a type alias for ``dict[str, list[int]]`` to represent student grades
+- a function that returns the average for one student
+- a function that returns the top student name or ``None`` if there is no data
+
+Use type hints on all parameters and return values.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "StudentGrades\nalias" as alias
+   rectangle "get_average(name) -> float" as avg
+   rectangle "get_top_student(...) -> str | None" as top
+
+   alias --> avg
+   alias --> top
+   @enduml

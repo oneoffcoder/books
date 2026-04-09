@@ -68,3 +68,27 @@ What to document
 ----------------
 
 Not every tiny function needs a long docstring. Focus on documenting functions whose purpose, inputs, outputs, side effects, or error cases might not be obvious from the code alone. Good documentation should clarify the code, not repeat it word for word.
+
+Exercise
+--------
+
+Write a function named ``calculate_shipping`` that accepts a package weight and destination zone and returns a shipping price. Document it twice:
+
+- once with a Sphinx-style docstring
+- once with a Google-style docstring
+
+Make sure both versions explain the parameters, return value, and what happens if the weight is negative.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "calculate_shipping(weight, zone)" as fn
+   rectangle "Parameters" as params
+   rectangle "Returns" as returns
+   rectangle "Raises / error cases" as errors
+
+   fn --> params
+   fn --> returns
+   fn --> errors
+   @enduml

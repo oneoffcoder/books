@@ -61,3 +61,24 @@ Why pathlib matters
 -------------------
 
 ``pathlib`` keeps path operations object-oriented and consistent. It is easier to read than manual string concatenation, and it helps keep filesystem code portable across operating systems.
+
+Exercise
+--------
+
+Write a script that creates a project folder named ``notes`` with two text files inside it. Then:
+
+- write some text to both files
+- list all ``.txt`` files with ``glob()``
+- print which entries are files and which are directories
+- read the contents back with ``Path.read_text()``
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   folder notes
+   file note1 as "day1.txt"
+   file note2 as "day2.txt"
+   notes --> note1
+   notes --> note2
+   @enduml

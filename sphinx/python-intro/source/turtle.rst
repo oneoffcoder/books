@@ -230,3 +230,29 @@ For even more examples, type in the following.
     :linenos:
 
     python -m turtledemo
+
+Exercise
+--------
+
+Draw a small night skyline with Turtle. Your program should:
+
+- draw a dark background
+- create at least three buildings with different heights
+- add windows using dots or filled squares
+- draw a moon in one corner
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "moon" as moon
+   rectangle "building 1" as b1
+   rectangle "building 2" as b2
+   rectangle "building 3" as b3
+   rectangle "windows" as windows
+
+   b1 --> windows
+   b2 --> windows
+   b3 --> windows
+   moon -[hidden]-> b1
+   @enduml

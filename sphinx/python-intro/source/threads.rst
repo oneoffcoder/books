@@ -208,3 +208,26 @@ We can use ``Lock`` to synchronize between different processes. The function ``a
    :language: python
    :linenos:
    :emphasize-lines: 13,17,21,32,37
+
+Exercise
+--------
+
+Create a simple worker pipeline with three stages:
+
+- one process produces numbers 1 through 10
+- one worker process doubles them
+- one worker process prints the final values
+
+Use queues between each stage so the data flows through the pipeline.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "producer" as p
+   rectangle "double worker" as d
+   rectangle "printer" as c
+
+   p --> d : queue 1
+   d --> c : queue 2
+   @enduml

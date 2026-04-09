@@ -71,3 +71,24 @@ If we need to create temporary files, we can use the ``tempfile`` module.
    :language: python
    :linenos:
    :emphasize-lines: 4,9,13
+
+Exercise
+--------
+
+Create a mini backup script. Read a text file, write a JSON summary containing the filename and line count, pickle the same summary for Python-only reuse, and save a short note in a temporary file.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "input text file" as text
+   rectangle "summary dict" as summary
+   rectangle "summary.json" as json
+   rectangle "summary.pkl" as pickle
+   rectangle "temp note" as temp
+
+   text --> summary
+   summary --> json
+   summary --> pickle
+   summary --> temp
+   @enduml

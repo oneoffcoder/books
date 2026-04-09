@@ -57,3 +57,21 @@ Why this matters
 ----------------
 
 Dates and times often become tricky because formatting, parsing, and time zones all matter at once. It is worth learning the standard-library tools early so you do not end up treating times as plain strings everywhere in your code.
+
+Exercise
+--------
+
+Create a flight itinerary display. Start with a departure time in New York, convert it to London time, and print both values in a readable format. Then compute the arrival time after adding a flight duration of 7 hours and 15 minutes.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   start
+   :Create New York datetime;
+   :Attach ZoneInfo('America/New_York');
+   :Convert to Europe/London;
+   :Add flight duration;
+   :Format all values for display;
+   stop
+   @enduml

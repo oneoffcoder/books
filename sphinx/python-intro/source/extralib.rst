@@ -51,3 +51,29 @@ If you have tabular data, you will find yourself wanting to pretty print the con
 .. literalinclude:: code/oneoffcoder/extralib/termtablesdemo.py
    :language: python
    :linenos:
+
+Exercise
+========
+
+Build a tiny command-line report that combines third-party tools:
+
+- use ``python-dateutil`` to parse three date strings in different formats
+- store the parsed data in dictionaries
+- use ``JMESPath`` to extract only the fields you want to display
+- print the final result as a table with ``termtables`` or ``tabulate``
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "raw text dates" as raw
+   rectangle "dateutil\nparse" as parse
+   rectangle "JSON-like records" as records
+   rectangle "JMESPath\nselect fields" as query
+   rectangle "table output" as table
+
+   raw --> parse
+   parse --> records
+   records --> query
+   query --> table
+   @enduml

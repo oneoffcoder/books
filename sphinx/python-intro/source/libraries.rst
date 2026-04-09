@@ -119,3 +119,27 @@ joblib
 
    results = Parallel(n_jobs=2)(delayed(sqrt) (i ** 2) for i in range(10))
    print(results)
+
+Exercise
+--------
+
+Pick one of the libraries in this chapter and build a tiny demo around it:
+
+- ``pandas``: read a CSV and compute one summary statistic
+- ``numpy``: generate random values and compute their mean
+- ``scikit-learn``: create fake regression data and print the shapes
+- ``joblib``: parallelize a simple math task
+
+Draw a short conclusion about why that library is more convenient than writing everything yourself.
+
+.. graphviz::
+
+   digraph library_exercise {
+     rankdir=LR;
+     node [shape=box, style="rounded"];
+     choose [label="choose one library"];
+     run [label="write small demo"];
+     inspect [label="print result"];
+     explain [label="explain why it helps"];
+     choose -> run -> inspect -> explain;
+   }
