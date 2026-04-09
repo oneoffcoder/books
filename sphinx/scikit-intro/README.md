@@ -7,7 +7,8 @@ The book is primarily notebook-backed and covers classical machine learning work
 ## Requirements
 
 - `uv`
-- Python 3.11+
+- Python 3.13+
+- Docker for full notebook execution, including the `rpy2` chapter
 
 ## Setup
 
@@ -29,6 +30,12 @@ Run the full local verification pass:
 
 ```bash
 make check
+```
+
+Execute every public notebook in the Python 3.13 check container:
+
+```bash
+make notebook-check
 ```
 
 Start the live-reloading docs development server:
@@ -75,3 +82,4 @@ build/html
 - `pyproject.toml`: Python dependencies and tool configuration
 - `Makefile`: primary developer entrypoint
 - `source/`: notebook-backed chapters and supporting files
+- `scripts/modernize_notebooks.py`: notebook API migration helper used for the Python 3.13 refresh

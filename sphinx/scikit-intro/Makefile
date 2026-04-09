@@ -10,7 +10,7 @@ HOST ?= 0.0.0.0
 
 .DEFAULT_GOAL := help
 
-.PHONY: help sync install format lint spellcheck clean build check html live linkcheck doctest
+.PHONY: help sync install format lint spellcheck clean build check html live linkcheck doctest notebook-check
 
 help:
 	@printf "Targets:\n"
@@ -21,6 +21,7 @@ help:
 	@printf "  spellcheck  Run codespell over the docs tree\n"
 	@printf "  build       Alias for html\n"
 	@printf "  check       Run lint and html build\n"
+	@printf "  notebook-check Execute notebooks in the Docker validation image\n"
 	@printf "  html        Build the HTML site\n"
 	@printf "  live        Run sphinx-autobuild locally\n"
 	@printf "  linkcheck   Check external links\n"
@@ -45,6 +46,9 @@ lint:
 build: html
 
 check: lint html
+
+notebook-check:
+	../../docker/scikit-intro-check/execute-notebooks.sh
 
 html:
 	$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS)
