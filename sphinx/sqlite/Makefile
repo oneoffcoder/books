@@ -1,20 +1,62 @@
-# Minimal makefile for Sphinx documentation
-#
+UV ?= uv
+UV_CMD := env -u VIRTUAL_ENV $(UV)
+SPHINXBUILD ?= $(UV_CMD) run sphinx-build
+SPHINXAUTOBUILD ?= $(UV_CMD) run sphinx-autobuild
+SPHINXOPTS ?=
+SOURCEDIR := source
+BUILDDIR := build
+PORT ?= 8000
+HOST ?= 0.0.0.0
 
-# You can set these variables from the command line, and also
-# from the environment for the first two.
-SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = source
-BUILDDIR      = build
+.DEFAULT_GOAL := help
 
-# Put it first so that "make" without argument is like "make help".
+.PHONY: help sync install format lint spellcheck clean build check html live linkcheck doctest
+
 help:
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@printf "Targets:\n"
+	@printf "  sync        Install/update dependencies with uv\n"
+	@printf "  install     Alias for sync\n"
+	@printf "  format      Format local Python files\n"
+	@printf "  lint        Run Python lint and docs spellcheck\n"
+	@printf "  spellcheck  Run codespell over the docs tree\n"
+	@printf "  build       Alias for html\n"
+	@printf "  check       Run lint and html build\n"
+	@printf "  html        Build the HTML site\n"
+	@printf "  live        Run sphinx-autobuild locally\n"
+	@printf "  linkcheck   Check external links\n"
+	@printf "  doctest     Run Sphinx doctests\n"
+	@printf "  clean       Remove build artifacts\n"
 
-.PHONY: help Makefile
+sync:
+	$(UV_CMD) sync
 
-# Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-%: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+install: sync
+
+format:
+	$(UV_CMD) run ruff format $(SOURCEDIR)/conf.py
+
+spellcheck:
+	$(UV_CMD) run codespell $(SOURCEDIR)
+
+lint:
+	$(UV_CMD) run ruff check $(SOURCEDIR)/conf.py
+	$(MAKE) spellcheck
+
+build: html
+
+check: lint html
+
+html:
+	$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS)
+
+live:
+	$(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDDIR)/html" -b html --host $(HOST) --port $(PORT)
+
+linkcheck:
+	$(SPHINXBUILD) -b linkcheck "$(SOURCEDIR)" "$(BUILDDIR)/linkcheck" $(SPHINXOPTS)
+
+doctest:
+	$(SPHINXBUILD) -b doctest "$(SOURCEDIR)" "$(BUILDDIR)/doctest" $(SPHINXOPTS)
+
+clean:
+	rm -rf "$(BUILDDIR)"

@@ -35,7 +35,6 @@ extensions = [
     'sphinxcontrib.bibtex',
     'nbsphinx',
     'sphinx.ext.mathjax',
-    'sphinxcontrib.blockdiag',
     'sphinx_sitemap'
 ]
 
