@@ -1,7 +1,9 @@
 JMESPath
 ========
 
-We work with JSON data a lot in the real world. Would it not be nice to be able to extract and query for values in our JSON data? `JMESPath` (james path) enables the extraction of elements from a JSON document. To use JMESPath, you will have to install the `jmespath <https://pypi.org/project/jmespath/>`_ module. 
+We work with JSON data a lot in the real world. `JMESPath`_ ("james path") makes it easy to extract and query values from a JSON document. To use it, install the `jmespath package <https://pypi.org/project/jmespath/>`_.
+
+.. _JMESPath: https://jmespath.org/
 
 .. literalinclude:: code/oneoffcoder/extralib/jmespathdemo.py
    :language: python
@@ -9,7 +11,7 @@ We work with JSON data a lot in the real world. Would it not be nice to be able 
 
 For more information on JMESPath, check out the following links.
 
-- `JMESPath <https://jmespath.org/>`_
+- `JMESPath home page <https://jmespath.org/>`_
 - `JMESPath examples <https://jmespath.org/examples.html>`_
 - `JMESPath tutorial <https://jmespath.org/tutorial.html>`_
 

@@ -11,4 +11,4 @@ students = {'John': 18, 'Jack': 19}
 try:
     print(students['Joe'])
 except KeyError:
-    print('you tried to access an entry that does not exists')
+    print('you tried to access an entry that does not exist')

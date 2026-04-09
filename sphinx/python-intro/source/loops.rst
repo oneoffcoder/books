@@ -3,7 +3,7 @@ Loops
 
 .. highlight:: python
 
-Loops are used to recycle logic over and over over any number of data or inputs. Without loops, for as many times as you need to apply the same logic to your data, you will have to code (or copy and paste) your logic that many times. Loops are frequently used to ``iterate`` over collections such as lists, sets, tuples and maps. There are two basic loops, the ``while`` and ``for-each`` loops. Let's investigate them further below.
+Loops let you repeat logic over many values without copying and pasting the same statements. They are frequently used to ``iterate`` over collections such as lists, sets, tuples, and dictionaries. Two of the most important loop forms in Python are ``while`` and ``for``. Let's look at them below.
 
 while
 -----
@@ -23,7 +23,7 @@ Below, we loop until the variable ``n`` is equal to or greater than 10. At the e
    :linenos:
    :emphasize-lines: 3-5
 
-You can also loop endless and ``break`` out of a ``while`` loop manually. In the example below, we loop forever since we set :code:`while True:`. However, inside the loop, we check if ``n`` is a multiple of 10, and if so, we issue a ``break`` (a manual termination) of the ``while`` loop.
+You can also create an intentional infinite loop and then ``break`` out of it manually. In the example below, the loop starts with :code:`while True:`. Inside the loop, we check whether ``n`` is a multiple of 10, and if so, we terminate the loop with ``break``.
 
 .. code-block:: python
    :linenos:
@@ -68,10 +68,10 @@ Solution.
 
       print(f'{user_input}')
 
-for-each
+for
 --------
 
-The ``for-each`` loop is best understood when looping over the elements of a collections. To appreciate the power of the ``for-each`` loop, let's see what it would take to print a list of 10 numbers without a ``for-each`` loop.
+The ``for`` loop is best understood when iterating over the elements of a collection. To appreciate its power, let's see what it would take to print a list of 10 numbers without a ``for`` loop.
 
 .. code-block:: python
    :linenos:
@@ -89,7 +89,7 @@ The ``for-each`` loop is best understood when looping over the elements of a col
    print(numbers[8])
    print(numbers[9])
 
-This approach to printing each number from a list is not scalable if there are a million numbers to print. We need to use the ``for-each`` loop. The syntax of the ``for-each`` loop is as follows.
+This approach is not scalable if there are a million numbers to print. We need a ``for`` loop instead. The syntax is as follows.
 
 .. code-block:: python
    :linenos:
@@ -97,10 +97,10 @@ This approach to printing each number from a list is not scalable if there are a
    for <element> in <collection>:
       # perform some logic over the element
 
-Basic for-each
+Basic for loop
 ^^^^^^^^^^^^^^
 
-Here are some examples of using a ``for-each`` loop against different types of collections.
+Here are some examples of using a ``for`` loop with different kinds of collections.
 
 .. literalinclude:: code/oneoffcoder/loop/foreach.py
    :language: python
@@ -200,10 +200,10 @@ Solution.
       for item in tup:
          print(item)
 
-for-each with break
-^^^^^^^^^^^^^^^^^^^
+for with break
+^^^^^^^^^^^^^^
 
-Breaking is also possible inside a for-each loop.
+Breaking is also possible inside a ``for`` loop.
 
 .. literalinclude:: code/oneoffcoder/loop/foreachbreak.py
    :language: python
@@ -235,10 +235,10 @@ Solution.
       if total_odds == 3:
          break
 
-for-each with continue
-^^^^^^^^^^^^^^^^^^^^^^
+for with continue
+^^^^^^^^^^^^^^^^^
 
-When used inside a ``for-each`` or ``while`` loop, the ``continue`` command forces the logic back to the start of the code block inside the loop; all code below the ``continue`` are skipped. The code below iterates through each integer a list and skips printing the integer if it is odd.
+When used inside a ``for`` or ``while`` loop, the ``continue`` command immediately jumps back to the top of the loop and skips any remaining code in the current iteration. The code below iterates through a list of integers and skips printing an integer if it is odd.
 
 .. literalinclude:: code/oneoffcoder/loop/foreachcontinue.py
    :language: python
@@ -267,8 +267,8 @@ Solution.
          continue
       print(name)
 
-for-each with enumeration
-^^^^^^^^^^^^^^^^^^^^^^^^^
+for with enumeration
+^^^^^^^^^^^^^^^^^^^^
 
 Sometimes, we want to access the corresponding index of an element as we are iterating through a collection. To get the index and element, we can pass the collection to the ``enumerate()`` function.
 
@@ -287,7 +287,7 @@ Note that ``enumerate()`` will return a tuple, and so we can loop over the eleme
    for tup in enumerate(numbers):
       print(tup[0], tup[1])
 
-Or, we can unpack the tuple inside the ``for-each`` loop.
+Or, we can unpack the tuple directly inside the ``for`` loop.
 
 .. code-block:: python
    :linenos:
@@ -298,7 +298,7 @@ Or, we can unpack the tuple inside the ``for-each`` loop.
       i, number = tup
       print(i, number)
 
-Typically, we prefer to unpack the tuple with the ``for-each`` loop as :code:`for i, numbers in enumerate(numbers):`.
+Typically, we prefer to unpack the tuple directly in the ``for`` loop as :code:`for i, number in enumerate(numbers):`.
 
 If we did not want to start the index at 0, then we can specify a starting index as follows.
 
@@ -353,7 +353,7 @@ What if we want to iterate over 2 collections at the same time? We can use the `
 
    # should print [('Jack', 18), ('John', 19), ('Joe', 20)]
 
-The example below show the use of using a ``for-each`` loop with ``zip()``. Note how we unpack the tuple elements generated by ``zip()``.
+The example below shows the use of a ``for`` loop with ``zip()``. Note how we unpack the tuple elements generated by ``zip()``.
 
 .. literalinclude:: code/oneoffcoder/loop/foreachzip.py
    :language: python
@@ -400,7 +400,7 @@ We can combine ``enumerate()`` with ``zip()`` as follows.
    # note the result is a list of tuples, where each tuple has the index in the first
    # position and a tuple in the second position
 
-Here is how we can use ``enumerate()`` with ``zip()`` with a ``for-each`` loop.
+Here is how we can use ``enumerate()`` with ``zip()`` in a ``for`` loop.
 
 .. literalinclude:: code/oneoffcoder/loop/foreachenumzip.py
    :language: python
@@ -431,12 +431,12 @@ Loop through both lists below. Only print the name and age if the name starts wi
 Comprehension
 -------------
 
-Comprehensions are a way to transform an existing collection into a new one using the ``for-each`` loop. There are comprehensions to generate lists, sets and dictionaries.
+Comprehensions are a way to transform an existing collection into a new one using ``for`` syntax. There are comprehensions for lists, sets, and dictionaries.
 
 List comprehension
 ^^^^^^^^^^^^^^^^^^
 
-The ``list comprehension`` has the following syntax: :code:`[<expression> for <element> in <collection> <filter:optional>]`. The ``<expression>`` is required and the ``<filter:optional>`` is optional. The ``<expression>`` is typically a transformation of the ``<element>``. Let's say we have a list :code:`numbers = [1, 2, 3, 4]` and we want to transform this list into a new one where each element is multiplied by two. We can use a regular ``for-each`` loop or a list comprehension. 
+The ``list comprehension`` has the following syntax: :code:`[<expression> for <element> in <collection> <filter:optional>]`. The ``<expression>`` is required and the ``<filter:optional>`` is optional. The ``<expression>`` is typically a transformation of the ``<element>``. Let's say we have a list :code:`numbers = [1, 2, 3, 4]` and we want to transform this list into a new one where each element is multiplied by two. We can use a regular ``for`` loop or a list comprehension.
 
 .. literalinclude:: code/oneoffcoder/loop/listcomprehension.py
    :language: python
@@ -498,7 +498,7 @@ Solution.
 Set comprehension
 ^^^^^^^^^^^^^^^^^
 
-``Set comprehensions`` are just like list comprensions, except, instead of using ``[]`` to setup the comprehension, we use ``{}``. The ``set comprehension`` has the following syntax: :code:`{<expression> for <element> in <collection> <filter:optional>}`.
+``Set comprehensions`` are just like list comprehensions, except that we use ``{}`` instead of ``[]``. The ``set comprehension`` has the following syntax: :code:`{<expression> for <element> in <collection> <filter:optional>}`.
 
 .. literalinclude:: code/oneoffcoder/loop/setcomprehension.py
    :language: python
@@ -536,7 +536,7 @@ A ``dictionary comprehension`` is used to generate a new dictionary. The ``dicti
 Exercise
 ^^^^^^^^
 
-Below is a list of names. Note that the elements are tuples, where the first element in the tuple is the first name and the second element is the last name. Transform the list into a dictionary where they key is the initials of each name and the corresponding value is the full name.
+Below is a list of names. Note that the elements are tuples, where the first element in the tuple is the first name and the second element is the last name. Transform the list into a dictionary where the key is the initials of each name and the corresponding value is the full name.
 
 .. code-block:: python
    :linenos:

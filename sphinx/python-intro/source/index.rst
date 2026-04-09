@@ -22,10 +22,12 @@
 Python, No Tears
 ================
 
+This edition is updated for Python 3.13.
+
 Preface
 =======
 
-This book is to teach students how program in ``Python``. To follow along and execute the code samples, you will need `Docker <https://www.docker.com/>`_ installed. The Docker container is located on `Docker Hub <https://hub.docker.com/r/oneoffcoder/book-python-intro>`_. After you have installed Docker, you may run the container as follows.
+This book is an introduction to programming in ``Python``. The examples and recommendations in this edition target Python 3.13. You can follow along with a local Python 3.13 installation, but a Docker image is also available if you want a preconfigured environment with JupyterLab already set up. To run the Docker image, use the following command.
 
 .. code-block:: bash
 
@@ -33,7 +35,7 @@ This book is to teach students how program in ``Python``. To follow along and ex
     -p 8888:8888 \
     oneoffcoder/book-python-intro
 
-Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
+The Docker container starts `JupyterLab <https://jupyter.org/>`_ on port ``8888``. When the container is running, you can open it at `http://localhost:8888 <http://localhost:8888>`_.
 
 .. toctree::
    :maxdepth: 2
@@ -44,14 +46,22 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    types
    operators
    control
+   pattern-matching
    user-input
    loops
    function
+   documentation
    builtin-function
+   collections
    functional
    decorators
    clazz
+   dataclasses
+   enum
+   typing
    libraries
+   pathlib
+   datetime-zoneinfo
    exceptions
    context-manager
    threads

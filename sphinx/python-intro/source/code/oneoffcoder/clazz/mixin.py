@@ -1,8 +1,8 @@
-class DivFloatMixin(object):
+class DivFloatMixin:
     def div_float(self):
         return self.dividend / self.divisor
 
-class DivQRMixin(object):
+class DivQRMixin:
     def div_qr(self):
         return (self.dividend // self.divisor, self.dividend % self.divisor)
 
@@ -10,7 +10,7 @@ class DivQRMixin(object):
 # object is the base class since it comes last
 # mixins should be defined first
 # if mixins override each other's methods, the priority is resolved left to right
-class DivisionSolver(DivQRMixin, DivFloatMixin, object):
+class DivisionSolver(DivQRMixin, DivFloatMixin):
     def __init__(self, dividend, divisor):
         self.dividend = dividend
         self.divisor = divisor

@@ -1,7 +1,7 @@
 Exceptions
 ==========
 
-Coding is an error-prone activity. It is difficult to anticipate when something might go wrong, and even if we could anticipate problems, it is equally, if not more, difficult to decide what to do when something does go wrong. In Python, we can use ``try-except-finally`` or just ``try-except`` to handle problems that might occur. Generally speaking, there are two types of problems that will bring your program to a grinding halt: ``errors`` and ``exceptions``. Errors cannot be handled, but exceptions can be handled (handle by our code). Let's look at some examples of how to use ``try-except`` to handle problems.
+Coding is error-prone, and robust programs need to deal with failures deliberately. In Python, we typically use ``try``/``except`` and sometimes ``finally`` to handle exceptions. In practice, most recoverable runtime problems are represented as exceptions, and your code can catch them when it makes sense to do so. Let's look at some examples of how to use ``try-except`` well.
 
 
 .. highlight:: python
@@ -9,7 +9,7 @@ Coding is an error-prone activity. It is difficult to anticipate when something 
 Divide by zero
 --------------
 
-In math, any (positive) number divided by zero results in infinity. In Python, if you attempt to divide a number by zero, an ``exception`` will be thrown. An exception is just a very specific signal indicating that something has gone wrong. The particular exception thrown when attempting to divide a number by zero will be a ``ZeroDivisionError`` type of exception. Once an exception is thrown, your code will crash altogether at that very point.
+In ordinary arithmetic, division by zero is undefined. In Python, attempting to divide a number by zero raises an exception. An exception is a specific signal indicating that something has gone wrong at runtime. The exception raised in this case is ``ZeroDivisionError``. If it is not caught, the program stops at that point.
 
 .. code-block:: python
    :linenos:
@@ -78,7 +78,7 @@ An ``IndexError`` will be thrown when we attempt to access an element by an inde
 Accessing invalid key
 ---------------------
 
-A ``KeyError`` will be thrown when we attempt to access a value with a key that does not exists in a dictionary.
+A ``KeyError`` is raised when we attempt to access a value with a key that does not exist in a dictionary.
 
 .. literalinclude:: code/oneoffcoder/exception/accessinvalidkey.py
    :language: python
@@ -88,7 +88,7 @@ A ``KeyError`` will be thrown when we attempt to access a value with a key that 
 Accessing invalid key
 ---------------------
 
-We can catch multiple types of exceptions. In the example below, we have a dictionary where the keys are car makes and the associated values are models. If we attempt to use a key that does not exists in the dictionary, a ``KeyError`` will be thrown, and if we attempt to use an index that is out of bounds for the list, an ``IndexError`` will be thrown. 
+We can catch multiple types of exceptions. In the example below, we have a dictionary where the keys are car makes and the associated values are models. If we attempt to use a key that does not exist in the dictionary, a ``KeyError`` is raised, and if we attempt to use an index that is out of bounds for the list, an ``IndexError`` is raised.
 
 .. literalinclude:: code/oneoffcoder/exception/multipleexceptions.py
    :language: python

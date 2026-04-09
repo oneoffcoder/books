@@ -28,7 +28,7 @@ Below, we show how to calculate the similarity of two bitstrings.
 - :math:`x_1`: 1000100
 - :math:`x_2`: 0011101
 
-.. list-table:: Similarity Calcuation Example
+.. list-table:: Similarity Calculation Example
     :header-rows: 1
 
     * - Character Index

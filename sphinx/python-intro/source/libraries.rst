@@ -8,7 +8,7 @@ The built-in Python modules do a lot that you need, but there are many external 
 pip
 ---
 
-One popular way to install external libraries is through ``pip``. ``pip`` is a commandline tool that allows you to install Python libraries from the `Python Package Index <https://pypi.org/>`_ ``PyPi``. In order to install a Python library from PyPi, all you need to know is the package name, e.g. ``pandas``, and then you can issue the installation as follows.
+One popular way to install external libraries is through ``pip``. ``pip`` is a command-line tool that installs Python packages from the `Python Package Index (PyPI) <https://pypi.org/>`_. To install a package, you usually only need its name, such as ``pandas``.
 
 .. code-block:: bash
 

@@ -12,10 +12,10 @@ When dealing with integers and floats, you can apply the following basic math op
    :language: python
    :linenos:
 
-Pay attention to the multiplication and division operators, as they are ``*`` (asterisk) and ``/`` (forward slash), correspondingly. Also, there are 3 ways to divide using ``/``, ``//`` and ``%``. 
+Pay attention to the multiplication and division operators: they are ``*`` (asterisk) and ``/`` (forward slash), respectively. Python also has three closely related operators for division-like operations: ``/``, ``//``, and ``%``.
 
-* ``/`` gives you a real number (decimal)
-* ``//`` gives you the quotient
+* ``/`` performs true division and returns a floating-point result
+* ``//`` performs floor division
 * ``%`` gives you the remainder
 
 Exercise
@@ -25,8 +25,8 @@ For the following 2 variables,
 
 * print what is a + b?
 * print what is a - b?
-* print what is a x b?
-* print what is a ÷ b?
+* print the result of ``a * b``
+* print the result of ``a / b``
 
 .. code-block:: python
    :linenos:

@@ -1,7 +1,7 @@
 Classes
 =======
 
-Classes are the way to model your code after real-world objects. The act of coding to model real-world objects is called ``Object Oriented Programming`` or ``OOP``. Classes define two things about objects: their properties and actions. Properties are simply traits, characteristics or attributes of an object. Actions are what the object can do. **As such, properties are variables attached to a class and actions are functions attached to a class.** When you start defining an object with a class (or start writing a class definition), always keep in mind the properties and actions that are important to that object and make a sketch or outline. Let's do some examples.
+Classes let you model data and behavior together. This style is called ``Object-Oriented Programming`` or ``OOP``. A class describes the attributes an object stores and the methods it exposes. When you start defining a class, think first about which pieces of data matter and which behaviors belong naturally to that object. A quick sketch usually helps.
 
 If you are trying to model a person, what are some properties of a person and what can a person do? A person has a first and last name, as well as an age. A person can also eat, sleep or talk.
 
@@ -15,11 +15,11 @@ If you are trying to model a person, what are some properties of a person and wh
       * sleep
       * talk
 
-If you are trying to model a square, what are some properties and actions of a square? A square has a side and can compute its own area and perimeter.
+If you are trying to model a square, what are some properties and actions of a square? A square has a side length and can compute its own area and perimeter.
 
-* Triangle
+* Square
    - properties
-      * side
+      * side length
    - actions
       * compute area
       * compute perimeter
@@ -47,36 +47,22 @@ What about modeling a car? A car has a make, model, year, doors and gas efficien
 Basic
 -----
 
-The best way to understand how to define an object is by looking at the **simplest** examples possible. Below, we are starting to define classes for a Person, Triangle and Car. Since we just want to view the simplest possible way to define classes without providing actual logic, we use the ``pass`` statement as a placeholder for future code.
+The best way to understand how to define an object is by looking at the **simplest** examples possible. Below, we start with classes for a Person, Square, and Car. Since we just want to show the simplest possible class definitions without real logic yet, we use the ``pass`` statement as a placeholder for future code.
 
 .. code-block:: python
    :linenos:
 
-   class Person(object):
+   class Person:
       pass
 
-   class Triangle(object):
+   class Square:
       pass
 
-   class Car(object):
+   class Car:
       pass
 
 .. note::
-   In Python 2, classes could be defined as follows.
-
-   .. code:: python
-
-      class Person:
-         pass
-   
-   This way of declaring a class is called ``old-style`` class definition. The ``new-style`` class definition is to make all class inherit from ``object`` explicitly as follows.
-
-   .. code:: python
-
-      class Person(object):
-         pass
-
-   In Python 3, there are only ``new-style`` classes, and whether you explicitly inherit from ``object`` or not, all classes in Python 3 are ``new-style``. We encourage coders to explicitly inherit from ``object`` regardless of using Python 2 or 3. In Python 2, if you use ``old-style`` class definition, then the class (by way of the ``.__class__`` property) and type (by way of calling ``type()``) are `not aligned <https://stackoverflow.com/questions/54867/what-is-the-difference-between-old-style-and-new-style-classes-in-python#:~:text=New%2Dstyle%20classes%20are%20created,addition%20to%20what%20type%20returns.>`_. There are many `benefits <https://stackoverflow.com/questions/4015417/python-class-inherits-object>`_ of using ``new-style`` classes.
+   In modern Python, write classes as ``class Person:``. You do not need to inherit from ``object`` explicitly in Python 3.
 
 
 Constructor
@@ -87,7 +73,7 @@ Let's just focus on the class definition of ``Car``. Below, only the properties 
 .. code-block:: python
    :linenos:
 
-   class Car(object):
+   class Car:
       def __init__(self, make, model, year):
          pass
 
@@ -99,7 +85,7 @@ How do we use ``self``? We use ``self`` to associate the instance with the prope
 .. code-block:: python
    :linenos:
 
-   class Car(object):
+   class Car:
       def __init__(self, make, model, year):
          self.make = make
          self.model = model
@@ -116,7 +102,7 @@ Now that we have class definition for ``Car``, how do we create an instance of `
 .. code-block:: python
    :linenos:
 
-   class Car(object):
+   class Car:
       def __init__(self, make, model, year):
          self.make = make
          self.model = model
@@ -130,7 +116,7 @@ After we have an instance of ``Car``, we can access the properties (and methods)
 .. code-block:: python
    :linenos:
 
-   class Car(object):
+   class Car:
       def __init__(self, make, model, year):
          self.make = make
          self.model = model
@@ -153,7 +139,7 @@ As stated before, classes has properties and actions. Actions defined for a clas
 .. code-block:: python
    :linenos:
 
-   class Car(object):
+   class Car:
       def __init__(self, make, model, year):
          self.make = make
          self.model = model
@@ -183,7 +169,7 @@ As stated before, classes has properties and actions. Actions defined for a clas
 Getters and setters
 ^^^^^^^^^^^^^^^^^^^
 
-If you come from other languages like Java or C#, it is typical to prevent direct read and write acces to properties. You may generate ``getters`` and ``setters`` to read and write to properties, correspondingly. 
+If you come from languages like Java or C#, it is common to restrict direct read and write access to attributes. You may add ``getters`` and ``setters`` to read and write properties, respectively.
 
 .. literalinclude:: code/oneoffcoder/clazz/gettersetter.py
    :language: python
@@ -221,7 +207,7 @@ Here's another example of modeling a student. Notice that the first and last nam
    :linenos:
    :emphasize-lines: 3,4,18
 
-   class Student(object):
+   class Student:
       def __init__(self, fname, lname):
          self.__fname = fname
          self.__lname = lname
@@ -285,7 +271,7 @@ A ``Rectangle`` class definition could look like the following.
 .. code-block:: python
    :linenos:
 
-   class Rectangle(object):
+   class Rectangle:
       def __init__(self, width, length):
          self.name = type(self).__name__
          self.width = width
@@ -322,7 +308,7 @@ Here is the all-in-one example of class inheritance.
 .. code-block:: python
    :linenos:
 
-   class Rectangle(object):
+   class Rectangle:
       def __init__(self, width, length):
          self.name = type(self).__name__
          self.width = width
@@ -514,7 +500,7 @@ Solution.
          'students': get_student_data()
       }
 
-   class Person(object):
+   class Person:
       def __init__(self, first_name, last_name, gender):
          self.first_name = first_name
          self.last_name = last_name

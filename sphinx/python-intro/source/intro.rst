@@ -3,7 +3,7 @@ Hello, World!
 
 .. highlight:: python
 
-When you start to learn a programming langugage, the first program you code is typically to print ``Hello, world!`` to the terminal (or console). Below is the simplest command you can code in Python to get ``Hello, world!`` to be printed.
+When you start to learn a programming language, the first program you write is typically one that prints ``Hello, world!`` to the terminal (or console). Below is the simplest Python statement that does exactly that.
 
 .. literalinclude:: code/oneoffcoder/intro/helloworld.py
    :language: python
@@ -11,7 +11,7 @@ When you start to learn a programming langugage, the first program you code is t
 
 Notice that this program is seemingly trivial, but a lot is going on. First, the ``print()`` command is actually a ``function``. The word ``print`` is the name of the function, and the opening and closing parentheses indicate that we are calling (or invoking) a function. Inside the parentheses, we have a string literal, ``'Hello, world!'``. All string literals are enclosed by either a pair of single or double quotes. In this example, it is said that we are passing a string literal to the print function; the string literal is called a ``parameter`` of or ``argument`` to the print function.
 
-This background information a lot already just to understand how to print something. Compared to other languages (e.g. Java), however, printing something to the terminal is very easy in Python. Quickly, we have already gotten ahead of ourselves by talking about functions, parameters, arguments and string literals while doing one the simplest thing possible in coding with Python.
+That is already a fair amount of background for such a small program. Even so, it shows one of Python's strengths early: simple tasks can often be expressed very directly. We have already touched on functions, arguments, and string literals while doing one of the simplest things possible in programming.
 
 .. note::
    When I specify string literals, do I use single or double quotes?

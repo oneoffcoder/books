@@ -20,7 +20,7 @@ The ``<function_name>`` is the name of the function, and the ``<parameters:optio
 Basic function
 --------------
 
-Your most basic function could just print **Hello, world!**. Notice that there are no variables passed to the function (thare are no variables defined inside the parentheses). Also, nothing is returned from this function (there is no ``return`` statement).
+Your most basic function could just print **Hello, world!**. Notice that no variables are passed to the function because there is nothing between the parentheses. Also, nothing is returned from this function because there is no ``return`` statement.
 
 .. code-block:: python
    :linenos:
@@ -839,7 +839,7 @@ Solution.
 Generators
 ----------
 
-Generator functions are those that returns a stream of data back to the caller. The caller is able to treat the output of a generator function like an iterable collection. Here's a simple example of a generator function that generates random colors in the set of red, green and blue. Note that we have to use ``yield`` to return the color.
+Generator functions return a stream of values back to the caller one item at a time. The caller can treat the result like any other iterable. Here's a simple example of a generator function that yields random colors from the set red, green, and blue. Note that we use ``yield`` instead of ``return`` for each produced value.
 
 .. code-block:: python
    :linenos:

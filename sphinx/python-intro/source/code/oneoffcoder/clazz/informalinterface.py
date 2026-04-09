@@ -1,4 +1,4 @@
-class CircleCalculator(object):
+class CircleCalculator:
     def get_area(self, radius):
         raise NotImplementedError
 

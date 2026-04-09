@@ -45,7 +45,7 @@ Here's code to draw a star.
 
 Let's draw a fancy star.
 
-.. literalinclude:: code/oneoffcoder/turtle/fancy-star.py
+.. literalinclude:: code/oneoffcoder/turtle/fancy_star.py
    :language: python
    :linenos:
    :emphasize-lines: 8-10
@@ -59,7 +59,7 @@ Draw rectangular spirals
 
 Let's draw a rectangular spiral from the inside out. We will change the color that the turtle will use to red. We will also define the ``spiral`` function to draw each spiral.
 
-.. literalinclude:: code/oneoffcoder/turtle/inside-out.py
+.. literalinclude:: code/oneoffcoder/turtle/inside_out.py
    :language: python
    :linenos:
    :emphasize-lines: 3-7, 13-14
@@ -70,7 +70,7 @@ Let's draw a rectangular spiral from the inside out. We will change the color th
 
 Let's draw a rectangular spiral from the outside-in. Since we are drawing the spirals from the outside-in, we will reverse the sizes.
 
-.. literalinclude:: code/oneoffcoder/turtle/outside-in.py
+.. literalinclude:: code/oneoffcoder/turtle/outside_in.py
    :language: python
    :linenos:
    :emphasize-lines: 14-16
@@ -98,7 +98,7 @@ Draw a spiral helix
 
 Let's draw a spiral helix. First, let's change the background color to black. Second, let's define the colors that we want the pen to use. Lastly, since there's a lot to draw, let's set the speed of the pen to 100.
 
-.. literalinclude:: code/oneoffcoder/turtle/spiral-helix.py
+.. literalinclude:: code/oneoffcoder/turtle/spiral_helix.py
    :language: python
    :linenos:
    :emphasize-lines: 5, 7, 10
@@ -137,7 +137,7 @@ Crazy lines
 
 Let's draw some crazy lines. We use ``penup`` and ``pendown`` to control when we want the pen to draw onto the canvas. Note that as we iterate through the angles, we speed up the pen's drawing speed as well as change its colors.
 
-.. literalinclude:: code/oneoffcoder/turtle/crazy-lines.py
+.. literalinclude:: code/oneoffcoder/turtle/crazy_lines.py
    :language: python
    :linenos:
    :emphasize-lines: 9, 21, 23, 27

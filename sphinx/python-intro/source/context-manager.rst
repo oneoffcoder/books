@@ -27,7 +27,7 @@ A context manager is defined by creating a class and implementing at least two m
 .. code-block:: python
     :linenos:
 
-    class HelloManager(object):
+    class HelloManager:
         def __init__(self):
             print('hello, world!')
         
@@ -61,7 +61,7 @@ Solution.
 
     from random import randint
 
-    class RandomRectManager(object):
+    class RandomRectManager:
         def __init__(self, a, b):
             self.a = a
             self.b = b
@@ -92,7 +92,7 @@ Solution.
 
     from random import randint
 
-    class RandomRectManager(object):
+    class RandomRectManager:
         def __init__(self, a, b):
             self.a = a
             self.b = b

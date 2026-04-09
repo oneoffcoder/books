@@ -26,7 +26,7 @@ The function ``type()`` returns the type of a value or variable.
     print(type_f)
     print(type_b)
 
-The following functions converts data from one type to another.
+The following functions convert data from one type to another.
 
 * ``str()`` converts something into a string
 * ``int()`` converts something to an integer
@@ -181,7 +181,7 @@ The following functions create different collections.
     print(b)
     print(c)
 
-The function ``all()`` will return ``True`` if all the elements in a collection are not null e.g. ``None``. The function ``any()`` will return ``True`` if at least one lement in a collection is not null e.g. ``None``.
+The function ``all()`` returns ``True`` only if every element in an iterable is truthy. The function ``any()`` returns ``True`` if at least one element is truthy. These functions check general truthiness, not just whether a value is ``None``.
 
 .. code-block:: python
     :linenos:
@@ -249,7 +249,7 @@ The ``range()`` function generates a range of values. To generate a range of num
    numbers = list(range(10))
    print(numbers)
 
-Note that ``range()`` does not create the numbers in the range until we start asking for the elements. ``range()`` is said to be a ``generator function``. To get the actual numbers out, we have to convert the output of ``range()`` to a list.
+Note that ``range()`` does not materialize all of the numbers up front. Instead, it produces a lightweight range object that can be iterated over efficiently. If you want to see all of the values at once, convert it to a list.
 
 We can specify the range of integers to output by supplying start and stop (exclusive) integers.
 

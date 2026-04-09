@@ -1,7 +1,7 @@
 User Input
 ==========
 
-Getting inputs from a user is accomplished through the ``user()`` function. When we use the ``user()`` function, we can supply a prompt to give the user a hint of what to type to give us the input we are asking for. The program below asks the user to type in something (anything) and it simply echoes that input back out. You may view ``input()`` as the opposite of ``print()`` in the sense that ``input()`` is asking for something ``from`` the terminal and ``print()`` is displaying something ``to`` the terminal.
+Getting input from a user is accomplished through the ``input()`` function. When we use ``input()``, we can supply a prompt to give the user a hint about what to type. The program below asks the user to type in something and then simply echoes that input back. You can think of ``input()`` as the opposite of ``print()``: ``input()`` reads from the terminal and ``print()`` writes to it.
 
 .. code-block:: python
     :linenos:
@@ -21,7 +21,7 @@ Everything you get back from ``input()`` is a string. Let's write a program to a
 
     print(f'{num_1} + {num_2} = {result}')
 
-If the user entered 1 and 1 again for ``num_1`` and ``num_2``, correspondingly, then the result should be 2, however, you will see that, instead, the program prints out 11 and **not** 2. Why is this happening? Because what we get back from ``input()`` are strings and so :code:`num_1 + num_2` is not math addition but becomes string concatenation. We have to modify our code to convert the inputs to integers before adding them so that we get mathematical addition (and not string concatenation).
+If the user enters 1 and then 1 again for ``num_1`` and ``num_2``, the mathematical answer should be 2. Instead, the program prints 11. Why? Because ``input()`` always returns strings, so :code:`num_1 + num_2` performs string concatenation rather than numeric addition. To get arithmetic addition, we need to convert the inputs to integers first.
 
 .. code-block:: python
     :linenos:
@@ -42,7 +42,7 @@ Let's create some math calculator programs.
 
 * Write a program that asks the user for 2 numbers, print the subtraction result of those 2 numbers.
 * Write a program that asks the user for 2 numbers, print the multiplication result of those 2 numbers.
-* Write a program that asks the user for 2 numbers, print the divison result of those 2 numbers.
+* Write a program that asks the user for 2 numbers, then print the division result of those 2 numbers.
 
 Solution.
 

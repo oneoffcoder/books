@@ -5,7 +5,7 @@ Types
 
 Variable
 --------
-There is the fundmental concept of a ``variable`` in programming languages. Mathematically, a variable is a symbol denoting an unknown value. A most popular symbol denoting an unknown value in math is ``x``. In computer programming, however, one useful mental model of a variable is to think of it as a ``box``. In life, what can you do with a box?
+One of the fundamental ideas in programming is the ``variable``. Mathematically, a variable is a symbol that stands for an unknown value. In programming, a helpful mental model is to think of a variable as a labeled box that stores a value.
 
 * you can put something into a box
 * you can take something out of a box
@@ -13,7 +13,7 @@ There is the fundmental concept of a ``variable`` in programming languages. Math
 
 A variable is simply a storage container. Let's not get too technical in understanding what is a variable, as going to such level is not necessary to knowing how to effectively create and use variables when programming.
 
-Last thing before moving on, each variable as a ``type`` associated with it. The variable type is determined by what it is storing. If a variable (a box) is storing an integer number, then the variable is said to be an integer variable. If a variable is storing a car, then the variable is siad to be a car variable. Whatever the box is storing determines the type of the box.
+Before moving on, note that each variable has a ``type`` associated with it. The variable's type is determined by the value it stores. If a variable stores an integer, it has an integer type. If it stores an object representing a car, then its type is that object's class. Whatever the box stores determines the type of the box.
 
 Basic types
 -----------
@@ -23,7 +23,7 @@ There are four basic or ``primitive`` types in Python. They are ``float``, ``int
 * an integer is a whole number value
 * a float is a decimal number value
 * a string is a text value
-* a boolean is either true or false
+* a boolean is either ``True`` or ``False``
 
 A lesser known Python type is a ``complex number`` value. Below, we declare and initialize 5 variables, each storing one of the 5 basic variable types. Note the symbol ``=``, which is called the ``assignment operator``. To the left of the assignment operator is the variable name, and to the right is a literal value (e.g. string literal, integer literal, float literal, boolean literal and complex number literal). If you read the line :code:`i = 32` naturally, you should read it as *i is assigned to 32* and **not** *i is equal to 32*.
 

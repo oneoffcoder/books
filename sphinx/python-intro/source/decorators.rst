@@ -6,9 +6,9 @@ Decorators are annotations that modify the behavior of functions. The mental mod
 Basic
 -----
 
-Below, we have a ``log()`` function that takes a function ``f`` as an argument. Inside ``log()`` function is an inner function ``decorated()``. Notice that ``decorated()`` is annotated itself with ``@wraps`` and also it takes in 2 arguments (a non-keyworded, variable-length argument ``*args`` and a key-worded, variable-length argument ``**kwargs``). The ``@wraps`` annotation ensures the reflection against the target function is perserved (reflection is using Python and its inspection functions to get metadata about an object). Without the ``@wraps`` annotation/decoration, getting the name and docstrings of the target function will return the wrapper function's information instead. The ``decorated`` function invokes the target function and returns its results. The ``log()`` function returns the ``decorated()`` function.
+Below, we have a ``log()`` function that takes another function ``f`` as an argument. Inside ``log()`` is an inner function named ``decorated()``. Notice that ``decorated()`` is annotated with ``@wraps`` and accepts two flexible argument forms: the positional tuple ``*args`` and the keyword dictionary ``**kwargs``. The ``@wraps`` annotation preserves metadata from the original function, such as its name and docstring. Without it, introspection would report the wrapper's metadata instead. The ``decorated()`` function calls the target function and returns its result, and ``log()`` returns ``decorated()``.
 
-After we define the decorator, we can use it to annotate other fuctions. Below, we annotate ``add_one()`` and ``minus_one()`` with ``@log``.
+After we define the decorator, we can use it to annotate other functions. Below, we annotate ``add_one()`` and ``minus_one()`` with ``@log``.
 
 .. code-block:: python
     :linenos:
@@ -275,7 +275,7 @@ The ``@property`` decorator will enable you to treat a function as if it was a p
 
     import math
 
-    class Circle(object):
+    class Circle:
         def __init__(self, radius):
             self.radius = radius
 
