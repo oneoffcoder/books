@@ -27,6 +27,33 @@ Preface
 
 This book is a tutorial on programming ``Makeblock`` robots. In particular, we will demonstrate how to program with the ``Codey Rocky`` (or just ``Codey`` for short) and ``mBot`` robots. To follow along, you will need to `install mBlock and mLink <https://www.mblock.cc/en-us/download>`_. It is advised to use mBlock version ``5.1.0`` or higher and mLink version ``1.3.0`` or higher.
 
+The diagram below shows how the book is organized around the mBlock toolchain first, then the robot-specific blocks, and finally the code-oriented chapters for moving beyond drag-and-drop programming.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "IDE Setup" as ide
+   rectangle "Codey Blocks" as codey_blocks
+   rectangle "mBot Blocks" as mbot_blocks
+   rectangle "Shared Blocks" as common_blocks
+   rectangle "Codey Coding" as codey_code
+   rectangle "mBot Coding" as mbot_code
+   rectangle "Resources" as resources
+   ide --> codey_blocks
+   ide --> mbot_blocks
+   ide --> common_blocks
+   codey_blocks --> codey_code
+   mbot_blocks --> mbot_code
+   common_blocks --> codey_code
+   common_blocks --> mbot_code
+   codey_code --> resources
+   mbot_code --> resources
+   @enduml
+
+In other words, readers learn the environment and block vocabulary before they are asked to reason about full robot programs, which makes the later coding chapters much easier to follow.
+
 .. toctree::
    :maxdepth: 2
    :numbered:

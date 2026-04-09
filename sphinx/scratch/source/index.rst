@@ -29,6 +29,24 @@ This book is to help students learn ``how to`` program in Scratch. To work throu
 
 Almost all sections have short videos demonstrating the usage of Scratch to code. For the impatient, the merged, full video is available below.
 
+The diagram below summarizes how the Scratch chapters build from interface basics into programming blocks and then into the assets that make a project feel complete.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "IDE" as ide
+   rectangle "Motion,\nLooks, Sound" as media
+   rectangle "Events and\nControl" as flow
+   rectangle "Sensing,\nOperators,\nVariables" as logic
+   rectangle "Custom Blocks" as custom
+   rectangle "Costumes,\nSounds,\nSprites,\nBackdrops" as assets
+   ide --> media --> flow --> logic --> custom --> assets
+   @enduml
+
+That progression matters for beginners because Scratch projects usually start with visible movement, then gain interactivity, and only later become modular and asset-rich.
+
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/GMQh6ARyaRs" frameborder="0" allowfullscreen></iframe>

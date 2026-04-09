@@ -42,6 +42,23 @@ This Docker container runs `JupyterLab <https://jupyter.org/>`_ on port ``8888``
 You may access JupyterLab at `http://localhost:8888 <http://localhost:8888>`_ when
 the container is running.
 
+The diagram below summarizes the structure of the R book from core language ideas into statistical work, visualization, and applied data science topics.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "Core\nvalues, structures,\ncontrol, functions,\nOOP, formula" as core
+   rectangle "Statistics\ndata manipulation,\ndescriptive stats,\ndistributions,\nhypothesis tests" as stats
+   rectangle "Graphs\nbase plot,\nggplot2" as graphs
+   rectangle "Data Science\nregression,\nlogistic,\nclassification,\nclustering,\nmissing data,\nvalidation" as ds
+   rectangle "Misc" as misc
+   core --> stats --> graphs --> ds --> misc
+   @enduml
+
+Read that map as a progression from language fluency into analysis workflows. The later chapters assume you can already shape data and write small functions comfortably.
+
 
 .. toctree::
    :maxdepth: 2

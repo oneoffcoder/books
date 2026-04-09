@@ -31,6 +31,25 @@ This book is a tutorial on ``Docker``. To follow along, you will need to `instal
 * `swarm <https://docs.docker.com/get-started/#enable-docker-swarm>`_
 * `kubernetes <https://kubernetes.io/docs/tasks/tools/install-kubectl>`_
 
+The diagram below gives a quick map of how the book moves from single-container basics toward multi-service orchestration and cloud deployment targets.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "Preflight" as preflight
+   rectangle "Quickstart" as quickstart
+   rectangle "Containerization\nand CLI" as core
+   rectangle "Compose" as compose
+   rectangle "Swarm and\nKubernetes" as orchestration
+   rectangle "Runtime, DevOps,\nARM, GPU, Encryption" as operations
+   rectangle "ECR, ECS,\nSageMaker" as deployment
+   preflight --> quickstart --> core --> compose --> orchestration --> operations --> deployment
+   @enduml
+
+Read the diagram from left to right: first get Docker working locally, then learn how containers are built and operated, and finally carry those patterns into orchestration and AWS-facing deployment workflows.
+
 .. toctree::
    :maxdepth: 2
    :numbered:

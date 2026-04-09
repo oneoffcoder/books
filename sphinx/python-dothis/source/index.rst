@@ -42,6 +42,24 @@ To follow along, you only need a recent Python 3 installation and a way to run s
 
 You can then paste the snippets into ``python`` or save them to small files as you work through the chapters.
 
+The diagram below shows the overall shape of the book: it starts with everyday coding habits, then moves into data and file handling, and finally closes with version-specific patterns from newer Python releases.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "Basics" as basics
+   rectangle "Loops and\nIteration" as iteration
+   rectangle "Lists, Tuples,\nStrings, Functions" as structure
+   rectangle "Dictionaries,\nData, Files,\nExceptions" as data
+   rectangle "Classes and Misc" as classes
+   rectangle "Modern Python\n3.9-3.13" as modern
+   basics --> iteration --> structure --> data --> classes --> modern
+   @enduml
+
+That flow mirrors the intent of the book: sharpen judgment on common review comments first, then apply the same "do this, not that" mindset to more specialized and version-dependent features.
+
 .. |JeffKnupp_Link| raw:: html
 
    <a href="https://jeffknupp.com/writing-idiomatic-python-ebook/" target="_blank">Jeff Knupp</a>

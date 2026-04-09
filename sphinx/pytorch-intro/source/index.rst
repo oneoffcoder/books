@@ -37,6 +37,23 @@ This book is to teach students how program in `PyTorch <https://pytorch.org>`_. 
     
 Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
 
+The diagram below shows the PyTorch learning path from tensors and automatic differentiation into data pipelines, optimization, model building, and more specialized deep learning applications.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "Environment,\nTensor,\nAutograd" as core
+   rectangle "Data and\nTransformation" as data
+   rectangle "Loss,\nOptimizer,\nScheduler" as training
+   rectangle "Model and\nPersistence" as model
+   rectangle "Learning,\nRNN, GAN,\nTransfer,\nDetection,\nTensorBoard" as advanced
+   core --> data --> training --> model --> advanced
+   @enduml
+
+That ordering mirrors real PyTorch work: understand tensors first, then build the training loop, and only then take on larger end-to-end architectures.
+
 
 .. toctree::
    :maxdepth: 2

@@ -35,6 +35,23 @@ This book is to teach students how to use `scikit-learn <https://scikit-learn.or
 
 Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
 
+The diagram below summarizes the scikit-learn workflow that the book follows: prepare data, fit models, validate them, and then branch out into visualization and supporting tools.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "Sample Data and\nVisualization" as start
+   rectangle "Core Models\nregression,\nclassification,\nclustering,\nneighbors" as models
+   rectangle "Preprocessing,\nImputation,\nPipelines" as preparation
+   rectangle "Validation,\nTuning,\nFeature Work" as validation
+   rectangle "Plotting and\nSupporting APIs" as ecosystem
+   start --> models --> preparation --> validation --> ecosystem
+   @enduml
+
+The chapters are not perfectly linear, but the diagram captures the main habit the book is trying to teach: model building is only one stage in a larger machine learning workflow.
+
 .. toctree::
    :maxdepth: 2
    :numbered:

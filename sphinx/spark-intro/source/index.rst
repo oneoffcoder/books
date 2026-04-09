@@ -36,6 +36,24 @@ This book is to teach students how program in `Apache Spark <https://spark.apach
 
 Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
 
+The diagram below shows how the Spark material progresses from low-level distributed collections into structured APIs and then into streaming, graphs, and machine learning.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "RDD" as rdd
+   rectangle "DataFrames\nand Spark SQL" as structured
+   rectangle "IO" as io
+   rectangle "DStreams" as streaming
+   rectangle "Graphs and\nMachine Learning" as advanced
+   rectangle "Tips" as tips
+   rdd --> structured --> io --> streaming --> advanced --> tips
+   @enduml
+
+That left-to-right path matches the mental model most readers need: first understand distributed execution, then move to higher-level abstractions, and finally explore specialized workloads.
+
 .. toctree::
    :maxdepth: 2
    :numbered:

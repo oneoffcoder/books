@@ -35,6 +35,23 @@ This book is to teach students how program in ``Java 12``. To follow along and e
 
 Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
 
+The diagram below summarizes the learning path through the Java material, starting with syntax and types before moving into object-oriented design and the standard library.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "Intro,\nTypes, Operators" as syntax
+   rectangle "Control\nand Loops" as flow
+   rectangle "Classes,\nGenerics, Enum,\nAnnotations" as oop
+   rectangle "Libraries,\nCollections,\nLambda, Streams" as libraries
+   rectangle "Exceptions,\nThreads, IO" as runtime
+   syntax --> flow --> oop --> libraries --> runtime
+   @enduml
+
+That roadmap is useful when you are skimming the book: the early chapters establish the language itself, the middle chapters focus on modeling and abstraction, and the later chapters show how Java code behaves in larger, real programs.
+
 .. toctree::
    :maxdepth: 2
    :numbered:

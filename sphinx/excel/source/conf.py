@@ -33,6 +33,7 @@ release = '0.0.1'
 # ones.
 extensions = [
     'sphinxcontrib.bibtex',
+    'sphinxcontrib.plantuml',
     'sphinx_sitemap'
 ]
 
@@ -60,6 +61,8 @@ html_logo = '_static/images/logo-small.png'
 html_favicon = '_static/favicon.ico'
 html_css_files = ['css/override.css']
 html_last_updated_fmt = '%b %d, %Y, %X'
+plantuml = '/opt/homebrew/bin/plantuml'
+plantuml_output_format = 'svg'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

@@ -27,6 +27,24 @@ Preface
 
 This book is a tutorial on programming ``Tello`` drones. Please watch the video below to imagine the possibilities of programming drones with the Tello, Scratch and Python!
 
+The diagram below shows the structure of the Tello material from preparation and safety into hands-on control with Scratch, Python, and eventually multi-drone workflows.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "Prerequisites\nand Safety" as prep
+   rectangle "Parts" as parts
+   rectangle "Blocks and\nScratch" as scratch
+   rectangle "Python\nBasics" as py
+   rectangle "Auto Flight and\nManual Control" as control
+   rectangle "Swarm and\nResources" as advanced
+   prep --> parts --> scratch --> py --> control --> advanced
+   @enduml
+
+Read it as a dependency chain: safe setup comes first, then you learn the aircraft and beginner controls, and only after that does the book ask you to automate or coordinate flights.
+
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/DuLY7IHaazo" frameborder="0" allowfullscreen></iframe>

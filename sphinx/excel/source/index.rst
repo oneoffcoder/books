@@ -6,6 +6,25 @@
 Excel, No Tears
 ===============
 
+The diagram below highlights the progression of this book from navigation speedups into spreadsheet modeling and then into analysis features that are useful for repeated reporting work.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "Shortcuts" as shortcuts
+   rectangle "Formulas and\nFunctions Overview" as overview
+   rectangle "Functions" as functions
+   rectangle "Nested\nFormulas" as nested
+   rectangle "Pivot Tables" as pivot
+   rectangle "Conditional\nFormatting" as formatting
+   rectangle "Downloads" as downloads
+   shortcuts --> overview --> functions --> nested --> pivot --> formatting --> downloads
+   @enduml
+
+The intent is to build confidence in layers: first move around Excel efficiently, then understand calculation building blocks, and finally combine those blocks into richer summaries and reusable artifacts.
+
 .. toctree::
    :maxdepth: 3
    :numbered:

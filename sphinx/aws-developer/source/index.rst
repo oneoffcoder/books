@@ -39,6 +39,22 @@ This book is to teach students how to develop applications and solutions using t
         -e AWS_SECRET_KEY="<set>" \
         oneoffcoder/book-aws-developer:latest
 
+The diagram below gives a compact view of the service path covered here: start with AWS fundamentals, then move into compute, storage, and persistence concerns that show up in most application architectures.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "Intro" as intro
+   rectangle "EC2" as ec2
+   rectangle "Storage" as storage
+   rectangle "Database" as database
+   intro --> ec2 --> storage --> database
+   @enduml
+
+The sequence is intentionally simple because the book itself is a focused overview rather than a service catalog. It gives readers a practical order for assembling a basic AWS-backed application stack.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

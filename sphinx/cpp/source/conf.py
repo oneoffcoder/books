@@ -33,6 +33,7 @@ release = '0.0.1'
 # ones.
 extensions = [
     'sphinxcontrib.bibtex',
+    'sphinxcontrib.plantuml',
     'nbsphinx',
     'sphinx_sitemap'
 ]
@@ -71,6 +72,8 @@ html_show_sphinx = False
 html_logo = '_static/images/logo-small.png'
 html_favicon = '_static/favicon.ico'
 html_last_updated_fmt = '%b %d, %Y, %X'
+plantuml = '/opt/homebrew/bin/plantuml'
+plantuml_output_format = 'svg'
 
 html_theme_options = {
     'canonical_url': 'https://cpp.oneoffcoder.com/',

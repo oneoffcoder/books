@@ -3,6 +3,8 @@ Threading
 
 .. highlight:: python
 
+The diagram below gives the concurrency pattern used in this chapter: start workers, let them do independent work, collect the results, and then wait for everything to finish cleanly.
+
 .. uml::
 
    @startuml

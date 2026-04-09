@@ -27,21 +27,23 @@ This edition is updated for Python 3.13.
 Preface
 =======
 
-This book is an introduction to programming in ``Python``. The examples and recommendations in this edition target Python 3.13. You can follow along with a local Python 3.13 installation, but a Docker image is also available if you want a preconfigured environment with JupyterLab already set up. To run the Docker image, use the following command.
+This book is an introduction to programming in ``Python``. The examples and recommendations in this edition target Python 3.13. You can follow along with a local Python 3.13 installation, but a Docker image is also available if you want a preconfigured environment with JupyterLab already set up. The diagram below is the book roadmap, showing that the material starts with core syntax, then adds control flow and reusable code, and only after that moves into objects, the standard library, and practice-heavy chapters.
 
-.. graphviz::
+.. uml::
 
-   digraph roadmap {
-     rankdir=LR;
-     node [shape=box, style="rounded"];
-     basics [label="basics\nintro, types, operators"];
-     flow [label="flow\ncontrol, matching, loops"];
-     functions [label="functions\nfunctions, docs, decorators"];
-     objects [label="objects\nclasses, dataclasses, enum, typing"];
-     stdlib [label="stdlib\npathlib, datetime, exceptions,\ncontext managers, threads, io"];
-     practice [label="practice\nbuilt-ins, collections,\nfunctional, turtle, exercises"];
-     basics -> flow -> functions -> objects -> stdlib -> practice;
-   }
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "Basics\nintro, types,\noperators" as basics
+   rectangle "Flow\ncontrol, matching,\nloops" as flow
+   rectangle "Functions\nfunctions, docs,\ndecorators" as functions
+   rectangle "Objects\nclasses, dataclasses,\nenum, typing" as objects
+   rectangle "Stdlib\npathlib, datetime,\nexceptions, threads,\nio" as stdlib
+   rectangle "Practice\nbuilt-ins, collections,\nfunctional, turtle,\nprojects" as practice
+   basics --> flow --> functions --> objects --> stdlib --> practice
+   @enduml
+
+Use that roadmap when jumping around the book: chapters later in the chain assume more vocabulary and more comfort with Python's built-in tools. To run the Docker image, use the following command.
 
 .. code-block:: bash
 

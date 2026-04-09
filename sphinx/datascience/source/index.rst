@@ -37,6 +37,23 @@ This book is to teach students specialized areas and topics of ``Data Science``.
 
 Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
 
+The diagram below is a high-level map for this notebook-heavy collection. It groups the topics into foundations, modeling methods, causal reasoning, and domain applications so the overall structure is easier to scan before diving into individual notebooks.
+
+.. uml::
+
+   @startuml
+   left to right direction
+   skinparam shadowing false
+   rectangle "Foundations\nmissing data,\nprobability,\nmetrics" as foundations
+   rectangle "Modeling\nregression,\nsurvival,\nranking" as modeling
+   rectangle "Optimization and\nDeep Learning" as optimization
+   rectangle "Causality and\nGraphical Models" as causality
+   rectangle "Applications\nNLP, retail,\nCOVID-19" as applications
+   foundations --> modeling --> optimization --> causality --> applications
+   @enduml
+
+Use the diagram as orientation rather than a strict prerequisite chain. The book is intentionally broad, but most notebooks fit into one of those larger clusters.
+
 .. toctree::
    :maxdepth: 1
    :numbered:
