@@ -16,14 +16,14 @@ PROJECTS = \
 	sqlite \
 	tello
 
+PYTHON ?= python3
+PARALLEL_JOBS ?=
+PARALLEL_RUNNER := $(PYTHON) tools/parallel_make.py
+
 .PHONY: clean build
 
 clean:
-	@for project in $(PROJECTS); do \
-		$(MAKE) -C $$project clean || exit $$?; \
-	done
+	@$(PARALLEL_RUNNER) $(if $(PARALLEL_JOBS),--jobs $(PARALLEL_JOBS)) clean $(PROJECTS)
 
 build:
-	@for project in $(PROJECTS); do \
-		$(MAKE) -C $$project build || exit $$?; \
-	done
+	@$(PARALLEL_RUNNER) $(if $(PARALLEL_JOBS),--jobs $(PARALLEL_JOBS)) build $(PROJECTS)
