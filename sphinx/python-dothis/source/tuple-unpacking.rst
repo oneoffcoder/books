@@ -6,6 +6,8 @@ Unpacking sequences and tuples
 
 Avoid stretching simple unpacking across multiple lines. In the first approach, a tuple is stored and then indexed repeatedly. In the second, the tuple is unpacked directly in one line.
 
+Direct unpacking states the expected shape of the returned data at the point of use. That usually reads better than treating the tuple as a tiny anonymous container and indexing into it repeatedly.
+
 Don't do this
 ^^^^^^^^^^^^^
 

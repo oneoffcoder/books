@@ -6,6 +6,8 @@ Lambdas
 
 Use ``lambda`` for short throwaway callables passed inline to another function. If the function deserves a name, prefer ``def``.
 
+Keeping lambdas small prevents them from becoming unnamed mini-functions that hide logic in the middle of another call. The decision point is simple: if the callable needs explanation, branching, or reuse, it usually deserves a real name.
+
 Don't do this
 ^^^^^^^^^^^^^
 

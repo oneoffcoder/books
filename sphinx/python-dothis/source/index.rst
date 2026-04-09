@@ -49,97 +49,182 @@ You can then paste the snippets into ``python`` or save them to small files as y
 
 The chapters are grouped into core patterns first, followed by patterns that depend on newer Python versions.
 
+Core Patterns
+-------------
+
 .. toctree::
    :maxdepth: 1
    :numbered:
-   :caption: Core Patterns
+   :caption: Basics
 
    collection-initialization
    basic-chained-comparison
    basic-falsy-truthy
    basic-ternary-operator
+   basic-any-all
+   basic-none-comparison
+   basic-walrus-operator
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Loops and Iteration
+
    looping-range-numbers
    looping-backward
    looping-collection
    looping-collection-indices
    looping-two-collections
    looping-enumerate-start
-   list-generator
-   list-filtering
-   list-count-if
-   list-counting
-   basic-any-all
-   basic-none-comparison
-   tuple-unpacking
-   tuple-ignoring
-   tuple-namedtuple
-   string-concatenation
-   string-interpolation
-   context-suppress
-   string-debug
-   string-dry
-   string-reversal
-   string-remove-prefix-suffix
-   function-clarification
-   function-lambda
-   function-generator
-   dictionary-defaultdict
-   dictionary-get
-   dictionary-updating
-   dictionary-merging
-   dictionary-counting
-   dictionary-comprehension
-   set-comprehension
-   data-map-filter-reduce
-   data-flattening
-   data-caching
-   file-reading
-   file-delete
-   file-filtering
-   file-serde-shelve
    iter-next-default
    collection-deque-queue
    iter-heapq-topn
    iter-combination
    iter-cycling
    iter-product
-   pathlib-over-os-path
-   exception-reraise
-   class-dunder
-   class-enumeration
-   class-dataclass-default-factory
-   context-nullcontext
-   misc-simultaneous-state-updates
-   misc-pandas
 
 .. toctree::
    :maxdepth: 1
    :numbered:
-   :caption: Version-Specific Patterns
+   :caption: Lists and Comprehensions
+
+   list-generator
+   list-filtering
+   list-count-if
+   list-counting
+   dictionary-comprehension
+   set-comprehension
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Tuples and Strings
+
+   tuple-unpacking
+   tuple-ignoring
+   tuple-namedtuple
+   string-concatenation
+   string-interpolation
+   string-debug
+   string-dry
+   string-reversal
+   string-remove-prefix-suffix
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Functions and Context
+
+   function-clarification
+   function-lambda
+   function-generator
+   context-suppress
+   context-nullcontext
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Dictionaries and Data
+
+   dictionary-defaultdict
+   dictionary-get
+   dictionary-updating
+   dictionary-merging
+   dictionary-counting
+   data-map-filter-reduce
+   data-flattening
+   data-caching
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Files, Paths, and Exceptions
+
+   file-reading
+   file-delete
+   file-filtering
+   file-serde-shelve
+   pathlib-over-os-path
+   exception-reraise
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Classes and Misc
+
+   class-dunder
+   class-enumeration
+   class-dataclass-default-factory
+   misc-simultaneous-state-updates
+   misc-pandas
+
+Version-Specific Patterns
+-------------------------
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: General Modern Python
 
    class-new-vs-old
+   misc-locals-explicit
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Python 3.9+
+
+   data-functools-cache
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Python 3.10+
+
    looping-zip-strict
    class-dataclass-slots
-   class-strenum
    basic-pattern-matching
-   data-functools-cache
-   pathlib-walk
-   pathlib-glob-case-sensitive
-   typing-type-statement
-   typing-override
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Python 3.11+
+
+   class-strenum
    typing-self
-   iter-batched
    file-tomllib
    asyncio-taskgroup
    exception-add-note
    exception-except-star
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Python 3.12+
+
+   pathlib-walk
+   pathlib-glob-case-sensitive
+   typing-type-statement
+   typing-override
+   iter-batched
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Python 3.13+
+
    data-copy-replace
    queue-shutdown
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Python 3.14+
+
    concurrent-interpreterpoolexecutor
    concurrent-interpreters
    file-zstd
    string-template-literals
-   misc-locals-explicit
 
 About
 =====

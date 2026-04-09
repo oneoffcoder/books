@@ -6,6 +6,8 @@ Looping backward
 
 Avoid awkward ``-1`` bounds when iterating backward. Use ``reversed`` to make the code clearer.
 
+``reversed`` states the direction change without exposing the indexing mechanics needed to accomplish it. That makes the loop easier to inspect and less error-prone when the sequence bounds change.
+
 Don't do this
 ^^^^^^^^^^^^^
 

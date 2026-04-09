@@ -6,6 +6,8 @@ Use nullcontext for optional context managers
 
 Use ``nullcontext()`` when a value is sometimes managed by a context manager and sometimes already available.
 
+This keeps the control flow uniform: the code can always use ``with`` even when one branch does not need resource management. That usually reads better than splitting the main logic across two branches just to handle setup differently.
+
 .. note::
 
    Python 3.7+

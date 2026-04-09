@@ -6,6 +6,8 @@ Use template strings for structured interpolation
 
 In Python 3.14 and later, use template strings when you need structured interpolation data instead of a finished string immediately.
 
+That is useful when the interpolation itself is data that another layer still needs to inspect, validate, or render later. The benefit is not prettier string formatting but preserving structure that ordinary f-strings discard.
+
 .. note::
 
    Python 3.14+

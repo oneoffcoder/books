@@ -6,6 +6,8 @@ Use itertools.batched for chunking
 
 Use ``itertools.batched()`` to split an iterable into fixed-size chunks instead of writing the indexing logic yourself.
 
+Using the standard tool makes the chunking rule obvious immediately and avoids off-by-one mistakes in hand-written slice loops. It also keeps the code focused on what a batch means instead of on index arithmetic.
+
 .. note::
 
    Python 3.12+

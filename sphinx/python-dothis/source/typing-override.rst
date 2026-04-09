@@ -6,6 +6,8 @@ Use @override for overridden methods
 
 In Python 3.12 and later, use ``@override`` to mark methods that are intended to override a base-class method.
 
+The decorator turns a design intention into something type checkers and reviewers can verify. That helps catch drift when a base-class method is renamed or a subclass method signature no longer matches.
+
 .. note::
 
    Python 3.12+

@@ -6,6 +6,8 @@ Generator functions
 
 Avoid materializing large collections when you only need to iterate over them. Use ``yield`` to generate values on demand. Generator functions are often more memory-efficient.
 
+Lazy generation also lets callers start consuming results before the full sequence exists, which can simplify streaming-style code. The key improvement is not just memory use but a cleaner separation between producing items and collecting them.
+
 Don't do this
 ^^^^^^^^^^^^^
 

@@ -6,6 +6,8 @@ Cycling through a list
 
 Here is how to cycle through a list of elements an arbitrary number of times.
 
+``itertools.cycle`` makes the potentially unbounded nature of the iteration explicit. That is easier to reason about than manually wrapping an index back to zero every time you hit the end.
+
 Don't do this
 ^^^^^^^^^^^^^
 

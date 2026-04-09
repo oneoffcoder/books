@@ -6,6 +6,8 @@ Use structural pattern matching for structural dispatch
 
 When branching on the shape of structured data, pattern matching can be clearer than a long ``if``/``elif`` chain.
 
+Pattern matching becomes especially valuable when the condition depends on both the kind of input and the fields available on that input. It keeps the dispatch logic in one place and makes it easier to add new shapes without growing a fragile ladder of nested checks.
+
 .. note::
 
    Python 3.10+

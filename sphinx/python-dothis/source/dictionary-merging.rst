@@ -6,6 +6,8 @@ Merging dictionaries
 
 Avoid explicit loops when merging two dictionaries.
 
+The direct merging forms communicate that you are producing one mapping from existing mappings, not performing step-by-step transformation logic. They also remove temporary mutation that can distract from which source wins on key conflicts.
+
 Don't do this
 ^^^^^^^^^^^^^
 

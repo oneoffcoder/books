@@ -6,6 +6,8 @@ Deleting a file
 
 If missing files are acceptable, ``contextlib.suppress`` keeps the intent clear.
 
+Deleting a file is often best-effort cleanup, so treating a missing file as noise can be reasonable. The goal is to make that choice explicit without broadening the exception handling more than necessary.
+
 Don't do this
 ^^^^^^^^^^^^^
 

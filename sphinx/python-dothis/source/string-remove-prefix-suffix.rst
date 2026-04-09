@@ -6,6 +6,8 @@ Use removeprefix and removesuffix
 
 Use ``removeprefix()`` and ``removesuffix()`` instead of manual slicing when trimming known text.
 
+The dedicated methods encode the exact intent and avoid off-by-one or accidental-match bugs from manual slicing. They are also easier to read because a reviewer does not have to reconstruct why a particular slice index was chosen.
+
 .. note::
 
    Python 3.9+

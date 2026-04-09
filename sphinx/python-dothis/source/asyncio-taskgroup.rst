@@ -6,6 +6,8 @@ Use asyncio.TaskGroup for related tasks
 
 Use ``asyncio.TaskGroup`` instead of managing related tasks manually.
 
+Task groups make the lifetime of related concurrent work explicit and give failures structured semantics instead of leaving cancellation and cleanup spread across the call site. That usually makes async code easier to reason about because the tasks that belong together are created, awaited, and torn down in one block.
+
 .. note::
 
    Python 3.11+

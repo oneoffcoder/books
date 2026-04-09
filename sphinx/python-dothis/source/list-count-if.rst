@@ -6,6 +6,8 @@ Count matching items without a temporary list
 
 When you only need a count, use a generator expression instead of building a temporary list first.
 
+A generator expression keeps the pipeline focused on the count rather than on building an intermediate structure that will be discarded immediately. That is a small but common example of aligning the expression with the result you actually need.
+
 Don't do this
 ^^^^^^^^^^^^^
 

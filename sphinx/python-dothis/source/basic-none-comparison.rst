@@ -6,6 +6,8 @@ Use is None for None checks
 
 Use ``is None`` and ``is not None`` for ``None`` checks.
 
+``None`` is a singleton, so identity is the right concept here, not equality. Using ``is`` also avoids surprising behavior from user-defined ``__eq__`` methods that can make ``== None`` behave in unexpected ways.
+
 Don't do this
 ^^^^^^^^^^^^^
 

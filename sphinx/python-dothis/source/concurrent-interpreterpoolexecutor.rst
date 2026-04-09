@@ -6,6 +6,8 @@ Use InterpreterPoolExecutor for isolated parallel workers
 
 In Python 3.14 and later, consider ``InterpreterPoolExecutor`` when you want isolated workers without jumping straight to process management.
 
+It gives you a higher-level API that matches the rest of ``concurrent.futures`` while taking advantage of subinterpreters as they mature. The main benefit is clearer intent and less custom orchestration code, not that it replaces every process-based workload.
+
 .. note::
 
    Python 3.14+

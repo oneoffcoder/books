@@ -6,6 +6,8 @@ Simultaneous state updates
 
 This pattern makes code more concise and avoids nuisance variables. In the first approach, temporary variables are used to stage updates. In the second, the related updates happen together in one assignment.
 
+Bundling related assignments can also avoid transient intermediate states that do not really exist in the intended logic. It is a good fit when several names are being updated as one conceptual step.
+
 Don't do this
 ^^^^^^^^^^^^^
 

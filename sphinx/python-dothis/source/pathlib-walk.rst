@@ -6,6 +6,8 @@ Use Path.walk in pathlib code
 
 If you are already using ``pathlib``, prefer ``Path.walk()`` over dropping back to ``os.walk()``. This is available in Python 3.12 and later.
 
+Staying inside ``pathlib`` avoids mixing path styles in the same block of code and makes later refactors cleaner. The main win is consistency: once the root is a ``Path``, the traversal can remain ``Path``-oriented end to end.
+
 .. note::
 
    Python 3.12+

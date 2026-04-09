@@ -6,6 +6,8 @@ Classes and dunders (double underscores)
 
 Use dunder methods when they improve how objects behave. In particular, override ``__str__`` to provide a printer-friendly representation of an object.
 
+Special methods let your objects participate in Python's built-in protocols instead of requiring callers to remember custom helper methods. That usually produces code that feels more native at the call site and concentrates representation logic inside the type that owns it.
+
 Don't do this
 ^^^^^^^^^^^^^
 

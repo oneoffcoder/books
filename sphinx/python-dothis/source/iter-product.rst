@@ -6,6 +6,8 @@ Product of lists
 
 Here's how to get the product of elements in multiple lists.
 
+``itertools.product`` names the Cartesian product directly, which is clearer than nested loops once the number of input iterables grows. It also scales better conceptually because the code shape stays the same as you add dimensions.
+
 Don't do this
 ^^^^^^^^^^^^^
 

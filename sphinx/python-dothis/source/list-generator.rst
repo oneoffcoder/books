@@ -6,6 +6,8 @@ Use list comprehensions
 
 Avoid looping over elements just to store derived results. Use a list comprehension or generator expression instead. A list comprehension eagerly evaluates and returns a list, while a generator expression evaluates lazily.
 
+Choosing between the two then becomes a question of ownership: do you need the whole materialized result now, or do you want to stream values into another consumer? That distinction is clearer when the code uses the dedicated comprehension forms.
+
 Don't do this
 ^^^^^^^^^^^^^
 

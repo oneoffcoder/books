@@ -6,6 +6,8 @@ Transforming data with map, filter, reduce
 
 In Python, comprehensions and generator expressions are usually easier to read than chaining ``map``, ``filter``, and ``reduce``. Reach for the functional tools when they are clearly the best fit, not by default.
 
+Most Python readers parse comprehension syntax faster because the transformation and filter live next to the resulting collection shape. That reduces the cognitive overhead of jumping between multiple function calls and anonymous lambdas.
+
 Don't do this
 ^^^^^^^^^^^^^
 

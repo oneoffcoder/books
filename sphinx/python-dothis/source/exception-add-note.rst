@@ -6,6 +6,8 @@ Use add_note for extra exception context
 
 Use ``add_note()`` to attach extra debugging context instead of overloading the exception message itself.
 
+This separates the original exception message from the local debugging context, which preserves the base error while still giving operators more clues. It is especially helpful when the same exception type can arise from many similar call sites.
+
 .. note::
 
    Python 3.11+

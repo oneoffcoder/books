@@ -6,6 +6,8 @@ Saving objects to file
 
 In the example below, ``shelve`` is shown as an alternative for storing multiple objects in one place.
 
+Serialization choices become easier to maintain when the code states whether it is storing one value or a small keyed collection of values. Showing ``shelve`` alongside lower-level pickling makes that tradeoff more concrete for small local persistence tasks.
+
 Don't do this
 ^^^^^^^^^^^^^
 

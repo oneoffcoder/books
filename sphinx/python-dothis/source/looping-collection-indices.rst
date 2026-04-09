@@ -6,6 +6,8 @@ Looping over a collection with indices
 
 Use ``enumerate`` when you need both the index and the element.
 
+``enumerate`` keeps the element and its position tied together as one iteration concept. That is less fragile than indexing into the collection manually, especially if the loop body later changes.
+
 Don't do this
 ^^^^^^^^^^^^^
 

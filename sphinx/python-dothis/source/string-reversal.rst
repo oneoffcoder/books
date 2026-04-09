@@ -6,6 +6,8 @@ String reversal
 
 Use slicing to reverse a string instead of building it character by character.
 
+Slicing communicates reversal as one operation instead of as an algorithm implemented by the loop. That is shorter, easier to trust, and usually the first form experienced Python readers expect to see.
+
 Don't do this
 ^^^^^^^^^^^^^
 

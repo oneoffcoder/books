@@ -6,6 +6,8 @@ Accessing a dictionary value with a default value
 
 Use ``dict.get`` when the missing-key case should fall back to a default value.
 
+It is a concise way to say that missing data is expected and should not be exceptional. That makes the fallback value part of the expression instead of scattering default-handling branches around the code.
+
 Don't do this
 ^^^^^^^^^^^^^
 

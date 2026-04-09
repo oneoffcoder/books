@@ -6,6 +6,8 @@ Prefer pathlib over os.path
 
 Prefer ``pathlib`` when working with filesystem paths. It composes operations more cleanly than string-based ``os.path`` code.
 
+Object-style path composition tends to read more like filesystem manipulation and less like manual string assembly. It also keeps related operations on one type instead of spreading them across several ``os.path`` helper calls.
+
 Don't do this
 ^^^^^^^^^^^^^
 

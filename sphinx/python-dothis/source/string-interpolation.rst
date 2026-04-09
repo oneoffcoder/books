@@ -6,6 +6,8 @@ String interpolation
 
 Prefer f-strings for most string interpolation in modern Python. They are usually the clearest option.
 
+F-strings keep the literal text and embedded values in one place with very little ceremony. That tends to be easier to scan than older formatting styles, especially once expressions or format specifiers appear.
+
 Don't do this
 ^^^^^^^^^^^^^
 

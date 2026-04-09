@@ -6,6 +6,8 @@ Chained comparison operators
 
 Avoid splitting simple chained comparisons with ``and`` when Python can express them directly.
 
+The chained form matches the mathematical idea directly and avoids repeating the middle operand. That reduces visual noise and makes boundary checks easier to audit during review.
+
 Don't do this
 ^^^^^^^^^^^^^
 

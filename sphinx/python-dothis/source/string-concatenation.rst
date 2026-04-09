@@ -6,6 +6,8 @@ String concatenation
 
 Avoid writing extra control flow just to concatenate strings. In the first approach, you need extra logic to place commas correctly. In the second, ``join`` expresses the intent directly.
 
+``str.join`` also makes it clear that the separator belongs to the whole operation, not to any one element. That reduces fiddly edge-case logic around leading or trailing delimiters.
+
 Don't do this
 ^^^^^^^^^^^^^
 

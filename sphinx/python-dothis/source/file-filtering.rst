@@ -6,6 +6,8 @@ Filtering files
 
 ``fnmatch`` can express simple filename filtering more concisely. Notice how the second example uses a helper function, nested loops, and an ``if`` statement.
 
+Filename matching is usually simpler than the loops used to discover it. Using a purpose-built helper keeps the filtering rule front and center instead of burying it inside traversal code.
+
 Don't do this
 ^^^^^^^^^^^^^
 

@@ -6,6 +6,8 @@ Reading a file
 
 Use a context manager to handle file resources safely.
 
+The ``with`` block ties acquisition and release together so the lifetime of the file handle is obvious from indentation alone. That improves correctness first, and it also makes the code easier to modify later without forgetting cleanup.
+
 Don't do this
 ^^^^^^^^^^^^^
 

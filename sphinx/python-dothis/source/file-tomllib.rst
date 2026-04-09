@@ -6,6 +6,8 @@ Use tomllib for reading TOML
 
 Use the standard-library ``tomllib`` module for read-only TOML parsing.
 
+Using the standard library removes an extra dependency for a very common configuration format and makes the parsing expectations obvious to readers. It is a strong default when you only need to read TOML, which is the common case for files like ``pyproject.toml``.
+
 .. note::
 
    Python 3.11+

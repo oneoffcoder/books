@@ -6,6 +6,8 @@ Use Queue.shutdown instead of sentinel values
 
 In Python 3.13 and later, prefer ``Queue.shutdown()`` over inventing sentinel values to stop worker threads.
 
+A dedicated shutdown API separates lifecycle signaling from the data values traveling through the queue. That removes the need to reserve special sentinel values and makes worker termination rules clearer.
+
 .. note::
 
    Python 3.13+

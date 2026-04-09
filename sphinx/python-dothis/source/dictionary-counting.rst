@@ -6,6 +6,8 @@ Using a dictionary to store counts
 
 Like ``defaultdict``, ``Counter`` initializes missing counts to zero. That lets you avoid checking whether a key already exists.
 
+``Counter`` captures a common problem domain directly and gives you additional operations such as most-common queries for free. Using the dedicated type reduces bookkeeping and makes the intent obvious to readers.
+
 Don't do this
 ^^^^^^^^^^^^^
 

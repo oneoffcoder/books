@@ -6,6 +6,8 @@ Combinations of a list
 
 Create combinations from a list of items.
 
+The standard iterator says exactly what mathematical operation is happening, which is easier to recognize than nested loops whose only purpose is pair or tuple generation. It also generalizes cleanly as the combination size changes.
+
 Don't do this
 ^^^^^^^^^^^^^
 

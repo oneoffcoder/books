@@ -6,6 +6,8 @@ String debug
 
 When debugging with f-strings, use the built-in debug format to be more concise.
 
+The debug form is particularly handy in quick diagnostics because the label stays tied to the expression automatically. That means you can rename variables or change expressions without rewriting the surrounding string.
+
 Don't do this
 ^^^^^^^^^^^^^
 

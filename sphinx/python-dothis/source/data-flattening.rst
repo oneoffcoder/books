@@ -6,6 +6,8 @@ Flattening data
 
 Here, we want to flatten a list of lists into one sequence. Prefer the approach that best balances readability and performance for your case.
 
+Flattening code often sits on hot paths or in data cleanup stages, so both readability and accidental quadratic behavior matter. A direct iterable-based approach usually communicates the shape transformation more clearly than nested append loops.
+
 Don't do this
 ^^^^^^^^^^^^^
 

@@ -6,6 +6,8 @@ Most frequent item in list
 
 Use ``Counter`` when you need frequencies. It is clearer and scales better than repeatedly calling ``list.count``.
 
+Repeated ``list.count`` scans the same data over and over, which hides both intent and cost. ``Counter`` says you are computing frequencies once and then querying them.
+
 Don't do this
 ^^^^^^^^^^^^^
 

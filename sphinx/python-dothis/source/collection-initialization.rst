@@ -6,6 +6,8 @@ Collection initialization
 
 When initializing empty Python collections such as lists and dictionaries, favor using the corresponding literal delimiters instead of the corresponding functions.
 
+Literals are shorter, more familiar to most readers, and emphasize the shape of the value immediately. They also avoid looking like a conversion from another iterable when you are simply creating an empty collection.
+
 Don't do this
 ^^^^^^^^^^^^^
 

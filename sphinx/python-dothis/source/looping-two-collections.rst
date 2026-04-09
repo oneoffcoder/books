@@ -6,6 +6,8 @@ Looping over two collections
 
 Avoid accessing elements by indices and manually managing which list is shorter. Use ``zip`` to iterate over both collections, stopping at the end of the shorter one.
 
+``zip`` makes the lockstep relationship between the iterables explicit and removes boundary arithmetic from the loop body. That generally reduces both noise and mismatch bugs.
+
 Don't do this
 ^^^^^^^^^^^^^
 

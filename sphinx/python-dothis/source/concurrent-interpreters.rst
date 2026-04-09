@@ -6,6 +6,8 @@ Use concurrent.interpreters instead of custom wrappers
 
 In Python 3.14 and later, use ``concurrent.interpreters`` rather than building your own thin wrapper around low-level subinterpreter management.
 
+Using the standard abstraction makes the concurrency model more legible and avoids coupling your code to private mechanisms that may change. It also lowers the amount of wrapper code your team has to debug and explain.
+
 .. note::
 
    Python 3.14+

@@ -6,6 +6,8 @@ Default dictionary values: defaultdict
 
 Avoid checking whether a key exists before initializing its value. ``defaultdict`` creates the default value for a missing key on first access. ``itertools.groupby`` can also help in some grouping cases.
 
+That removes repeated existence checks and keeps the happy path focused on the update itself. It is most useful when the default for a missing key is part of the data shape, such as an empty list, set, or counter value.
+
 Don't do this
 ^^^^^^^^^^^^^
 

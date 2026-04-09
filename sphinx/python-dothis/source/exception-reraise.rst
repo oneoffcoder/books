@@ -6,6 +6,8 @@ Re-raise exceptions deliberately
 
 Catch specific exceptions and re-raise with context. Avoid swallowing errors or using a bare ``except``.
 
+Re-raising deliberately keeps the failure visible while adding just enough local context to explain what the code was trying to do. That usually produces better debugging information than either swallowing the error or replacing it with a vague new one.
+
 Don't do this
 ^^^^^^^^^^^^^
 

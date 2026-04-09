@@ -6,6 +6,8 @@ Looping over a range of numbers
 
 Avoid creating a list just to loop over a sequence of numbers. Use ``range`` instead because it is more concise and more memory-efficient.
 
+``range`` describes a numeric sequence without allocating all of its values up front. That is the normal tool for count-controlled loops, so using it also matches reader expectations.
+
 Don't do this
 ^^^^^^^^^^^^^
 

@@ -6,6 +6,8 @@ Pandas apply and numpy vectorization
 
 When operating over Pandas dataframes, avoid row-by-row Python loops. Prefer vectorized Pandas or NumPy operations. ``apply`` can be useful, but it is usually not the fastest option.
 
+In dataframe code, the highest-leverage improvement is usually moving work from Python-level row iteration into array-oriented operations. That shift tends to improve both performance and clarity because the code starts describing whole-column transformations.
+
 Don't do this
 ^^^^^^^^^^^^^
 

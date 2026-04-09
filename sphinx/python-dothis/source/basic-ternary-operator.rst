@@ -6,6 +6,8 @@ Ternary operator
 
 Python supports conditional expressions, which are often called the ternary operator.
 
+A conditional expression keeps a small value choice close to the assignment or return that uses it. It works best for simple two-way decisions; once the branches become large or side-effectful, a normal ``if`` statement is usually easier to read.
+
 Don't do this
 ^^^^^^^^^^^^^
 

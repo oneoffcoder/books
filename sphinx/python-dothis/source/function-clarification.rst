@@ -6,6 +6,8 @@ Clarify function calls with keyword arguments
 
 When passing values to a function, prefer keyword arguments when they make the call clearer.
 
+Keyword arguments turn positional knowledge into explicit names at the call site, which is especially helpful when several parameters share the same broad type. They also make later refactors safer because reviewers can see which argument is intended to mean what.
+
 Don't do this
 ^^^^^^^^^^^^^
 

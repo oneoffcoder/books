@@ -6,6 +6,8 @@ Use functools.cache for unbounded memoization
 
 If you want an unbounded cache, prefer ``functools.cache`` over ``lru_cache(maxsize=None)``.
 
+The name matches the intent directly: you want memoization, not an LRU policy with an unlimited size disguised through a special argument. That small naming improvement makes maintenance easier because readers do not have to decode the configuration to understand the behavior.
+
 .. note::
 
    Python 3.9+

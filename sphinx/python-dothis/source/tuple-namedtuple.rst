@@ -6,6 +6,8 @@ Avoid accessing tuple elements by index
 
 Avoid accessing tuple elements by index when the positions have semantic meaning. Use ``namedtuple`` so the fields can be accessed by name.
 
+Once positions start carrying domain meaning, named access is easier to remember and far harder to misuse than numeric indexes. It also makes later code reviews faster because field names explain themselves.
+
 Don't do this
 ^^^^^^^^^^^^^
 

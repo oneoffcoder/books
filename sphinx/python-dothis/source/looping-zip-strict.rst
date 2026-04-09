@@ -6,6 +6,8 @@ Use zip(strict=True) when equal lengths are required
 
 Use ``zip(strict=True)`` when a length mismatch is a bug. It fails fast instead of silently dropping extra items.
 
+That small keyword turns an implicit assumption into executable validation. It is valuable whenever silently truncating data would hide a bug rather than gracefully handling uneven inputs.
+
 .. note::
 
    Python 3.10+
