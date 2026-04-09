@@ -42,7 +42,11 @@ The diagram below summarizes how the Scratch chapters build from interface basic
    rectangle "Sensing,\nOperators,\nVariables" as logic
    rectangle "Custom Blocks" as custom
    rectangle "Costumes,\nSounds,\nSprites,\nBackdrops" as assets
-   ide --> media --> flow --> logic --> custom --> assets
+   ide --> media
+   media --> flow
+   flow --> logic
+   logic --> custom
+   custom --> assets
    @enduml
 
 That progression matters for beginners because Scratch projects usually start with visible movement, then gain interactivity, and only later become modular and asset-rich.

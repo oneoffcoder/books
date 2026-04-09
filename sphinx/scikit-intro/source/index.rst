@@ -47,7 +47,10 @@ The diagram below summarizes the scikit-learn workflow that the book follows: pr
    rectangle "Preprocessing,\nImputation,\nPipelines" as preparation
    rectangle "Validation,\nTuning,\nFeature Work" as validation
    rectangle "Plotting and\nSupporting APIs" as ecosystem
-   start --> models --> preparation --> validation --> ecosystem
+   start --> models
+   models --> preparation
+   preparation --> validation
+   validation --> ecosystem
    @enduml
 
 The chapters are not perfectly linear, but the diagram captures the main habit the book is trying to teach: model building is only one stage in a larger machine learning workflow.

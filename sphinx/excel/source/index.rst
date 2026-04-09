@@ -20,7 +20,12 @@ The diagram below highlights the progression of this book from navigation speedu
    rectangle "Pivot Tables" as pivot
    rectangle "Conditional\nFormatting" as formatting
    rectangle "Downloads" as downloads
-   shortcuts --> overview --> functions --> nested --> pivot --> formatting --> downloads
+   shortcuts --> overview
+   overview --> functions
+   functions --> nested
+   nested --> pivot
+   pivot --> formatting
+   formatting --> downloads
    @enduml
 
 The intent is to build confidence in layers: first move around Excel efficiently, then understand calculation building blocks, and finally combine those blocks into richer summaries and reusable artifacts.

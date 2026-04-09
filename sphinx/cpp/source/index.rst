@@ -47,7 +47,10 @@ The diagram below summarizes the flow of the C++ material from basic syntax into
    rectangle "Functions" as functions
    rectangle "OOP" as oop
    rectangle "Misc" as misc
-   basics --> containers --> functions --> oop --> misc
+   basics --> containers
+   containers --> functions
+   functions --> oop
+   oop --> misc
    @enduml
 
 That roadmap is useful because later examples assume you are already comfortable with the earlier standard-library types and syntax patterns.

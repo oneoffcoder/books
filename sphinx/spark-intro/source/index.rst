@@ -49,7 +49,11 @@ The diagram below shows how the Spark material progresses from low-level distrib
    rectangle "DStreams" as streaming
    rectangle "Graphs and\nMachine Learning" as advanced
    rectangle "Tips" as tips
-   rdd --> structured --> io --> streaming --> advanced --> tips
+   rdd --> structured
+   structured --> io
+   io --> streaming
+   streaming --> advanced
+   advanced --> tips
    @enduml
 
 That left-to-right path matches the mental model most readers need: first understand distributed execution, then move to higher-level abstractions, and finally explore specialized workloads.

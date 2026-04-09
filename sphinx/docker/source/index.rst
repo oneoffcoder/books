@@ -45,7 +45,12 @@ The diagram below gives a quick map of how the book moves from single-container 
    rectangle "Swarm and\nKubernetes" as orchestration
    rectangle "Runtime, DevOps,\nARM, GPU, Encryption" as operations
    rectangle "ECR, ECS,\nSageMaker" as deployment
-   preflight --> quickstart --> core --> compose --> orchestration --> operations --> deployment
+   preflight --> quickstart
+   quickstart --> core
+   core --> compose
+   compose --> orchestration
+   orchestration --> operations
+   operations --> deployment
    @enduml
 
 Read the diagram from left to right: first get Docker working locally, then learn how containers are built and operated, and finally carry those patterns into orchestration and AWS-facing deployment workflows.

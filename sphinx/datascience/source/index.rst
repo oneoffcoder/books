@@ -49,7 +49,10 @@ The diagram below is a high-level map for this notebook-heavy collection. It gro
    rectangle "Optimization and\nDeep Learning" as optimization
    rectangle "Causality and\nGraphical Models" as causality
    rectangle "Applications\nNLP, retail,\nCOVID-19" as applications
-   foundations --> modeling --> optimization --> causality --> applications
+   foundations --> modeling
+   modeling --> optimization
+   optimization --> causality
+   causality --> applications
    @enduml
 
 Use the diagram as orientation rather than a strict prerequisite chain. The book is intentionally broad, but most notebooks fit into one of those larger clusters.

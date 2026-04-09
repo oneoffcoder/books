@@ -40,7 +40,11 @@ This book is an introduction to programming in ``Python``. The examples and reco
    rectangle "Objects\nclasses, dataclasses,\nenum, typing" as objects
    rectangle "Stdlib\npathlib, datetime,\nexceptions, threads,\nio" as stdlib
    rectangle "Practice\nbuilt-ins, collections,\nfunctional, turtle,\nprojects" as practice
-   basics --> flow --> functions --> objects --> stdlib --> practice
+   basics --> flow
+   flow --> functions
+   functions --> objects
+   objects --> stdlib
+   stdlib --> practice
    @enduml
 
 Use that roadmap when jumping around the book: chapters later in the chain assume more vocabulary and more comfort with Python's built-in tools. To run the Docker image, use the following command.

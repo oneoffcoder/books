@@ -304,6 +304,7 @@ dependencies = [
     { name = "sphinx-rtd-theme" },
     { name = "sphinx-sitemap" },
     { name = "sphinxcontrib-bibtex" },
+    { name = "sphinxcontrib-plantuml" },
 ]
 
 [package.dev-dependencies]
@@ -321,6 +322,7 @@ requires-dist = [
     { name = "sphinx-rtd-theme", specifier = ">=3.0.2,<4" },
     { name = "sphinx-sitemap", specifier = ">=2.6.0" },
     { name = "sphinxcontrib-bibtex", specifier = ">=2.6.5" },
+    { name = "sphinxcontrib-plantuml", specifier = ">=0.30" },
 ]
 
 [package.metadata.requires-dev]
@@ -1355,6 +1357,15 @@ sdist = { url = "https://files.pythonhosted.org/packages/b2/e8/9ed3830aeed71f17c
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c2/42/4c8646762ee83602e3fb3fbe774c2fac12f317deb0b5dbeeedd2d3ba4b77/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl", hash = "sha256:2ec2eaebfb78f3f2078e73666b1415417a116cc848b72e5172e596c871103178", size = 5071, upload-time = "2019-01-21T16:10:14.333Z" },
 ]
+
+[[package]]
+name = "sphinxcontrib-plantuml"
+version = "0.31"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "sphinx" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/08/8f/f26dd61b92176c4cba6b7898ca2875e7dfc29263d8e1b3b63d6acf81434f/sphinxcontrib_plantuml-0.31.tar.gz", hash = "sha256:fd74752f8ea070e641c3f8a402fccfa1d4a4056e0967b56033d2a76282d9f956", size = 15736, upload-time = "2025-09-03T11:11:35.028Z" }
 
 [[package]]
 name = "sphinxcontrib-qthelp"

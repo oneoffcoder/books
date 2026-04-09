@@ -18,7 +18,10 @@ This book is currently small, but the diagram below still captures the core SQLi
    rectangle "Insert and\nUpdate Data" as mutate
    rectangle "Query" as query
    rectangle "Inspect\nResults" as inspect
-   connect --> schema --> mutate --> query --> inspect
+   connect --> schema
+   schema --> mutate
+   mutate --> query
+   query --> inspect
    @enduml
 
 Even before more chapters are added, that diagram gives readers the practical lifecycle they should expect when working through SQLite examples.

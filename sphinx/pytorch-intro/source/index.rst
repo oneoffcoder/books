@@ -49,7 +49,10 @@ The diagram below shows the PyTorch learning path from tensors and automatic dif
    rectangle "Loss,\nOptimizer,\nScheduler" as training
    rectangle "Model and\nPersistence" as model
    rectangle "Learning,\nRNN, GAN,\nTransfer,\nDetection,\nTensorBoard" as advanced
-   core --> data --> training --> model --> advanced
+   core --> data
+   data --> training
+   training --> model
+   model --> advanced
    @enduml
 
 That ordering mirrors real PyTorch work: understand tensors first, then build the training loop, and only then take on larger end-to-end architectures.

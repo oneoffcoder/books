@@ -54,7 +54,10 @@ The diagram below summarizes the structure of the R book from core language idea
    rectangle "Graphs\nbase plot,\nggplot2" as graphs
    rectangle "Data Science\nregression,\nlogistic,\nclassification,\nclustering,\nmissing data,\nvalidation" as ds
    rectangle "Misc" as misc
-   core --> stats --> graphs --> ds --> misc
+   core --> stats
+   stats --> graphs
+   graphs --> ds
+   ds --> misc
    @enduml
 
 Read that map as a progression from language fluency into analysis workflows. The later chapters assume you can already shape data and write small functions comfortably.

@@ -40,7 +40,11 @@ The diagram below shows the structure of the Tello material from preparation and
    rectangle "Python\nBasics" as py
    rectangle "Auto Flight and\nManual Control" as control
    rectangle "Swarm and\nResources" as advanced
-   prep --> parts --> scratch --> py --> control --> advanced
+   prep --> parts
+   parts --> scratch
+   scratch --> py
+   py --> control
+   control --> advanced
    @enduml
 
 Read it as a dependency chain: safe setup comes first, then you learn the aircraft and beginner controls, and only after that does the book ask you to automate or coordinate flights.

@@ -47,7 +47,10 @@ The diagram below summarizes the learning path through the Java material, starti
    rectangle "Classes,\nGenerics, Enum,\nAnnotations" as oop
    rectangle "Libraries,\nCollections,\nLambda, Streams" as libraries
    rectangle "Exceptions,\nThreads, IO" as runtime
-   syntax --> flow --> oop --> libraries --> runtime
+   syntax --> flow
+   flow --> oop
+   oop --> libraries
+   libraries --> runtime
    @enduml
 
 That roadmap is useful when you are skimming the book: the early chapters establish the language itself, the middle chapters focus on modeling and abstraction, and the later chapters show how Java code behaves in larger, real programs.

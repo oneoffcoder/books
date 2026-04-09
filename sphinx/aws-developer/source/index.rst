@@ -50,7 +50,9 @@ The diagram below gives a compact view of the service path covered here: start w
    rectangle "EC2" as ec2
    rectangle "Storage" as storage
    rectangle "Database" as database
-   intro --> ec2 --> storage --> database
+   intro --> ec2
+   ec2 --> storage
+   storage --> database
    @enduml
 
 The sequence is intentionally simple because the book itself is a focused overview rather than a service catalog. It gives readers a practical order for assembling a basic AWS-backed application stack.

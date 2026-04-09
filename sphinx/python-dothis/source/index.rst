@@ -55,7 +55,11 @@ The diagram below shows the overall shape of the book: it starts with everyday c
    rectangle "Dictionaries,\nData, Files,\nExceptions" as data
    rectangle "Classes and Misc" as classes
    rectangle "Modern Python\n3.9-3.13" as modern
-   basics --> iteration --> structure --> data --> classes --> modern
+   basics --> iteration
+   iteration --> structure
+   structure --> data
+   data --> classes
+   classes --> modern
    @enduml
 
 That flow mirrors the intent of the book: sharpen judgment on common review comments first, then apply the same "do this, not that" mindset to more specialized and version-dependent features.
