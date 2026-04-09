@@ -4,7 +4,7 @@ Filtering a list
 .. highlight:: python
    :linenothreshold: 1
 
-Use a for comprehension to filter out values, not a for loop.
+Use a comprehension to filter values instead of building the list with a loop.
 
 Don't do this
 ^^^^^^^^^^^^^

@@ -1,2 +1,5 @@
+.venv/
 build/
-.DS_Store
+dist/
+*.doctree
+

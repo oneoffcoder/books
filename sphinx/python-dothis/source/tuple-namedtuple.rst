@@ -4,7 +4,7 @@ Avoid accessing tuple elements by index
 .. highlight:: python
    :linenothreshold: 1
 
-The key here is to avoid accessing tuples by indicies since those indicies are meaningless. Instead, use namedtuple and access elements of the tuple by a meaningful name.
+Avoid accessing tuple elements by index when the positions have semantic meaning. Use ``namedtuple`` so the fields can be accessed by name.
 
 Don't do this
 ^^^^^^^^^^^^^

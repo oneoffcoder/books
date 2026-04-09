@@ -4,7 +4,7 @@ Default dictionary values: defaultdict
 .. highlight:: python
    :linenothreshold: 1
 
-The key is to avoid checking to see if a key exists in the dictionary, and if not, then initialize its associated value. The use of defaultdict will initialize a value associated with a key that does not yet exists upon first access. Check out `itertools` too.
+Avoid checking whether a key exists before initializing its value. ``defaultdict`` creates the default value for a missing key on first access. ``itertools.groupby`` can also help in some grouping cases.
 
 Don't do this
 ^^^^^^^^^^^^^

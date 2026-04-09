@@ -30,4 +30,4 @@ Do this
 
     symbols = ['A', 'B', 'C', 'D']
 
-    combs = (comb for comb in combinations(symbols, 2) if comb[0] != comb[1])
+    combs = list(combinations(symbols, 2))

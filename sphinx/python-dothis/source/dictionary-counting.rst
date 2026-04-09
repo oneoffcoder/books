@@ -4,7 +4,7 @@ Using a dictionary to store counts
 .. highlight:: python
    :linenothreshold: 1
 
-Like defaultdict, Counter initialize values associated with keys to 0. Note how we get rid of checking to see if a key entry exists?
+Like ``defaultdict``, ``Counter`` initializes missing counts to zero. That lets you avoid checking whether a key already exists.
 
 Don't do this
 ^^^^^^^^^^^^^
@@ -24,6 +24,8 @@ Do this
 ^^^^^^^
 
 .. code:: python
+
+    from collections import defaultdict
 
     names = ['john', 'jane', 'jeremy', 'janice', 'joyce', 'jonathan']
 

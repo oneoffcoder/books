@@ -4,7 +4,7 @@ Don't repeat yourself (DRY)
 .. highlight:: python
    :linenothreshold: 1
 
-It's easier to do `'-'*15` to produce 15 consecutive dashes, than to type them all out.
+It is easier to write ``'-' * 15`` to produce 15 consecutive dashes than to type them out manually.
 
 Don't do this
 ^^^^^^^^^^^^^

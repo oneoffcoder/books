@@ -4,7 +4,7 @@ Merging dictionaries
 .. highlight:: python
    :linenothreshold: 1
 
-Avoid explicit iterations when merging two dictionaries.
+Avoid explicit loops when merging two dictionaries.
 
 Don't do this
 ^^^^^^^^^^^^^

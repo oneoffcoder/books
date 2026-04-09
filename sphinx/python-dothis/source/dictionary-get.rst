@@ -4,7 +4,7 @@ Accessing a dictionary value with a default value
 .. highlight:: python
    :linenothreshold: 1
 
-Use the dictionary `.get` method with a supplied default value.
+Use ``dict.get`` when the missing-key case should fall back to a default value.
 
 Don't do this
 ^^^^^^^^^^^^^
@@ -33,7 +33,8 @@ Do this
 .. code:: python
 
     d = {
-        'username': 'jdoe'
+        'username': 'jdoe',
+        'theme': 'dark',
     }
 
-    is_authorized = d.get('auth_token', False)
+    theme = d.get('theme', 'light')

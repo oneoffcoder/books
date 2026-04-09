@@ -4,7 +4,7 @@ String reversal
 .. highlight:: python
    :linenothreshold: 1
 
-Use ``string indexing`` to reverse a string, not a for loop or for-comprehension.
+Use slicing to reverse a string instead of building it character by character.
 
 Don't do this
 ^^^^^^^^^^^^^
@@ -17,7 +17,7 @@ Don't do this
 Do this
 ^^^^^^^
 
-Use slicing to reverse a string. The first number is the start index, the second number is the stop index and the last number is the skip. Since we are starting and stopping at the start and stop index, those values are omitted. The skip is -1 which forces the skip to go backwards.
+Use slicing to reverse a string. The first number is the start index, the second is the stop index, and the last is the step. Here, the start and stop values are omitted, and the step is ``-1``, which moves backward through the string.
 
 .. code:: python
 

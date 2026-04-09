@@ -4,7 +4,7 @@ Chained comparison operators
 .. highlight:: python
    :linenothreshold: 1
 
-Some chained comparisons, like the one below, should be avoided. Notice the use of `and`?
+Avoid splitting simple chained comparisons with ``and`` when Python can express them directly.
 
 Don't do this
 ^^^^^^^^^^^^^

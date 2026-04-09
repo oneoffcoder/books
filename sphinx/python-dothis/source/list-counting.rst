@@ -4,7 +4,7 @@ Most frequent item in list
 .. highlight:: python
    :linenothreshold: 1
 
-Use ``max`` with ``set`` to find the most frequent item in a list.
+Use ``Counter`` when you need frequencies. It is clearer and scales better than repeatedly calling ``list.count``.
 
 Don't do this
 ^^^^^^^^^^^^^
@@ -29,5 +29,7 @@ Do this
 
 .. code:: python
 
+    from collections import Counter
+
     nums = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
-    num = max(set(nums), key=nums.count)
+    num, freq = Counter(nums).most_common(1)[0]

@@ -4,7 +4,7 @@ Looping over a collection
 .. highlight:: python
    :linenothreshold: 1
 
-Avoid using an index to access your elements in the array.
+Avoid using an index just to access elements in a collection.
 
 Don't do this
 ^^^^^^^^^^^^^

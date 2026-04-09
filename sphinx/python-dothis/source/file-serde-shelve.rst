@@ -4,7 +4,7 @@ Saving objects to file
 .. highlight:: python
    :linenothreshold: 1
 
-In the example below, although pickle is a great way to save objects, shelve is an alternative to saving multiple data/objects into a central location.
+In the example below, ``shelve`` is shown as an alternative for storing multiple objects in one place.
 
 Don't do this
 ^^^^^^^^^^^^^

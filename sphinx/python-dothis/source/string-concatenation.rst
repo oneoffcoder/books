@@ -4,7 +4,7 @@ String concatenation
 .. highlight:: python
    :linenothreshold: 1
 
-The key here is to avoid writing too much code just to concatenate a string. In the discouraged approach, note how we have to add logic to append a comma `,`? In the encourage approach, the for loop is gone and there is no more need for when to add a comma.
+Avoid writing extra control flow just to concatenate strings. In the first approach, you need extra logic to place commas correctly. In the second, ``join`` expresses the intent directly.
 
 Don't do this
 ^^^^^^^^^^^^^

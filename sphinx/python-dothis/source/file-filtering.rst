@@ -4,7 +4,7 @@ Filtering files
 .. highlight:: python
    :linenothreshold: 1
 
-We are able to filter strings more concisely with fnmatch. Notice the second example uses a method, two for loops and an if statement?
+``fnmatch`` can express simple filename filtering more concisely. Notice how the second example uses a helper function, nested loops, and an ``if`` statement.
 
 Don't do this
 ^^^^^^^^^^^^^

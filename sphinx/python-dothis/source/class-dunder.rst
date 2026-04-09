@@ -4,7 +4,7 @@ Classes and dunders (double underscores)
 .. highlight:: python
    :linenothreshold: 1
 
-Exploit dunders when doing object-oriented programming in Python. In particular, override the __str__ dunder to enable a printer friendly representation of the object.
+Use dunder methods when they improve how objects behave. In particular, override ``__str__`` to provide a printer-friendly representation of an object.
 
 Don't do this
 ^^^^^^^^^^^^^

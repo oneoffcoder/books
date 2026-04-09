@@ -4,15 +4,14 @@ Lambdas
 .. highlight:: python
    :linenothreshold: 1
 
-If you have one-liner functions, avoid using function declaration with def. Instead, use lambda.
+Use ``lambda`` for short throwaway callables passed inline to another function. If the function deserves a name, prefer ``def``.
 
 Don't do this
 ^^^^^^^^^^^^^
 
 .. code:: python
 
-    def add_one(x):
-        return x + 1
+    add_one = lambda x: x + 1
 
     add_one(3)
 
@@ -21,6 +20,14 @@ Do this
 
 .. code:: python
 
-    add_one = lambda x: x + 1
+    def add_one(x):
+        return x + 1
 
     add_one(3)
+
+.. code:: python
+
+    numbers = ['10', '2', '1']
+    numbers = sorted(numbers, key=lambda value: int(value))
+
+    print(numbers)

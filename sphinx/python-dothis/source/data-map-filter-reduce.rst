@@ -4,7 +4,7 @@ Transforming data with map, filter, reduce
 .. highlight:: python
    :linenothreshold: 1
 
-Favor `map`, `filter`, and `reduce` to transform data. Your code will be more concise and better understood, as well as faster.
+In Python, comprehensions and generator expressions are usually easier to read than chaining ``map``, ``filter``, and ``reduce``. Reach for the functional tools when they are clearly the best fit, not by default.
 
 Don't do this
 ^^^^^^^^^^^^^
@@ -31,10 +31,6 @@ Do this
 
 .. code:: python
 
-    from functools import reduce
-
     data = [i for i in range(10000000)]
 
-    x = map(lambda val: val * 2, data)
-    y = filter(lambda val: val % 2 == 0, x)
-    z = reduce(lambda val1, val2: val1 + val2, y)
+    z = sum(val * 2 for val in data if (val * 2) % 2 == 0)

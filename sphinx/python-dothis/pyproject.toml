@@ -1,0 +1,31 @@
+[project]
+name = "python-dothis"
+version = "0.1.0"
+description = "Sphinx source for the Python: Do This, Not That! book."
+requires-python = ">=3.11"
+dependencies = [
+    "sphinx>=8.2,<9",
+    "sphinx-rtd-theme>=3.0.2,<4",
+    "sphinx-autobuild>=2024.10.3",
+    "sphinx-sitemap>=2.6.0",
+    "sphinxcontrib-bibtex>=2.6.5",
+]
+
+[dependency-groups]
+dev = [
+    "codespell>=2.4.1",
+    "ruff>=0.11.8",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.codespell]
+skip = "*.png,*.ico,build,_build,.venv"

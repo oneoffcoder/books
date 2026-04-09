@@ -4,7 +4,7 @@ Set comprehension
 .. highlight:: python
    :linenothreshold: 1
 
-Set comprehension avoids for loops.
+Set comprehensions are a concise way to build sets from iterables.
 
 Don't do this
 ^^^^^^^^^^^^^

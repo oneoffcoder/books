@@ -4,7 +4,7 @@ Looping backward
 .. highlight:: python
    :linenothreshold: 1
 
-The key here is to avoid the awkward -1 values and nested functions (look at how many parenthesis pairs are involved). Use reverse to make your code more elegant.
+Avoid awkward ``-1`` bounds when iterating backward. Use ``reversed`` to make the code clearer.
 
 Don't do this
 ^^^^^^^^^^^^^

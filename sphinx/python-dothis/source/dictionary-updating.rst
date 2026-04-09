@@ -4,7 +4,7 @@ Updating dictionaries
 .. highlight:: python
    :linenothreshold: 1
 
-The key is to avoid copying and updating dictionaries just to override values. ChainMap will take care of this concern. Notice how the discouraged approached copies d1 then updates with d2, while ChainMap starts with d2 followed by d1. This part of the ChainMap is awkward.
+Avoid copying and updating dictionaries just to override values. ``ChainMap`` can layer mappings without creating a merged copy, though the lookup order can be less obvious than a plain dictionary.
 
 Don't do this
 ^^^^^^^^^^^^^

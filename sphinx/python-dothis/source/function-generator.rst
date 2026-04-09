@@ -4,7 +4,7 @@ Generator functions
 .. highlight:: python
    :linenothreshold: 1
 
-Avoid generating large number of values or objects as they may take up memory. Use yield inside a function to generate values or objects as needed. Functions generating collections using yield are more space efficient and faster.
+Avoid materializing large collections when you only need to iterate over them. Use ``yield`` to generate values on demand. Generator functions are often more memory-efficient.
 
 Don't do this
 ^^^^^^^^^^^^^

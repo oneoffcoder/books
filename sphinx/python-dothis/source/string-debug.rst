@@ -4,7 +4,7 @@ String debug
 .. highlight:: python
    :linenothreshold: 1
 
-When debugging with f-string, be more concise.
+When debugging with f-strings, use the built-in debug format to be more concise.
 
 Don't do this
 ^^^^^^^^^^^^^

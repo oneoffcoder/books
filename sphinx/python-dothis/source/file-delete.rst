@@ -4,7 +4,7 @@ Deleting a file
 .. highlight:: python
    :linenothreshold: 1
 
-The key here is to avoid the try/except code and favor a context manager approach.
+If missing files are acceptable, ``contextlib.suppress`` keeps the intent clear.
 
 Don't do this
 ^^^^^^^^^^^^^
@@ -23,6 +23,7 @@ Do this
 
 .. code:: python
 
+    import os
     from contextlib import suppress
 
     with suppress(OSError):

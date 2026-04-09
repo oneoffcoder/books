@@ -4,7 +4,7 @@ Enumerations
 .. highlight:: python
    :linenothreshold: 1
 
-If you are working with enumerations, use the enum package. In the example below, we have students who may be part, half or full time. If we simply declared these states with normal variables, they may be overwritten and there will be no context. On the other hand, if we use IntEnum, once declared, these states are immutable and provide context.
+If you are working with enumerations, use the ``enum`` module. In the example below, students may be part-time, half-time, or full-time. If you declare these states as plain variables, they can be overwritten and provide little context. ``IntEnum`` makes the intent explicit and keeps the values grouped under a meaningful type.
 
 Don't do this
 ^^^^^^^^^^^^^

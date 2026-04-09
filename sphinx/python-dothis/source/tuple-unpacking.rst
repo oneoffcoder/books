@@ -4,7 +4,7 @@ Unpacking sequences and tuples
 .. highlight:: python
    :linenothreshold: 1
 
-The key is to avoid long code that breaks up the coherent intention. In the discouraged approach, we receive a tuple, and store it in s and then for each element in s, use a different line to access the values. In the encouraged approach, the tuple is unpacked neatly into one line.
+Avoid stretching simple unpacking across multiple lines. In the first approach, a tuple is stored and then indexed repeatedly. In the second, the tuple is unpacked directly in one line.
 
 Don't do this
 ^^^^^^^^^^^^^

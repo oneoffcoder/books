@@ -4,7 +4,7 @@ Clarify function calls with keyword arguments
 .. highlight:: python
    :linenothreshold: 1
 
-When passing in values/arguments to a method, try to associate the values with the argument names.
+When passing values to a function, prefer keyword arguments when they make the call clearer.
 
 Don't do this
 ^^^^^^^^^^^^^

@@ -4,7 +4,7 @@ Flattening data
 .. highlight:: python
    :linenothreshold: 1
 
-Here, we need to flatten an array of arrays into one array. Notice that the second discouraged approach is actually the fastest (faster than the encouraged approaches)? The setup with the `x` array and use of a for loop spans 3 lines. This example appears controversial with trading off idiomatic Python for speed.
+Here, we want to flatten a list of lists into one sequence. Prefer the approach that best balances readability and performance for your case.
 
 Don't do this
 ^^^^^^^^^^^^^

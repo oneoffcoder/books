@@ -25,31 +25,34 @@ Python: Do This, Not That!
 Preface
 =======
 
-This book shows how to write beautiful, idiomatic Python code with simple, effective examples. There are no long explanations, but the intention is to **show** and **demonstrate** preferred ways of writing code in Python. As such, the intended audience is for intermediate Python programmers looking to improve ways to write and express their code in a readable way while still preserving computational efficiency and effectiveness. 
+This book is a compact guide to writing clear, idiomatic Python. Each chapter uses a small example to contrast a clumsy approach with a cleaner one, with an emphasis on readability first and performance second.
 
-Under each major section, you will see two sub-sections: ``Don't Do This`` and ``Do This``. Code under ``Don't Do This`` are discouraged, and following the adjective of |JeffKnupp_Link| :cite:`JeKn19`, are harmful. Code under ``Do This`` are the encouraged, beautiful and idiomatic Pythonic way to write the code instead. All examples are geared for Python 3 (specifically, v3.7) and higher (though a lot of examples may work for Python 2).
+The intended audience is Python developers who already know the language basics and want sharper instincts for everyday code review decisions. The examples are deliberately short, but the underlying goal is practical: write code that is easier to read, easier to change, and less error-prone.
 
-Ideas and code examples are borrowed from :cite:`RaHe19b,JeKn19,YaKh19`.
+Under each major section, you will see two sub-sections: ``Don't Do This`` and ``Do This``. Treat them as rules of thumb, not absolute laws. Python is full of tradeoffs, and the "better" choice depends on context. In this edition, the examples target modern Python 3 and favor current best practices over historical Python 2 compatibility.
 
-To follow along and execute the code samples, you will need `Docker <https://www.docker.com/>`_ installed. The Docker container is located on `Docker Hub <https://hub.docker.com/r/oneoffcoder/book-python-dothis>`_. After you have installed Docker, you may run the container as follows.
+Ideas and code examples are adapted from :cite:`RaHe19b,JeKn19,YaKh19` and from the wider Python community.
+
+To follow along, you only need a recent Python 3 installation and a way to run short scripts or a REPL. A virtual environment is recommended.
 
 .. code-block:: bash
 
-   docker run -it \
-    -p 8888:8888 \
-    oneoffcoder/book-python-dothis
+   python3 -m venv .venv
+   source .venv/bin/activate
 
-Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
+You can then paste the snippets into ``python`` or save them to small files as you work through the chapters.
 
 .. |JeffKnupp_Link| raw:: html
 
    <a href="https://jeffknupp.com/writing-idiomatic-python-ebook/" target="_blank">Jeff Knupp</a>
 
 
+The chapters are grouped into core patterns first, followed by patterns that depend on newer Python versions.
+
 .. toctree::
    :maxdepth: 1
    :numbered:
-   :caption: Contents
+   :caption: Core Patterns
 
    collection-initialization
    basic-chained-comparison
@@ -60,9 +63,26 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    looping-collection
    looping-collection-indices
    looping-two-collections
+   looping-enumerate-start
    list-generator
    list-filtering
+   list-count-if
    list-counting
+   basic-any-all
+   basic-none-comparison
+   tuple-unpacking
+   tuple-ignoring
+   tuple-namedtuple
+   string-concatenation
+   string-interpolation
+   context-suppress
+   string-debug
+   string-dry
+   string-reversal
+   string-remove-prefix-suffix
+   function-clarification
+   function-lambda
+   function-generator
    dictionary-defaultdict
    dictionary-get
    dictionary-updating
@@ -70,20 +90,6 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    dictionary-counting
    dictionary-comprehension
    set-comprehension
-   tuple-unpacking
-   tuple-ignoring
-   tuple-namedtuple
-   string-concatenation
-   string-interpolation
-   string-debug
-   string-dry
-   string-reversal
-   function-clarification
-   function-lambda
-   function-generator
-   class-new-vs-old
-   class-dunder
-   class-enumeration
    data-map-filter-reduce
    data-flattening
    data-caching
@@ -91,11 +97,49 @@ Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ runnin
    file-delete
    file-filtering
    file-serde-shelve
+   iter-next-default
+   collection-deque-queue
+   iter-heapq-topn
    iter-combination
    iter-cycling
    iter-product
+   pathlib-over-os-path
+   exception-reraise
+   class-dunder
+   class-enumeration
+   class-dataclass-default-factory
+   context-nullcontext
    misc-simultaneous-state-updates
    misc-pandas
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+   :caption: Version-Specific Patterns
+
+   class-new-vs-old
+   looping-zip-strict
+   class-dataclass-slots
+   class-strenum
+   basic-pattern-matching
+   data-functools-cache
+   pathlib-walk
+   pathlib-glob-case-sensitive
+   typing-type-statement
+   typing-override
+   typing-self
+   iter-batched
+   file-tomllib
+   asyncio-taskgroup
+   exception-add-note
+   exception-except-star
+   data-copy-replace
+   queue-shutdown
+   concurrent-interpreterpoolexecutor
+   concurrent-interpreters
+   file-zstd
+   string-template-literals
+   misc-locals-explicit
 
 About
 =====

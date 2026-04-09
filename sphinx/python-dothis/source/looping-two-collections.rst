@@ -4,7 +4,7 @@ Looping over two collections
 .. highlight:: python
    :linenothreshold: 1
 
-The key is to avoid accessing elements by indicies and also managing the concern of which list is smaller than which. Use `zip` to iterate over the two lists; the iteration will only go until the end of the shorter list.
+Avoid accessing elements by indices and manually managing which list is shorter. Use ``zip`` to iterate over both collections, stopping at the end of the shorter one.
 
 Don't do this
 ^^^^^^^^^^^^^

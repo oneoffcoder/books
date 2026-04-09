@@ -4,7 +4,7 @@ Looping over a collection with indices
 .. highlight:: python
    :linenothreshold: 1
 
-The key here is to use enumerate which will return the index with the element.
+Use ``enumerate`` when you need both the index and the element.
 
 Don't do this
 ^^^^^^^^^^^^^
