@@ -20,6 +20,7 @@ PYTHON ?= python3
 PARALLEL_JOBS ?=
 PARALLEL_RUNNER := $(PYTHON) tools/parallel_make.py
 
+.NOTPARALLEL:
 .PHONY: clean build
 
 clean:

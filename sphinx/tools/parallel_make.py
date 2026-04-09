@@ -75,6 +75,7 @@ def normalize_projects(projects: Iterable[str], root: Path) -> list[str]:
 def run_project(root: Path, logs_dir: Path, project: str, target: str) -> Result:
     project_dir = root / project
     log_path = logs_dir / f"{project}-{target}.log"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
     command = ["make", "-C", project, target]
     proc = subprocess.run(
         command,
@@ -126,7 +127,7 @@ def summarize(results: list[Result], tail_count: int) -> None:
 def main() -> int:
     args = parse_args()
     root = Path(__file__).resolve().parent.parent
-    logs_dir = (root / args.logs_dir).resolve()
+    logs_dir = (root / args.logs_dir / args.target).resolve()
     logs_dir.mkdir(parents=True, exist_ok=True)
 
     try:
