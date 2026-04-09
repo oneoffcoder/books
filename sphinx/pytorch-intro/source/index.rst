@@ -87,17 +87,39 @@ That ordering mirrors real PyTorch work: understand tensors first, then build th
    learning
    training-recipe
    debug-training
-   performance
+   ragged-sequences
+   multi-task-learning
 
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Models and Operations
+   :caption: Performance and Scaling
+
+   performance
+   profiling
+   compiled-models
+   distributed-training
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Models, Persistence, and Deployment
 
    model
    model-persistence
    checkpoint-resume
    model-zoo
+   custom-autograd
+   quantization
+   export-and-deploy
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Evaluation and Reliability
+
+   calibration-and-metrics
+   reproducibility
 
 .. toctree::
    :maxdepth: 2
