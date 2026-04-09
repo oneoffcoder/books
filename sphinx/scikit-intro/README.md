@@ -1,6 +1,8 @@
-# R, No Tears
+# Scikit, No Tears
 
-This directory contains the Sphinx source for the `R, No Tears` book.
+This directory contains the Sphinx source for the `Scikit, No Tears` book.
+
+The book is primarily notebook-backed and covers classical machine learning workflows, visualization, preprocessing, and ecosystem tooling.
 
 ## Requirements
 
@@ -14,8 +16,6 @@ Install the project dependencies and create the local virtual environment:
 ```bash
 make sync
 ```
-
-This uses `uv` and creates a local `.venv` automatically.
 
 ## Common Commands
 
@@ -37,42 +37,11 @@ Start the live-reloading docs development server:
 make live
 ```
 
-Build the minimal Docker image used for notebook execution:
-
-```bash
-make docker-build
-```
-
-Execute all `r-intro` notebooks end-to-end inside Docker:
-
-```bash
-make docker-notebooks
-```
-
-Run a single notebook while debugging:
-
-```bash
-make docker-notebooks NOTEBOOKS=classification.ipynb
-```
-
-Executed notebooks are written to:
-
-```text
-build/executed-notebooks
-```
-
 Run formatting and lint checks:
 
 ```bash
 make format
 make lint
-```
-
-Normalize notebook JSON formatting:
-
-```bash
-make notebook-format
-make notebook-check
 ```
 
 Check external links:
@@ -105,6 +74,4 @@ build/html
 
 - `pyproject.toml`: Python dependencies and tool configuration
 - `Makefile`: primary developer entrypoint
-- `tools/`: local docs maintenance scripts
-- `source/`: Sphinx content and configuration
-- `uv.lock`: locked dependency set for reproducible local installs
+- `source/`: notebook-backed chapters and supporting files

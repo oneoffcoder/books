@@ -75,3 +75,4 @@ build/html
 - `pyproject.toml`: Python dependencies and tool configuration
 - `Makefile`: primary developer entrypoint
 - `source/`: Sphinx content and configuration
+- `uv.lock`: locked dependency set for reproducible local installs

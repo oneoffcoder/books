@@ -71,3 +71,10 @@ The generated HTML site is written to:
 ```text
 build/html
 ```
+
+## Project Files
+
+- `pyproject.toml`: Python dependencies and tool configuration
+- `Makefile`: primary developer entrypoint
+- `source/`: Sphinx chapters, examples, and supporting assets
+- `uv.lock`: locked dependency set for reproducible local installs
