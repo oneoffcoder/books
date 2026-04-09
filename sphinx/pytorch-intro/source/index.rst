@@ -67,13 +67,18 @@ That ordering mirrors real PyTorch work: understand tensors first, then build th
    tensor
    autograd
    data
+   datasets-and-caching
    transformation
    loss
    optimizer
    scheduler
    model
    model-persistence
+   checkpoint-resume
    learning
+   training-recipe
+   debug-training
+   performance
    rnn
    gan
    neural-transfer
