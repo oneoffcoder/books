@@ -87,6 +87,8 @@ That ordering mirrors real PyTorch work: understand tensors first, then build th
    scheduler
    learning
    training-recipe
+   early-stopping
+   class-imbalance
    debug-training
    ragged-sequences
    multi-task-learning
@@ -112,10 +114,12 @@ That ordering mirrors real PyTorch work: understand tensors first, then build th
    checkpoint-resume
    model-zoo
    parameter-efficient-finetuning
+   fine-tuning-patterns
    custom-autograd
    quantization
    export-and-deploy
    serving-api
+   inference-batching
 
 .. toctree::
    :maxdepth: 2
@@ -123,6 +127,7 @@ That ordering mirrors real PyTorch work: understand tensors first, then build th
    :caption: Evaluation and Reliability
 
    calibration-and-metrics
+   experiment-tracking
    uncertainty
    reproducibility
    testing-pytorch-code
