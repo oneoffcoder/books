@@ -77,7 +77,6 @@ html_theme_options = {
     'canonical_url': 'https://aws.oneoffcoder.com/',
     'analytics_id': 'UA-153553865-1',
     'logo_only': False,
-    'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': True,
     'style_nav_header_background': '#003594',
@@ -89,7 +88,7 @@ html_theme_options = {
     'titles_only': False
 }
 
-mathjax_config = {
+mathjax3_config = {
     'TeX': {'equationNumbers': {'autoNumber': 'AMS', 'useLabelIds': True}},
 }
 

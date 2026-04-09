@@ -44,15 +44,30 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = [
-    '_build', 
-    '**.ipynb_checkpoints', 
+    '_build',
+    '**.ipynb_checkpoints',
     '**/.ipynb_checkpoints',
     '**/output',
     '_*.ipynb',
+    'Untitled.ipynb',
+    'Untitled1.ipynb',
+    'Untitled2.ipynb',
+    'Untitled3.ipynb',
+    'arima.ipynb',
+    'calibration.ipynb',
+    'doubleml-causal-effects.ipynb',
+    'dynamic-pricing.ipynb',
+    'flatten-probabilities.ipynb',
+    'covid/*.ipynb',
+    'nba/*.ipynb',
+    'nfl/*.ipynb',
+    'staging/*.ipynb',
     'shapes/',
-    '**/shapes'
-    'faces/', '**/faces',
-    'faces-small/', '**/faces-small'
+    '**/shapes',
+    'faces/',
+    '**/faces',
+    'faces-small/',
+    '**/faces-small',
 ]
 html_extra_path = ['robots.txt']
 
@@ -80,7 +95,6 @@ html_theme_options = {
     'canonical_url': 'https://datascience.oneoffcoder.com/',
     'analytics_id': 'UA-151656551-1',  #  Provided by Google in your dashboard
     'logo_only': False,
-    'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': True,
     'style_nav_header_background': '#D50A0A',
@@ -92,6 +106,6 @@ html_theme_options = {
     'titles_only': False
 }
 
-mathjax_config = {
+mathjax3_config = {
     'TeX': {'equationNumbers': {'autoNumber': 'AMS', 'useLabelIds': True}},
 }

@@ -44,7 +44,12 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', '**.ipynb_checkpoints']
+exclude_patterns = [
+    '_build',
+    '**.ipynb_checkpoints',
+    '_model_transform.ipynb',
+    'autoviz.ipynb',
+]
 source_suffix = '.rst'
 html_extra_path = ['robots.txt']
 
@@ -71,7 +76,6 @@ html_theme_options = {
     'canonical_url': 'https://learn-scikit.oneoffcoder.com/',
     'analytics_id': 'UA-150760969-1',  #  Provided by Google in your dashboard
     'logo_only': False,
-    'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': True,
     'style_nav_header_background': '#FF3C00',
@@ -83,6 +87,6 @@ html_theme_options = {
     'titles_only': False
 }
 
-mathjax_config = {
+mathjax3_config = {
     'TeX': {'equationNumbers': {'autoNumber': 'AMS', 'useLabelIds': True}},
 }

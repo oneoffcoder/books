@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Sphinx source for the datascience book."
 requires-python = ">=3.11"
 dependencies = [
+    "ipywidgets>=8.1.7",
     "nbsphinx>=0.9.7",
     "sphinx>=8.2,<9",
     "sphinx-rtd-theme>=3.0.2,<4",

@@ -67,7 +67,6 @@ html_theme_options = {
     'canonical_url': 'https://learn-java.oneoffcoder.com/',
     'analytics_id': 'UA-150715122-1',  #  Provided by Google in your dashboard
     'logo_only': False,
-    'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': True,
     'style_nav_header_background': '#008853',
