@@ -8,7 +8,7 @@ How do we modify the states and behavior of our containers and the applications 
 Flask
 -----
 
-The Flask application ``app.py`` can acquire environment variables through the ``os`` package. We can supply the key and a default value when attempting to acquire an environment variable ``os.getenv(KEY, DEFAULT_VALUE)``. In this application, we get database connection parameters from the environment, and if we fail, we fallback to the application configuration. When specifying on which port the Flask application will run, we do not use the application configuration, rather, we set a default value of ``5000`` in the case that the environment variable corresponding to this value does not exists.
+The Flask application ``app.py`` can acquire environment variables through the ``os`` package. We can supply the key and a default value when attempting to acquire an environment variable ``os.getenv(KEY, DEFAULT_VALUE)``. In this application, we get database connection parameters from the environment, and if we fail, we fall back to the application configuration. When specifying on which port the Flask application will run, we do not use the application configuration; rather, we set a default value of ``5000`` in the case that the environment variable corresponding to this value does not exist.
 
 .. literalinclude:: _static/code/runtime/flask/rest-app/app.py
    :language: python
@@ -215,7 +215,7 @@ This ``nginx.ini`` file specifies the ``nginx`` service for ``supervisor``.
    :language: ini
    :linenos:
 
-This is the ``Dockerfile``. In the container, we copy over the ``*.ini`` and ``*.py`` files. Additionaly, install the ``supervisor`` service to help us do multiple things; namely, perform the string substitution with Python and then run ``nginx``.
+This is the ``Dockerfile``. In the container, we copy over the ``*.ini`` and ``*.py`` files. Additionally, we install the ``supervisor`` service to help us do multiple things; namely, perform the string substitution with Python and then run ``nginx``.
 
 .. literalinclude:: _static/code/runtime/ng/Dockerfile
    :language: docker

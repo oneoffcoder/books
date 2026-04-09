@@ -4,7 +4,7 @@ Quickstart
 Dockerfile
 ----------
 
-All ``docker`` containers are defined through a ``Dockerfile``. A ``Dockerfile`` has a set of predefined ``instructions`` or ``directives`` that declares how the container should be built, its state, as well as its runtime behavior. The `official Dockerfile reference <https://docs.docker.com/engine/reference/builder/>`_ is avaible. The most important instruction is ``FROM``, which defines which ``base image container`` your container will be based. Below, we the base image is ``busybox``. The ``LABEL`` instruction specifies ``metadata`` in a ``key-value`` pair way for the container.
+All ``docker`` containers are defined through a ``Dockerfile``. A ``Dockerfile`` has a set of predefined ``instructions`` or ``directives`` that declares how the container should be built, its state, as well as its runtime behavior. The `official Dockerfile reference <https://docs.docker.com/engine/reference/builder/>`_ is available. The most important instruction is ``FROM``, which defines which ``base image container`` your container will be based on. Below, the base image is ``busybox``. The ``LABEL`` instruction specifies ``metadata`` in a ``key-value`` pair format for the container.
 
 .. literalinclude:: _static/code/quickstart/Dockerfile
    :language: docker
@@ -194,10 +194,10 @@ You should get an output like the following.
     node                                     Node.js is a JavaScript-based platform for s…   8130                [OK]                
     tomcat                                   Apache Tomcat is an open source implementati…   2564                [OK]                
     openjdk                                  OpenJDK is an open-source implementation of …   1998                [OK]                
-    java                                     Java is a concurrent, class-based, and objec…   1976                [OK]                
+    java                                     Java is a concurrent, class-based, and object…   1976                [OK]                
     ghost                                    Ghost is a free and open source blogging pla…   1062                [OK]                
     jetty                                    Jetty provides a Web server and javax.servle…   319                 [OK]                
-    groovy                                   Apache Groovy is a multi-faceted language fo…   80                  [OK]                
+    groovy                                   Apache Groovy is a multi-faceted language of…   80                  [OK]                
     lwieske/java-8                           Oracle Java 8 Container - Full + Slim - Base…   45                                      [OK]
     nimmis/java-centos                       This is docker images of CentOS 7 with diffe…   42                                      [OK]
     fabric8/java-jboss-openjdk8-jdk          Fabric8 Java Base Image (JBoss, OpenJDK 8)      28                                      [OK]
@@ -212,7 +212,7 @@ You should get an output like the following.
     cfje/java-test-applications              Java Test Applications CI Image                 1                                       
     buildo/java8-wkhtmltopdf                 Java 8 + wkhtmltopdf                            1                                       [OK]
     dwolla/java                              Dwolla’s custom Java image                      1                                       [OK]
-    jelastic/javaengine                      An image of the Java Engine server maintaine…   0                                       
+    jelastic/javaengine                      An image of the Java Engine server maintained…   0                                       
     cfje/java-buildpack-dependency-builder   Java Buildpack Dependencies Builder Image       0                                       
     cfje/java-buildpack-memory-calculator    Java Buildpack Memory Calculator CI Image       0                                       
     thingswise/java-docker                   Java + dcd                                      0                                       [OK]

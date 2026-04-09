@@ -1,7 +1,7 @@
 Elastic Container Registry
 ==========================
 
-Elastic Container Registry (ECR) is a service from Amazon Web Services (AWS) to host your own docker images. To be able to publish to ECR, you must first login to the AWS console and then go to the ECR section. There, you need to create a docker repository. Afer you have used the AWS console to create an ECR repository, you must login using the AWS CLI as follows.
+Elastic Container Registry (ECR) is a service from Amazon Web Services (AWS) to host your own docker images. To be able to publish to ECR, you must first log in to the AWS console and then go to the ECR section. There, you need to create a docker repository. After you have used the AWS console to create an ECR repository, you must log in using the AWS CLI as follows.
 
 .. code:: bash
 

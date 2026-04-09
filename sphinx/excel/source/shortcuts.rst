@@ -1,7 +1,7 @@
 Shortcuts
 =========
 
-Shortcuts are essential if users wish to be effecient and save time while working in Excel.
+Shortcuts are essential if users wish to be efficient and save time while working in Excel.
 It can be tedious and cumbersome to switch between mouse and keyboard usage performing the
 same tasks over a large set of data. These shortcuts help to mitigate that.
 
@@ -77,7 +77,7 @@ General
    ``Ctrl+V``, Paste content from clipboard
    ``Ctrl+Alt+V``, Display paste special
    ``Ctrl+F``, Display find and replace
-   ``Ctrl+H``, Find with replace selectd
+   ``Ctrl+H``, Find with replace selected
    ``Ctrl+Shift+F4``, Find previous match
    ``Shift+F4``, Find next match
    ``Alt+F1``, Create embedded chart
@@ -205,7 +205,7 @@ Cell format
    ``Ctrl+I``, Apply or remove italic formatting
    ``Ctrl+U``, Apply or remove underscoring
    ``Ctrl+5``, Toggle strikethrough formatting
-   ``Alt+H+A+C``, Aligin center
+   ``Alt+H+A+C``, Align center
    ``Alt+H+A+L``, Align left
    ``Alt+H+A+R``, Align right
    ``Alt+H+6``, Indent

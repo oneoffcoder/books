@@ -202,7 +202,7 @@ Useful notes and commands
 -------------------------
 
 * ``minikube dashboard`` brings up the Kubernetes dashboard
-* ``minikube ssh`` will SSH into the virutal machine
+* ``minikube ssh`` will SSH into the virtual machine
 * ``kubectl get deployment`` gets the deployments in the cluster
 * ``kubectl get events`` gets the events in the cluster
 * ``kubectl get svc`` checks the services created

@@ -154,13 +154,13 @@ If 8 in decimal is represented as ``0000000000001000``, then the bitwise not ``~
      bitwise [label="bitwise operators"];
      not [label="~ flip every bit"];
      orr [label="| either bit is 1"];
-     andd [label="& both bits are 1"];
+     and [label="& both bits are 1"];
      xor [label="^ exactly one bit is 1"];
      lshift [label="<< shift left"];
      rshift [label=">> shift right"];
      bitwise -> not;
      bitwise -> orr;
-     bitwise -> andd;
+     bitwise -> and;
      bitwise -> xor;
      bitwise -> lshift;
      bitwise -> rshift;

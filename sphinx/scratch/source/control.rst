@@ -1,7 +1,7 @@
 Control
 =======
 
-Control code blocks are responsibile for directing the flow of your code and program.
+Control code blocks are responsible for directing the flow of your code and program.
 
 Waiting
 -------
