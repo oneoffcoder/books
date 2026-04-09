@@ -1,58 +1,62 @@
 ![One-Off Coder Logo](../logo.png "One-Off Coder")
 
-# Intro
+# Sphinx Books
 
-A collection of online books for data science, computer science and coding!
+This directory contains the Sphinx-based books in this repository.
 
-# Build
+Most books now follow the same pattern:
 
-Install dependencies.
+- a local `Makefile`
+- a local `pyproject.toml`
+- a local `uv.lock`
+- `uv`-managed Python dependencies
 
-```bash
-pip install \
-    sphinx \
-    sphinx_rtd_theme \
-    sphinxcontrib-bibtex \
-    sphinx-autobuild \
-    sphinxcontrib-blockdiag \
-    sphinx-sitemap \
-    jupyter-sphinx \
-    nbsphinx -U
+Examples include `python-intro`, `python-dothis`, `r-intro`, `datascience`, `scikit-intro`, and the other Sphinx book directories that include a `Makefile`.
 
-conda install -c conda-forge pandoc ipython -y
-```
+# Root Commands
 
-To build.
+From [`sphinx/Makefile`](/Users/super/git/oneoffcoder/books/sphinx/Makefile):
 
 ```bash
-./build.sh
+make clean
+make build
 ```
 
-To clean.
+These fan out across all Sphinx book projects under `sphinx/` that are wired into the root makefile.
+
+# Per-Book Workflow
+
+Change into a specific book directory first.
 
 ```bash
-./clean.sh
+cd sphinx/python-intro
 ```
 
-## Autobuild
+Install or update that book's dependencies:
 
 ```bash
-./autobuild.sh
+env -u VIRTUAL_ENV uv sync
 ```
 
-Then go to 
-* [java](http://localhost:8000)
-* [python](http://localhost:8001)
-* [pytorch](http://localhost:8002)
-* [scikit](http://localhost:8003)
-* [spark](http://localhost:8004)
-* [datascience](http://localhost:8005)
-* [python-dothis](http://localhost:8006)
-* [scratch](http://localhost:8007)
-* [docker](http://localhost:8008)
-
-To kill the `autobuild`.
+Build that book:
 
 ```bash
-./kill-autobuild.sh
+make build
 ```
+
+Clean that book:
+
+```bash
+make clean
+```
+
+For books that support local autobuild:
+
+```bash
+make live
+```
+
+# Notes
+
+- Do not use the old `build.sh`, `clean.sh`, `autobuild.sh`, or `make.bat` workflow. The books have been moved to makefile-driven builds.
+- Some directories under `sphinx/` are not active Sphinx books yet, such as `csharp` and `keras`. They are not part of the root `make build` / `make clean` flow.
