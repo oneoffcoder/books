@@ -9,7 +9,6 @@ dependencies = [
     "sphinx-rtd-theme>=3.0.2,<4",
     "sphinx-autobuild>=2024.10.3",
     "sphinx-sitemap>=2.6.0",
-    "sphinxcontrib-bibtex>=2.6.5",
     "sphinxcontrib-plantuml>=0.30",
 ]
 

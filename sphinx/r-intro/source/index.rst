@@ -39,8 +39,8 @@ you may run the container as follows.
     oneoffcoder/book-r-intro
     
 This Docker container runs `JupyterLab <https://jupyter.org/>`_ on port ``8888``.
-You may access JupyterLab at `http://localhost:8888 <http://localhost:8888>`_ when
-the container is running.
+You may access JupyterLab at ``http://localhost:8888`` when the container is
+running.
 
 The diagram below summarizes the structure of the R book from core language ideas into statistical work, visualization, and applied data science topics.
 
@@ -68,6 +68,7 @@ Read that map as a progression from language fluency into analysis workflows. Th
    :numbered:
    :caption: Core
    
+   getting-started
    data-types
    data-structures
    control-structures
