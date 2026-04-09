@@ -1,7 +1,8 @@
 UV ?= uv
+UV_CMD := env -u VIRTUAL_ENV $(UV)
 DOCKER ?= docker
-SPHINXBUILD ?= $(UV) run sphinx-build
-SPHINXAUTOBUILD ?= $(UV) run sphinx-autobuild
+SPHINXBUILD ?= $(UV_CMD) run sphinx-build
+SPHINXAUTOBUILD ?= $(UV_CMD) run sphinx-autobuild
 SPHINXOPTS ?=
 SOURCEDIR := source
 BUILDDIR := build
@@ -37,22 +38,22 @@ help:
 	@printf "  clean       Remove build artifacts\n"
 
 sync:
-	$(UV) sync
+	$(UV_CMD) sync
 
 install: sync
 
 format:
-	$(UV) run ruff format $(SOURCEDIR)/conf.py tools/spellcheck_docs.py
+	$(UV_CMD) run ruff format $(SOURCEDIR)/conf.py tools/spellcheck_docs.py
 	$(MAKE) notebook-format
 
 spellcheck:
-	$(UV) run python tools/spellcheck_docs.py
+	$(UV_CMD) run python tools/spellcheck_docs.py
 
 notebook-format:
-	$(UV) run python tools/normalize_notebooks.py
+	$(UV_CMD) run python tools/normalize_notebooks.py
 
 notebook-check:
-	$(UV) run python tools/normalize_notebooks.py --check
+	$(UV_CMD) run python tools/normalize_notebooks.py --check
 
 docker-build:
 	$(DOCKER) build -t $(RINTROIMAGE) "$(DOCKERRINTRODIR)"
@@ -62,7 +63,7 @@ docker-notebooks:
 		bash "$(DOCKERRINTRODIR)/execute-notebooks.sh" $(NOTEBOOKS)
 
 lint:
-	$(UV) run ruff check $(SOURCEDIR)/conf.py tools/spellcheck_docs.py
+	$(UV_CMD) run ruff check $(SOURCEDIR)/conf.py tools/spellcheck_docs.py
 	$(MAKE) notebook-check
 	$(MAKE) spellcheck
 
