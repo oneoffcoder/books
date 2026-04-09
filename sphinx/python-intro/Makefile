@@ -1,6 +1,7 @@
 UV ?= uv
-SPHINXBUILD ?= $(UV) run sphinx-build
-SPHINXAUTOBUILD ?= $(UV) run sphinx-autobuild
+UV_CMD := env -u VIRTUAL_ENV $(UV)
+SPHINXBUILD ?= $(UV_CMD) run sphinx-build
+SPHINXAUTOBUILD ?= $(UV_CMD) run sphinx-autobuild
 SPHINXOPTS ?=
 SOURCEDIR := source
 BUILDDIR := build
@@ -27,18 +28,18 @@ help:
 	@printf "  clean       Remove build artifacts\n"
 
 sync:
-	$(UV) sync
+	$(UV_CMD) sync
 
 install: sync
 
 format:
-	$(UV) run ruff format $(SOURCEDIR)/conf.py
+	$(UV_CMD) run ruff format $(SOURCEDIR)/conf.py
 
 spellcheck:
-	$(UV) run codespell $(SOURCEDIR)
+	$(UV_CMD) run codespell $(SOURCEDIR)
 
 lint:
-	$(UV) run ruff check $(SOURCEDIR)/conf.py
+	$(UV_CMD) run ruff check $(SOURCEDIR)/conf.py
 	$(MAKE) spellcheck
 
 build: html
