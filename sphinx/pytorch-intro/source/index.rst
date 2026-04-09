@@ -74,6 +74,7 @@ That ordering mirrors real PyTorch work: understand tensors first, then build th
 
    data
    datasets-and-caching
+   data-pipelines-at-scale
    transformation
 
 .. toctree::
@@ -96,6 +97,7 @@ That ordering mirrors real PyTorch work: understand tensors first, then build th
    :caption: Performance and Scaling
 
    performance
+   memory-optimization
    profiling
    compiled-models
    distributed-training
@@ -109,9 +111,11 @@ That ordering mirrors real PyTorch work: understand tensors first, then build th
    model-persistence
    checkpoint-resume
    model-zoo
+   parameter-efficient-finetuning
    custom-autograd
    quantization
    export-and-deploy
+   serving-api
 
 .. toctree::
    :maxdepth: 2
@@ -119,7 +123,9 @@ That ordering mirrors real PyTorch work: understand tensors first, then build th
    :caption: Evaluation and Reliability
 
    calibration-and-metrics
+   uncertainty
    reproducibility
+   testing-pytorch-code
 
 .. toctree::
    :maxdepth: 2
@@ -141,7 +147,16 @@ That ordering mirrors real PyTorch work: understand tensors first, then build th
    message-passing
    graph-convolution
    graph-classification
+   heterogeneous-graphs
    pytorch-geometric
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Forecasting and Recommendation
+
+   time-series
+   recommendation-systems
 
 .. toctree::
    :maxdepth: 2
