@@ -25,7 +25,11 @@ R, No Tears
 Preface
 =======
 
-This book is a tutorial on programming ``R``. To follow along and execute the code samples, you will need `Docker <https://www.docker.com/>`_ installed. The Docker container is located on `Docker Hub <https://hub.docker.com/r/oneoffcoder/book-r-intro>`_. After you have installed Docker, you may run the container as follows.
+This book is a tutorial on programming ``R``. To follow along and execute the code
+samples, you will need `Docker <https://www.docker.com/>`_ installed. The Docker
+container is located on `Docker Hub
+<https://hub.docker.com/r/oneoffcoder/book-r-intro>`_. After you install Docker,
+you may run the container as follows.
 
 .. code-block:: bash
 
@@ -34,7 +38,9 @@ This book is a tutorial on programming ``R``. To follow along and execute the co
     -v $HOME/git/books/sphinx/r-intro/source:/root/ipynb \
     oneoffcoder/book-r-intro
     
-Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
+This Docker container runs `JupyterLab <https://jupyter.org/>`_ on port ``8888``.
+You may access JupyterLab at `http://localhost:8888 <http://localhost:8888>`_ when
+the container is running.
 
 
 .. toctree::
@@ -93,7 +99,9 @@ About
 .. image:: _static/images/logo.png
    :alt: One-Off Coder logo.
 
-One-Off Coder is an educational, service and product company. Please visit us online to discover how we may help you achieve life-long success in your personal coding career or with your company's business goals and objectives.
+One-Off Coder is an education, services, and product company. Visit us online to
+learn how we may help you achieve lifelong success in your personal coding career
+or with your company's business goals and objectives.
 
 - |Website_Link|
 - |Facebook_Link|
