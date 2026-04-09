@@ -61,25 +61,71 @@ That ordering mirrors real PyTorch work: understand tensors first, then build th
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Contents
+   :caption: Foundations
    
    environment
    tensor
    autograd
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Data
+
    data
    datasets-and-caching
    transformation
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Training
+
    loss
    optimizer
    scheduler
-   model
-   model-persistence
-   checkpoint-resume
    learning
    training-recipe
    debug-training
    performance
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Models and Operations
+
+   model
+   model-persistence
+   checkpoint-resume
+   model-zoo
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Text and Language
+
+   text-data
+   embeddings
+   sequence-classification
+   transformer-language
    rnn
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Graphs
+
+   graph-data
+   message-passing
+   graph-convolution
+   graph-classification
+   pytorch-geometric
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Vision and Generative Models
+
    gan
    neural-transfer
    object-detection
