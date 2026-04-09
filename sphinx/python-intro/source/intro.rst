@@ -5,6 +5,21 @@ Hello, World!
 
 When you start to learn a programming language, the first program you write is typically one that prints ``Hello, world!`` to the terminal (or console). Below is the simplest Python statement that does exactly that.
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+
+   rectangle "print('Hello, world!')" as statement
+   rectangle "print" as function
+   rectangle "'Hello, world!'" as argument
+   rectangle "terminal output" as output
+
+   statement --> function : calls
+   statement --> argument : passes
+   function --> output : writes text
+   @enduml
+
 .. literalinclude:: code/oneoffcoder/intro/helloworld.py
    :language: python
    :linenos:

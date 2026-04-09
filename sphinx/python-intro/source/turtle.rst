@@ -3,6 +3,32 @@ Turtle
 
 ``Turtle`` is part of the Python API used to draw graphics on the screen. The main objects in Turtle are the ``Screen`` and ``Pen``. The Screen is the canvas that is being drawn onto and the Pen is the object that you use to draw. As always, the best way to learn Turtle is to see some examples and start coding your own creations. 
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   class Screen {
+     bgcolor()
+     onkey()
+     listen()
+     exitonclick()
+   }
+
+   class Pen {
+     forward()
+     right()
+     left()
+     penup()
+     pendown()
+     color()
+     dot()
+   }
+
+   Screen --> Pen : provides drawing canvas
+   @enduml
+
 Draw a line
 -----------
 
@@ -164,12 +190,25 @@ Events
 ------
 We may also interact with the turtle through listening for events. In this example, we listen for key events using the screen's ``onkey`` function and call ``listen`` after we have defined all the keys we are listening to. When a user presses
 
-* the up arrow, we move up
-* the down arrow, we move down
-* the left arrow, we move left
-* the right arrow, we move right
-* the ``p`` key, we toggle the pen up and down state
-* the ``q`` key, we quit the program
+.. graphviz::
+
+   digraph turtle_events {
+     rankdir=LR;
+     node [shape=box, style="rounded"];
+     key [label="keyboard event"];
+     up [label="Up\nmove north"];
+     down [label="Down\nmove south"];
+     left [label="Left\nmove west"];
+     right [label="Right\nmove east"];
+     toggle [label="P\ntoggle pen"];
+     quit [label="Q\nquit"];
+     key -> up;
+     key -> down;
+     key -> left;
+     key -> right;
+     key -> toggle;
+     key -> quit;
+   }
 
 We use the pen's ``setheading`` to orient the cursor as appropriate (to the north, south, east or west) before we move.
 

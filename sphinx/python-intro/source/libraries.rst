@@ -5,6 +5,24 @@ Libraries
 
 The built-in Python modules do a lot that you need, but there are many external Application Programming Interfaces (APIs), libraries or modules. We will look at some of these external libraries.
 
+.. graphviz::
+
+   digraph libraries {
+     rankdir=LR;
+     node [shape=box, style="rounded"];
+     pypi [label="PyPI packages"];
+     pip [label="pip install"];
+     pandas [label="pandas\nCSV and tables"];
+     numpy [label="numpy / scipy\nnumerical computing"];
+     sklearn [label="scikit-learn\nmachine learning"];
+     joblib [label="joblib\nparallel work"];
+     pypi -> pip;
+     pip -> pandas;
+     pip -> numpy;
+     pip -> sklearn;
+     pip -> joblib;
+   }
+
 pip
 ---
 

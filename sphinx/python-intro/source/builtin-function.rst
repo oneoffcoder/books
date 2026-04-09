@@ -3,6 +3,22 @@ Built-in Functions and Types
 
 There are many functions and types (data structures) that are built into Python that you should reuse and try to not re-invent yourself. As you progress and study more into Python, you will acquire exposure to ever more utility functions and data structures available. Below are just some samples of what we think will be useful.
 
+.. graphviz::
+
+   digraph builtins {
+     rankdir=LR;
+     node [shape=box, style="rounded"];
+     builtins [label="built-in tools"];
+     types [label="types\nstr int float isinstance"];
+     math [label="math\nsum abs min max round"];
+     collections [label="collections\nlist set tuple dict"];
+     truth [label="truth and size\nall any len sorted reversed"];
+     builtins -> types;
+     builtins -> math;
+     builtins -> collections;
+     builtins -> truth;
+   }
+
 Types
 -----
 
@@ -27,6 +43,23 @@ The function ``type()`` returns the type of a value or variable.
     print(type_b)
 
 The following functions convert data from one type to another.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+
+   object "32" as int_value
+   object "'32'" as str_value
+   object "'32.2'" as float_text
+   object "'32'" as to_str
+   object "32" as to_int
+   object "32.2" as to_float
+
+   int_value --> to_str : str()
+   str_value --> to_int : int()
+   float_text --> to_float : float()
+   @enduml
 
 * ``str()`` converts something into a string
 * ``int()`` converts something to an integer
@@ -164,6 +197,22 @@ Collections
 -----------
 
 The following functions create different collections.
+
+.. graphviz::
+
+   digraph collections {
+     rankdir=LR;
+     node [shape=box, style="rounded"];
+     iterable [label="existing iterable"];
+     list [label="list()"];
+     set [label="set()"];
+     tuple [label="tuple()"];
+     dict [label="dict()"];
+     iterable -> list;
+     iterable -> set;
+     iterable -> tuple;
+     iterable -> dict [label="empty or key/value data"];
+   }
 
 * ``list()`` creates an empty list or converts a collection into a list
 * ``set()`` creates an empty set or converts a collection into a set

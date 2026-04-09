@@ -7,6 +7,23 @@ Functional programming is just a style of programming using functions to transfo
 * ``filter()`` removes an item
 * ``reduce()`` collapses a collection of values into a single one
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+
+   rectangle "input collection" as Input
+   rectangle "map()" as Map
+   rectangle "filter()" as Filter
+   rectangle "reduce()" as Reduce
+   rectangle "single result" as Output
+
+   Input --> Map : transform each item
+   Input --> Filter : keep matching items
+   Input --> Reduce : combine all items
+   Reduce --> Output
+   @enduml
+
 .. note:: 
     Functional programming is said to be describing ``what`` we are doing. The opposite, ``imperative programming``, is said to be describing ``how`` we are doing something. Functional programming may be viewed as ``declarative`` programming, and imperative programming may be viewed as ``procedural`` programming. 
 
@@ -89,6 +106,25 @@ reduce
 ------
 
 The ``reduce()`` function is available through the ``functools`` module. Reduce takes the elements in a collection and collapses them into one final value. Below, we use ``reduce()`` to sum up all the integers in a list.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+
+   object "1" as n1
+   object "2" as n2
+   object "3" as n3
+   object "4" as n4
+   object "5" as n5
+   object "15" as total
+
+   n1 --> n2 : combine
+   n2 --> n3 : combine
+   n3 --> n4 : combine
+   n4 --> n5 : combine
+   n5 --> total : final value
+   @enduml
 
 .. code-block:: python
     :linenos:

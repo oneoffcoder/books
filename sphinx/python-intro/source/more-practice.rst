@@ -23,6 +23,20 @@ The similarity score, :math:`s(x_1, x_2)`, of two bitstrings, :math:`x_1` and :m
 
 :math:`s(x_1, x_2) = \frac{a}{a + b + c}`
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+
+   start
+   :Read bitstring x1;
+   :Read bitstring x2;
+   :Compare matching positions;
+   :Count a, b, c, d;
+   :Compute a / (a + b + c);
+   stop
+   @enduml
+
 Below, we show how to calculate the similarity of two bitstrings.
 
 - :math:`x_1`: 1000100
@@ -175,9 +189,18 @@ Rock Paper Scissor
 
 The class game of Rock Paper Scissor ``RPS`` is played between two people. Each round, each of the players picks either rock, paper or scissor. The rules for win, lose or tie is as follows.
 
-- If both players pick the same item (e.g. rock and rock), then the outcome is a tie.
-- Rock always beats scissor.
-- Scissor always beats paper.
-- Paper always beats rock.
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+
+   rectangle Rock
+   rectangle Paper
+   rectangle Scissor
+
+   Rock --> Scissor : beats
+   Scissor --> Paper : beats
+   Paper --> Rock : beats
+   @enduml
 
 Write a terminal-based game of ``RPS`` where a user gets to challenge the computer. The game should loop endlessly and handle the situation when a user wants to quit. Before the game ends, the user should have information of the number of times they have won, total games played and percentage of wins. On each round, let the user pick rock, paper or scissor, and then randomly let the computer pick as well. Compute the result for the user (win, lose or tie). Always show what the user and computer picked as well as the result each time.

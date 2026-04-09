@@ -11,6 +11,18 @@ One of the fundamental ideas in programming is the ``variable``. Mathematically,
 * you can take something out of a box
 * you can label a box meaningfully
 
+.. graphviz::
+
+   digraph variable_box {
+     rankdir=LR;
+     node [shape=box, style="rounded"];
+     name [label="variable name\nage"];
+     box [label="storage box"];
+     value [label="stored value\n32"];
+     name -> box : labels;
+     value -> box : goes into;
+   }
+
 A variable is simply a storage container. Let's not get too technical in understanding what is a variable, as going to such level is not necessary to knowing how to effectively create and use variables when programming.
 
 Before moving on, note that each variable has a ``type`` associated with it. The variable's type is determined by the value it stores. If a variable stores an integer, it has an integer type. If it stores an object representing a car, then its type is that object's class. Whatever the box stores determines the type of the box.
@@ -24,6 +36,24 @@ There are four basic or ``primitive`` types in Python. They are ``float``, ``int
 * a float is a decimal number value
 * a string is a text value
 * a boolean is either ``True`` or ``False``
+
+.. graphviz::
+
+   digraph primitive_types {
+     rankdir=LR;
+     node [shape=box, style="rounded"];
+     basic [label="basic Python types"];
+     integer [label="int\nwhole numbers"];
+     floating [label="float\ndecimal numbers"];
+     string [label="str\ntext"];
+     boolean [label="bool\nTrue / False"];
+     complex [label="complex\nreal + imaginary"];
+     basic -> integer;
+     basic -> floating;
+     basic -> string;
+     basic -> boolean;
+     basic -> complex;
+   }
 
 A lesser known Python type is a ``complex number`` value. Below, we declare and initialize 5 variables, each storing one of the 5 basic variable types. Note the symbol ``=``, which is called the ``assignment operator``. To the left of the assignment operator is the variable name, and to the right is a literal value (e.g. string literal, integer literal, float literal, boolean literal and complex number literal). If you read the line :code:`i = 32` naturally, you should read it as *i is assigned to 32* and **not** *i is equal to 32*.
 
@@ -123,6 +153,24 @@ Specifying a variable's type
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In Python, the variable type is inferred from what it is storing; we do not have to explicitly declare the variable type with the variable name. Python is said to be a ``dynamically typed`` language, as compared with other languages that are ``statically typed`` where when you declare the variable name, you must also declare the variable type. However, in later versions of Python, you may declare the variable type associated with the variable name as follows. (As programmers from other statically typed languages have begun to adopt Python, you will see more Python code that specify type information with variables.)
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+
+   rectangle "age = 32" as dynamic
+   rectangle "age: int = 32" as annotated
+
+   note right of dynamic
+     Python infers the type from the value.
+   end note
+
+   note right of annotated
+     Python still stores the same value,
+     but the annotation documents intent.
+   end note
+   @enduml
 
 .. literalinclude:: code/oneoffcoder/type/typedeclaration.py
    :language: python

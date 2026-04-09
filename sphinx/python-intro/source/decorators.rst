@@ -3,6 +3,23 @@ Decorators
 
 Decorators are annotations that modify the behavior of functions. The mental model of a decorator is that it is an outer function wrapped around a target function. The outer function has a chance to intercept the arguments and modify or interact with them, before invoking the target function. Using decorators is sometimes referred to as ``meta-programming`` since we are programming the program. 
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+
+   actor Caller
+   rectangle "decorated function" as Wrapped
+   rectangle "decorator wrapper" as Wrapper
+   rectangle "original function" as Original
+
+   Caller --> Wrapped
+   Wrapped --> Wrapper : intercept call
+   Wrapper --> Original : invoke target
+   Original --> Wrapper : return value
+   Wrapper --> Caller : maybe log, validate,\ntransform, then return
+   @enduml
+
 Basic
 -----
 
@@ -130,6 +147,21 @@ Parameterized decorators
 ------------------------
 
 Your decorator can also be parameterized to change its own behavior. To achieve a parameterized decorator, we wrap the **real** decorator yet inside another wrapper function. 
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+
+   rectangle "range_check(lower, upper)" as Factory
+   rectangle "real_decorator(f)" as Decorator
+   rectangle "wrapper(*args, **kwargs)" as Wrapper
+   rectangle "target function" as Function
+
+   Factory --> Decorator : returns configured decorator
+   Decorator --> Wrapper : returns wrapper
+   Wrapper --> Function : calls after checks
+   @enduml
 
 .. code-block:: python
     :linenos:

@@ -8,6 +8,26 @@ Basic arithmetic operators
 
 When dealing with integers and floats, you can apply the following basic math operators.
 
+.. graphviz::
+
+   digraph arithmetic {
+     rankdir=LR;
+     node [shape=box, style="rounded"];
+     operators [label="arithmetic operators"];
+     add [label="+  add"];
+     sub [label="-  subtract"];
+     mul [label="*  multiply"];
+     div [label="/  true division"];
+     floor [label="// floor division"];
+     mod [label="%  remainder"];
+     operators -> add;
+     operators -> sub;
+     operators -> mul;
+     operators -> div;
+     operators -> floor;
+     operators -> mod;
+   }
+
 .. literalinclude:: code/oneoffcoder/operator/mathop.py
    :language: python
    :linenos:
@@ -126,12 +146,25 @@ All data is represented as a list of bits. A bit is just a space in the computer
 
 If 8 in decimal is represented as ``0000000000001000``, then the bitwise not ``~``, when applied to the decimal number, changes the bits to be ``1111111111110111``, and the resulting decimal is -9. Note that ``~`` flips all 0 bits to 1 and all 1 bits to 0. Here's a cheat sheet on the bitwise operators.
 
-* ``~`` reverses the bit (0 is turned to 1, 1 is turned to 0)
-* ``|`` if either bit is 1, then 1, else 0
-* ``&`` if both bits are 1, then 1, else 0
-* ``^`` if one or the other bit is 1, then 1, else 0
-* ``<<`` shifts the bits to the left (padding zeros to the right)
-* ``>>`` shifts the bits to the right (padding zeros to the left)
+.. graphviz::
+
+   digraph bitwise {
+     rankdir=LR;
+     node [shape=box, style="rounded"];
+     bitwise [label="bitwise operators"];
+     not [label="~ flip every bit"];
+     orr [label="| either bit is 1"];
+     andd [label="& both bits are 1"];
+     xor [label="^ exactly one bit is 1"];
+     lshift [label="<< shift left"];
+     rshift [label=">> shift right"];
+     bitwise -> not;
+     bitwise -> orr;
+     bitwise -> andd;
+     bitwise -> xor;
+     bitwise -> lshift;
+     bitwise -> rshift;
+   }
 
 .. literalinclude:: code/oneoffcoder/operator/bitwise.py
    :language: python
@@ -205,6 +238,25 @@ Boolean logical operators
 -------------------------
 
 You can chain boolean values or comparisons to evaluate to True or False using boolean logical operators. The following are examples of such operators.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+
+   start
+   if (A and B?) then (true)
+     :both expressions are true;
+   else (false)
+     :at least one expression is false;
+   endif
+   if (A or B?) then (true)
+     :at least one expression is true;
+   else (false)
+     :both expressions are false;
+   endif
+   stop
+   @enduml
 
 .. literalinclude:: code/oneoffcoder/operator/booleanlogical.py
    :language: python

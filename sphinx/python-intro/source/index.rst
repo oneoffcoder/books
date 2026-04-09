@@ -29,6 +29,20 @@ Preface
 
 This book is an introduction to programming in ``Python``. The examples and recommendations in this edition target Python 3.13. You can follow along with a local Python 3.13 installation, but a Docker image is also available if you want a preconfigured environment with JupyterLab already set up. To run the Docker image, use the following command.
 
+.. graphviz::
+
+   digraph roadmap {
+     rankdir=LR;
+     node [shape=box, style="rounded"];
+     basics [label="basics\nintro, types, operators"];
+     flow [label="flow\ncontrol, matching, loops"];
+     functions [label="functions\nfunctions, docs, decorators"];
+     objects [label="objects\nclasses, dataclasses, enum, typing"];
+     stdlib [label="stdlib\npathlib, datetime, exceptions,\ncontext managers, threads, io"];
+     practice [label="practice\nbuilt-ins, collections,\nfunctional, turtle, exercises"];
+     basics -> flow -> functions -> objects -> stdlib -> practice;
+   }
+
 .. code-block:: bash
 
    docker run -it \
