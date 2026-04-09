@@ -1,6 +1,7 @@
 _temp/
 build/
 sphinx/.parallel-logs/
+sphinx/pytorch-intro/build/
 .DS_Store
 .ipynb_checkpoints/
 __pycache__/
