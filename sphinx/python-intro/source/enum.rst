@@ -5,6 +5,19 @@ Enumerations
 
 An ``enum`` is a type whose values come from a fixed set of named choices. Enums are useful when a value should be one of a small number of valid options, such as status codes, directions, or roles.
 
+.. uml::
+
+   @startuml
+   skinparam classAttributeIconSize 0
+   skinparam shadowing false
+
+   enum Status {
+     DRAFT
+     PUBLISHED
+     ARCHIVED
+   }
+   @enduml
+
 Basic enum
 ----------
 

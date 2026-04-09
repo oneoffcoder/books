@@ -29,7 +29,9 @@ release = '1.0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.graphviz',
     'sphinxcontrib.bibtex',
+    'sphinxcontrib.plantuml',
     'sphinx_sitemap'
 ]
 
@@ -63,6 +65,9 @@ html_logo = '_static/images/logo-small.png'
 html_favicon = '_static/favicon.ico'
 html_css_files = ['css/override.css']
 html_last_updated_fmt = '%b %d, %Y, %X'
+graphviz_output_format = 'svg'
+plantuml = '/opt/homebrew/bin/plantuml'
+plantuml_output_format = 'svg'
 
 html_theme_options = {
     'canonical_url': 'https://learn-python.oneoffcoder.com/',

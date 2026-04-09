@@ -3,6 +3,16 @@ Input/Output (IO)
 
 IO operations are those dealing with interacting with files; either we are reading (input) or writing (output). Most of the IO operations are done with context managers to manage the lifecycle of acquiring and releasing access to the files.
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "Text file\nplain text" as text
+   rectangle "JSON\nportable structured text" as json
+   rectangle "pickle\nPython object serialization" as pickle
+   rectangle "shelve\nkeyed object storage" as shelve
+   @enduml
+
 .. highlight:: python
 
 File write and read

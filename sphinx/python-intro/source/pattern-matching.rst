@@ -5,6 +5,21 @@ Structural Pattern Matching
 
 Structural pattern matching lets you branch on both the kind of value you received and the structure of that value. It is often clearer than a long chain of ``if`` and ``elif`` checks when the code is dispatching on shapes of data.
 
+.. uml::
+
+   @startuml
+   start
+   :Receive input value;
+   if (case 1 matches?) then (yes)
+     :Run case 1 block;
+   elseif (case 2 matches?) then (yes)
+     :Run case 2 block;
+   else
+     :Run default case _;
+   endif
+   stop
+   @enduml
+
 Basic matching
 --------------
 

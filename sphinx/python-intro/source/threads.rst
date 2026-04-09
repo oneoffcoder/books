@@ -3,6 +3,19 @@ Threading
 
 .. highlight:: python
 
+.. uml::
+
+   @startuml
+   start
+   :Create worker processes;
+   :Start each process;
+   :Workers compute results;
+   :Workers put results in queue;
+   :Main process reads queue;
+   :Join worker processes;
+   stop
+   @enduml
+
 Process
 -------
 

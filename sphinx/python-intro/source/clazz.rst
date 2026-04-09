@@ -3,41 +3,59 @@ Classes
 
 Classes let you model data and behavior together. This style is called ``Object-Oriented Programming`` or ``OOP``. A class describes the attributes an object stores and the methods it exposes. When you start defining a class, think first about which pieces of data matter and which behaviors belong naturally to that object. A quick sketch usually helps.
 
-If you are trying to model a person, what are some properties of a person and what can a person do? A person has a first and last name, as well as an age. A person can also eat, sleep or talk.
+If you are trying to model a person, what are some properties of a person and what can a person do? A person has a first and last name, as well as an age. A person can also eat, sleep, or talk.
 
-* Person
-   - properties
-      * first name
-      * last name
-      * age
-   - actions
-      * eat
-      * sleep
-      * talk
+.. uml::
+
+   @startuml
+   skinparam classAttributeIconSize 0
+   skinparam shadowing false
+
+   class Person {
+     first_name
+     last_name
+     age
+     eat()
+     sleep()
+     talk()
+   }
+   @enduml
 
 If you are trying to model a square, what are some properties and actions of a square? A square has a side length and can compute its own area and perimeter.
 
-* Square
-   - properties
-      * side length
-   - actions
-      * compute area
-      * compute perimeter
+.. uml::
 
-What about modeling a car? A car has a make, model, year, doors and gas efficiency rating. A car can start up, speed up, slow down or stop. 
+   @startuml
+   skinparam classAttributeIconSize 0
+   skinparam shadowing false
 
-* Car
-   - properties
-      * make
-      * model
-      * year
-      * number of doors
-      * miles per gallon
-   - actions
-      * start up
-      * speed 
-      * slow
-      * stop
+   class Square {
+     side_length
+     compute_area()
+     compute_perimeter()
+   }
+   @enduml
+
+What about modeling a car? A car has a make, model, year, doors, and gas efficiency rating. A car can start up, speed up, slow down, or stop.
+
+.. uml::
+
+   @startuml
+   skinparam classAttributeIconSize 0
+   skinparam shadowing false
+
+   class Car {
+     make
+     model
+     year
+     number_of_doors
+     miles_per_gallon
+     start_up()
+     speed_up()
+     slow_down()
+     stop()
+   }
+   @enduml
 
 .. highlight:: python
 
@@ -182,17 +200,34 @@ If you come from languages like Java or C#, it is common to restrict direct read
 Access specifiers
 ^^^^^^^^^^^^^^^^^
 
-In OOP, you may desire to specify who can reference your class properties or invoke your class functions. Typically, there are three levels of access.
+In OOP, you may want to signal who should reach into a class and use its data or behavior. Python does not enforce access control the way Java or C# does, but it does use naming conventions to communicate intent.
 
-- ``public``: anyone can have access
-- ``protected``: only sub-classes can have access
-- ``private``: only the class itself can have access
+.. uml::
 
-The convention to signal ``access specifiers`` is with underscores ``_``. 
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
 
-- ``public``: names of properties or functions of a class without any underscore are public
-- ``protected``: names of properties or functions of a class with one underscore as the prefix are protected
-- ``private``: names of properties or functions of a class with two underscores as the prefix are private
+   class AccessLevels {
+     public_name
+     _protected_name
+     __private_name
+   }
+
+   note right of AccessLevels
+     public
+     no leading underscore
+     meant for general use
+
+     protected
+     one leading underscore
+     internal use by subclasses
+
+     private
+     two leading underscores
+     name-mangled to avoid direct access
+   end note
+   @enduml
 
 Below, we have defined ``__check_year()`` to be private, and users cannot not invoke this method directly. The ``set_year()`` method calls ``__check_year()`` internally when the year is being mutated.
 
@@ -202,6 +237,26 @@ Below, we have defined ``__check_year()`` to be private, and users cannot not in
    :emphasize-lines: 7-8, 26
 
 Here's another example of modeling a student. Notice that the first and last names are stored internally as private properties (two double underscores). Thus, we cannot access those properties directly. We have to access through the decorated methods (those methods are public). 
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   class Student {
+     __fname
+     __lname
+     + fname
+     + lname
+   }
+
+   note right of Student
+     Attributes with a double underscore
+     are stored internally under a mangled name.
+     Public properties expose a controlled interface.
+   end note
+   @enduml
 
 .. code-block:: python
    :linenos:
@@ -242,8 +297,26 @@ Method overriding dunders
 
 Overriding a method means to redefine it (assumes that a method has been previously defined). When defining a class, two dunder functions that should be overridden are ``__str__()`` and ``__repr__()``. Both methods return a string representation of the instance (of a class), however,
 
-* ``__str__()`` returns an informal representation, and
-* ``__repr__()`` returns a formal representation.
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   class PrintableObject {
+     __str__()
+     __repr__()
+   }
+
+   note right of PrintableObject
+     __str__()
+     informal, human-friendly output
+
+     __repr__()
+     formal, developer-friendly output
+     ideally useful for reconstruction
+   end note
+   @enduml
 
 By convention, the string returned by ``__repr__()`` should be able to be used to reconstruct the instance. Many times, ``__str__()`` can just call ``__repr()__`` (or vice-versa).
 
@@ -258,13 +331,19 @@ One of the core tenets of coding is to reuse existing code. Why? Writing code is
 
 Let's understand inheritance a bit better with an example dealing with shapes. In particular, we want to model a rectangle as follows. A rectangle has a width and length (properties). A rectangle should be able to compute its own area and perimeter (actions).
 
-* Rectangle
-   - properties
-      * width
-      * length
-   - actions
-      * computes area
-      * computes perimeter
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   class Rectangle {
+     width
+     length
+     get_area()
+     get_perimeter()
+   }
+   @enduml
 
 A ``Rectangle`` class definition could look like the following.
 
@@ -343,6 +422,21 @@ Here is the all-in-one example of class inheritance.
 .. note::
    In OOP, much discussion is around differentiating between ``inheritance`` and ``composition``. Inheritance is when one class (sub-class) derives from another class (base class). Composition is when one class has another class as one of its properties. Along with our ``Car`` class, we can also create a ``Wheel`` class, and specify that a ``Car`` has 4 ``Wheel``. Two classes in an inheritance relationship is called a ``is-a`` relationship and two classes in a compos relationship is called a ``has-a`` relationship.
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   class Rectangle
+   class Square
+   class Car
+   class Wheel
+
+   Rectangle <|-- Square : is-a
+   Car *-- "4" Wheel : has-a
+   @enduml
+
 Abstract Classes
 ----------------
 
@@ -351,6 +445,28 @@ We annotate the ``make_noise`` method ``@abstractmethod`` decorator. A class tha
 instantiated directly. We create two subclasses, ``Dog`` and ``Cat``, from Animal. These derived classes can be
 instantiated, however, they must implement all methods annotated with ``@abstractmethod`` or a ``TypeError`` will be thrown.
 The Animal class is also called a ``formal interface``.
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   abstract class Animal {
+     {abstract} make_noise()
+   }
+
+   class Dog {
+     make_noise()
+   }
+
+   class Cat {
+     make_noise()
+   }
+
+   Animal <|-- Dog
+   Animal <|-- Cat
+   @enduml
 
 .. literalinclude:: code/oneoffcoder/clazz/inheritance.py
    :language: python
@@ -362,6 +478,25 @@ Informal Interface
 An informal interface is defined like a class but has no internal state and method implementations are not provided.
 Below, we have a circle calculator which computes the area and circumference of a circle given
 the radius. We also show how to implement the informal interface. 
+
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   class CircleCalculator {
+     get_area(radius)
+     get_circumference(radius)
+   }
+
+   class BasicCircleCalculator {
+     get_area(radius)
+     get_circumference(radius)
+   }
+
+   CircleCalculator <|.. BasicCircleCalculator : implements informally
+   @enduml
 
 .. literalinclude:: code/oneoffcoder/clazz/informalinterface.py
    :language: python
@@ -380,6 +515,39 @@ Below, we have an example class ``DivisionSolver`` that solves a division proble
 and divisor (denominator) must be given. The ``DivFloatMixin`` returns the solution as a float. 
 The ``DivQRMixin`` returns the solution with the quotient and remainder.
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   class DivisionSolver {
+     dividend
+     divisor
+   }
+
+   class DivFloatMixin {
+     solve()
+   }
+
+   class DivQRMixin {
+     solve()
+   }
+
+   class FloatDivisionSolver {
+     solve()
+   }
+
+   class QuotientRemainderSolver {
+     solve()
+   }
+
+   DivisionSolver <|-- FloatDivisionSolver
+   DivisionSolver <|-- QuotientRemainderSolver
+   DivFloatMixin <|-- FloatDivisionSolver
+   DivQRMixin <|-- QuotientRemainderSolver
+   @enduml
+
 .. literalinclude:: code/oneoffcoder/clazz/mixin.py
    :language: python
    :linenos:
@@ -396,37 +564,56 @@ Exercise
 
 Model a teacher and students in a classroom. The class definitions required are as follows. 
 
-* Person
-   - properties
-      * first name
-      * last name
-      * gender
-   - actions
-      * a check to see if the person is a male
-* Teacher
-   - properties
-      * a list of students
-      * course name
-   - actions
-      * a way to count the number of students
-      * a way to get the average grade of all students
-      * a way to get the average grade of all male students
-      * a way to get the average grade of all female students
-* Student
-   - properties
-      * a list of numeric grades
-   - actions
-      * a way to return the list of numeric grades as a list of letter grades
-      * a way to get the overall grade numerically
-      * a way to get the overall letter grade
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   class Person {
+     first_name
+     last_name
+     gender
+     is_male()
+   }
+
+   class Teacher {
+     course
+     students
+     get_num_students()
+     get_average_grade()
+     get_male_average_grade()
+     get_female_average_grade()
+   }
+
+   class Student {
+     grades
+     letter_grades
+     grade
+     letter_grade
+   }
+
+   Person <|-- Teacher
+   Person <|-- Student
+   Teacher "1" o-- "*" Student
+   @enduml
 
 Create instances of a ``Teacher`` and a list of ``Students`` with the following data.
 
-* What is the number grade of each student?
-* What is the letter grade of each student?
-* What is the average grade of all students of the teacher?
-* What is the average grade of all male students?
-* What is the average grade of all female students?
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+
+   start
+   :Create one Teacher and many Student objects;
+   :Compute each student's numeric grade;
+   :Compute each student's letter grade;
+   :Compute the class average;
+   :Compute the male-student average;
+   :Compute the female-student average;
+   stop
+   @enduml
 
 .. code-block:: python
    :linenos:
@@ -582,11 +769,27 @@ Solution.
 Data classes
 ------------
 
-Data classes are available in Python 3.7. Notice the following:
+Data classes are available in Python 3.7. A data class is mostly a declaration of fields, and Python fills in common boilerplate for you.
 
-- the ``@dataclass`` annotation is placed on the class
-- properties defined in a data class requires type hints
-- the ``__eq__`` and ``__repr__`` dunders are implemented 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   skinparam classAttributeIconSize 0
+
+   class Person <<dataclass>> {
+     first_name: str
+     last_name: str
+     age: int
+   }
+
+   note right of Person
+     @dataclass marks the class
+     fields use type hints
+     Python generates methods such as
+     __init__, __eq__, and __repr__
+   end note
+   @enduml
 
 .. code-block:: python
    :linenos:

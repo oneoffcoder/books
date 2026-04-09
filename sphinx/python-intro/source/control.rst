@@ -9,6 +9,20 @@ Control statements are also called ``if/else`` statements or ``conditional`` sta
 
 Control statements are how computers (and, most likely, even humans) make categorical decisions and take actions based upon those decisions.
 
+.. uml::
+
+   @startuml
+   start
+   if (traffic light is yellow?) then (yes)
+     :slow down;
+   elseif (traffic light is red?) then (yes)
+     :stop;
+   else
+     :go;
+   endif
+   stop
+   @enduml
+
 .. highlight:: python
 
 if

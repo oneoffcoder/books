@@ -5,6 +5,18 @@ Dates, Times, and Time Zones
 
 Working with dates and times is a common task in real programs. Python's ``datetime`` module handles dates and times, and ``zoneinfo`` adds standard-library time zone support.
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "datetime\ncreate values" as create
+   rectangle "strftime / strptime\nformat and parse" as format
+   rectangle "zoneinfo\nattach real time zones" as zone
+
+   create --> format
+   create --> zone
+   @enduml
+
 Creating dates and times
 ------------------------
 

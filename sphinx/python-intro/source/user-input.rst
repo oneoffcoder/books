@@ -3,6 +3,18 @@ User Input
 
 Getting input from a user is accomplished through the ``input()`` function. When we use ``input()``, we can supply a prompt to give the user a hint about what to type. The program below asks the user to type in something and then simply echoes that input back. You can think of ``input()`` as the opposite of ``print()``: ``input()`` reads from the terminal and ``print()`` writes to it.
 
+.. uml::
+
+   @startuml
+   start
+   :Prompt user with input();
+   :Read text from terminal;
+   :Convert text if needed;
+   :Use value in program;
+   :Print result;
+   stop
+   @enduml
+
 .. code-block:: python
     :linenos:
 

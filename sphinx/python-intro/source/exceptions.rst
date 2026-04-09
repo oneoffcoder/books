@@ -3,6 +3,20 @@ Exceptions
 
 Coding is error-prone, and robust programs need to deal with failures deliberately. In Python, we typically use ``try``/``except`` and sometimes ``finally`` to handle exceptions. In practice, most recoverable runtime problems are represented as exceptions, and your code can catch them when it makes sense to do so. Let's look at some examples of how to use ``try-except`` well.
 
+.. uml::
+
+   @startuml
+   start
+   :Enter try block;
+   if (Exception raised?) then (yes)
+     :Jump to matching except block;
+   else (no)
+     :Continue normally;
+   endif
+   :Run finally block if present;
+   stop
+   @enduml
+
 
 .. highlight:: python
 

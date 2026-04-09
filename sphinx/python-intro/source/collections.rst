@@ -5,6 +5,15 @@ Collections Gems
 
 The ``collections`` module contains several standard-library data structures that solve common problems cleanly. Three especially useful ones are ``Counter``, ``defaultdict``, and ``deque``.
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "Counter\ncount frequencies" as counter
+   rectangle "defaultdict\nauto-create defaults" as defaultdict
+   rectangle "deque\nfast queue operations" as deque
+   @enduml
+
 Counter
 -------
 

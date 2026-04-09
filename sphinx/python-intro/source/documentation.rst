@@ -5,6 +5,18 @@ Code Documentation
 
 Good code documentation explains what a function does, what inputs it expects, and what it returns. In Python, the most common place to document that information is in a ``docstring``: a string literal placed immediately below a module, class, or function definition.
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "Function definition" as fn
+   rectangle "Docstring\npurpose\nparameters\nreturns" as doc
+   rectangle "Reader / help() / docs tool" as reader
+
+   fn --> doc
+   doc --> reader
+   @enduml
+
 Basic docstrings
 ----------------
 

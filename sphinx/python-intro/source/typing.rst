@@ -5,6 +5,18 @@ Typing
 
 Type hints let you describe the kind of values a function expects and returns. Python stays dynamically typed, but type hints make code easier to read and help static analysis tools catch mistakes.
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "Function signature\nadd(a: int, b: int) -> int" as sig
+   rectangle "Reader" as reader
+   rectangle "Type checker / editor" as tool
+
+   sig --> reader
+   sig --> tool
+   @enduml
+
 Basic type hints
 ----------------
 

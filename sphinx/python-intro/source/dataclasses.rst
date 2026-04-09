@@ -5,6 +5,25 @@ Dataclasses
 
 ``dataclasses`` are a modern way to define classes that mostly store data. They reduce boilerplate for common tasks such as creating an ``__init__()`` method, a readable ``__repr__()``, and value-based equality checks.
 
+.. uml::
+
+   @startuml
+   skinparam classAttributeIconSize 0
+   skinparam shadowing false
+
+   class Student {
+     name : str
+     grade : int
+   }
+
+   note right of Student
+     @dataclass can generate:
+     - __init__()
+     - __repr__()
+     - __eq__()
+   end note
+   @enduml
+
 Basic dataclass
 ---------------
 

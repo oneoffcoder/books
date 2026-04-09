@@ -5,6 +5,21 @@ Loops
 
 Loops let you repeat logic over many values without copying and pasting the same statements. They are frequently used to ``iterate`` over collections such as lists, sets, tuples, and dictionaries. Two of the most important loop forms in Python are ``while`` and ``for``. Let's look at them below.
 
+.. uml::
+
+   @startuml
+   start
+   if (Use while?) then (yes)
+     :Check condition each time;
+     :Run body while condition is true;
+   else (no)
+     :Iterate over each item in a collection;
+   endif
+   :break stops the loop;
+   :continue skips to the next iteration;
+   stop
+   @enduml
+
 while
 -----
 

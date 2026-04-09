@@ -14,6 +14,18 @@ If a context manager is being used, Python provides the ``with`` idiom to expres
     with <context_manager> as <resource>:
         # do something with the resource
 
+.. uml::
+
+   @startuml
+   start
+   :Set up resource;
+   :Call __enter__();
+   :Run code inside with block;
+   :Call __exit__();
+   :Clean up resource;
+   stop
+   @enduml
+
 .. highlight:: python
 
 Basic

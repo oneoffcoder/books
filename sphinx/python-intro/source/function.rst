@@ -3,6 +3,21 @@ Functions
 
 We have been using functions all along. In fact, the ``Hello, world!`` example used the ``print()`` function to print to the terminal. Here, we take an in-depth look at how to create functions. Remember, functions are just verbs or actions, they do something. The basic syntax for defining a function is as follows.
 
+.. uml::
+
+   @startuml
+   start
+   :Receive inputs;
+   :Bind values to parameters;
+   :Run function body;
+   if (Return statement?) then (yes)
+     :Send output to caller;
+   else (no)
+     :Implicitly return None;
+   endif
+   stop
+   @enduml
+
 .. code:: python
 
    def <function_name>(<parameters:optional>):

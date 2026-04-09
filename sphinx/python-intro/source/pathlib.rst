@@ -5,6 +5,20 @@ Pathlib
 
 ``pathlib`` is the modern standard-library way to work with filesystem paths. It is usually clearer than building paths by hand with strings or older ``os.path`` helper functions.
 
+.. uml::
+
+   @startuml
+   skinparam shadowing false
+   rectangle "Create paths" as create
+   rectangle "Inspect paths" as inspect
+   rectangle "Read / write files" as io
+   rectangle "Find matches with glob()" as glob
+
+   create --> inspect
+   create --> io
+   create --> glob
+   @enduml
+
 Creating paths
 --------------
 
