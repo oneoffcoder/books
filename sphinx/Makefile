@@ -13,7 +13,6 @@ PROJECTS = \
 	scikit-intro \
 	scratch \
 	spark-intro \
-	sqlite \
 	tello
 
 PYTHON ?= python3
