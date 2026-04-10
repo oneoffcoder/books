@@ -4,13 +4,15 @@
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import os
+import shutil
+
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -72,7 +74,7 @@ html_logo = '_static/images/logo-small.png'
 html_favicon = '_static/favicon.ico'
 html_css_files = ['css/override.css']
 html_last_updated_fmt = '%b %d, %Y, %X'
-plantuml = '/opt/homebrew/bin/plantuml'
+plantuml = os.environ.get('PLANTUML') or shutil.which('plantuml') or 'plantuml'
 plantuml_output_format = 'svg'
 
 html_theme_options = {
