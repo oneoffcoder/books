@@ -88,4 +88,5 @@ mathjax3_config = {
     'TeX': {'equationNumbers': {'autoNumber': 'AMS', 'useLabelIds': True}},
 }
 
-nbsphinx_allow_errors = True
+nbsphinx_execute = 'never'
+nbsphinx_allow_errors = False

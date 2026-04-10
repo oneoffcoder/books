@@ -31,6 +31,13 @@ Run the full local verification pass:
 make check
 ```
 
+Execute every notebook in the local Spark Docker check image:
+
+```bash
+docker build -t book-spark-intro-check:local ../../docker/spark-intro-check
+make notebooks
+```
+
 Start the live-reloading docs development server:
 
 ```bash
@@ -75,3 +82,4 @@ build/html
 - `pyproject.toml`: Python dependencies and tool configuration
 - `Makefile`: primary developer entrypoint
 - `source/`: notebook-backed chapters and supporting docs files
+- `../../docker/spark-intro-check/`: Docker image and runner for end-to-end notebook execution

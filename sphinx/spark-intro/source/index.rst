@@ -25,16 +25,16 @@ Spark, No Tears
 Preface
 =======
 
-This book is to teach students how program in `Apache Spark <https://spark.apache.org>`_. To follow along and execute the code samples, you will need `Docker <https://www.docker.com/>`_ installed. The Docker container is located on `Docker Hub <https://hub.docker.com/r/oneoffcoder/book-spark-intro>`_. After you have installed Docker, you may run the container as follows.
+This book teaches students how to program in `Apache Spark <https://spark.apache.org>`_. The notebooks run with a local Spark master, ``local[*]``. No Hadoop, HDFS, or standalone Spark cluster is required for the examples.
+
+To execute the notebooks end-to-end, build the local Docker check image from the repository root.
 
 .. code-block:: bash
 
-   docker run -it \
-    -p 8888:8888 \
-    -e PYSPARK_MASTER=spark://localhost:7077 \
-    oneoffcoder/book-spark-intro
+   docker build -t book-spark-intro-check:local docker/spark-intro-check
+   docker/spark-intro-check/execute-notebooks.sh
 
-Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
+The runner writes executed notebooks to ``sphinx/spark-intro/build/executed-notebooks``.
 
 The diagram below shows how the Spark material progresses from low-level distributed collections into structured APIs and then into streaming, graphs, and machine learning.
 

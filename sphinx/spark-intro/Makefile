@@ -10,7 +10,7 @@ HOST ?= 0.0.0.0
 
 .DEFAULT_GOAL := help
 
-.PHONY: help sync install format lint spellcheck clean build check html live linkcheck doctest
+.PHONY: help sync install format lint spellcheck clean build check html live linkcheck doctest notebooks
 
 help:
 	@printf "Targets:\n"
@@ -25,6 +25,7 @@ help:
 	@printf "  live        Run sphinx-autobuild locally\n"
 	@printf "  linkcheck   Check external links\n"
 	@printf "  doctest     Run Sphinx doctests\n"
+	@printf "  notebooks   Execute notebooks in the local Spark Docker check image\n"
 	@printf "  clean       Remove build artifacts\n"
 
 sync:
@@ -57,6 +58,9 @@ linkcheck:
 
 doctest:
 	$(SPHINXBUILD) -b doctest "$(SOURCEDIR)" "$(BUILDDIR)/doctest" $(SPHINXOPTS)
+
+notebooks:
+	../../docker/spark-intro-check/execute-notebooks.sh
 
 clean:
 	rm -rf "$(BUILDDIR)"

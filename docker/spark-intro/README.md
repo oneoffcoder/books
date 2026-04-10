@@ -2,6 +2,10 @@
 
 # Purpose
 
+This is the legacy Spark intro Jupyter image. It starts Hadoop, HDFS, YARN, Spark standalone services, streaming demo services, and Jupyter.
+
+For the current no-cluster notebook verification workflow, use `../spark-intro-check` instead. The current book notebooks create a local `SparkSession` with `local[*]` and do not require this pseudo cluster image.
+
 This docker container is meant to be used for learning purpose for programming PySpark. It has the following components.
 
 * Hadoop v3.2.1
