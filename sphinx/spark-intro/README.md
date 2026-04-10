@@ -2,7 +2,7 @@
 
 This directory contains the Sphinx source for the `Spark, No Tears` book.
 
-The book is primarily notebook-backed and covers Spark fundamentals including RDDs, DataFrames, Spark SQL, streaming, and machine learning.
+The book is primarily notebook-backed and covers Spark fundamentals including RDDs, DataFrames, Spark SQL, execution plans, local IO, joins and skew, schemas and bad data, UDFs, DStreams, Structured Streaming, graphs, machine learning, pandas API on Spark, local testing, packaged jobs, lakehouse table formats, Spark Connect, and a compact end-to-end project.
 
 ## Requirements
 
@@ -37,6 +37,8 @@ Execute every notebook in the local Spark Docker check image:
 docker build -t book-spark-intro-check:local ../../docker/spark-intro-check
 make notebooks
 ```
+
+The notebook runner uses a local Spark master with `local[*]`; it does not require HDFS or a standalone Spark cluster. The check image also includes the local dependencies needed by GraphFrames, Delta Lake, Iceberg, pandas API on Spark, and Spark Connect client examples.
 
 Start the live-reloading docs development server:
 

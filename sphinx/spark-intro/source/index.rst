@@ -1,6 +1,6 @@
 .. meta::
    :description: Spark, No Tears
-   :keywords: spark massively parallel programming hadoop hdfs databricks
+   :keywords: spark massively parallel programming pyspark dataframes structured streaming machine learning delta lake iceberg spark connect
    :robots: index, follow
    :abstract: A Spark tutorial book.
    :author: One-Off Coder
@@ -36,42 +36,77 @@ To execute the notebooks end-to-end, build the local Docker check image from the
 
 The runner writes executed notebooks to ``sphinx/spark-intro/build/executed-notebooks``.
 
-The diagram below shows how the Spark material progresses from low-level distributed collections into structured APIs and then into streaming, graphs, and machine learning.
+The diagram below shows the major groups in the book. The first chapters build the API foundation. The middle chapters focus on data movement, data quality, and specialized workloads. The final chapters cover applied projects, local testing, packaging, table formats, and runtime choices.
 
 .. uml::
 
    @startuml
    left to right direction
    skinparam shadowing false
-   rectangle "RDD" as rdd
-   rectangle "DataFrames\nand Spark SQL" as structured
-   rectangle "IO" as io
-   rectangle "DStreams" as streaming
-   rectangle "Graphs and\nMachine Learning" as advanced
-   rectangle "Tips" as tips
-   rdd --> structured
-   structured --> io
-   io --> streaming
-   streaming --> advanced
-   advanced --> tips
+   rectangle "Foundations" as foundations
+   rectangle "Data Movement\nand Quality" as movement
+   rectangle "Specialized\nWorkloads" as workloads
+   rectangle "Projects and\nProduction Shape" as projects
+   rectangle "Runtime and\nEcosystem" as runtime
+   foundations --> movement
+   movement --> workloads
+   workloads --> projects
+   projects --> runtime
    @enduml
 
-That left-to-right path matches the mental model most readers need: first understand distributed execution, then move to higher-level abstractions, and finally explore specialized workloads.
+That left-to-right path matches the mental model most readers need: first understand distributed execution, then learn where Spark moves data, then use higher-level workloads, and finally shape the work into local tests, submitted jobs, and table-format-aware applications.
 
 .. toctree::
    :maxdepth: 2
    :numbered:
-   :caption: Contents
-   
+   :caption: Foundations
+
    rdd
    dataframes
    sparksql
+   execution-plans
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Data Movement and Quality
+
    io
+   joins-skew
+   schemas-bad-data
+   udfs-builtins
+   broadcast-accumulators
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Specialized Workloads
+
    dstreams
+   structured-streaming
    graphs
    machine-learning
+   pandas-api-on-spark
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Projects and Production Shape
+
+   end-to-end-project
+   testing-spark
+   packaging-spark-jobs
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Runtime and Ecosystem
+
+   lakehouse-formats
+   spark-connect
    tips
    tips-datetime
+   local-runtime
 
 About
 =====

@@ -8,6 +8,8 @@ It is intentionally separate from the legacy `docker/spark-intro` Jupyter image:
 - no standalone Spark master or worker daemons
 - notebook execution uses `local[*]`
 - GraphFrames is available through a bundled Spark 3.5 jar
+- Delta Lake and Apache Iceberg are available through bundled local runtime jars
+- Spark Connect client dependencies are installed for the Spark Connect chapter
 
 Current pinned runtime:
 
@@ -15,6 +17,8 @@ Current pinned runtime:
 - `OpenJDK 17`
 - `PySpark 3.5.8`
 - `GraphFrames 0.8.3` Spark package with the `graphframes 0.6` Python wrapper
+- `Delta Lake 3.3.2`
+- `Apache Iceberg 1.10.1` Spark 3.5 runtime jar
 - `JupyterLab 4.5.6`
 
 Build the image:
