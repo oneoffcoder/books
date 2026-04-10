@@ -6,6 +6,7 @@ from pathlib import Path
 
 import nltk
 import numpy as np
+import pandas as pd
 from scipy import sparse
 from sklearn.datasets import (
     load_breast_cancer,
@@ -48,6 +49,7 @@ def ensure_nltk_data() -> None:
         "punkt_tab": "tokenizers/punkt_tab",
         "stopwords": "corpora/stopwords",
         "wordnet": "corpora/wordnet",
+        "omw-1.4": "corpora/omw-1.4",
         "averaged_perceptron_tagger_eng": "taggers/averaged_perceptron_tagger_eng",
         "tagsets": "help/tagsets/upenn_tagset.pickle",
         "tagsets_json": "help/tagsets_json/PY3_json/upenn_tagset.json",
@@ -69,19 +71,84 @@ def get_mlflow_tracking_uri() -> str:
     return (data_dir() / "mlflow").resolve().as_uri()
 
 
+def graph_layout(graph, layout: str = "dot", *, seed: int = 37):
+    import networkx as nx
+
+    requested = layout or "dot"
+
+    try:
+        return nx.nx_agraph.graphviz_layout(graph, prog=requested)
+    except Exception:
+        pass
+
+    try:
+        return nx.nx_pydot.graphviz_layout(graph, prog=requested)
+    except Exception:
+        pass
+
+    fallback_layouts = {
+        "circo": nx.circular_layout,
+        "dot": nx.shell_layout,
+        "fdp": nx.spring_layout,
+        "neato": nx.kamada_kawai_layout,
+        "osage": nx.shell_layout,
+        "patchwork": nx.spectral_layout,
+        "sfdp": nx.spring_layout,
+        "twopi": nx.spiral_layout,
+    }
+    func = fallback_layouts.get(requested, nx.spring_layout)
+
+    try:
+        return func(graph, seed=seed)
+    except TypeError:
+        return func(graph)
+
+
 def load_california_housing_data(*, return_X_y: bool = True, as_frame: bool = False):
     if should_run_remote_assets():
         from sklearn.datasets import fetch_california_housing
 
         return fetch_california_housing(return_X_y=return_X_y, as_frame=as_frame)
 
-    fallback = load_diabetes(return_X_y=return_X_y, as_frame=as_frame)
+    feature_names = [
+        "MedInc",
+        "HouseAge",
+        "AveRooms",
+        "AveBedrms",
+        "Population",
+        "AveOccup",
+        "Latitude",
+        "Longitude",
+    ]
+    X_frame, y_series = load_diabetes(return_X_y=True, as_frame=True)
+    X_frame = X_frame.iloc[:, : len(feature_names)].copy()
+    X_frame.columns = feature_names
+    y_series = y_series.rename("MedHouseVal")
+
     if return_X_y:
-        X, y = fallback
         if as_frame:
-            y = y.rename("target")
-        return X, y
-    return fallback
+            return X_frame, y_series
+        return X_frame.to_numpy(), y_series.to_numpy()
+
+    if as_frame:
+        frame = X_frame.copy()
+        frame["MedHouseVal"] = y_series
+        return Bunch(
+            data=X_frame,
+            target=y_series,
+            frame=frame,
+            feature_names=feature_names,
+            target_names=["MedHouseVal"],
+            DESCR="Fallback local dataset used in notebook check mode instead of the remote California housing dataset.",
+        )
+
+    return Bunch(
+        data=X_frame.to_numpy(),
+        target=y_series.to_numpy(),
+        feature_names=feature_names,
+        target_names=["MedHouseVal"],
+        DESCR="Fallback local dataset used in notebook check mode instead of the remote California housing dataset.",
+    )
 
 
 def load_20newsgroups_vectorized_data(*, subset: str, return_X_y: bool = True):
@@ -135,6 +202,23 @@ def load_kddcup99_http_data(*, return_X_y: bool = True):
         random_state=37,
     )
     return (X, y) if return_X_y else Bunch(data=X, target=y)
+
+
+def make_shap_classification_frame(*, n_samples: int = 100, random_state: int = 37):
+    X, y = make_classification(
+        n_samples=n_samples,
+        n_features=2,
+        n_informative=2,
+        n_redundant=0,
+        n_repeated=0,
+        n_classes=2,
+        n_clusters_per_class=1,
+        class_sep=1.5,
+        random_state=random_state,
+    )
+    df = pd.DataFrame(X, columns=["x0", "x1"])
+    df["y"] = y
+    return df
 
 
 def load_rcv1_data(*, subset: str, return_X_y: bool = True):

@@ -31,6 +31,7 @@ notebook = [
     "nbclient>=0.10.4",
     "nbconvert>=7.17.1",
     "nltk>=3.9.4",
+    "networkx>=3.5",
     "numba>=0.65.0",
     "numpy>=2.4.4",
     "optuna>=4.8.0",

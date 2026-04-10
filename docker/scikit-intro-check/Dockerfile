@@ -23,13 +23,15 @@ WORKDIR /workspace
 
 COPY sphinx/scikit-intro/pyproject.toml /workspace/pyproject.toml
 COPY sphinx/scikit-intro/uv.lock /workspace/uv.lock
-COPY sphinx/scikit-intro/source/_runtime.py /workspace/_runtime.py
 
 RUN uv sync --frozen --no-dev --group notebook
+RUN uv pip install --python /workspace/.venv/bin/python setuptools
 RUN uv pip install --python /workspace/.venv/bin/python autoviz
 RUN uv pip install --python /workspace/.venv/bin/python --upgrade xgboost
 RUN uv pip install --python /workspace/.venv/bin/python --upgrade shap
 RUN uv pip install --python /workspace/.venv/bin/python "pandas<3"
+
+COPY sphinx/scikit-intro/source/_runtime.py /workspace/_runtime.py
 
 RUN .venv/bin/python - <<'PY'
 from _runtime import ensure_nltk_data
