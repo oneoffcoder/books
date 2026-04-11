@@ -7,6 +7,7 @@ Here are some useful references.
 * `Docker Hub <https://hub.docker.com/>`_
 * `Docker Documentation <https://docs.docker.com/>`_
 * `Docker Build <https://docs.docker.com/build/>`_
+* `Docker Multi-platform Builds <https://docs.docker.com/build/building/multi-platform/>`_
 * `Docker Build Checks <https://docs.docker.com/reference/build-checks/>`_
 * `Docker Scout <https://docs.docker.com/scout/>`_
 * `Compose Specification <https://docs.docker.com/reference/compose-file/>`_

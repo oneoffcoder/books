@@ -76,6 +76,7 @@ Read the diagram from left to right: first get Docker working locally, then lear
    :caption: Build and Security
 
    buildkit
+   cross-builds
    build-checks
    image-hardening
    supply-chain

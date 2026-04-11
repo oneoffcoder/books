@@ -1,7 +1,7 @@
 ARM
 ===
 
-Modern Docker builds should treat CPU architecture as an explicit build output. A developer may build on an ``amd64`` laptop, deploy to ``arm64`` cloud nodes, and still publish one image name that works for both platforms.
+Modern Docker builds should treat CPU architecture as an explicit build output. A developer may build on an ``amd64`` laptop, deploy to ``arm64`` cloud nodes, and still publish one image name that works for both platforms. See the cross-builds chapter for the full Mac-to-x86, x86-to-ARM64, and multi-platform release workflow.
 
 Use Buildx for multi-platform builds.
 
