@@ -1,7 +1,7 @@
 FROM node:lts as NodeBuilder
 WORKDIR /usr/app
 COPY . .
-RUN npm install -g @angular/cli@13.1.2
+RUN npm install -g @angular/cli@latest
 RUN npm install
 RUN ng build --aot --configuration=development
 

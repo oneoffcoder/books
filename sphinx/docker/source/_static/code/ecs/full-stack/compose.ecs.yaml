@@ -1,4 +1,4 @@
-version: "3.7"
+name: ecs-full-stack
 services:
   db:
     image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/fs-demo-db:latest

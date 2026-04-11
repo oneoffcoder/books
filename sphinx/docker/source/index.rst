@@ -25,56 +25,89 @@ Docker, No Tears
 Preface
 =======
 
-This book is a tutorial on ``Docker``. To follow along, you will need to `install the following components <https://docs.docker.com/get-started/>`_.
+This book is a tutorial on ``Docker``. To follow along, install Docker Engine or Docker Desktop, then verify that the modern Compose and Buildx plugins are available.
 
-* `docker <https://docs.docker.com/install/>`_
-* `swarm <https://docs.docker.com/get-started/#enable-docker-swarm>`_
-* `kubernetes <https://kubernetes.io/docs/tasks/tools/install-kubectl>`_
+* `Docker <https://docs.docker.com/get-started/get-docker/>`_
+* `Docker Compose <https://docs.docker.com/compose/>`_
+* `Docker Buildx <https://docs.docker.com/build/>`_
+* `kubectl <https://kubernetes.io/docs/tasks/tools/>`_
+* A local Kubernetes cluster such as `minikube <https://minikube.sigs.k8s.io/docs/start/>`_, `kind <https://kind.sigs.k8s.io/>`_, or Docker Desktop Kubernetes
 
-The diagram below gives a quick map of how the book moves from single-container basics toward multi-service orchestration and cloud deployment targets.
+The diagram below gives a quick map of how the book moves from single-container basics toward repeatable builds, orchestration, security, and cloud deployment targets.
 
 .. uml::
 
    @startuml
    left to right direction
    skinparam shadowing false
-   rectangle "Preflight" as preflight
-   rectangle "Quickstart" as quickstart
-   rectangle "Containerization\nand CLI" as core
-   rectangle "Compose" as compose
-   rectangle "Swarm and\nKubernetes" as orchestration
-   rectangle "Runtime, DevOps,\nARM, GPU, Encryption" as operations
+   rectangle "Start Here" as start
+   rectangle "Core Docker" as core
+   rectangle "Build and\nSecurity" as build
+   rectangle "Multi-Service and\nOrchestration" as orchestration
+   rectangle "Platforms and\nWorkloads" as operations
    rectangle "ECR, ECS,\nSageMaker" as deployment
-   preflight --> quickstart
-   quickstart --> core
-   core --> compose
-   compose --> orchestration
+   start --> core
+   core --> build
+   build --> orchestration
    orchestration --> operations
    operations --> deployment
    @enduml
 
-Read the diagram from left to right: first get Docker working locally, then learn how containers are built and operated, and finally carry those patterns into orchestration and AWS-facing deployment workflows.
+Read the diagram from left to right: first get Docker working locally, then learn core container workflows, harden the build path, orchestrate multiple services, and carry those patterns into specialized workloads and AWS deployments.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
-   :caption: Contents
+   :caption: Start Here
 
    preflight
    quickstart
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Core Docker
+
    containerization
-   compose
-   swarm
-   kubernetes
    cli
    runtime
    devops
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Build and Security
+
+   buildkit
+   build-checks
+   image-hardening
+   supply-chain
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Multi-Service and Orchestration
+
+   compose
+   swarm
+   kubernetes
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Platforms and Workloads
+
    arm
    gpu
    encryption
+
+.. toctree::
+   :maxdepth: 2
+   :caption: AWS Deployment
+
    ecr
    ecs
    sagemaker
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Reference
+
    references
 
 

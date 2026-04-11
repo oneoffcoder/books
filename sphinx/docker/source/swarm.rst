@@ -1,6 +1,8 @@
 Swarm
 =====
 
+Swarm mode is still part of Docker Engine, but it is no longer where most new container orchestration work is happening. Use this chapter to understand Docker's built-in single-cluster orchestrator and to maintain existing Swarm deployments. For new cloud-native systems, Kubernetes or a managed service such as ECS is usually the better default.
+
 Enable Swarm
 ------------
 
@@ -35,7 +37,7 @@ Output.
 ::
 
     ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
-    16ui13y7ijoaqw6u8h05u2a2b *   ryzen               Ready               Active              Leader              19.03.3
+    16ui13y7ijoaqw6u8h05u2a2b *   docker-host         Ready               Active              Leader              current
 
 
 Set up a Docker registry
@@ -77,9 +79,9 @@ Check that it's working.
 Publish stack
 -------------
 
-Create ``docker-compose.yml`` as follows.
+Create a Compose file as follows.
 
-.. literalinclude:: _static/code/swarm/docker-compose.yml
+.. literalinclude:: _static/code/swarm/compose.yaml
    :language: yaml
    :linenos:
 
@@ -88,14 +90,14 @@ Build.
 .. code-block:: bash
     :linenos:
 
-    docker-compose up
+    docker compose up --build
 
 Publish.
 
 .. code-block:: bash
     :linenos:
 
-    docker-compose push
+    docker compose push
 
 Deploy to Swarm
 ---------------
@@ -105,7 +107,7 @@ Now deploy the stack to the swarm.
 .. code-block:: bash
     :linenos:
 
-    docker stack deploy -c docker-compose.yml student
+    docker stack deploy -c compose.yaml student
 
 Output.
 

@@ -1,4 +1,4 @@
-version: "3.7"
+name: ecs-ww1
 services:
   ng:
     image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/ww1:latest

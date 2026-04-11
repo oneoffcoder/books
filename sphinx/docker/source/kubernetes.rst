@@ -1,214 +1,200 @@
 Kubernetes
 ==========
 
-Installation
-------------
+Kubernetes schedules containers across a cluster and keeps the declared state running. Docker builds and publishes the images; Kubernetes pulls those images and manages Pods, Deployments, Services, ConfigMaps, Secrets, storage, rollout history, and health checks.
 
-To deploy to ``Kubernetes``, we need the following components installed. On Linux, ``kubectl`` and ``minikube`` are single binary executable files.
+Install tools
+-------------
 
-* Install `kubectl <https://kubernetes.io/docs/tasks/tools/install-kubectl>`_
+Install ``kubectl`` and choose a local cluster.
 
-   * `kubectl documentation <https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands>`_
-* Install `minikube <https://kubernetes.io/docs/tasks/tools/install-minikube>`_
+* `kubectl <https://kubernetes.io/docs/tasks/tools/>`_
+* `minikube <https://minikube.sigs.k8s.io/docs/start/>`_
+* `kind <https://kind.sigs.k8s.io/>`_
+* Docker Desktop Kubernetes
 
-   * `minikube documentation <https://minikube.sigs.k8s.io/docs/>`_
+Start a local minikube cluster with the Docker driver.
 
-* Install `VirtualBox <https://www.virtualbox.org>`_
+.. code-block:: bash
+    :linenos:
 
-Starting minikube cluster
+    minikube start --driver=docker
+
+Check the cluster.
+
+.. code-block:: bash
+    :linenos:
+
+    kubectl version --client
+    kubectl cluster-info
+    kubectl get nodes
+
+Build and load local images
+---------------------------
+
+For local Kubernetes, either push images to a registry or load local images into the cluster.
+
+.. code-block:: bash
+    :linenos:
+
+    docker build -t student-rest:local ./flask
+    minikube image load student-rest:local
+
+With kind, load the image into the named cluster.
+
+.. code-block:: bash
+    :linenos:
+
+    kind load docker-image student-rest:local --name kind
+
+Deployment and Service
+----------------------
+
+A ``Deployment`` manages replicated Pods. A ``Service`` gives those Pods a stable network name and virtual IP.
+
+.. code-block:: yaml
+    :linenos:
+
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: student-rest
+    spec:
+      replicas: 2
+      selector:
+        matchLabels:
+          app: student-rest
+      template:
+        metadata:
+          labels:
+            app: student-rest
+        spec:
+          containers:
+            - name: rest
+              image: student-rest:local
+              imagePullPolicy: IfNotPresent
+              ports:
+                - containerPort: 5000
+              readinessProbe:
+                httpGet:
+                  path: /
+                  port: 5000
+              livenessProbe:
+                httpGet:
+                  path: /
+                  port: 5000
+              resources:
+                requests:
+                  cpu: 100m
+                  memory: 128Mi
+                limits:
+                  cpu: 500m
+                  memory: 512Mi
+    ---
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: student-rest
+    spec:
+      selector:
+        app: student-rest
+      ports:
+        - port: 80
+          targetPort: 5000
+
+Apply the manifest and inspect the workload.
+
+.. code-block:: bash
+    :linenos:
+
+    kubectl apply -f student-rest.yaml
+    kubectl get deployments
+    kubectl get pods
+    kubectl get services
+    kubectl rollout status deployment/student-rest
+
+Forward the Service to the local machine.
+
+.. code-block:: bash
+    :linenos:
+
+    kubectl port-forward service/student-rest 8080:80
+
+Open `http://localhost:8080 <http://localhost:8080>`_.
+
+Rollouts
+--------
+
+Deploy a new image by changing the image in the Deployment.
+
+.. code-block:: bash
+    :linenos:
+
+    kubectl set image deployment/student-rest rest=student-rest:next
+    kubectl rollout status deployment/student-rest
+    kubectl rollout history deployment/student-rest
+    kubectl rollout undo deployment/student-rest
+
+Configuration and secrets
 -------------------------
 
-Start minikube. This command effectively creates a virtual machine.
+Use ConfigMaps for non-secret configuration.
 
 .. code-block:: bash
     :linenos:
 
-    minikube start
+    kubectl create configmap student-config \
+        --from-literal=APP_ENV=local \
+        --dry-run=client -o yaml > configmap.yaml
 
-You should see an output like the following.
-
-::
-
-    😄  minikube v1.5.2 on Ubuntu 19.10
-    ✨  Automatically selected the 'virtualbox' driver (alternates: [none])
-    💿  Downloading VM boot image ...
-        > minikube-v1.5.1.iso.sha256: 65 B / 65 B [--------------] 100.00% ? p/s 0s
-        > minikube-v1.5.1.iso: 143.76 MiB / 143.76 MiB [] 100.00% 127.66 MiB p/s 2s
-    🔥  Creating virtualbox VM (CPUs=2, Memory=2000MB, Disk=20000MB) ...
-    🐳  Preparing Kubernetes v1.16.2 on Docker '18.09.9' ...
-    💾  Downloading kubeadm v1.16.2
-    💾  Downloading kubelet v1.16.2
-    🚜  Pulling images ...
-    🚀  Launching Kubernetes ... 
-    ⌛  Waiting for: apiserver
-    🏄  Done! kubectl is now configured to use "minikube"
-
-
-Quicktest
----------
-
-Deploy through an image
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Type in the following to deploy a service through an image.
+Use Secrets for sensitive values, then mount or expose them to Pods through Kubernetes. Production clusters should integrate with the cloud provider's secret manager when available.
 
 .. code-block:: bash
     :linenos:
 
-    # create deployment
-    kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+    kubectl create secret generic db-credentials \
+        --from-literal=username=student \
+        --from-literal=password='change-me' \
+        --dry-run=client -o yaml > secret.yaml
 
-    # expose deployment as a service
-    kubectl expose deployment hello-minikube --type=NodePort --port=8080
+Pods and sidecars
+-----------------
 
-    # get pod information
-    kubectl get pods
-    
-    # get the service url
-    minikube service hello-minikube --url
-    
-    # delete service
-    kubectl delete services hello-minikube
+A Pod is the smallest Kubernetes scheduling unit. Put multiple containers in one Pod only when they must share lifecycle, network namespace, and storage. A frontend, API, and database should usually be separate Deployments and Services. Sidecars, log shippers, and local proxies are better examples of multi-container Pods.
 
-    # delete deployment
-    kubectl delete deployment hello-minikube
+Operations
+----------
 
-Deploy through YAML configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Create a file called ``pod.yaml``.
-
-.. literalinclude:: _static/code/kubernetes/pod.yml
-   :language: yaml
-   :linenos:
-
-Then type in the following.
+These commands are used constantly.
 
 .. code-block:: bash
     :linenos:
 
-    # create deployment
-    kubectl apply -f pod.yml
-
-    # get pod information
-    kubectl get pods
-
-    # get logs of pod
-    kubectl logs demo
-
-    ## delete service
-    kubectl delete -f pod.yml
-
-Pod creation
-^^^^^^^^^^^^
-
-Create a file called ``pod.yaml``.
-
-.. literalinclude:: _static/code/kubernetes/student.yml
-   :language: yaml
-   :linenos:
-   :emphasize-lines: 2
-
-Now try running the following commands to create a pod and more.
-
-.. code-block:: bash
-    :linenos:
-
-    # create deployment
-    kubectl apply -f student.yml
-
-    # get pod information
-    kubectl get pods
-    kubectl describe pod student
-
-    # get logs of pod
-    kubectl logs student db
-    kubectl logs student rest
-
-    # shell access
-    kubectl exec -it student --container db -- /bin/bash
-    kubectl exec -it student --container rest -- /bin/bash
-
-    ## delete service
-    kubectl delete -f student.yml
-
-Deployment creation
-^^^^^^^^^^^^^^^^^^^
-
-Build the docker images. 
-
-.. code-block:: bash
-    :linenos:
-
-    docker build --no-cache -t db-app:local .
-    docker build --no-cache -t rest-app:local .
-    docker build --no-cache -t ui-app:local .
-
-Create ``student-deployment.yml`` with the following content.       
-
-.. literalinclude:: _static/code/kubernetes/student-deployment.yml
-   :language: yaml
-   :linenos:
-   :emphasize-lines: 2
-
-Now try running the following commands to create a deployment and more.
-
-.. code-block:: bash
-    :linenos:
-
-    # create deployment
-    kubectl create -f student-deployment.yml
-
-    # check deployment
-    kubectl get deployment
-
-    # check replication set
-    kubectl get rs
-
-    # get pod information
-    kubectl get pods
-    POD=student-deployment-75d56dc8f5-55rtt
-    kubectl describe pod $POD
-
-    # get logs
-    kubectl logs $POD db
-    kubectl logs $POD rest
-    kubectl logs $POD ui
-
-    # shell access
-    kubectl exec -it $POD --container db -- /bin/bash
-    kubectl exec -it $POD --container rest -- /bin/bash
-    kubectl exec -it $POD --container ui -- /bin/sh
-
-    # forward port
-    kubectl port-forward $POD 3306:3306
-    kubectl port-forward $POD 5000:5000
-    kubectl port-forward $POD 8080:80
-
-    ## delete service
-    kubectl delete -f student-deployment.yml
+    kubectl config get-contexts
+    kubectl config use-context minikube
+    kubectl create namespace docker-book
+    kubectl get all -n docker-book
+    kubectl describe pod <pod-name> -n docker-book
+    kubectl logs deployment/student-rest -n docker-book
+    kubectl exec -it deployment/student-rest -n docker-book -- sh
+    kubectl delete -f student-rest.yaml
 
 Using local images
 ------------------
 
-The following command enables us to reuse Minikube's built-in docker daemon. This feature is useful to avoid building a Docker registry and pushing images into it. When you issue ``docker ps`` you will see the containers running on Minikube.
+The older ``eval $(minikube docker-env)`` workflow points the local Docker CLI at the minikube Docker daemon. Prefer ``minikube image load`` for new local workflows because it is explicit and works naturally with Buildx-built images.
 
 .. code-block:: bash
     :linenos:
 
-    eval $(minikube docker-env)    
+    minikube image load student-rest:local
 
-Useful notes and commands
--------------------------
+Useful minikube commands:
 
-* ``minikube dashboard`` brings up the Kubernetes dashboard
-* ``minikube ssh`` will SSH into the virtual machine
-* ``kubectl get deployment`` gets the deployments in the cluster
-* ``kubectl get events`` gets the events in the cluster
-* ``kubectl get svc`` checks the services created
-* ``/home`` (local) is mounted ``/hosthome`` (virtual machine)
-* addons in ``~/.minikube/addons`` (local) will be moved to the virtual machine on Minikube start/restart
-
+* ``minikube dashboard`` opens the Kubernetes dashboard.
+* ``minikube ssh`` opens a shell on the minikube node.
+* ``minikube service <service-name>`` opens a Service exposed through minikube.
+* ``kubectl get events --sort-by=.metadata.creationTimestamp`` shows recent cluster events.
 
 Removing minikube cluster
 -------------------------
@@ -226,3 +212,11 @@ Delete minikube. This command effectively deletes the virtual machine.
     :linenos:
 
     minikube delete
+
+References
+----------
+
+* `Kubernetes Deployments <https://kubernetes.io/docs/concepts/workloads/controllers/deployment/>`_
+* `Kubernetes Services <https://kubernetes.io/docs/concepts/services-networking/service/>`_
+* `kubectl reference <https://kubernetes.io/docs/reference/kubectl/>`_
+* `minikube image load <https://minikube.sigs.k8s.io/docs/commands/image/>`_

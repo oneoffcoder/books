@@ -1,17 +1,52 @@
 ARM
 ===
 
-Thus far, we assumed that you are building your Docker containers on a x86 CPU architecture. However, you may also build Docker containers for the ARM CPU architecture too, such as the `Raspberr Pi <https://www.raspberrypi.org/>`_. Typically, you build x86 CPU targeted Docker containers on a computer with a x86 CPU, and likewise, you build ARM CPU targeted Docker containers on a ARM CPU computer. However, you may also build ARM CPU targeted Docker containers from a x86 CPU computer by typing in the following.
+Modern Docker builds should treat CPU architecture as an explicit build output. A developer may build on an ``amd64`` laptop, deploy to ``arm64`` cloud nodes, and still publish one image name that works for both platforms.
+
+Use Buildx for multi-platform builds.
 
 .. code-block:: bash
     :linenos:
 
-    docker run --rm --privileged hypriot/qemu-register
+    docker buildx ls
+    docker buildx create --name multiarch --driver docker-container --use
+    docker buildx inspect --bootstrap
+
+If the builder needs CPU emulation, install QEMU/binfmt support on the build host.
+
+.. code-block:: bash
+    :linenos:
+
+    docker run --privileged --rm tonistiigi/binfmt --install all
+
+Build and push one manifest list containing both ``amd64`` and ``arm64`` images.
+
+.. code-block:: bash
+    :linenos:
+
+    docker buildx build \
+        --platform linux/amd64,linux/arm64 \
+        -t registry.example.com/team/app:latest \
+        --push .
+
+For local testing, load a single-platform image into the local Docker image store.
+
+.. code-block:: bash
+    :linenos:
+
+    docker buildx build --platform linux/arm64 --load -t app:arm64 .
+
+Do not assume that every base image supports every platform. Check the manifest before choosing the base image.
+
+.. code-block:: bash
+    :linenos:
+
+    docker buildx imagetools inspect python:3-slim
 
 Basic ARM container
 -------------------
 
-An example ``Dockerfile`` to build a basic ARM container is as follows.
+An example ``Dockerfile`` to build a basic ARM container for Raspberry Pi-style work is as follows.
 
 .. literalinclude:: _static/code/arm/rpi-base/Dockerfile
    :language: docker
@@ -52,10 +87,10 @@ Notice the following.
 
 * We use the previous ``rpi-base:local`` image to bootstrap this image.
 * We install ``miniconda`` to manage our Python environments and dependencies.
-* We setup a mount volume at ``/ipynb`` so that we can mout our local notebooks onto the container at runtime.
-* We expose port ``8888``, which is what Jupyer Lab is running on. 
+* We setup a mount volume at ``/ipynb`` so that we can mount our local notebooks onto the container at runtime.
+* We expose port ``8888``, which is what Jupyter Lab is running on.
 * We use ``supervisor`` to start up Jupyter Lab at runtime.
-* If you do not like Jupyer Lab and want the old Jupyter Notebook, override at runtime with ``-e JUPYTER_TYPE=notebook``.
+* If you do not like Jupyter Lab and want the classic Jupyter Notebook, override at runtime with ``-e JUPYTER_TYPE=notebook``.
 
 Build.
 
@@ -77,3 +112,9 @@ Run.
         rpi-jupyter:local
 
 You may now access the Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_.
+
+References
+----------
+
+* `Multi-platform builds <https://docs.docker.com/build/building/multi-platform/>`_
+* `Buildx <https://docs.docker.com/build/>`_

@@ -1,4 +1,4 @@
-version: "3.7"
+name: ecs-full-stack-local
 services:
   db:
     build: db

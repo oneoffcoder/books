@@ -11,11 +11,11 @@ Let's check to make sure ``docker`` and other components are installed and worki
 
     docker --version
     
-You should see an output that looks like the following.
+You should see the installed Docker Engine or Docker Desktop version.
 
 ::
 
-    Docker version 19.03.2, build 6a30dfca03
+    Docker version <current>, build <hash>
 
 Now, let's make sure we are able to run the ``busybox`` container.
 
@@ -54,12 +54,12 @@ You should see an output as follows.
 Service creation
 ^^^^^^^^^^^^^^^^
 
-Now let's create a toy service. This service uses the ``apline:3.5`` container to ping the Google domain name servier ``8.8.8.8``.
+Now let's create a toy service. This service uses the current ``alpine`` container to ping the Google domain name server ``8.8.8.8``.
 
 .. code-block:: bash
     :linenos:
 
-    docker service create --name demo alpine:3.5 ping 8.8.8.8
+    docker service create --name demo alpine:latest ping 8.8.8.8
 
 The output should look like the following.
 

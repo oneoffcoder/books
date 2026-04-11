@@ -10,7 +10,7 @@ One major use of containerization is to build shippable containers out of applic
 Angular
 -------
 
-The ``Angular`` application is created using `Angular CLI <https://cli.angular.io/>`_. To create the application we simply type in the following command.
+The ``Angular`` application is created using the current `Angular CLI <https://angular.dev/tools/cli>`_. To create the application we simply type in the following command.
 
 .. code-block:: bash
     :linenos:
@@ -23,18 +23,14 @@ Note that all the default options are used in the interactive creation of this A
 
     ui-app
     ├── angular.json
-    ├── browserslist
-    ├── e2e
     ├── karma.conf.js
     ├── node_modules
     ├── package.json
-    ├── package-lock.json
     ├── README.md
     ├── src
     ├── tsconfig.app.json
     ├── tsconfig.json
-    ├── tsconfig.spec.json
-    └── tslint.json
+    └── tsconfig.spec.json
 
 The next thing to do is create a ``Dockerfile`` that will containerize this Angular application. A couple of things to note here. Notice that we have two ``FROM`` instructions. What is happening here is that we are using docker's `multi-stage build <https://docs.docker.com/develop/develop-images/multistage-build/>`_ capabilities. The first ``FROM`` builds the Angular application using the ``node:lts`` docker image, and the second ``FROM`` uses the ``nginx:alpine`` docker image to run the built application (from the first stage). The first ``FROM`` aliases the first stage as ``NodeBuilder`` so that downstream stages may reference it.
 

@@ -1,36 +1,18 @@
 GPU
 ===
 
-In some application, you may need Graphics Processing Unit ``GPU`` support with NVIDIA graphics card. NVIDIA has published the ``NVIDIA Container Toolkit`` to enable GPU support for Docker containers. The `GitHub <https://github.com/NVIDIA/nvidia-docker>`_ site has information on how to install this tool ``nvidia-docker``.
+Some workloads need NVIDIA GPU access from inside a container. Install the current `NVIDIA Container Toolkit <https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html>`_ and verify that Docker can pass the GPU through to a CUDA image.
 
-To see if you have installed ``nvidia-docker`` correctly, type in the following.
+Use the current CUDA image tag from NVIDIA's container registry. This book uses a current CUDA 13 image.
 
 .. code-block:: bash
     :linenos:
 
-    docker run --gpus all nvidia/cuda:9.0-base nvidia-smi
+    docker run --rm --gpus all nvidia/cuda:13.1.1-base-ubuntu24.04 nvidia-smi
 
-You should see an output similar to the below.
+You should see ``nvidia-smi`` output with the GPU, driver, and CUDA compatibility reported by the host.
 
-::
-
-    +-----------------------------------------------------------------------------+
-    | NVIDIA-SMI 430.50       Driver Version: 430.50       CUDA Version: 10.1     |
-    |-------------------------------+----------------------+----------------------+
-    | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
-    | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
-    |===============================+======================+======================|
-    |   0  GeForce RTX 208...  Off  | 00000000:01:00.0  On |                  N/A |
-    | 25%   33C    P8    17W / 250W |    893MiB / 11016MiB |      5%      Default |
-    +-------------------------------+----------------------+----------------------+
-                                                                                
-    +-----------------------------------------------------------------------------+
-    | Processes:                                                       GPU Memory |
-    |  GPU       PID   Type   Process name                             Usage      |
-    |=============================================================================|
-    +-----------------------------------------------------------------------------+
-
-The ``Dockerfile`` uses ``nvidia/cuda:10.0-cudnn7-devel`` as the base image. We install ``conda`` and the ``PyTorch`` packages, and we use ``supervisor`` to start up Jupyter Lab.
+The ``Dockerfile`` uses a current CUDA/cuDNN development image as the base image. It installs Python, Jupyter Lab, PyTorch, and ``supervisor``. Before production use, confirm that the CUDA image, host driver, and framework wheels support the same CUDA generation.
 
 .. literalinclude:: _static/code/gpu/Dockerfile
    :language: docker
@@ -58,3 +40,9 @@ Run. Note that we have to specify the ``--gpus all`` flag to give GPU access to 
         gpu-jupyter:local
 
 You may now access the Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_.
+
+References
+----------
+
+* `NVIDIA Container Toolkit <https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html>`_
+* `NVIDIA CUDA container images <https://catalog.ngc.nvidia.com/orgs/nvidia/containers/cuda>`_

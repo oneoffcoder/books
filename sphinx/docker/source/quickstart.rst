@@ -47,23 +47,12 @@ You should see an output like the following.
 
 ::
 
-    Sending build context to Docker daemon  2.048kB
-    Step 1/4 : FROM busybox
-    ---> 020584afccce
-    Step 2/4 : LABEL "author"="One-Off Coder"
-    ---> Running in af8fdeea4744
-    Removing intermediate container af8fdeea4744
-    ---> 8424b50d2202
-    Step 3/4 : LABEL "version"="0.0.1"
-    ---> Running in 81f29ec03010
-    Removing intermediate container 81f29ec03010
-    ---> d57b4186fb56
-    Step 4/4 : LABEL "description"="A do nothing container."
-    ---> Running in 4208567a8939
-    Removing intermediate container 4208567a8939
-    ---> a8f8fc8d975c
-    Successfully built a8f8fc8d975c
-    Successfully tagged donothing:local
+    [+] Building 1.0s (5/5) FINISHED
+     => [internal] load build definition from Dockerfile
+     => [internal] load metadata for docker.io/library/busybox:latest
+     => [1/1] FROM docker.io/library/busybox:latest
+     => exporting to image
+     => => naming to docker.io/library/donothing:local
 
 Run
 ---
@@ -143,11 +132,10 @@ Your output should look like the following.
 ::
 
     REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
-    donothing               local               a8f8fc8d975c        36 minutes ago      1.22MB
-    oneoffcoder/donothing   0.0.1               a8f8fc8d975c        36 minutes ago      1.22MB
-    oneoffcoder/donothing   latest              a8f8fc8d975c        36 minutes ago      1.22MB
-    busybox                 latest              020584afccce        3 weeks ago         1.22MB
-    alpine                  <none>              f80194ae2e0c        10 months ago       4MB
+    donothing               local               <image-id>          <age>               <size>
+    oneoffcoder/donothing   0.0.1               <image-id>          <age>               <size>
+    oneoffcoder/donothing   latest              <image-id>          <age>               <size>
+    busybox                 latest              <image-id>          <age>               <size>
 
 Publishing
 ----------

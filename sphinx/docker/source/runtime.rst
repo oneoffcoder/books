@@ -113,7 +113,7 @@ Flask downloads
 Angular
 -------
 
-Angular applications manage configuration as a first class citizen through `envrionment files <https://angular.io/guide/build>`_. If you use the `Angular CLI <https://cli.angular.io/>`_ or ``ng-cli`` to initialize, scaffold and build your Angular application, there will be two files ``environment.ts`` and ``environment.prod.ts`` where you may declare the development and production settings for using with ``ng build``. After you build your application (e.g. with either ``ng build`` or ``ng build --prod``), a distribution will be created. In this example, we set ``environment.ts`` and ``environment.prod.ts`` to be as follows.
+Angular applications manage build-time configuration through `environment files <https://angular.dev/tools/cli/environments>`_. If you use the current `Angular CLI <https://angular.dev/tools/cli>`_ to initialize, scaffold and build your Angular application, environment files may declare development and production settings for ``ng build``. After you build your application with ``ng build`` or ``ng build --configuration production``, a distribution will be created. In this example, we set ``environment.ts`` and ``environment.prod.ts`` to be as follows.
 
 .. literalinclude:: _static/code/runtime/ng/ui-app/src/environments/environment.ts
    :language: typescript
@@ -138,46 +138,24 @@ Here is what the files for ``ng build`` will generate.
     ui-app/
     ├── favicon.ico
     ├── index.html
-    ├── main-es2015.js
-    ├── main-es2015.js.map
-    ├── main-es5.js
-    ├── main-es5.js.map
-    ├── polyfills-es2015.js
-    ├── polyfills-es2015.js.map
-    ├── polyfills-es5.js
-    ├── polyfills-es5.js.map
-    ├── runtime-es2015.js
-    ├── runtime-es2015.js.map
-    ├── runtime-es5.js
-    ├── runtime-es5.js.map
-    ├── styles-es2015.js
-    ├── styles-es2015.js.map
-    ├── styles-es5.js
-    ├── styles-es5.js.map
-    ├── vendor-es2015.js
-    ├── vendor-es2015.js.map
-    ├── vendor-es5.js
-    └── vendor-es5.js.map
+    ├── main.js
+    ├── polyfills.js
+    └── styles.css
 
-Here is what the files for ``ng build --prod`` will generate.
+Here is what the files for ``ng build --configuration production`` will generate.
 
 ::
 
     ui-app/
-    ├── 3rdpartylicenses.txt
     ├── favicon.ico
     ├── index.html
-    ├── main-es2015.c2c754009562ee4be6a8.js
-    ├── main-es5.c2c754009562ee4be6a8.js
-    ├── polyfills-es2015.2987770fde9daa1d8a2e.js
-    ├── polyfills-es5.6696c533341b95a3d617.js
-    ├── runtime-es2015.edb2fcf2778e7bf1d426.js
-    ├── runtime-es5.edb2fcf2778e7bf1d426.js
-    └── styles.3ff695c00d717f2d2a11.css
+    ├── main.<hash>.js
+    ├── polyfills.<hash>.js
+    └── styles.<hash>.css
 
-The key is in the ``main-es*.js`` files. If you reference the environment settings from within your application, they will be exported as literals in the ``main-es*.js`` files (if you do not, then ``ng build --prod`` will shake these unnecessary literals off). 
+The key is in the generated ``main`` JavaScript file. If you reference the environment settings from within your application, they will be exported as literals in that file. If you do not reference them, the production build can remove the unused literals.
 
-Here is a snippet from of the code in ``main-es2015.js``.
+Here is a snippet from the development bundle.
 
 .. code-block:: javascript
     :linenos:
@@ -188,7 +166,7 @@ Here is a snippet from of the code in ``main-es2015.js``.
         apiKey: 'ENV_API_KEY'
     };
 
-Here is a snippet from of the code in ``main-es2015.c2c754009562ee4be6a8.js``.
+Here is a snippet from the production bundle.
 
 .. code-block:: javascript
     :linenos:
@@ -237,7 +215,7 @@ Run the container without any environment specification.
 
 Run the container with environment specification.
 
-.. code-block: bash
+.. code-block:: bash
     :linenos:
 
     docker run -it --rm \

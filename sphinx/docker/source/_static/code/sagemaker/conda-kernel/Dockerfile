@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:4.9.2
+FROM continuumio/miniconda3:latest
 
 COPY environment.yml .
 RUN conda env create -f environment.yml

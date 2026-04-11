@@ -5,5 +5,5 @@ metadata:
 spec:
   containers:
   - name: testpod
-    image: alpine:3.5
+    image: alpine:latest
     command: ["ping", "8.8.8.8"]

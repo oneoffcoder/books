@@ -1,7 +1,7 @@
-FROM node:lts as NodeBuilder
+FROM node:lts AS node_builder
 WORKDIR /tmp/ui-app
 COPY ./ui-app .
-RUN npm install -g @angular/cli@8.3.19
+RUN npm install -g @angular/cli@latest
 RUN npm install
 RUN ng build
 
@@ -13,7 +13,7 @@ COPY ./nginx.ini /etc/supervisor.d/
 COPY ./override.ini /etc/supervisor.d/
 COPY ./override.py /tmp/override.py
 
-COPY --from=NodeBuilder /tmp/ui-app/dist/ui-app /usr/share/nginx/html
+COPY --from=node_builder /tmp/ui-app/dist/ui-app /usr/share/nginx/html
 EXPOSE 80
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf", "-n"]

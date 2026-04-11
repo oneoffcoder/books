@@ -1,31 +1,31 @@
 Encryption
 ==========
 
-Although container encryption technology is still in its infancy, you can encrypt your containers at rest. As of 9/2021, Docker Hub does not support encrypted containers being published to it, but, IBM's Container Registry does. Container encryption requires tools from different projects to make the encryption work; the procedure is not a fluid process like with building and publishing normal, non-encrypted containers.
+Encrypted container images protect image layers at rest in registries and archives. Registry support varies, so verify the target registry and runtime before adopting encrypted images for production. Container image encryption still requires tools across the OCI, containerd, and imgcrypt ecosystem; it is more operationally involved than a normal Docker push and pull.
 
-Here are the tools that you will need, and the versions tested and used are also listed.
+Use current releases of these tools.
 
 .. list-table:: Container Encryption Tools
-    :widths: 20 20 60
+    :widths: 20 30 50
     :header-rows: 1
 
     * - Name
-      - Version
+      - Install from
       - Purpose
     * - `docker <https://www.docker.com/>`_
-      - 20.10.8
+      - Docker Engine or Docker Desktop
       - Docker containerization tools.
-    * - `go <https://golang.org/>`_
-      - 1.17.1
+    * - `go <https://go.dev/>`_
+      - Current Go release
       - Programming language to compile/build ``imgcrypt``.
     * - `imgcrypt <https://github.com/containerd/imgcrypt>`_
-      - 1.1.1-17-g967ee1f
+      - Current imgcrypt release
       - CLI drop-in replacement for ``ctr`` to interact with ``containerd``.
     * - `nerdctl <https://github.com/containerd/nerdctl>`_
-      - 0.11.2
+      - Current nerdctl release
       - CLI drop-in replacement for ``docker`` CLI.
     * - `cni <https://github.com/containernetworking/plugins>`_
-      - 1.0.1
+      - Current CNI plugins release
       - Additional networking plugin components.
 
 Setup tools
@@ -34,18 +34,11 @@ Setup tools
 go
 ^^
 
-The ``go`` runtime is really only needed to compile ``imgcrypt``. First, download go and extract the contents to ``/usr/local``.
+The ``go`` runtime is only needed to compile ``imgcrypt``. Install the current Go release for your operating system and verify it.
 
 .. code:: bash
 
-    wget -c https://golang.org/dl/go1.17.1.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-
-Then, modify your path to include the go binaries. For example, modify your ``.bashrc`` as follows.
-
-.. code:: bash
-
-    GO_HOME=/usr/local/go
-    PATH="$GO_HOME/bin:$PATH"
+    go version
 
 imgcrypt
 ^^^^^^^^
@@ -70,24 +63,22 @@ Two binaries should be placed in your ``/usr/local/bin`` folder.
 nerdctl
 ^^^^^^^
 
-Now, download the binary release of nerdctl and extract its content to ``/usr/local/bin``.
+Download the current ``nerdctl`` binary release for your operating system and extract its content to a directory on ``PATH``.
 
 .. code:: bash
 
-    wget https://github.com/containerd/nerdctl/releases/download/v0.11.2/nerdctl-0.11.2-linux-amd64.tar.gz
-    tar Cxzvvf /usr/local/bin nerdctl-0.11.2-linux-amd64.tar.gz
+    nerdctl version
 
 
 cni
 ^^^
 
-Download the cni tools and extract them to ``/opt/cni/bin``. These tools support nerdctl to work properly.
+Download the current CNI plugin bundle and extract it to ``/opt/cni/bin``. These tools support nerdctl networking.
 
 .. code:: bash
 
     sudo mkdir /opt/cni/bin
-    wget https://github.com/containernetworking/plugins/releases/download/v1.0.1/cni-plugins-linux-amd64-v1.0.1.tgz
-    sudo tar -xzvf cni-plugins-linux-amd64-v1.0.1.tgz /opt/cni/bin
+    sudo tar -xzvf cni-plugins-linux-<arch>-<version>.tgz -C /opt/cni/bin
 
 Configuration
 -------------
@@ -205,9 +196,9 @@ To run these containers, do **NOT** use ``ctr-enc`` as this CLI does not support
     sudo nerdctl run --rm -p 8000:80 localhost:5000/rest.enc:latest
     sudo nerdctl run --rm -p 4200:80 localhost:5000/www.enc:latest
 
-Life is easier to bring up dependent containers together with a tool like ``docker-compose``. Well, ``nerdctl`` can do the same. Just define your ``docker-compose.yml`` file as normal.
+Life is easier when dependent containers come up together with Compose-style configuration. ``nerdctl`` can do the same. Define your ``compose.yaml`` file as normal.
 
-- :download:`docker-compose.yml <_static/downloads/encryption/docker-compose.yml>`
+- :download:`compose.yaml <_static/downloads/encryption/compose.yaml>`
 
 You may then bring up and down your containers together as follows.
 

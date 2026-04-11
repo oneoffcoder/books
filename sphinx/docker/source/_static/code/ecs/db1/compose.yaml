@@ -1,4 +1,4 @@
-version: "3.7"
+name: ecs-db1
 services:
   db1:
     image: ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/db1:latest

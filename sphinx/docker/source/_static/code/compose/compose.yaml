@@ -1,4 +1,4 @@
-version: "3.7"
+name: student-stack
 services:
   db:
     image: db-app:local
