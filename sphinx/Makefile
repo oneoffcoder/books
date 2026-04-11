@@ -1,5 +1,4 @@
 PROJECTS = \
-	aws-developer \
 	datascience \
 	docker \
 	excel \
