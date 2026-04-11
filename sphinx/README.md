@@ -59,4 +59,4 @@ make live
 # Notes
 
 - Do not use the old `build.sh`, `clean.sh`, `autobuild.sh`, or `make.bat` workflow. The books have been moved to makefile-driven builds.
-- Some directories under `sphinx/` are not active Sphinx books yet, such as `csharp` and `keras`. They are not part of the root `make build` / `make clean` flow.
+- Some directories under `sphinx/` are not active Sphinx books yet, such as `keras`. They are not part of the root `make build` / `make clean` flow.

@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://datascience.oneoffcoder.com/sitemap.xml
