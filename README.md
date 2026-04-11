@@ -40,6 +40,37 @@ A collection of online books for data science, computer science and coding!
 * Docker
   * [Book](https://docker.oneoffcoder.com)
 
+# Deployment
+
+The Sphinx books live under `sphinx/`. Each book builds HTML into
+`sphinx/<book>/build/html`, and that output is deployed to the matching S3
+bucket.
+
+| Sphinx book | S3 bucket |
+| --- | --- |
+| `datascience` | `datascience.oneoffcoder.com` |
+| `docker` | `docker.oneoffcoder.com` |
+| `java-intro` | `learn-java.oneoffcoder.com` |
+| `makeblock` | `makeblock.oneoffcoder.com` |
+| `python-dothis` | `python.oneoffcoder.com` |
+| `python-intro` | `learn-python.oneoffcoder.com` |
+| `pytorch-intro` | `learn-pytorch.oneoffcoder.com` |
+| `r-intro` | `r.oneoffcoder.com` |
+| `scikit-intro` | `learn-scikit.oneoffcoder.com` |
+| `scratch` | `scratch.oneoffcoder.com` |
+| `spark-intro` | `learn-spark.oneoffcoder.com` |
+| `tello` | `tello.oneoffcoder.com` |
+
+These buckets exist, but this repository does not currently have matching
+Sphinx book directories for them:
+
+| S3 bucket | Local Sphinx book |
+| --- | --- |
+| `hht.oneoffcoder.com` | none |
+| `iaia.oneoffcoder.com` | none |
+| `rpa.oneoffcoder.com` | none |
+| `vex-exp.oneoffcoder.com` | none |
+
 # Copyright Stuff
 
 Copyright 2019 One-Off Coder
