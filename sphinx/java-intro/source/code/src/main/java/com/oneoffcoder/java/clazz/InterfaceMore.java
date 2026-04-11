@@ -22,7 +22,7 @@ public class InterfaceMore {
         case TYPE.CAT:
           return "Cat";
         default:
-          return "Uknown";
+          return "Unknown";
       }
     }
   }

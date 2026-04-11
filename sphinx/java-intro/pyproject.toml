@@ -29,4 +29,4 @@ target-version = "py311"
 select = ["E", "F", "I"]
 
 [tool.codespell]
-skip = "*.png,*.ico,build,_build,.venv"
+skip = "*.png,*.ico,build,_build,.venv,source/code/5827-8.txt"
