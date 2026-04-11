@@ -23,6 +23,7 @@ Object practice
 3. Override ``toString()`` so a student prints clearly.
 4. Create an interface named ``Reportable`` with one method named ``report``.
 5. Make ``Student`` implement ``Reportable``.
+6. Rewrite ``Student`` as a record and decide which version is clearer.
 
 Collection practice
 -------------------
@@ -42,6 +43,16 @@ Streams practice
 4. Use ``collect`` to place filtered results into a new list.
 5. Use ``groupingBy`` to group students by letter grade.
 
+Modern Java practice
+--------------------
+
+1. Create a sealed interface named ``Command`` with records named ``Add``,
+   ``Remove``, and ``ListAll``.
+2. Write a ``switch`` expression that pattern matches each command.
+3. Use a record pattern to extract fields from one command.
+4. Use ``_`` for a caught exception that you intentionally ignore.
+5. Run five independent blocking tasks with virtual threads.
+
 Mini-project: gradebook
 -----------------------
 
@@ -59,7 +70,8 @@ Requirements:
 7. Add tests for the grade conversion logic.
 
 This project uses classes, collections, streams, exceptions, file IO, and tests
-in one small program.
+in one small program. Use records for immutable row data when that keeps the
+model simpler.
 
 Mini-project: contact manager
 -----------------------------

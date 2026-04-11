@@ -25,7 +25,7 @@ Java, No Tears
 Preface
 =======
 
-This book teaches students how to program in Java with small, runnable examples. To follow along and execute the code samples, you will need `Docker <https://www.docker.com/>`_ installed. The Docker container is located on `Docker Hub <https://hub.docker.com/r/oneoffcoder/book-java-intro>`_. After you have installed Docker, you may run the container as follows.
+This book teaches students how to program in Java with small, runnable examples. The main examples target ``JDK 25``, the current long-term support baseline. To follow along and execute the code samples, you will need `Docker <https://www.docker.com/>`_ installed. The Docker container is located on `Docker Hub <https://hub.docker.com/r/oneoffcoder/book-java-intro>`_. After you have installed Docker, you may run the container as follows.
 
 .. code-block:: bash
 
@@ -35,7 +35,7 @@ This book teaches students how to program in Java with small, runnable examples.
 
 Note that this Docker container has `Jupyter Lab <https://jupyter.org/>`_ running on port ``8888``. You may access Jupyter Lab at `http://localhost:8888 <http://localhost:8888>`_ when the Docker container is running.
 
-The diagram below summarizes the learning path through the Java material, starting with setup and syntax before moving into object-oriented design, project workflow, libraries, runtime behavior, and practice.
+The diagram below summarizes the learning path through the Java material, starting with setup and syntax before moving into object-oriented design, project workflow, libraries, runtime behavior, modern idioms, and practice.
 
 .. uml::
 
@@ -48,15 +48,17 @@ The diagram below summarizes the learning path through the Java material, starti
    rectangle "Classes,\nGenerics, Enum,\nAnnotations" as oop
    rectangle "Packages,\nMaven, Tests" as project
    rectangle "Libraries,\nCollections,\nLambda, Streams,\nDate/Time" as libraries
-   rectangle "Exceptions,\nThreads, IO" as runtime
-   rectangle "Modern Java\nand Practice" as practice
+   rectangle "Exceptions,\nVirtual Threads,\nIO" as runtime
+   rectangle "Modern Java,\nJDK 26 Notes,\nOptional Tools" as modern
+   rectangle "Debugging\nand Practice" as practice
    setup --> syntax
    syntax --> flow
    flow --> oop
    oop --> project
    project --> libraries
    libraries --> runtime
-   runtime --> practice
+   runtime --> modern
+   modern --> practice
    @enduml
 
 That roadmap is useful when you are skimming the book: the early chapters establish the language itself, the middle chapters focus on modeling and project structure, and the later chapters show how Java code behaves in larger, real programs.
@@ -117,6 +119,14 @@ That roadmap is useful when you are skimming the book: the early chapters establ
    :caption: Modern Java
 
    modern-java
+   jdk26-preview
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :caption: Optional Tools
+
+   optional-tools
 
 .. toctree::
    :maxdepth: 2

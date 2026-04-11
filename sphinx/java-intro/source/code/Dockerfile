@@ -1,10 +1,8 @@
-FROM openjdk:13.0.1-buster
-LABEL One-Off Coder "info@oneoffcoder.com"
-ENV PATH /maven/bin:$PATH
-ENV MAVEN_URL http://apache.mirrors.ionfish.org/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
+FROM eclipse-temurin:25-jdk
+LABEL maintainer="One-Off Coder <info@oneoffcoder.com>"
 COPY . /code
-RUN wget -q ${MAVEN_URL} -O /tmp/maven.tar.gz \
-    && tar xzvf /tmp/maven.tar.gz -C / \
-    && ln -s /apache-maven-3.6.1 /maven
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends maven \
+    && rm -rf /var/lib/apt/lists/*
 WORKDIR /code
 RUN mvn test

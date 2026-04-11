@@ -51,8 +51,11 @@ Nested switch
    :dedent: 4
    :emphasize-lines: 6-12,14-20
 
-New syntax for switch
----------------------
+Arrow syntax for switch
+-----------------------
+
+Modern ``switch`` statements can use arrow labels. This avoids accidental
+fall-through between cases.
 
 .. literalinclude:: code/src/main/java/com/oneoffcoder/java/control/SwitchNew.java
    :language: java

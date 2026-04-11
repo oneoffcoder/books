@@ -54,6 +54,19 @@ explicitly.
 Imports tell the compiler which type a short class name refers to. Without this
 import, the program would need the fully qualified name ``java.util.Optional``.
 
+Module imports
+--------------
+
+JDK 25 also supports module import declarations. They import the public API
+exported by a module.
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/modern/ModuleImportDemo.java
+   :language: java
+   :lines: 3
+
+Module imports are useful for compact examples and exploratory code. In larger
+files, explicit imports are still easier to audit.
+
 Maven project files
 -------------------
 
@@ -63,7 +76,7 @@ JUnit for test examples.
 
 .. literalinclude:: code/pom.xml
    :language: xml
-   :lines: 36-49
+   :lines: 34-45
    :dedent: 2
 
 Maven downloads dependencies into a local cache and places them on the classpath

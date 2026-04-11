@@ -1,6 +1,10 @@
 Libraries
 =========
 
+The Java standard library is large. Prefer standard library APIs first, and add
+third-party dependencies only when the standard library does not cover the
+problem well.
+
 Math
 ----
 
@@ -21,6 +25,10 @@ StringBuilder
 
 HTTP
 ----
+
+Use ``java.net.http.HttpClient`` for new HTTP code. JDK 26 adds HTTP/3 support
+to this API, but ordinary beginner code still uses the same ``HttpClient``,
+``HttpRequest``, and ``HttpResponse`` types.
 
 .. literalinclude:: code/src/main/java/com/oneoffcoder/java/library/HttpPackage.java
    :language: java
@@ -96,6 +104,10 @@ String tokenization
 Optional
 --------
 
+``Optional`` is most useful as a return type when a method may not have a
+result. Avoid using it as a field type or method parameter in beginner code;
+plain values and validation are usually clearer there.
+
 Basic use of optional
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -126,6 +138,9 @@ Nullable optional
 
 Date
 ----
+
+``Date`` and ``Calendar`` are legacy APIs. They appear in older code, but new
+code should usually use the ``java.time`` package covered in the next chapter.
 
 Basic date
 ^^^^^^^^^^

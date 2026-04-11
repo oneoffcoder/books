@@ -1,8 +1,56 @@
 Threading
 =========
 
+Modern Java code should start with virtual threads for high-concurrency tasks
+that mostly wait on I/O. Platform threads, executors, atomics, and fork/join
+are still useful, but they are no longer the only practical tools.
+
+Virtual threads
+---------------
+
+Virtual threads are lightweight Java threads managed by the JDK. They are most
+useful when you have many concurrent tasks that block while waiting for files,
+network calls, databases, or other I/O.
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/threading/VirtualThreadDemo.java
+   :language: java
+   :linenos:
+   :lines: 3-5
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/threading/VirtualThreadDemo.java
+   :language: java
+   :linenos:
+   :lines: 9-18
+   :dedent: 2
+   :emphasize-lines: 2
+
+Do not pool virtual threads to make them cheaper. They are already cheap. Use a
+separate limit, such as a semaphore, when you need to protect a database,
+service, or other constrained resource.
+
+Scoped values
+-------------
+
+Scoped values share immutable data with methods called inside a bounded dynamic
+scope. They are easier to reason about than thread-local variables, especially
+with virtual threads.
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/threading/ScopedValueDemo.java
+   :language: java
+   :linenos:
+   :lines: 5-14
+   :dedent: 2
+   :emphasize-lines: 1,4-5
+
+Use scoped values for contextual data such as request IDs, authenticated users,
+or trace information when passing an argument through every method would make
+the call chain noisy.
+
 Different ways to create threads
 --------------------------------
+
+The following examples show the older platform-thread APIs. They are still part
+of Java and are important when reading existing code.
 
 Implementing Runnable
 ^^^^^^^^^^^^^^^^^^^^^
@@ -68,6 +116,10 @@ Multiple threads
 
 Timer and TimerTask
 -------------------
+
+``Timer`` and ``TimerTask`` are older scheduling APIs. Prefer modern executor
+services for new code unless you are maintaining an existing program that
+already uses ``Timer``.
 
 .. literalinclude:: code/src/main/java/com/oneoffcoder/java/threading/WithTimer.java
    :language: java
