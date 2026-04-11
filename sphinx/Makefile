@@ -1,7 +1,6 @@
 PROJECTS = \
 	datascience \
 	docker \
-	excel \
 	java-intro \
 	makeblock \
 	python-dothis \

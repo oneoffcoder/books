@@ -37,8 +37,6 @@ A collection of online books for data science, computer science and coding!
 * R, No Tears 
   * [Book](https://r.oneoffcoder.com)
   * [Docker Image](https://hub.docker.com/r/oneoffcoder/book-r-intro)
-* Excel
-  * [Book](https://excel.oneoffcoder.com)
 * Docker
   * [Book](https://docker.oneoffcoder.com)
 
