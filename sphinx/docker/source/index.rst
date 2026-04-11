@@ -42,18 +42,22 @@ The diagram below gives a quick map of how the book moves from single-container 
    skinparam shadowing false
    rectangle "Start Here" as start
    rectangle "Core Docker" as core
-   rectangle "Build and\nSecurity" as build
-   rectangle "Multi-Service and\nOrchestration" as orchestration
+   rectangle "Build, CI,\nRelease" as build
+   rectangle "Security" as security
+   rectangle "Development\nWorkflows" as development
+   rectangle "Orchestration" as orchestration
    rectangle "Platforms and\nWorkloads" as operations
    rectangle "ECR, ECS,\nSageMaker" as deployment
    start --> core
    core --> build
-   build --> orchestration
+   build --> security
+   security --> development
+   development --> orchestration
    orchestration --> operations
    operations --> deployment
    @enduml
 
-Read the diagram from left to right: first get Docker working locally, then learn core container workflows, harden the build path, orchestrate multiple services, and carry those patterns into specialized workloads and AWS deployments.
+Read the diagram from left to right: first get Docker working locally, then learn core container workflows, build and release images, harden runtime behavior, improve development loops, orchestrate services, and carry those patterns into specialized workloads and AWS deployments.
 
 .. toctree::
    :maxdepth: 2
@@ -69,23 +73,45 @@ Read the diagram from left to right: first get Docker working locally, then lear
    containerization
    cli
    runtime
+   networking
+   storage
+   resources-performance
+   debugging
    devops
 
 .. toctree::
    :maxdepth: 2
-   :caption: Build and Security
+   :caption: Build, CI, and Release
 
    buildkit
    cross-builds
+   bake
    build-checks
-   image-hardening
-   supply-chain
+   registry-release
 
 .. toctree::
    :maxdepth: 2
-   :caption: Multi-Service and Orchestration
+   :caption: Security
 
+   image-hardening
+   hardened-images
+   runtime-security
+   supply-chain
+   encryption
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Development Workflows
+
+   dev-containers
+   docker-desktop-offload
    compose
+   compose-watch
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Orchestration
+
    swarm
    kubernetes
 
@@ -95,7 +121,7 @@ Read the diagram from left to right: first get Docker working locally, then lear
 
    arm
    gpu
-   encryption
+   ai-containers
 
 .. toctree::
    :maxdepth: 2
