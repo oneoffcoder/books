@@ -10,9 +10,11 @@ Syntax practice
 1. Change the ``HelloWorld`` program so it prints your name and the current
    year.
 2. Create variables for a product name, price, quantity, and total cost.
-3. Write an ``if`` statement that prints a letter grade from a numeric score.
-4. Rewrite the grade logic with ``switch`` when the input is already a letter.
-5. Use a ``for`` loop to print the first ten square numbers.
+3. Put a multi-line report template in a text block.
+4. Write an ``if`` statement that prints a letter grade from a numeric score.
+5. Rewrite the grade logic with a ``switch`` expression when the input is
+   already a letter.
+6. Use a ``for`` loop to print the first ten square numbers.
 
 Object practice
 ---------------
@@ -40,7 +42,7 @@ Streams practice
 1. Convert a loop that sums numbers into a stream pipeline.
 2. Use ``filter`` to keep only passing grades.
 3. Use ``map`` to convert students into full names.
-4. Use ``collect`` to place filtered results into a new list.
+4. Use ``toList()`` to place filtered results into a new list.
 5. Use ``groupingBy`` to group students by letter grade.
 
 Modern Java practice
@@ -51,7 +53,8 @@ Modern Java practice
 2. Write a ``switch`` expression that pattern matches each command.
 3. Use a record pattern to extract fields from one command.
 4. Use ``_`` for a caught exception that you intentionally ignore.
-5. Run five independent blocking tasks with virtual threads.
+5. Use ``var`` in a lambda parameter when you want to annotate that parameter.
+6. Run five independent blocking tasks with virtual threads.
 
 Mini-project: gradebook
 -----------------------

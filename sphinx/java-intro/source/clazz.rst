@@ -169,3 +169,17 @@ More on interface
    :linenos:
    :lines: 76-82
    :dedent: 4
+
+Private interface methods
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Interfaces may have private helper methods for shared logic used by their
+``default`` or ``static`` methods. Keep these helpers small; once behavior gets
+large, a class is usually clearer.
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/clazz/PrivateInterfaceMethods.java
+   :language: java
+   :linenos:
+   :lines: 5-17
+   :dedent: 2
+   :emphasize-lines: 11-13

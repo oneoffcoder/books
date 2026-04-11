@@ -68,6 +68,20 @@ Lambda as argument
    :dedent: 4
    :emphasize-lines: 1-4
 
+Lambda parameters with var
+--------------------------
+
+Lambda parameters can use ``var``. This is most useful when the parameter needs
+an annotation or when a multi-parameter lambda reads better with uniform
+parameter syntax.
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/lambda/VarLambdaParameters.java
+   :language: java
+   :linenos:
+   :lines: 9-18
+   :dedent: 2
+   :emphasize-lines: 9
+
 Variable capture
 ----------------
 

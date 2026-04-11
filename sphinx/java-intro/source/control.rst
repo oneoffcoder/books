@@ -63,3 +63,20 @@ fall-through between cases.
    :lines: 6-14
    :dedent: 4
    :emphasize-lines: 3-9
+
+Switch expressions
+------------------
+
+Modern ``switch`` can also produce a value. This works well when each branch
+chooses one result and the rest of the method should keep moving. Use
+``yield`` when a branch needs a block with more than one statement.
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/control/SwitchExpression.java
+   :language: java
+   :linenos:
+   :lines: 6-19
+   :dedent: 4
+   :emphasize-lines: 3-12
+
+JDK 26 previews primitive patterns in ``switch``. Keep those examples in the
+JDK 26 preview notes until the feature is final.

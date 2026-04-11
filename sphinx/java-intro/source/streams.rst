@@ -92,3 +92,17 @@ Collecting streams
    :lines: 14-46
    :dedent: 4
    :emphasize-lines: 6,13,18,24,30-32
+
+Stream to list
+--------------
+
+Use ``toList()`` when a stream pipeline simply needs an unmodifiable list at the
+end. Use ``collect(Collectors.toList())`` when you specifically need collector
+behavior, such as downstream collectors in ``groupingBy``.
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/stream/StreamToList.java
+   :language: java
+   :linenos:
+   :lines: 8-14
+   :dedent: 4
+   :emphasize-lines: 3-5

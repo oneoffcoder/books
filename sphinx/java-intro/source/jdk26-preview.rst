@@ -18,6 +18,8 @@ Primitive patterns
 
 JDK 26 previews primitive types in patterns, ``instanceof``, and ``switch``.
 This makes pattern matching more uniform across reference and primitive values.
+It can also check whether a value fits exactly into a narrower primitive type
+before binding it.
 
 .. code-block:: java
 
@@ -28,6 +30,16 @@ This makes pattern matching more uniform across reference and primitive values.
        case 2 -> "error";
        case int code when code > 2 -> "unknown status: " + code;
      };
+   }
+
+.. code-block:: java
+
+   void printIfByte(int value) {
+     if (value instanceof byte b) {
+       IO.println("fits in a byte: " + b);
+     } else {
+       IO.println("too large for byte");
+     }
    }
 
 Because this is preview syntax, do not use it in the core examples. The standard

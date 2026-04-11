@@ -49,6 +49,10 @@ Arrays
 Type inference with var
 -----------------------
 
+Use ``var`` for local variables when the initializer makes the type obvious.
+The variable is still statically typed; Java infers the type at compile time.
+Prefer the explicit type when it carries useful meaning for the reader.
+
 .. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/TypeInference.java
    :language: java
    :linenos:
@@ -68,6 +72,19 @@ String instantiation
    :lines: 6-14
    :dedent: 4
    :emphasize-lines: 1-2,5-6,9
+
+Text blocks
+^^^^^^^^^^^
+
+Use text blocks for multi-line strings such as JSON, SQL, HTML, or messages.
+The opening ``"""`` starts the block and the closing ``"""`` controls how much
+incidental indentation Java removes.
+
+.. literalinclude:: code/src/main/java/com/oneoffcoder/java/types/string/TextBlocks.java
+   :language: java
+   :linenos:
+   :lines: 6-17
+   :dedent: 4
 
 String concatenation 
 ^^^^^^^^^^^^^^^^^^^^
